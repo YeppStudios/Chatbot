@@ -1,0 +1,49 @@
+6. LICZBA LOKALI MIESZKANIOWYCH I UŻYTKOWYCH
+
+Zaprojektowano 68 lokali mieszkalnych oraz dwa lokale usługowe zlokalizowane na parterze budynku.
+
+Struktura zaprojektowanych lokali mieszkalnych w budynku:
+2P – mieszkanie dwupokojowe z aneksem kuchennym: 18 lokali mieszkalnych
+3P – mieszkanie trzypokojowe z aneksem kuchennym: 37 lokali mieszkalnych
+4P – mieszkanie czteropokojowe z aneksem kuchennym: 13 lokali mieszkalnych
+
+PARTER
+LOKALE USŁUGOWE
+LOKAL 1 U1 98,56
+LOKAL 2 U2 84,20
+
+LOKALE MIESZKANIOWE
+3-pokojowe M0.01 61,04
+3-pokojowe M0.02 60,13
+3-pokojowe M0.03 60,26
+2-pokojowe M0.04 43,84
+2-pokojowe M0.05 43,87
+2-pokojowe M0.06 44,71
+2-pokojowe M0.07 46,58
+4-pokojowe M0.08 86,75
+
+KONDYGNACJA POWTARZALNA: POZIOM +1 DO +4
+LOKALE MIESZKANIOWE
+3-pokojowe M1.01 59,83
+3-pokojowe M1.02 66,51
+3-pokojowe M1.03 60,16
+3-pokojowe M1.04 60,3
+4-pokojowe M1.05 88,44
+4-pokojowe M1.06 88,8
+2-pokojowe M1.07 44,71
+2-pokojowe M1.08 46,58
+2-pokojowe M1.09 47,95
+3-pokojowe M1.10 72,53
+3-pokojowe M1.11 56,99
+
+Numer dokumentu
+Dokument Number
+PB-A-OT-01
+
+Strona
+Page
+19
+
+Rewizja
+Revision
+00
