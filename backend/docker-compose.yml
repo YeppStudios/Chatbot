@@ -5,4 +5,4 @@ services:
     build: .
     ports:
       - 8000:8000
-    command: uvicorn avatar.main:app --reload --host 0.0.0.0 --port 8000
+    command: uvicorn chatbot.main:app --reload --host 0.0.0.0 --port 8000

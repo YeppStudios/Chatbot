@@ -10,9 +10,9 @@ import os
 directory = path.Path(__file__).abspath()
 sys.path.append(directory.parent.parent)
 
-from avatar.database.datastore.models.models import Document, Query
-from avatar.database.datastore.pinecone_datastore import PineconeDataStore
-from avatar.database.datastore.services.helpers import create_uuid_from_string
+from chatbot.database.datastore.models.models import Document, Query
+from chatbot.database.datastore.pinecone_datastore import PineconeDataStore
+from chatbot.database.datastore.services.helpers import create_uuid_from_string
 
 import logging
 

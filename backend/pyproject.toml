@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "avatar"
+name = "chatbot"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
@@ -26,7 +26,7 @@ fuzzywuzzy = "^0.18.0"
 openai = "^1.52.0"
 
 [tool.poetry.scripts]
-start = "avatar.main:start"
+start = "chatbot.main:start"
 
 [build-system]
 requires = ["poetry-core"]

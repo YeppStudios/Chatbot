@@ -8,5 +8,5 @@ FROM python:3.12-alpine
 WORKDIR /code
 COPY --from=requirements-stage /tmp/requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-COPY ./avatar /code/avatar
-ENTRYPOINT uvicorn avatar.main:app --reload --host 0.0.0.0 --port 8000
+COPY ./chatbot /code/chatbot
+ENTRYPOINT uvicorn chatbot.main:app --reload --host 0.0.0.0 --port 8000
