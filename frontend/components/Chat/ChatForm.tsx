@@ -1,80 +1,58 @@
+import { useChatStore } from "@/store/ChatStore";
+import Image from "next/image";
 import React, { useState } from "react";
 
-import Button from "../Button";
-import { cn } from "@/utils/cn";
-import RecordingButton from "../RecordingButton";
-import TimerButton from "../TimerButton";
-
-interface ChatFromProps {
-  input: string;
-  sendMessage: (e: any) => void;
-  setInput: (value: string) => void;
-  isRecordingRunning: boolean;
-  setIsRecordingRunning: (v: boolean) => void;
-  setVoiceMessage: (message: string) => void;
-  time: number;
-  setTime: (time: (prevTime: number) => number) => void;
-}
-
-const ChatForm = ({
-  sendMessage,
-  input,
-  setInput,
-  isRecordingRunning,
-  setIsRecordingRunning,
-  setVoiceMessage,
-  time,
-  setTime,
-}: ChatFromProps) => {
-  const [displaySendButton, setDisplaySendButton] = useState<boolean>(false);
-  const [displayTimer, setDisplayTimer] = useState<boolean>(false);
+const ChatForm = () => {
+  const [inputValue, setInputValue] = useState("");
+  const { setMessages, setIsThinking } = useChatStore();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    sendMessage(e);
-    setDisplaySendButton(false);
-    setDisplayTimer(false);
+
+    if (inputValue.trim()) {
+      setMessages({
+        sender: "user",
+        message: inputValue.trim(),
+      });
+
+      setIsThinking(true);
+      setTimeout(() => {
+        setMessages({
+          sender: "bot",
+          message: "Dziękuję za wiadomość! Jak mogę pomóc?",
+        });
+        setIsThinking(false);
+      }, 2500);
+
+      setInputValue("");
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-0 sm:p-6 w-full">
-      <div className="w-full flex items-center justify-between gap-4">
-        {displayTimer ? (
-          <TimerButton
-            isRecordingRunning={isRecordingRunning}
-            time={time}
-            setTime={setTime}
+    <form
+      onSubmit={handleSubmit}
+      className="border-t border-gray-200 p-2 bg-white"
+    >
+      <div className="flex">
+        <input
+          type="text"
+          placeholder="Zadaj pytanie..."
+          className="w-full p-2 shadow-inner shadow-black/15 border border-black/5 bg-slate-50 rounded-md"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button
+          type="submit"
+          className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-xl p-2 ml-3 w-10 h-10"
+        >
+          <Image
+            src="/send_white.png"
+            alt="icon"
+            width={50}
+            height={50}
+            className="w-5 h-5 object-contain"
           />
-        ) : (
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Let's chat!"
-            type="text"
-            className="rounded-xl h-12 outline-none shadow-inner px-4 border text-white border-white backdrop-blur-sm  bg-black bg-opacity-40 w-full"
-          />
-        )}
-        {input || displaySendButton ? (
-          <Button
-            onClick={handleSubmit}
-            iconSrc="/send_white.png"
-            iconOnly={true}
-            className="rounded-xl w-10 bg-black border border-neutral-400 bg-opacity-40 hover:bg-opacity-70 backdrop-blur-sm"
-            type={"submit"}
-          />
-        ) : (
-          <RecordingButton
-            setDisplaySendButton={setDisplaySendButton}
-            setIsRecordingRunning={setIsRecordingRunning}
-            setVoiceMessage={setVoiceMessage}
-            setTime={setTime}
-            setDisplayTimer={setDisplayTimer}
-            micImg="/micIconW.png"
-            className={cn(
-              "rounded-xl w-10 bg-black border border-neutral-400 opacity-40 hover:bg-opacity-70 backdrop-blur-sm"
-            )}
-          />
-        )}
+        </button>
       </div>
     </form>
   );
