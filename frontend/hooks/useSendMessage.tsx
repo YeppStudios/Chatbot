@@ -29,13 +29,10 @@ const useSendMessage = ({
   const functionCallRef = useRef<FunctionCall[]>([]);
   const currentMessageIdRef = useRef<string | null>(null);
   const isStreamingRef = useRef(false);
-  const settings = useSelector((state: any) => state.pageSettings);
   const conversationId: any = useSelector(
     (state: any) => state.conversation.id
   );
-  const assistantId: any = useSelector(
-    (state: any) => state.pageSettings.assistantID
-  );
+
   const { language } = useAppSelector((state: RootState) => state.user);
   const sentenceQueue = useRef<string[]>([]);
   const processingRef = useRef(false);
@@ -235,7 +232,7 @@ const useSendMessage = ({
 
       const runId = toolAction[0]?.run_id || "";
       const callId = toolAction[0]?.id || "";
-      console.log(conversationId, "conversationId");
+
       try {
         const reader = await askAI(
           input,
@@ -243,7 +240,7 @@ const useSendMessage = ({
           conversationId,
           true,
           language,
-          assistantId,
+          "asst_x6MKYmAnK0IPjMSRp0dafCwF",
           runId,
           callId
         );
@@ -296,11 +293,9 @@ const useSendMessage = ({
       setMessages,
       setInput,
       setAiThinking,
-      assistantId,
       setToolAction,
       toolAction,
       processChunk,
-      settings.avatarID,
       conversationId,
     ]
   );

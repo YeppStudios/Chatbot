@@ -5,7 +5,6 @@ from bson import ObjectId
 
 class User(BaseModel):
     id: PyObjectId = Field(default_factory=PyObjectId, alias='_id')
-    code: Optional[str] = None
     name: Optional[str] = None
     email: Optional[str] = None
     language: str = Field(default='English')

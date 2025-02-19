@@ -12,15 +12,6 @@ export interface RootState {
   conversation: {
     id: string;
   };
-  pageSettings: {
-    avatarID: string;
-    assistantID: string;
-    voiceID: string;
-    knowledgebaseID: string;
-    backgroundUrl: string;
-    logoUrl: string;
-    route: string;
-  };
   user: {
     userId: string;
     name: string;

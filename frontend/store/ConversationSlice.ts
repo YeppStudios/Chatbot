@@ -6,7 +6,7 @@ interface ConversationState {
 }
 
 const initialState: ConversationState = {
-    id: ""
+    id: "thread_zmTU9lLeXJgOHRbXp4wT6YVz"
 };
 
 export const conversationSlice = createSlice({

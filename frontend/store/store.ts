@@ -2,7 +2,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import sessionReducer from './SessionSlice';
 import conversationReducer from './ConversationSlice';
-import pageSettingsReducer from './PageSettingsSlice';
 import userReducer from './UserSlice';
 import cookieMiddleware, { loadStateFromCookies } from './cookieMiddleware';
 
@@ -12,7 +11,6 @@ const store = configureStore({
   reducer: {
     session: sessionReducer,
     conversation: conversationReducer,
-    pageSettings: pageSettingsReducer,
     user: userReducer
   },
   preloadedState,

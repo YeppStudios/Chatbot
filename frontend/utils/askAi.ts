@@ -13,15 +13,14 @@ export const askAI = async (
   const payload = {
     question: text,
     model,
-    thread_id: conversationId,
+    threadId: conversationId,
     stream,
     language,
-    assistant_id: assistantId,
-    run_id: runId,
-    call_id: callId,
+    assistantId: assistantId,
+    runId: runId,
+    callId: callId,
   };
 
-  console.log(payload);
   try {
     const response = await fetch(`${backend.serverUrl}/askAI`, {
       method: "POST",

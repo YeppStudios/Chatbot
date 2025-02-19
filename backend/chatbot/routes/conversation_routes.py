@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import List, Optional
+from chatbot.models.request.create_conversation import ConversationCreateRequest
 from chatbot.models.user import User
 from chatbot.models.assistant import Assistant
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -60,11 +61,6 @@ async def get_all_conversations(page: int = Query(1, description="Page number, s
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-class ConversationCreateRequest(BaseModel):
-    userId: str
-    assistantId: str
-    title: str
-    text: Optional[str] = None
 
 @router.post("/conversation")
 async def create_conversation(request: ConversationCreateRequest):

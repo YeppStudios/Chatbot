@@ -12,11 +12,6 @@ from chatbot.middleware.jwt import create_access_token, verify_access_token
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 router = APIRouter()
-
-def generate_code(length: int = 6) -> str:
-    characters = string.ascii_letters + string.digits
-    return ''.join(random.choices(characters, k=length))
-
 class UserCreate(BaseModel):
     role: str
 
@@ -41,7 +36,6 @@ async def login_user(user_data: UserAuth = Body(...)):
             user = User.parse_obj(existing_user)
         else:
             new_user = {
-                "code": generate_code(),
                 "name": user_data.name,
                 "email": user_data.email,
                 "language": user_data.language,
@@ -87,7 +81,6 @@ async def create_user(user_data: UserCreate):
         collection = db['users'] 
         
         user_dict = {
-            "code": generate_code(),
             "language": 'English',
             "role": user_data.role,
             "conversations": []

@@ -10,7 +10,7 @@ from openai import OpenAI
 
 openai = OpenAI()
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-index = pc.Index("dishes")
+index = pc.Index("courses")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

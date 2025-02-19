@@ -9,8 +9,8 @@ from typing import Optional
 
 class AssistantCreate(BaseModel):
     name: str
-    assistantId: str
     openaiAssistantId: str
+    preprompt: str
     tools: List[Dict[str, Any]] = []
 
 

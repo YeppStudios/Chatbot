@@ -19,7 +19,6 @@ const cookieMiddleware: Middleware = (store) => (next) => (action) => {
   const stateToPersist = {
     user: state.user,
     language: state.language,
-    pageSettings: state.pageSettings
     // Add or remove other slices as needed
   };
 

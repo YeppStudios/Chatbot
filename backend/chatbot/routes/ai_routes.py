@@ -13,7 +13,6 @@ from chatbot.database.database import db
 from openai import OpenAI
 from chatbot.models.request.ai import AskAiRequest, CancelRun, ListRuns, SubmitToolResponse
 
-
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 load_dotenv()
 openai = OpenAI()
@@ -23,41 +22,45 @@ router = APIRouter()
 @router.post("/askAI")
 async def ask_ai(request: AskAiRequest):
     try:
-        assistant = await db['assistants'].find_one({"openaiAssistantId": request.assistant_id})
+        # Note: using request.assistantId as defined in your model
+        assistant = await db['assistants'].find_one({"openaiAssistantId": request.assistantId})
         if not assistant:
             return JSONResponse(status_code=404, content={"detail": "Assistant not found"})
 
-        if request.run_id:
+        if request.runId:
             run = openai.beta.threads.runs.retrieve(
-                thread_id=request.thread_id,
-                run_id=request.run_id
+                thread_id=request.threadId,
+                run_id=request.runId
             )
 
             if run.status in ['queued', 'in_progress', 'requires_action']:
                 stream = openai.beta.threads.runs.cancel(
-                    thread_id=request.thread_id,
-                    run_id=request.run_id,
+                    thread_id=request.threadId,
+                    run_id=request.runId,
                 )
 
         openai.beta.threads.messages.create(
-            thread_id=request.thread_id,
+            thread_id=request.threadId,
             role="user",
             content=request.question
         )
 
         await db['conversations'].update_one(
-            {"threadId": request.thread_id},
+            {"threadId": request.threadId},
             {"$set": {"lastUpdated": datetime.utcnow()}}
         )
 
         base_instructions = assistant.get('preprompt', '')
-        language_instruction = f"\nPlease respond in {request.language} as it is our client's choice. Use appropriate cultural context and language nuances for {request.language} speakers."
+        language_instruction = (
+            f"\nPlease respond in {request.language} as it is our client's choice. "
+            f"Use appropriate cultural context and language nuances for {request.language} speakers."
+        )
         instructions = base_instructions + language_instruction
 
         if request.stream:
             stream = openai.beta.threads.runs.create(
-                thread_id=request.thread_id,
-                assistant_id=request.assistant_id,
+                thread_id=request.threadId,
+                assistant_id=request.assistantId,
                 instructions=instructions,
                 temperature=0,
                 stream=True,
@@ -68,8 +71,8 @@ async def ask_ai(request: AskAiRequest):
         
         else:
             run = openai.beta.threads.runs.create_and_poll(
-                thread_id=request.thread_id,
-                assistant_id=request.assistant_id,
+                thread_id=request.threadId,
+                assistant_id=request.assistantId,
                 model=request.model,
                 instructions=instructions,
                 temperature=0,
@@ -77,7 +80,7 @@ async def ask_ai(request: AskAiRequest):
             )
             if run.status == 'completed': 
                 messages = openai.beta.threads.messages.list(
-                    thread_id=request.thread_id
+                    thread_id=request.threadId
                 )
                 regex_pattern = r"【.*?】"
                 response_text = messages.data[0].content[0].text.value
@@ -85,7 +88,10 @@ async def ask_ai(request: AskAiRequest):
                 return {"response": cleaned_string}
             else:
                 print(run.status)
-                return JSONResponse(status_code=422, content={"detail": "AI processing not completed", "status": run.status})
+                return JSONResponse(
+                    status_code=422,
+                    content={"detail": "AI processing not completed", "status": run.status}
+                )
 
     except Exception as e:
         print(e)
@@ -97,9 +103,9 @@ async def submit_tool_response(request: SubmitToolResponse):
     try:
         print(f"Received request: {request.dict()}")
         stream = openai.beta.threads.runs.submit_tool_outputs(
-            thread_id=request.thread_id,
-            run_id=request.run_id,
-            tool_outputs=request.tool_outputs,
+            thread_id=request.threadId,
+            run_id=request.runId,
+            tool_outputs=request.toolOutputs,
             stream=True
         )
         return StreamingResponse(event_stream(stream), media_type="text/event-stream")
@@ -115,7 +121,7 @@ async def submit_tool_response(request: SubmitToolResponse):
 async def get_runs(request: ListRuns):
     try:
         runs = openai.beta.threads.runs.list(
-            request.thread_id
+            request.threadId
         )
         return runs
     
@@ -127,8 +133,8 @@ async def get_runs(request: ListRuns):
 async def cancel_run(request: CancelRun):
     try:
         run = openai.beta.threads.runs.cancel(
-            thread_id=request.thread_id,
-            run_id=request.run_id
+            thread_id=request.threadId,
+            run_id=request.runId
         )
         return run
     
@@ -137,7 +143,11 @@ async def cancel_run(request: CancelRun):
 
 
 @router.post("/transcribe")
-async def transcribe_audio(language: str = Form(...), file: UploadFile = File(...), token: str = Depends(oauth2_scheme)):
+async def transcribe_audio(
+    language: str = Form(...), 
+    file: UploadFile = File(...), 
+    token: str = Depends(oauth2_scheme)
+):
     verify_access_token(token)
     try:
         contents = await file.read()

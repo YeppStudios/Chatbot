@@ -11,4 +11,4 @@ MONGODB_URI = os.getenv("MONGODB_URI")
 # Establish a synchronous MongoDB client connection
 client = AsyncIOMotorClient(MONGODB_URI, tlsCAFile=certifi.where())
 
-db = client.Test
+db = client.Main

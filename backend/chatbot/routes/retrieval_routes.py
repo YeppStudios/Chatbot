@@ -15,7 +15,7 @@ load_dotenv()
 
 openai = OpenAI()
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-index = pc.Index("dishes")
+index = pc.Index("courses")
 
 dishes_collection = db["dishes"]
 
