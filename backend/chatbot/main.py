@@ -8,14 +8,13 @@ from dotenv import load_dotenv
 from chatbot.routes.user_routes import router as user_router
 from chatbot.routes.file_routes import router as file_router
 from chatbot.routes.assistant_routes import router as assistant_router
+from chatbot.routes.scraping_roues import router as scraping_router
 from chatbot.routes.conversation_routes import router as conversation_router
-from chatbot.routes.retrieval_routes import router as retrieval_router
 from chatbot.routes.ai_routes import router as ai_router
 from chatbot.database.database import client
 import logging
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
-from chatbot.websocket_manager import manager 
 
 load_dotenv()
 
@@ -24,24 +23,12 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "http://localhost:3001",
-    "http://127.0.0.1:3000",
-    "https://wpip-chatbot.vercel.app",
-    "https://wpip-chatbot-git-test-yepp.vercel.app",
-    "https://snipy.ai",
-]
-
-# Add WebSocket URLs
-websocket_origins = [
-    origin.replace('http', 'ws') for origin in origins
-] + [
-    "ws://localhost:8000",
-    "ws://0.0.0.0:8000",
-    "wss://snipy.ai"
+    "http://127.0.0.1:3000"
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins + websocket_origins,
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -51,9 +38,9 @@ app.add_middleware(
 app.include_router(user_router)
 app.include_router(assistant_router)
 app.include_router(conversation_router)
+app.include_router(scraping_router)
 app.include_router(ai_router)
 app.include_router(file_router)
-app.include_router(retrieval_router)
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request, exc):
@@ -66,21 +53,6 @@ async def validation_exception_handler(request, exc):
             )
         ),
     )
-
-@app.websocket("/ws/waiter")
-async def websocket_endpoint(websocket: WebSocket):
-    await manager.connect_waiter(websocket)
-    try:
-        while True:
-            await websocket.receive_text()
-    except WebSocketDisconnect:
-        manager.disconnect_waiter(websocket)
-    except Exception as e:
-        manager.disconnect_waiter(websocket)
-
-
-app.state.websocket_manager = manager
-
 
 @app.get("/")
 async def read_root():

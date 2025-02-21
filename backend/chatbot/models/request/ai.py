@@ -6,7 +6,6 @@ class AskAiRequest(BaseModel):
     model: str
     threadId: str
     stream: bool
-    language: str
     assistantId: str
     runId: Optional[str] = None
     callId: Optional[str] = None

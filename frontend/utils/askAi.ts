@@ -5,7 +5,6 @@ export const askAI = async (
   model: string,
   conversationId: string,
   stream = false,
-  language: string,
   assistantId: string,
   runId?: string,
   callId?: string
@@ -15,10 +14,9 @@ export const askAI = async (
     model,
     threadId: conversationId,
     stream,
-    language,
-    assistantId: assistantId,
-    runId: runId,
-    callId: callId,
+    assistantId,
+    runId,
+    callId,
   };
 
   try {

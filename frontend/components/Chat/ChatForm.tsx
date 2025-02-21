@@ -1,43 +1,51 @@
-import { useChatStore } from "@/store/ChatStore";
+"use client";
+
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useChatStore } from "@/store/ChatStore";
+import useSendMessage from "@/hooks/useSendMessage";
 
 const ChatForm = () => {
   const [inputValue, setInputValue] = useState("");
-  const { setMessages, setIsThinking } = useChatStore();
+  const { messages, isThinking, setIsThinking } = useChatStore();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // Use a ref for tool actions
+  const toolActionRef = useRef([]);
 
-    if (inputValue.trim()) {
-      setMessages({
-        sender: "user",
-        message: inputValue.trim(),
-      });
-
-      setIsThinking(true);
-      setTimeout(() => {
-        setMessages({
-          sender: "bot",
-          message: "Dziękuję za wiadomość! Jak mogę pomóc?",
-        });
-        setIsThinking(false);
-      }, 2500);
-
-      setInputValue("");
-    }
+  // Callback for setting new tool actions
+  const setToolAction = (action: any) => {
+    toolActionRef.current = action;
   };
 
+  // A helper that updates Zustand’s messages by referencing the latest state
+  const setMessages = (updater: any) => {
+    useChatStore.setState((state) => {
+      if (typeof updater === "function") {
+        return { messages: updater(state.messages) };
+      }
+      return { messages: updater };
+    });
+  };
+
+  // Our custom hook that returns the sendMessage function
+  const sendMessage = useSendMessage({
+    input: inputValue,
+    setMessages,
+    setInput: setInputValue,
+    setAiThinking: setIsThinking,
+    toolAction: toolActionRef.current,
+    setToolAction,
+    mediaElement: null,
+    session: null,
+  });
+
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="border-t border-gray-200 p-2 bg-white"
-    >
+    <form onSubmit={sendMessage} className="border-t border-gray-200 p-2 bg-white">
       <div className="flex">
         <input
           type="text"
           placeholder="Zadaj pytanie..."
-          className="w-full p-2 shadow-inner shadow-black/15 border border-black/5 bg-slate-50 rounded-md"
+          className="w-full p-2 shadow-inner outline-none shadow-black/15 border border-black/5 bg-slate-50 rounded-md"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />

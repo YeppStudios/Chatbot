@@ -1,10 +1,6 @@
+"use client";
+
 import { useCallback, useRef, useEffect } from "react";
-
-import { useSelector } from "react-redux";
-
-import { RootState } from "@/app/types";
-import { useAppSelector } from "@/store/hooks";
-import { repeatHandler } from "@/utils/handlers";
 import { askAI } from "@/utils/askAi";
 
 interface FunctionCall {
@@ -29,84 +25,43 @@ const useSendMessage = ({
   const functionCallRef = useRef<FunctionCall[]>([]);
   const currentMessageIdRef = useRef<string | null>(null);
   const isStreamingRef = useRef(false);
-  const conversationId: any = useSelector(
-    (state: any) => state.conversation.id
-  );
 
-  const { language } = useAppSelector((state: RootState) => state.user);
-  const sentenceQueue = useRef<string[]>([]);
-  const processingRef = useRef(false);
+  // Store the latest session in a ref if you need to re-use it
   const sessionRef = useRef(session);
-
   useEffect(() => {
     sessionRef.current = session;
   }, [session]);
 
-  const processResponseBuffer = useCallback(() => {
-    const sentenceEndRegex =
-      /(?<!\b(?:[A-Z][a-z]*|(?:1[1-9]|[2-9]\d+|\d{3,})|(?:Dr|Mr|Ms|Mrs|Prof|Sr|Jr|St|vs|etc|i\.e|e\.g|p\.s|n\.b)))[.!?](?=\s|$)/g;
-    let match;
-    let lastIndex = 0;
-
-    while ((match = sentenceEndRegex.exec(responseBuffer.current)) !== null) {
-      const sentence = responseBuffer.current
-        .slice(lastIndex, match.index + 1)
-        .trim();
-      if (sentence) {
-        sentenceQueue.current.push(sentence);
-      }
-      lastIndex = match.index + 1;
-    }
-
-    responseBuffer.current = responseBuffer.current.slice(lastIndex);
-
-    processQueue();
-  }, []);
-
-  const processQueue = useCallback(async () => {
-    if (!processingRef.current && sentenceQueue.current.length > 0) {
-      processingRef.current = true;
-      const nextSentence = sentenceQueue.current.shift();
-      if (nextSentence) {
-        try {
-          await repeatHandler({
-            sessionInfo: sessionRef.current,
-            taskInput: nextSentence,
-          });
-        } catch (error) {
-          console.error("Error in repeatHandler:", error);
-        }
-      }
-      processingRef.current = false;
-      if (sentenceQueue.current.length > 0) {
-        processQueue();
-      }
-    }
-  }, []);
-
   const processChunk = useCallback(
     (chunk: string) => {
+      // Remove any SSE prefix ("data: ") and accumulate
       chunk = chunk.replace(/data: /g, "").trim();
       jsonChunkBuffer.current += chunk;
 
       let startIndex = 0;
       let endIndex;
+
       while (
         (endIndex = jsonChunkBuffer.current.indexOf("}", startIndex)) !== -1
       ) {
         const possibleJson = jsonChunkBuffer.current.substring(0, endIndex + 1);
+
         try {
           const json = JSON.parse(possibleJson);
+          // Remove the parsed JSON from the buffer
           jsonChunkBuffer.current = jsonChunkBuffer.current
             .substring(endIndex + 1)
             .trim();
           startIndex = 0;
 
+          // Handle partial or completed text chunk
           if (json.type === "text" && json.data) {
             if (!isStreamingRef.current) {
               isStreamingRef.current = true;
             }
             responseBuffer.current += json.data;
+
+            // Update the correct assistant message in the store
             setMessages((prevMessages: any) =>
               prevMessages.map((msg: any) =>
                 msg.id === currentMessageIdRef.current
@@ -114,10 +69,12 @@ const useSendMessage = ({
                   : msg
               )
             );
+
+            // If we receive any text chunk, we know the AI is already “speaking”
             setAiThinking(false);
-            processResponseBuffer();
           }
 
+          // Handle function call, tool actions, etc. ...
           if (json.type === "function_call") {
             const newFunctionCall: FunctionCall = {
               name: json.data.name,
@@ -142,9 +99,9 @@ const useSendMessage = ({
             );
             setAiThinking(false);
           }
-          console.log(json.data[0], "json.data[0]");
 
           if (json.type === "tool_action") {
+            // ...
             setToolAction([
               {
                 id: json.data[0].id,
@@ -152,137 +109,97 @@ const useSendMessage = ({
                 function: json.data[0].function,
               },
             ]);
-
-            const updatedFunctionCall = functionCallRef.current.find(
-              (fc) => fc.name === json.data[0].function.name
-            );
-            if (updatedFunctionCall) {
-              updatedFunctionCall.status = "pending";
-              updatedFunctionCall.call_id = json.data[0].id;
-
-              setMessages((prevMessages: any) =>
-                prevMessages.map((msg: any) =>
-                  msg.id === currentMessageIdRef.current
-                    ? {
-                        ...msg,
-                        functionCall: msg.functionCall.map((fc: FunctionCall) =>
-                          fc.name === updatedFunctionCall.name
-                            ? updatedFunctionCall
-                            : fc
-                        ),
-                      }
-                    : msg
-                )
-              );
-            }
+            // ...
           }
 
           if (json.type === "tool_outputs") {
-            console.log("tool output: ", json.data);
-            const output = json.data;
-            const updatedFunctionCall = functionCallRef.current.find(
-              (fc) => fc.call_id === output.tool_call_id
-            );
-            if (updatedFunctionCall) {
-              updatedFunctionCall.status = "completed";
-              try {
-                updatedFunctionCall.outputs = JSON.parse(output.output);
-              } catch (error) {
-                console.error("Error parsing tool output:", error);
-                updatedFunctionCall.outputs = output.output;
-              }
-
-              setMessages((prevMessages: any) =>
-                prevMessages.map((msg: any) =>
-                  msg.id === currentMessageIdRef.current
-                    ? {
-                        ...msg,
-                        functionCall: msg.functionCall.map((fc: FunctionCall) =>
-                          fc.call_id === updatedFunctionCall.call_id
-                            ? updatedFunctionCall
-                            : fc
-                        ),
-                      }
-                    : msg
-                )
-              );
-            }
+            // ...
           }
         } catch (error) {
+          // Incomplete/partial JSON, keep accumulating
           startIndex = endIndex + 1;
         }
       }
     },
-    [setMessages, setToolAction, setAiThinking, processResponseBuffer]
+    [setMessages, setAiThinking, setToolAction]
   );
 
   const sendMessage = useCallback(
     async (e: any) => {
       e.preventDefault();
 
+      // Create user message
       const userMessage = {
         id: Date.now().toString(),
         text: input,
         sender: "You",
       };
+
+      // Add user message to store
       setMessages((messages: any) => [...messages, userMessage]);
+
+      // Clear input, set "thinking" to true
       setInput("");
       setAiThinking(true);
-      isStreamingRef.current = false;
 
-      const runId = toolAction[0]?.run_id || "";
-      const callId = toolAction[0]?.id || "";
+      isStreamingRef.current = false;
+      jsonChunkBuffer.current = "";
+      responseBuffer.current = "";
+      functionCallRef.current = [];
 
       try {
+        const runId = toolAction[0]?.run_id || "";
+        const callId = toolAction[0]?.id || "";
+
         const reader = await askAI(
           input,
           "gpt-4o",
-          conversationId,
+          "thread_KPVZaOjDsx1DZgJd5iDwrDLV",
           true,
-          language,
           "asst_x6MKYmAnK0IPjMSRp0dafCwF",
           runId,
           callId
         );
+
         if (mediaElement?.current) {
           mediaElement.current.muted = false;
         }
-        if (reader) {
-          responseBuffer.current = "";
-          functionCallRef.current = [];
-          sentenceQueue.current = [];
 
-          const assistantMessageId = Date.now().toString();
-          currentMessageIdRef.current = assistantMessageId;
-          setMessages((messages: any) => [
-            ...messages,
-            {
-              id: assistantMessageId,
-              text: "",
-              sender: "Assistant",
-              functionCall: [],
-            },
-          ]);
-
-          const read = () => {
-            reader.read().then(({ done, value }: any) => {
-              if (done) {
-                currentMessageIdRef.current = null;
-                isStreamingRef.current = false;
-                processResponseBuffer(); // Process any remaining content
-                return;
-              }
-
-              const textChunk = new TextDecoder().decode(value);
-              processChunk(textChunk);
-              read();
-            });
-          };
-
-          read();
-        } else {
+        if (!reader) {
           throw new Error("Stream reader not available");
         }
+
+        // Create an "Assistant" message to stream into
+        const assistantMessageId = Date.now().toString();
+        currentMessageIdRef.current = assistantMessageId;
+
+        setMessages((messages: any) => [
+          ...messages,
+          {
+            id: assistantMessageId,
+            text: "",
+            sender: "Assistant",
+            functionCall: [],
+          },
+        ]);
+
+        // Continuously read from the stream
+        const read = () => {
+          reader.read().then(({ done, value }: any) => {
+            if (done) {
+              // End of the stream
+              currentMessageIdRef.current = null;
+              isStreamingRef.current = false;
+              setAiThinking(false);
+              return;
+            }
+
+            const textChunk = new TextDecoder().decode(value);
+            processChunk(textChunk);
+            read();
+          });
+        };
+        read();
       } catch (error) {
         console.error("Failed to send to AI:", error);
         setAiThinking(false);
@@ -295,8 +212,8 @@ const useSendMessage = ({
       setAiThinking,
       setToolAction,
       toolAction,
-      processChunk,
-      conversationId,
+      mediaElement,
+      processChunk
     ]
   );
 

@@ -1,0 +1,754 @@
+Title: Laser – pojęcia podstawowe
+URL: https://edu.metrum.com.pl/lessons/laser-pojecia-podstawowe/
+Content:
+Laser – pojęcia podstawowe
+Laseroterapia – podstawy  Laser – pojęcia podstawowe
+W TRAKCIE
+Lekcja
+Materiały
+Lista tematów
+0% UKOŃCZONE
+0/4 Kroków
+Światło
+Oddziaływanie na tkankę
+Efekty oddziaływania na tkankę
+Chłodzenie podczas zabiegów laserowych
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Światło
+URL: https://edu.metrum.com.pl/topics/swiatlo/
+Content:
+Światło
+Laseroterapia – podstawy  Laser – pojęcia podstawowe  Światło
+W TRAKCIE
+Światło
+
+
+
+Nauka zajmująca się badaniem światła to optyka. Współczesna optyka, zgodnie z dualizmem korpuskularno-falowym, postrzega światło jednocześnie jako falę elektromagnetyczną oraz jako strumień cząstek nazywanych fotonami.
+
+Światło – potocznie nazywa się tak widzialną część promieniowania elektromagnetycznego, czyli promieniowanie widzialne odbierane przez siatkówkę oka ludzkiego. Precyzyjne ustalenie zakresu długości fal elektromagnetycznych nie jest tutaj możliwe, gdyż wzrok każdego człowieka charakteryzuje się nieco inną wrażliwością – stąd za najszerszy przedział przyjmuje się 380-780nm, choć często podaje się mniejsze zakresy (szczególnie od strony fal dłuższych), aż do 400–700 nm.
+
+W naukach ścisłych używa się określenia promieniowanie optyczne. Jest to promieniowanie podlegające prawom optyki geometrycznej oraz falowej. Przyjmuje się, że promieniowanie optyczne obejmuje zakres fal elektromagnetycznych o długości od 100nm do 1 mm, podzielony na trzy zakresy: ultrafiolet, światło widzialne i podczerwień. Wszystkie te zakresy można obserwować i mierzyć, używając podobnego zestawu przyrządów, a wyniki tych badań można opracowywać, stosując te same prawa fizyki.
+
+Ze względu na swoje właściwości (monochromatyczność, spójność, mała rozbieżność) światło lasera jest wykorzystywane w wielu obszarach nowoczesnej obróbki materiałów czy medycynie. Spójność pozwala na zachowanie odpowiedniego natężenia przez dłuższy czas, aby uzyskać jeszcze lepszy efekt oddziaływania lasera używa się soczewek, które skupiają promień. Odległość od soczewki do punktu w którym wiązka jest najbardziej skupiona (ognisko) to ogniskowa. W ognisku osiągana jest największa gęstość promieniowania, natomiast średnica plamki lasera jest najmniejsza. Za i przed tym punktem wiązka lasera się rozprasza. Padający na dany materiał czy tkankę promień laserowy powoduje jego podgrzanie, a jeśli ilość energii będzie odpowiednio duża, doprowadzić może do ich odparowania.
+
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Oddziaływanie na tkankę
+URL: https://edu.metrum.com.pl/topics/oddzialywanie-na-tkanke/
+Content:
+Oddziaływanie na tkankę
+Laseroterapia – podstawy  Laser – pojęcia podstawowe  Oddziaływanie na tkankę
+W TRAKCIE
+
+Laser, jak każde źródło światła, podczas padania na daną powierzchnię (np. na tkankę) będzie powodował różne reakcje: 
+
+ Odbicie – zwrot promieniowania bez zmiany jego składowych
+Pochłanianie (absorpcja) – przemiana energii promieniowania w inna formę (np. cieplną)
+Przepuszczanie – przechodzenie promieniowania bez zmiany jego składowych
+
+W wyniku zarówno odbicia, jak i przepuszczania, może zachodzić rozpraszanie światła – zmiana w rozkładzie przestrzennym wiązki promieniowania, odchylanej w wielu kierunkach przez powierzchnię (odbicie) czy ośrodek (przepuszczanie) bez zmiany częstotliwości jego składowych promieniowań monochromatycznych.
+
+W wyniku samego przepuszczania z kolei może zachodzić załamanie (czyli refrakcja) światła – zmiana kierunku rozchodzenia się promieniowania na skutek zmiany prędkości rozchodzenia się w ośrodku niejednorodnym optycznie albo przejściu przez powierzchnię rozgraniczającą dwa różne (optycznie) ośrodki.
+
+Laser, dzięki swoim unikalnym cechom, działa na komórki i ulega przenikaniu przez nie oraz absorbcji w poszczególnych chromoforach. W ten sposób stopniowo wytraca swoją energię. W zależności od długości fali promieniowania laserowego chromoforami są woda, hemoglobina (oksyhemoglobina, deoksyhemoglobina), melanina itp. Decydując się na konkretny rodzaj terapii, pamiętać należy o uwarunkowaniach wybranego do zabiegu urządzenia. Skuteczne w zamykaniu naczyń będą zatem lasery, których długość fali wykazuje duże powinowactwo do hemoglobiny (532nm, 585nm, 940nm, 980nm, 1064nm), do depilacji pochłaniane głównie w melaninie (755nm, 810nm, 1064nm), do redukcji tatuaży pochłaniane w konkretnych barwnikach (532nm, 585nm, 650nnm, 1064nm) czy lasery ablacyjne mające głównie powinowactwo do wody (diodowe 1470nm, 1940nm czy laser CO2).
+
+Na wykresie powyżej ukazano stopień absorpcji poszczególnych chromoforów w zależności od długości fali. Bardzo istotnym chromoforem jest woda. To ona decyduje bezpośrednio o głębokości wnikania promieniowania laserowego w tkankę, co często przekłada się na bezpieczeństwo wykonywanych procedur. Biorąc pod uwagę wszystkie właściwości danej długości fali można określić przybliżoną głębokość jej wnikania,. Ukazuje to wykres poniżej.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Efekty oddziaływania na tkankę
+URL: https://edu.metrum.com.pl/topics/efekty-oddzialywania-na-tkanke/
+Content:
+Efekty oddziaływania na tkankę
+Laseroterapia – podstawy  Laser – pojęcia podstawowe  Efekty oddziaływania na tkankę
+W TRAKCIE
+Efekty w tkance w zależności od mocy i czasu trwania impulsu.
+
+
+
+Konkretne efekty w tkance wybranym laserem (ablacja, usuwanie tatuaży, depilacja, zamykanie naczyń, odmładzanie skóry itd.) uzyskujemy stosując nie tylko odpowiednią długość fali ale również odpowiednio dobrane: moc lasera, oraz czas trwania impulsu. W zależności od rodzaju lasera może on generować impulsy w trybie ciągłym lub przerywanym. Długość impulsu może być liczona w sekundach ale również w znacznie krótszych jednostkach czasu, nawet pikosekundach. Tabela poniżej przedstawia jednostki używane podczas wykonywania zabiegów laserami. (UWAGA: odnoszą się nie tylko do czasu ale również np. energii, mocy itd.).
+
+Przedrostek	Oznaczenie	Mnożnik	Mnożnik wykładniczo
+piko	p	0,000000000001	10-12
+nano	n	0,000000001	10-9
+mikro	μ	0,000001	10-6
+mili	m	0,001	10-3
+JEDNOSTKA		1	100
+kilo	k	1 000	103
+mega	M	1 000 000	106
+giga	G	1 000 000 000	109
+
+Wpływ promieniowania laserowego na tkankę może być różny. W głównej mierze efekty zależą od czasu emisji oraz energii pojedynczego impulsu (lub mocy w trybie ciągłym). By dobrze zrozumieć jednostki i wielkości jakimi będziemy się posługiwać należy przypomnieć sobie podstawowe zagadnienia z tym związane.
+
+Wat (W) – jednostka mocy – 1W = 1J : 1s
+Dżul (J) – jednostka energii – 1J = 1W * 1s
+
+UWAGA:
+pamiętamy o prawidłowych jednostkach np. ilość energii dostarczonej z użyciem 1W mocy  w czasie równym 1 milisekundzie – ms – równa będzie 1mJ
+
+Bardzo często będziemy również posługiwać się tymi jednostkami w odniesieniu do pola powierzchni na jakie oddziałujemy
+
+gęstość mocy – 1W/cm2
+gęstość energii – 1J/cm2 = 1W/cm2*1s
+
+Jak już wcześniej opisano, lasery mogą pracować w różnych trybach – ciągłym (CW) oraz impulsowym gdzie określamy konkretny czas trwania impulsu (określany zazwyczaj jako Ton) ale również czas przerwy pomiędzy impulsami (określany zazwyczaj jako Toff). W przypadku niektórych laserów, będziemy używać pojęcia mocy szczytowej (np. laser co2 w przypadku trybu Ultra Pulse). Jest to wartość mocy jaką laser uzyskuje w danym punkcie a nie na przestrzeni całego impulsu. Wszystkie tryby pracy przedstawiono na wykresach po prawej stronie.
+
+P peak – moc szczytowa
+P av – moc średnia
+
+Poniższy wykres przestawia możliwy do uzyskania wpływ promieniowania laserowego na tkankę.
+
+Jak czytać powyższy wykres?
+
+oś pozioma to czas emisji – od Q-Switch mode (bardzo krótki impuls liczony w ns i ps (odpowiednio 10-9 i 10-12) o wysokiej energii (gęstości energii) przez tryby impulsowe (μs, ms) aż do trybu ciągłego (CW mode) gdzie laser w sposób ciągły emituje promieniowanie w zadanej przez operatora mocy.
+oś pionowa odnosi się do mocy (gęstości mocy)
+
+Odpowiednio regulując tymi parametrami (mocą i czasem impulsu) jesteśmy w stanie otrzymać konkretne oddziaływanie na tkankę
+
+efekty foto-chemiczne (foto-biologiczne) FP < 500 mW/cm2 t ~ CW
+efekt uzyskiwany przy działaniu lasera w trybie ciągłym z niską wartością gęstości mocy – poniżej 500mW/cm2 – na skórze odczuwalny jako ciepło. Wykorzystywany w laseroterapii np. przy leczeniu bólu.
+efekty foto-termiczne FP > 1 W/cm2 – kW/cm2 t ~1 ms – CW
+efekty uzyskiwane przy działaniu lasera w trybie impulsowym (względnie ciągłym) gdzie długość pojedynczego impulsu wyrażona jest w milisekundach (ms). Najczęściej wykorzystywany przy zamykaniu naczyń czy epilacji laserowej.
+efekty foto-ablacyjne FP > 1 MW/cm2 t ~ 1 μs – 999 μs
+efekt uzyskiwany przy działaniu lasera w trybie impulsowym gdzie czas pojedynczego impulsu wyrażony jest w mikrosekundach (μs). Stosowany w laserach CO2 w trybie chirurgicznym do odparowania zmian skórnych.
+efekty foto-mechaniczne FP > 100 MW/cm2 t ~ 1 ns – 500 ns
+efekt uzyskiwany przy działaniu lasera z bardzo krótkim impulsem rzędu na nanosekund (pikosekund) i bardzo dużej gęstości mocy. Stosowany w redukcji przebarwień i tatuaży.
+
+Ważnym zjawiskiem jakie powinno być rozpatrywane w przypadku działania laserem w trybie impulsowym jest czas relaksacji tkanki. Czas relaksacji tkanki to czas, w którym ta tkanka pozbywa się połowy dostarczonej do niej energii cieplnej. Stosowanie czasu impulsu mniejszego niż czas relaksacji tkanki pozwala uniknąć kumulowania energii minimalizując obrażenia termiczne tkanek sąsiednich. Najczęściej zjawisko to jest wykorzystywane przy usuwaniu tatuaży, przebarwień czy zamykaniu naczyń.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Chłodzenie podczas zabiegów laserowych
+URL: https://edu.metrum.com.pl/topics/chlodzenie-podczas-zabiegow-laserowych/
+Content:
+Chłodzenie podczas zabiegów laserowych
+Laseroterapia – podstawy  Laser – pojęcia podstawowe  Chłodzenie podczas zabiegów laserowych
+W TRAKCIE
+
+O tym, że w trakcie zabiegów laserowych należy schładzać powierzchnię skóry zdecydowana większość lekarzy już wie. Dlaczego? Na to pytanie nie każdy już odpowie bez zastanowienia. Jak to zrobić dobrze? Z tym pytaniem jest jeszcze większy problem.
+
+Dlaczego chłodzimy w trakcie zabiegów laserowych?
+
+Chłodzenie ma na celu uzyskanie kilku efektów:
+
+chłodzenie w trakcie zabiegów i po zabiegach laserowych lub IPL redukuje odczucie bólu. Dzięki temu zwiększamy komfort pacjenta oraz ograniczamy użycie środków analgetycznych.
+chroni tkanki przed uszkodzeniem termicznym – minimalizuje stany zapalne i obrzęki po zabiegach laserowych i IPL , co znacznie skraca okres rekonwalescencji pacjenta.
+zabezpiecza przed powstawaniem przebarwień i odbarwień po zabiegach laserowych i IPL.
+
+W gabinetach medycyny estetycznej często prowadzi się chłodzenie tylko po zabiegu, zapominając         o potrzebie schłodzenia powierzchni skóry w celu redukcji odczuć bólowych przed zabiegiem i w jego trakcie. Chłodzenie po zabiegu często wykonywane jest przy pomocy różnego rodzaju pakietów chłodzących, schładzanych najczęściej w zamrażalnikach lodówek, w których panuje temperatura poniżej -10°C. Schładzanie powierzchni skóry przebiega w sposób niekontrolowany. Przy tak intensywnym odbiorze ciepła, zamiast odebrania ciepła pozabiegowego, wywołujemy efekt stymulacji miejscowej znany z gabinetów fizjoterapeutycznych. Jest to efekt niepożądany, w wyniku którego wywołujemy najpierw znaczące zwężenie naczyń krwionośnych następnie bardzo mocny efekt przekrwienny.
+
+Prawidłowo przeprowadzone chłodzenie w trakcie zabiegów laserowych i IPL, powinno zapewnić temperaturę powierzchni skóry nie niższą niż 16-18°C. Przed zabiegiem chłodzimy krótko i intensywnie w celu zapewnienia efektu przeciwbólowego, natomiast po zakończeniu zabiegu chłodzimy, aby odebrać nadmiar ciepła z tkanek w czasie nawet do 20 minut. Prawa fizyki są nieubłagane. Ciepło do tkanki możemy „wprowadzić” nawet pojedynczym, bardzo krótkim impulsem, natomiast „wyprowadzenie” tej porcji ciepła trwa wiele minut.
+
+W celu poprawnego chłodzenia powierzchni skóry warto wykorzystać aparat Cryo-T cooler  wyprodukowany przez Metrum Cryoflex. To aparat przeznaczony do gabinetów medycyny estetycznej służący do chłodzenia powierzchni skóry. Medium chłodzącym jest strumień zimnego powietrza. Najważniejszym elementem tego aparatu jest głowica, która umożliwia pomiar temperatury powierzchni skóry. Sensor podczerwieni na bieżąco analizuje temperaturę powierzchni schładzanej skóry         i steruje intensywnością nadmuchu tak, żeby nie obniżyć jej temperatury poniżej 16-18°C. Dzięki temu jesteśmy pewni, że ciepło lasera i IPL zostanie odebrane w sposób właściwy i tkanka zostanie schłodzona, a nie zastymulowana.
+
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Bezpieczeństwo podczas pracy laserami
+URL: https://edu.metrum.com.pl/lessons/bezpieczenstwo-podczas-pracy-laserami/
+Content:
+Bezpieczeństwo podczas pracy laserami
+Laseroterapia – podstawy  Bezpieczeństwo podczas pracy laserami
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/3 Kroków
+Kontakt ze skórą i okiem
+Klasy bezpieczeństwa
+Zabezpieczenia i oznaczenia na urządzeniach
+Poprzedni Temat
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Kontakt ze skórą i okiem
+URL: https://edu.metrum.com.pl/topics/kontakt-ze-skora-i-okiem/
+Content:
+Kontakt ze skórą i okiem
+Laseroterapia – podstawy  Bezpieczeństwo podczas pracy laserami  Kontakt ze skórą i okiem
+W TRAKCIE
+
+Najbardziej narażone na szkodliwe działanie promieniowania laserowego są oczy, mniej niebezpieczne ale również istotne są uszkodzenia skóry. Ekspozycja na promieniowanie laserowe w obu przypadkach jest zazwyczaj przypadkowa. Niestety, nawet tak krótkotrwała i niezamierzona ekspozycja, zwłaszcza w nowoczesnych urządzeniach laserowych, może być bardzo niebezpieczna.
+
+Stopień oraz rodzaj uszkodzenia skóry/oka zależy w dużej mierze od długości fali laserowej oraz mocy (energii) emitowanej przez laser
+
+nadfiolet – 180nm-400nm
+
+skóra: oparzenie słoneczne, rumień, zwiększona pigmentacja, ciemnienie pigmentu
+oko: zapalne uszkodzenie rogówki, katarakta fotochromatyczna 
+
+światło widzialne – 400nm-700nm
+
+skóra: ciemnienie pigmentu, reakcje fotouczuleniowe, oparzenia skóry
+oko: fotochemiczne i termiczne uszkodzenie siatkówki
+
+podczerwień A – 700nm-1400nm
+
+skóra: oparzenie
+oko: katarakta, oparzenie siatkówki
+
+podczerwień B, C – 1400nm-1mm
+
+skóra: oparzenie
+oko: przymglenie rogówki, oparzenie rogówki
+
+Szkodliwe promieniowanie laserowe może trafić do oka nie tylko bezpośrednio z lasera ale może być również wiązką odbitą od przedmiotów znajdujących się na jej drodze jak np. metalowe kuwety, szyby okienne, soczewki. Jest to szczególnie niebezpieczne w przypadku promieniowania w niewidzialnym zakresie widma. Biorąc pod uwagę czas reakcji źrenicy, bardziej niebezpieczne wydaje się promieniowanie impulsowe, które czas tej reakcji wydłuża.
+
+Jak wynika z powyższych opisów i grafik, najbardziej niebezpieczne dla oka jest promieniowanie w zakresie 400-1400nm. Wynika to głównie z niskiej absorbcji takiego promieniowania w wodzie. Gałka oczna zbudowana głównie z wody, przez co nie jest w stanie wcześniej pochłonąć promieniowania, które dociera bezpośrednio na siatkówkę, stwarzając zagrożenie trwałej utraty wzroku.
+
+W związku z powyższym podczas pracy z laserami, konieczne jest aby zarówno pacjent jak i operator używali okularów ochronnych!
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Klasy bezpieczeństwa
+URL: https://edu.metrum.com.pl/topics/klasy-bezpieczenstwa/
+Content:
+Klasy bezpieczeństwa
+Laseroterapia – podstawy  Bezpieczeństwo podczas pracy laserami  Klasy bezpieczeństwa
+W TRAKCIE
+Promieniowanie laserowe o różnych długościach fali i o tej samej mocy może wywołać różne skutki podczas oddziaływania z tkanką biologiczną W związku z tą zależnością lasery podzielono na kilka klas: 1, 1M, 1S, 2, 2M, 3R, 3B, 4.
+
+
+Lasery klasy 1 to lasery bezpieczne, których moc jest bardzo niska lub, w przypadku większej mocy, zamknięte są w szczelnej obudowie bez możliwości otwarcia podczas pracy, np. nagrywarki DVD (poniżej 200mW).
+
+
+Lasery klasy 2 to lasery zawierające się w przedziale światła widzialnego (400nm-700nm) i mocy nieprzekraczającej 1mW np. wskaźniki laserowe (nie wszystkie, są takie, które moc mają znacznie większą). Jest całkowicie bezpieczny i nie wymaga stosowania okularów ochronnych.
+
+
+Lasery klasy 3 to lasery potencjalnie niebezpieczne lub niebezpieczne przy bezpośredniej ekspozycji promieniowania. Podczas ich używania należy zapewnić ochronę oczu (okulary). W zależności od podklasy (3R,3B) ich moc nie przekracza w trybie ciągłym 500mW.
+
+
+Lasery klasy 4 to lasery, w których emisja promieniowania jest niebezpieczna dla oczu i skóry w każdych warunkach, ponadto mogą wywołać pożar lub wybuch. Charakteryzują się mocą powyżej 500mW a podczas ich używania należy zachować szczególną ostrożność. Konieczne jest używanie okularów ochronnych.
+ 
+Wszystkie lasery sprzedawane przez MC to lasery klasy 4.
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Zabezpieczenia i oznaczenia na urządzeniach
+URL: https://edu.metrum.com.pl/topics/zabezpieczenia-i-oznaczenia-na-urzadzeniach/
+Content:
+Zabezpieczenia i oznaczenia na urządzeniach
+Laseroterapia – podstawy  Bezpieczeństwo podczas pracy laserami  Zabezpieczenia i oznaczenia na urządzeniach
+W TRAKCIE
+
+Zabezpieczenia lasera:
+
+specjalna, ochronna obudowa
+awaryjny przycisk wyłączenia/zatrzymania pracy lasera
+zdalna blokada INTERLOCK
+elementy uniemożliwiające prace niepowołanym użytkownikom – np. kluczyk do uruchomienia, blokada z kodem
+układy zdalnego sterowania w tym elementy do pomiaru mocy i energii emitowanej przez laser
+zabezpieczenia w postaci RFID, EPROM uniemożlwiające pracę innymi akcesoriami, niż te dostarczane przez producenta sprzętu.
+
+Oznaczenia laserów:
+
+tabliczka znamionowa – nazwa urządzenia, producent, nr seryjny znak CE, rok produkcji, podstawowe dane techniczne
+znaki i napisy ostrzegawcze
+
+Uwaga promieniowanie laserowe
+
+Awaryjny wyłącznik emisji promieniowania
+
+Miejsce podłączenia aplikatora światłowodowego
+
+Zdalna blokada interlock
+
+ 
+
+Informacja na temat klasy lasera
+
+Przygotowanie pomieszczenia:
+
+Nie tylko urządzenie powinno być odpowiednio oznakowane. Kluczowe dla bezpieczeństwa jest także odpowiednie przygotowanie pomieszczenia, oraz wejścia do niego, za pomocą naklejek.
+lampy błyskowe przed wejściem do pomieszczenia ostrzegające o pracy lasera
+minimalizowanie ilości przedmiotów mogących odbijać promieniowanie
+
+Ogólne zasady bezpieczeństwa podczas korzystania z urządzeń laserowych
+
+aparat może być użytkowany wyłącznie przez personel przeszkolony w obsłudze aparatu i posiada certyfikat wystawiony przez producenta/dystrybutora! Metrum Cryoflex nie odpowiada za szkody wyrządzone przez osoby, które nie posiadają wystawionego przez Metrum Cryoflex pisemnego certyfikatu potwierdzającego odbycie szkolenia  z obsługi urządzenia
+użytkowanie aparatu bez aktualnego dopuszczenia (przegląd techniczny) potwierdzonego przez serwis producenta jest zabronione. W takim przypadku cała odpowiedzialność za ewentualne szkody wynikające z wady sprzętu spoczywa na użytkowniku
+użytkownik powinien zapoznać się z instrukcją obsługi i bezwzględnie przestrzegać nakazów i zaleceń w niej zawartych. Instrukcja powinna znajdować się w pobliżu aparatu.
+należy zadbać o stabilne umiejscowienie lasera uniemożliwiające upadek przez przesunięcie. Powierzchnia na której stoi/postawiony jest laser powinna być płaska.
+urządzenie należy umiejscowić w taki sposób aby otwory wentylacyjne nie były zasłonięte.
+wiązka laserowa stanowi zagrożenie dla zdrowia! Jej skierowanie w stronę oczu może spowodować trwałe, nieodwracalne uszkodzenie wzroku. Należy zachować szczególną ostrożność, kiedy aparat jest w trybie READY!
+podczas pracy z laserem wszystkie osoby znajdujące się w pomieszczeniu powinny mieć założone specjalne okulary ochronne. Dotyczy to również pacjenta. Należy pamiętać, że okulary ochronne są skonstruowane w ten sposób, żeby zabezpieczać oczy przed promieniowaniem o danej długością fali. Nie należy używać okularów innych niż te dostarczone wraz ze sprzętem.
+włączone urządzenie nie powinno być pozostawione bez nadzoru. Należy bezwzględnie przed oddaleniem się od lasera (nawet chwilowym) zabezpieczyć go przed użyciem przez osoby trzecie (np. poprzez wyjęcie kluczyka)
+bezwzględnie zabrania się patrzenia w wiązkę laserową (tj. zaglądania do otworu wyjściowego lasera, z którego jest emitowana wiązka); dotyczy to także wiązki odbitej.
+zabrania się zabaw wiązkami laserowymi polegającymi na oświetlaniu ludzi, a także materiałów niebezpiecznych, np. łatwopalnych, reaktywnych itp.
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Lasery i inne urządzenia stosowane w medycynie estetycznej
+URL: https://edu.metrum.com.pl/lessons/lasery-i-inne-urzadzenia-stosowane-w-medycynie-estetycznej/
+Content:
+Lasery i inne urządzenia stosowane w medycynie estetycznej
+Laseroterapia – podstawy  Lasery i inne urządzenia stosowane w medycynie estetycznej
+W TRAKCIE
+
+Nazwy laserów z jakimi spotkać się możemy w medycynie pochodzą najczęściej od nazwy ośrodka czynnego (Nd:YAG, KTP itp.). Ze względu na bardzo szybki postęp techniczny każdego roku pojawiają się nowe urządzenia laserowe oraz platformy wielozadaniowe gdzie połączono kilka laserów (urządzeń EBD [energy base devises]). W medycynie estetycznej stosuje się głównie lasery wysokoenergetyczne generujące wysoką moc. Efekty jakie dzięki nim uzyskujemy to odparowanie tkanki, koagulacja czy cięcie i służą najczęściej do usuwania zmian skórnych i odmładzaniu skóry (blizny, rozstępy, brodawki, włókniaki itp.), redukcji owłosienia, usuwaniu tatuaży, naczynek itp. Techniki wykonywania zabiegów dzielimy na kontaktowe oraz bezkontaktowe, prowadzone z pewnej odległości (wyznacza ją najczęściej dystanser końcówki/głowicy zabiegowej). Sam laser może pracować natomiast w sposób ablacyjny         (z uszkodzeniem skóry – odparowaniem, mikrokraterami itd.) oraz nieablacyjny (nie przerywa ciągłości skóry). Stosowanie laseroterapii w medycynie jest niezwykle popularne ponieważ wiąże się z nim wiele zalet – doskonałe efekty terapeutyczne, szybkie, sprawdzone i bezpieczne procedury, szybki powrót do normalnej aktywności. Wśród najbardziej popularnych urządzeń wyróżniamy:
+
+Laser CO2
+
+Laser ablacyjny wyposażony w głowice chirurgiczne, skaner frakcyjny oraz opcjonalnie w głowice dopochwowe. Efekt uzyskujemy poprzez odparowanie wody zawartej w tkance (wiązka lasera 10600nm jest bardzo dobrze pochłaniana w wodzie) co prowadzi do uszkodzenia skóry oraz pobudza procesy jej regeneracji. Pierwszy efekt w postaci poprawy napięcia skóry widoczny jest po kilku dniach. Efekt pożądany w przypadku zabiegów np. frakcyjnych to znacznie dłuższy okres, który potrzebny jest do produkcji nowego kolagenu i kończy się po 6-8 tygodniach od zbiegu. Jest to laser najczęściej i najszerzej wykorzystywany w medycynie estetycznej. Charakteryzuje się dobrym stosunkiem ceny do możliwości zabiegowych (w tym otrzymywanych rezultatów).
+
+Laser Nd:YAG (neodymowo-yagowy)
+
+Urządzenie będące idealnym uzupełnieniem gabinetu medycyny estetycznej po zakupie lasera co2. Oczywiście często stanowi on wybór numer jeden. Jego możliwości zabiegowe w zależności od konfiguracji urządzenia mogą być bardzo duże. Od usuwania tatuaży i makijażu permanentnego, przebarwień i plam skórnych (laser z Q-Switchem), poprzez nieablacyjne zabiegi odmładzania skóry i leczenie grzybicy paznokci (tryb GENESIS działający w mikrosekundach – us) aż do redukcji zmian naczyniowych i depilacji (w laserach z tak zwanym Long Pulsem czyli impulsem o długości milisekund – ms). Nie wszystkie z tych trybów zawsze znajdziemy w jednym urządzeniu. Najczęściej spotkamy lasery long pulsowe dedykowane do zmian naczyniowych lub Q-Switchowe do usuwania tatuaży. Oferowany przez Metrum Cryoflex laser Q-Master Plus zawiera w sobie wszystkie te tryby.
+
+Lasery do usuwania zmian naczyniowych (1064nm, 980nm, 532nm)
+
+Różnego typu lasery, których chromoforem jest hemoglobina pozwalają na skuteczne i szybkie zamykanie naczyń przezskórnie. Wykorzystane jest tu zjawisko selektywności oddziaływania wiązki laserowej na tkankę. Jedne z popularniejszych urządzeń na rynku. Pamiętać należy przy tym, że nie ma uniwersalnego lasera do zamykania każdego rodzaju zmian naczyniowych jakie mogą występować. Inne lasery ze względu na właściwości ich promieniowania będą dedykowane do zmian w postaci rumienia czy gęstych sieci płytko położonych naczyń (532nm, 585nm) inne natomiast do pajączków i większych zmian na twarzy i nogach (980nm, 1064nm).
+
+RF mikroigłowy
+
+To nowoczesne urządzenia wykorzystujące połączenie dwóch niezależnych procedur – nakłuwania mikroigłowego oraz termicznego oddziaływania na skórę. Efekty uzyskiwane przy odmładzaniu skóry za jego pomocą są zbliżone do lasera CO2 z tą różnicą że można je wykonywać cały rok. Co więcej pacjent szybciej się goi, zwłaszcza jeśli igły są wykonane w technologii izolowania (oddziaływanie na konkretnie zadanej głębokości bez uszkodzenia naskórka). Inne zabiegi jakie można wykonać tymi aparatami to skuteczna redukcja rozstępów oraz leczenie nadpotliwości.
+
+Lasery do usuwania owłosienia
+
+Tutaj również mamy kilka kategorii laserów – diodowe (810nm lub mieszane fale 755,810,1064), neodymowo yagowe czy aleksandrytowe (755). Im szersze spektrum tym lepiej gdyż pozwala to na redukcje owłosienia w każdym kolorze i grubości. Częściej stosowane w kosmetologii niż medycynie estetycznej.
+
+IPL
+
+To urządzenia (nie lasery) wykorzystujące lampę błyskową i kryształy (filtry) dzięki którym uzyskujemy pożądane zakresy długości fali (400-120nm). Skuteczne w leczeniu zmian naczyniowych, epilacji, przebarwieniach i inne.
+
+Na rynku istnieje wiele innych laserów i urządzeń do medycyny estetycznej jak np. lasery tulowe, Er:YAG, rubinowe, lampy LED, HiFu itd. Warto na bieżąco śledzić doniesienia o nowych urządzeniach czy wskazaniach w tej dziedzinie.
+
+Poprzedni Temat
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Lasery produkcji METRUM CRYOFLEX
+URL: https://edu.metrum.com.pl/lessons/lasery-produkcji-metrum-cryoflex/
+Content:
+Lasery produkcji METRUM CRYOFLEX
+Laseroterapia – podstawy  Lasery produkcji METRUM CRYOFLEX
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/3 Kroków
+Laser Twist 1940nm, 10W
+Laser Swing 1470nm, 15W
+Laser Salsa 940nm, 280W
+Poprzednia Lekcja
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Laser Twist 1940nm, 10W
+URL: https://edu.metrum.com.pl/topics/laser-twist-1940nm-10w/
+Content:
+Laser Twist 1940nm, 10W
+Laseroterapia – podstawy  Lasery produkcji METRUM CRYOFLEX  Laser Twist 1940nm, 10W
+W TRAKCIE
+
+TWIST Diode 1940nm to zaawansowany laser do zabiegów flebologicznych oraz proktologicznych o wysokim stopniu bezpieczeństwa dla pacjenta, zapewniający 290 razy lepszą absorpcję długości fali w wodzie niż w przypadku fali 980nm (oraz 4 razy lepszą niż 1470nm) co przekłada się na:
+
+brak ryzyka poparzeń oraz mogących wystąpić związanych z nimi efektów odbarwień skóry
+brak efektu karbonizacji tkanki w żyle i krwi na światłowodzie
+możliwość używania mniejszych energii w zabiegu
+
+Co zapewnia
+
+wysoką skuteczność zabiegu, niskie ryzyko nawrotów, większe zadowolenie pacjentów
+duże bezpieczeństwo zabiegu dla pacjenta – niskie ryzyko powikłań
+
+Zastosowanie
+
+flebologia (żylaki kończyn dolnych – zabieg EVLT)
+proktologia (hemoroidy, przetoki, cysty pilonidalne, szczeliny odbytu)
+
+Przewaga lasera TWIST Diode 1940nm podczas zabiegu EVLT:
+
+efektywne zamknięcie światła żyły przy użyciu mniejszej dawki energii dostarczanej do żyły (średnio 47 J/cm przy mocy z zakresu od 4 do 6 W)
+brak efektu karbonizacji tkanki w żyle i krwi na światłowodzie gwarantujący transfer jednorodnej dawki energii na całej długości żyły, dzięki czemu, światłowód może być użyty w zabiegu wykonywanym na obu kończynach, bez potrzeby usuwania zwęgleń z jego powierzchni lub wymiany na nowy
+brak ryzyka poparzeń oraz mogących wystąpić związanych z nimi efektów odbarwień skóry
+wysoka skuteczność zabiegu sięgająca wg. publikacji naukowych ponad 95% w pierwszym roku po zabiegu i 91% po 3 latach od zabiegu
+
+Przewaga lasera TWIST Diode 1940nm podczas zabiegu proktologii:
+
+efektywne zabiegi przy użyciu mniejszej mocy i energii lasera (6W/3s) względem laser 1470nm
+mniejsze oddziaływanie termiczne na tkanki sąsiednie
+bardzo wysoka skuteczność zabiegów
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Laser Swing 1470nm, 15W
+URL: https://edu.metrum.com.pl/topics/laser-swing-1470nm-15w/
+Content:
+Laser Swing 1470nm, 15W
+Laseroterapia – podstawy  Lasery produkcji METRUM CRYOFLEX  Laser Swing 1470nm, 15W
+W TRAKCIE
+
+Lasery SWING 15W to najbardziej uniwersalne narzędzie tego typu dostępne na polskim rynku.  Zróżnicowana oferta akcesoriów sprawia, że lasery SWING znajdują zastosowanie między innymi w chirurgii naczyniowej, proktologii, medycynie estetycznej, chirurgii endoskopowej, laryngologii i ginekologii. 
+
+Laser SWING emituje promieniowanie o długości fali 1470 nm. Jest to optymalna długość fali dla penetracji w skórze. Odpowiednio niska absorpcja w hemoglobinie i melaninie, a jednocześnie wysoka w wodzie i tłuszczu. Fala ta jest pochłaniana przez wodę komórkową 40 razy lepiej niż w przypadku lasera 980nm i 160 razy lepiej niż w przypadku lasera 1064 nm.
+
+Zastosowanie
+
+Flebologia – endowaskularne usuwanie niewydolnych pni żylnych (EVLT)
+Proktologia – ablacja hemoroidów, fistula, cysta pilonidalna, szczelina odbytu
+Medycyna estetyczna  – lipoliza, liposukcja wspierana laserem
+Ortopedia – laserowa dekompresja dysku
+Laryngologia – chirurgia tkanek miękkich
+Ginekologia – histeroskopia i laparoskopia
+
+Flebologia
+
+Laser o długości fali 1470nm jest złotym standardem w EVLT dla głównych żył pniowych. Wysoka absorpcja promieniowania o długości fali 1470nm w wodzie ogranicza oddziaływanie wiązki jedynie do zamykanej żyły, bez ingerencji w otaczające tkanki. Efektem są:
+
+Zmniejszone odczucia bólowe.
+Zminimalizowane ryzyko perforacji żyły i jej karbonizacji.
+Zminimalizowane ryzyko przebarwień na powierzchni skóry tam, gdzie obliterowana żyła przebiega blisko jej powierzchni.
+
+Proktologia
+
+Długość fali 1470nm ma wysoki stopień absorpcji w wodzie tkankowej z jednoczesnym oddziaływaniem na krew. Ta biofizyczna właściwość sprawia, że strefa ablacji jest płytka i kontrolowana, co przekłada się na brak ryzyka uszkodzenia tkanek sąsiednich. Zalety metody laserowej w proktologii
+
+Zabieg jednorazowy, szybki powrót do normalnej aktywności, niskie ryzyko powikłań
+Zredukowane krwawienia i bolesność zabiegu
+Wysoka skuteczność
+
+PLDD (laserowa dekompresja dysku)
+
+Zabiegi PLDD wykonywane są w znieczuleniu miejscowym. Pod kontrolą RTG (ramię C) wprowadza się do dysku kaniulę ze światłowodem. Podając kontrast oceniamy strukturę dysku oraz położenie kaniuli. Emisja promieniowania laserowego powoduje dekompresję dysku i zmniejszenie ciśnienia śróddyskowego. Odparowaniu ulega niewielka ilość jądra miażdżystego. Metoda ta minimalizuje ryzyko uszkodzenia worka oponowego, korzeni rdzeniowych czy samego rdzenia. PLDD nie powoduje wzmocnienia pierścienia włóknistego, jest zabiegiem naprawczym – zmniejsza objętość dysku a co za tym idzie redukuje ciśnienie w jego wnętrzu.
+
+Zalety PLDD
+
+Procedura jednodniowa (obserwacja do 4 h po zabiegu)
+Procedura wykonywana w znieczuleniu miejscowym
+Minimalna inwazyjność – brak uszkodzenia otaczających tkanek
+Wysoka skuteczność zabiegów i krótki czas rehabilitacji
+Możliwość powtarzania procedury
+
+Liposukcja wspierana laserem
+
+Jednym z najnowszych zastosowań promieniowania emitowanego przez urządzenia laserowe jest lipoliza laserowa nazywana również liposukcją małych objętości. Istota lipolizy laserowej polega na selektywnym działaniu promienia laserowego na tkankę tłuszczową, powodującym niszczenie termiczne komórek tłuszczowych. Emitowana przez lasery SWING wiązka o długości fali 1470nm jest zbliżona do pików absorpcyjnych tłuszczu, co gwarantuje skuteczną liposukcję lokalnych otyłości i kształtowanie sylwetki ciała. Unikalną cechą zabiegu z użyciem lasera jest zdecydowana poprawa elastyczności i sprężystości skóry, osiągana w rezultacie podgrzania włókien kolagenowych nad miejscem prowadzenia zabiegu.
+
+Zalety zabiegów liposukcji wykonywanych z pomocą laserów diodowych:
+
+Mała inwazyjność zabiegu
+Znieczulenie miejscowe
+Równoczesna koagulacja naczyń (w efekcie mniejsze krwawienie)
+Skrócenie czasu rekonwalescencji
+Możliwość wykonania zabiegu w takich obszarach jak: policzki, podbródek, ramiona, brzuch, kolana, uda, również ginekomastia
+Poprawa powierzchniowej jednorodności skóry po zabiegu
+Jednoczesna laserowa stymulacja skóry poprawiająca stan jej napięcia
+
+Chirurgia (laryngologia, ginekologia itp.)
+
+Laser Swing doskonale sprawdza się w zabiegach na tkankach miękkich. Umożliwia cięcie i ablację tkanek z minimalnym uszkodzeniem termicznym. Może być wykorzystywany w zabiegach laparoskopowych oraz histeroskopowych.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Laser Salsa 940nm, 280W
+URL: https://edu.metrum.com.pl/topics/laser-salsa-940nm-280w/
+Content:
+Laser Salsa 940nm, 280W
+Laseroterapia – podstawy  Lasery produkcji METRUM CRYOFLEX  Laser Salsa 940nm, 280W
+W TRAKCIE
+
+Laser Salsa 280W to urządzenie, które idealnie sprawdzi się w zabiegach gdzie głównym chromoforem wiązki jest hemoglobina (przezskórne zamykanie naczyń) lub w zabiegach, w których minimalizowanie krwawienia i dobra koagulacja są najważniejsze (liposukcja wspierana laserem).
+
+Przezskórne zamykanie naczyń.
+
+Ze względu na większą absorpcję światła laserowego w hemoglobinie, terapia przezskórna zmian naczyniowych wykonywana przez laser diodowy o długości fali 940nm wymaga mniejszej gęstości energii niż terapia laserami 1064 nm. Dlatego zabiegi przeprowadzane laserem SALSA 940  są szybsze, mniej bolesne i bezpieczniejsze przy porównywalnej skuteczności do takich laserów jak Nd: YAG, KTP, laser diodowy 810nm i 980nm. Ponadto, dostępna w laserze moc 280W jest niespotykaną w żadnym innym urządzeniu. Pozwala to na skuteczne zamknięcie naczyń bardzo krótkim impulsem (na twarzy 5ms – konkurencja 30-40ms).
+
+Liposukcja wspierana laserem
+
+Długość fali 940nm ze względu na wysokie powinowactwo do hemoglobiny idealnie sprawdza się w zabiegach lipolizy laserowej gdzie szczególnie ważne jest minimalizowanie krwawienia i szybka koagulacja naczyń. Co więcej, wiązka 940nm jest również na piku absorbcyjnym tłuszczu, dzięki czemu zabieg jest szybki i efektywny.
+
+Zalety zabiegów wykonywanych za pomocą laserów diodowych:
+
+Mała inwazyjność zabiegu
+Znieczulenie miejscowe
+Równoczesna koagulacja naczyń (w efekcie mniejsze krwawienie)
+Skrócenie czasu rekonwalescencji
+Możliwość wykonania zabiegu w takich obszarach jak: policzki, podbródek, ramiona, brzuch, kolana, uda, również ginekomastia
+Poprawa powierzchniowej jednorodności skóry po zabiegu
+Jednoczesna laserowa stymulacja skóry poprawiająca stan jej napięcia
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Lasery i urządzenia dystrybuowane przez METRUM CRYOFLEX
+URL: https://edu.metrum.com.pl/lessons/lasery-i-urzadzenia-dystrybuowane-przez-metrum-cryoflex/
+Content:
+Lasery i urządzenia dystrybuowane przez METRUM CRYOFLEX
+Laseroterapia – podstawy  Lasery i urządzenia dystrybuowane przez METRUM CRYOFLEX
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/4 Kroków
+Laser CO2 Bioxel
+Laser Nd:YAG Q-Switch z long pulsem Q-MASTER PLUS
+Radiofrekwencja mikroigłowa ANTIGE
+Chirurgiczny laser CO2 HESTIA
+Poprzedni Temat
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Laser CO2 Bioxel
+URL: https://edu.metrum.com.pl/topics/laser-co2-bioxel/
+Content:
+Laser CO2 Bioxel
+Laseroterapia – podstawy  Lasery i urządzenia dystrybuowane przez METRUM CRYOFLEX  Laser CO2 Bioxel
+W TRAKCIE
+
+Laser BIOXEL to ultranowoczesne narzędzie pracy wykorzystywane w medycynie estetycznej, chirurgii, ginekologii estetycznej, laryngologii oraz stomatologii. Wysoka moc szczytowa trybu UltraPulse na poziomie 315W pozwala na wykonywanie precyzyjnych zabiegów chirurgicznych. Laser posiada 45 zapisanych programów zabiegowych gwarantujących najwyższy komfort, skuteczność i bezpieczeństwo podczas pracy. Co równie istotne laser jest niezwykle łatwy w obsłudze gdyż posiada intuicyjny i przyjazny dla użytkownika interface w języku polskim zamknięty w wygodnym, dużym panelu dotykowym.
+
+Laser BIOXEL wyposażony jest standardowo w trzy głowice (dwie chirurgiczne o ogniskowych 50 mm       i 100 mm oraz frakcyjną) i kilka opcjonalnych (laryngologia, stomatologia). Laser przystosowany jest do współpracy z mikromanipulatorem, kolposkopem oraz mikroskopem.
+
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Laser Nd:YAG Q-Switch z long pulsem Q-MASTER PLUS
+URL: https://edu.metrum.com.pl/topics/laser-ndyag-q-switch-z-long-pulsem-q-master-plus/
+Content:
+Laser Nd:YAG Q-Switch z long pulsem Q-MASTER PLUS
+Laseroterapia – podstawy  Lasery i urządzenia dystrybuowane przez METRUM CRYOFLEX  Laser Nd:YAG Q-Switch z long pulsem Q-MASTER PLUS
+W TRAKCIE
+
+Wszechstronny, uniwersalny laser Nd:YAG, opracowany dla profesjonalnych klinik medycyny estetycznej. Jedyne urządzenie na rynku pracujące w 3 długościach impulsu:
+
+nanosekundy (ns) – redukcja tatuaży, przebarwień, makijażu permanentnego
+mikrosekundy (us) – nieablacyjne zabiegi frakcyjne i grzybice paznokci
+milisekundy (ms) – przezskórne zamykanie naczyń, depilacja laserowa
+
+Laser Q-MASTER PLUS ma intuicyjne polskie menu oraz 31 zdefiniowanych trybów pracy, dodatkowe bezpieczeństwo zapewniają identyfikowalne przeze system lasera głowice zabiegowe.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Radiofrekwencja mikroigłowa ANTIGE
+URL: https://edu.metrum.com.pl/topics/radiofrekwencja-mikroiglowa-antige/
+Content:
+Radiofrekwencja mikroigłowa ANTIGE
+Laseroterapia – podstawy  Lasery i urządzenia dystrybuowane przez METRUM CRYOFLEX  Radiofrekwencja mikroigłowa ANTIGE
+W TRAKCIE
+
+Przełomowa technika frakcjonowania mikroigłowego RF. Frakcyjna radiofrekwencja mikroigłowa to skuteczny zabieg odmładzania skóry oraz redukcji problemów skórnych. Technologia frakcyjnej radiofrekwencji mikrogiłowej to nowoczesna metoda oparta o precyzyjne działanie izolowanych mikroigieł. Połączenie dwóch niezależnych procedur – nakłuwania mikroigłowego oraz termicznego oddziaływania na skórę pozwoliło na uzyskanie niewiarygodnych rezultatów w przebudowie skóry – tzw. Termolifting. ANTIGE to ultranowoczesny aparat wykorzystywany w medycynie estetycznej, dermatologii i kosmetologii, pozwalający wykonywać zabiegi zarówno o działaniu ablacyjnym, jak i nieablacyjnym.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Chirurgiczny laser CO2 HESTIA
+URL: https://edu.metrum.com.pl/topics/chirurgiczny-laser-co2-hestia/
+Content:
+Chirurgiczny laser CO2 HESTIA
+Laseroterapia – podstawy  Lasery i urządzenia dystrybuowane przez METRUM CRYOFLEX  Chirurgiczny laser CO2 HESTIA
+W TRAKCIE
+
+Chirurgiczny laser co2 o mocy 40W do zastosowań w ablacji i cięciu tkanek miękkich. Szybka i bezpieczna praca możliwa jest dzięki dwóm głowicom chirurgicznym o ogniskowej 50 mm i 100 mm.  Laser Hestia idealnie sprawdzi się w zabiegach dermatologicznych, weterynaryjnych, laryngologicznych, stomatologicznych i innych.
+
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Urządzenia uzupełniające ofertę laserową.
+URL: https://edu.metrum.com.pl/lessons/urzadzenia-uzupelniajace-oferte-laserowa/
+Content:
+Urządzenia uzupełniające ofertę laserową.
+Laseroterapia – podstawy  Urządzenia uzupełniające ofertę laserową.
+W TRAKCIE
+
+Chłodziarka zabiegowa Cryo-T Cooler
+
+CRYO-T ® Cooler to aparat, który za pomocą niezwykle wydajnego agregatora, unikalnych, opracowanych przez METRUM CRYOFLEX algorytmów oraz jedynej w swoim rodzaju technologii WIND-UP, pozwala na połączenie w jednym urządzeniu kriostymulacji azotowej i niestymulacyjnego schładzania skóry przy zabiegach laserowych, urazach czy oparzeniach. Automatyczny tryb pracy sam dostosowuje intensywność nadmuchu odczytując na bieżąco informację o temperaturze skóry (dla dyszy z pomiarem).
+
+Zalety urządzenia:
+
+Nie wymaga zasilania gazem
+Zawiera nowoczesne systemy bezpieczeństwa
+Przyjazny interfejs użytkownika
+Szybki start i osiągnięcie temperatury w kilka minut
+Jest łatwy i bezpieczny w użyciu; wykonany zgodnie z medycznymi normami ISO
+Niezawodny
+Nie wymaga dodatkowych kosztów eksploatacji
+Pozwala na wyjątkowo efektywne, niestymulacyjne schładzanie skóry podczas zabiegów laseroterapii co znacząco redukuje efekty uboczne i zwiększa komfort pacjentów
+
+Ewakuator dymów zabiegowych EV-1000
+
+Ewakuatory stosuje się przy zabiegach fotokoagulacji, elektrokoagulacji oraz waporyzacji laserowej, podczas których powstaje dym o przykrym zapachu, zawierający materiał biologiczny, powodując skażenie gabinetu. W dymie często znajdują się genomy wirusowe, np. HPV, stwarzające zagrożenie jatrogenną infekcją dróg oddechowych zarówno u pacjentów jak i personelu. Ewakuator zapewnia skuteczne usuwanie i filtrację dymu powstałego podczas waporyzacji tkanek. Ewakuatory dymu EV1000 cechuje bardzo niski koszt eksploatacji w porównaniu z ogólnie dostępnymi modelami. Ewakuator posiada wielowarstwowy filtr o dużej powierzchni, umożliwiający długi czas pracy – nawet do 2 tysięcy godzin. Ewakautor może być bezpośrednio połączony z laserem CO2 Bioxel, dzięki czemu możliwa jest obsługa obu urządzeń przy pomocy jednego przełącznika nożnego.
+
+Poprzedni Temat
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: To trzeba zapamiętać
+URL: https://edu.metrum.com.pl/lessons/to-trzeba-zapamietac/
+Content:
+To trzeba zapamiętać
+Laseroterapia – podstawy  To trzeba zapamiętać
+W TRAKCIE
+
+PEŁNY SERWIS PL
+lasery dostarczane do gabinetu, prezentacja u lekarza w gabinecie, asysta przy pierwszych zabiegach, szkolenie z obsługi, serwis gwarancyjny i pogwarancyjny
+
+URZĄDZENIA ZASTĘPCZE
+podczas dłuższego serwisu lub awarii udostępniamy urządzenia zastępcze
+
+REALNE PARAMETRY LASERA
+Metrum, jako producent innych urządzeń laserowych każde urządzenie dokładnie sprawdza, dokonuje pomiarów i ewentualnej kalibracji – wykwalifikowani inżynierowie
+
+SZKOLENIA DLA LEKARZY
+możliwość szkolenia na zakupionym urządzeniu przeprowadzonego przez lekarza specjalistę, który również na co dzień na takim sprzęcie pracuje
+
+LASERY DOSTĘPNE OD RĘKI
+lekarz może zaczynać pracę niemal od razu po podjęciu decyzji o zakupie.
+
+
+MOŻLWIOŚĆ WYPOZYCZENIA LASERA Z ASYSTĄ DOŚWIADCZONEGO PRZEDSTAWICIELA
+większy komfort lekarza, brak ryzyka błędnego ustawienia lasera, płynne wprowadzenia w zabiegi.
+
+Światło i promieniowanie optyczne
+
+Światło – potocznie nazywa się tak widzialną część promieniowania elektromagnetycznego, czyli promieniowanie widzialne odbierane przez siatkówkę oka ludzkiego. Przyjmuje się, ze długość fal dla tego zakresu to 400–700 nm. Przyjmuje się, że promieniowanie optyczne obejmuje zakres fal elektromagnetycznych o długości od 100nm do 1 mm, podzielony na trzy zakresy: ultrafiolet, światło widzialne i podczerwień.
+Reakcja z tkanką
+
+Laser, jak każde źródło światła, podczas padania na daną powierzchnię (np. na tkankę) będzie powodował różne reakcje:
+Odbicie – zwrot promieniowania bez zmiany jego składowych
+Pochłanianie (absorpcja) – przemiana energii promieniowania w inna formę (np. cieplną)
+Przepuszczanie – przechodzenie promieniowania bez zmiany jego składowych
+W wyniku zarówno odbicia, jak i przepuszczania, może zachodzić rozpraszanie światła. W wyniku samego przepuszczania z kolei może zachodzić załamanie (czyli refrakcja).
+
+Laser, dzięki swoim unikalnym cechom, działa na komórki i ulega przenikaniu przez nie oraz absorbcji w poszczególnych chromatoforach. W ten sposób stopniowo wytraca swoją energię. W zależności od długości fali promieniowania laserowego chromatoforami są woda, hemoglobina (oksyhemoglobina, deoksyhemoglobina), melanina itp.
+
+Absorbcja w chromoforach a głębokość wnikania
+
+Efekty w tkance w zależności od mocy i czasu trwania impulsu
+
+Jednostki
+
+Przedrostek	Oznaczenie	Mnożnik	Mnożnik wykładniczo
+piko	p	0,000000000001	10-12
+nano	n	0,000000001	10-9
+mikro	μ	0,000001	10-6
+mili	m	0,001	10-3
+JEDNOSTKA		1	100
+kilo	k	1 000	103
+mega	M	1 000 000	106
+giga	G	1 000 000 000	109
+Wat (W) – jednostka mocy – 1W = 1J : 1s
+Dżul (J) – jednostka energii – 1J = 1W * 1s
+
+UWAGA:
+pamiętamy o prawidłowych jednostkach np. ilość energii dostarczonej z użyciem 1W mocy dostarczonej w 1 milisekundzie – ms – równa będzie 1mJ
+
+gęstość mocy – 1W/cm2
+gęstość energii – 1J/cm2 = 1W/cm2*1s
+
+Poniższy wykres przestawia możliwy do uzyskania wpływ promieniowania laserowego na tkankę
+
+Efekty foto-chemiczne Efekty foto-biologiczne FP < 500 mW/cm2 t ~ CW
+Efekty foto-termiczne FP > 1 W/cm2 – kW/cm2 t ~1 ms – CW
+Efekty foto-ablacyjne FP > 1 MW/cm2 t ~ 1 μs – 999 μs
+Efekty foto-mechaniczne FP > 100 MW/cm2 t ~ 1 ns – 500 ns
+Chłodzenie podczas zabiegów laserowych
+
+
+chłodzenie w trakcie zabiegów i po zabiegach laserowych lub IPL redukuje odczucie bólu. Dzięki temu zwiększamy komfort pacjenta oraz ograniczamy użycie środków analgetycznych.
+chroni tkanki przed uszkodzeniem termicznym – minimalizuje stany zapalne i obrzęki po zabiegach laserowych i IPL , co znacznie skraca okres rekonwalescencji pacjenta.
+zabezpiecza przed powstawaniem przebarwień i odbarwień po zabiegach laserowych i IPL.
+W celu poprawnego chłodzenia powierzchni skóry warto wykorzystać aparat Cryo-T cooler  wyprodukowany przez Metrum CryoFlex. To aparat przeznaczony do gabinetów medycyny estetycznej służący do chłodzenia powierzchni skóry. Medium chłodzącym jest strumień zimnego powietrza. Najważniejszym elementem tego aparatu jest głowica, która umożliwia pomiar temperatury powierzchni skóry. Sensor podczerwieni na bieżąco analizuje temperaturę powierzchni schładzanej skóry i steruje intensywnością nadmuchu tak, żeby nie obniżyć jej temperatury poniżej 16-18°C. Dzięki temu jesteśmy pewni, że ciepło lasera i IPL zostanie odebrane w sposób właściwy i tkanka zostanie schłodzona, a nie zastymulowana.
+Bezpieczeństwo pracy
+
+Najbardziej narażone na szkodliwe działanie promieniowania laserowego są oczy, mniej niebezpieczne ale również istotne są uszkodzenia skóry. Ekspozycja na promieniowanie laserowe w obu przypadkach jest zazwyczaj przypadkowa. Niestety, nawet tak krótkotrwała i niezamierzona ekspozycja, zwłaszcza w nowoczesnych urządzeniach laserowych, może być bardzo niebezpieczna. Szkodliwe promieniowanie laserowe może trafić do oka nie tylko bezpośrednio z lasera ale może być również wiązką odbitą od przedmiotów znajdujących się na jej drodze jak np. okienka, metalowe kuwety, szyby okienne, soczewki. Jest to szczególnie niebezpieczne w przypadku promieniowania w niewidzialnym zakresie widma. Biorąc pod uwagę czas reakcji źrenicy, bardziej niebezpieczne wydaje się promieniowanie impulsowe, które czas tej reakcji wydłuża. Najbardziej niebezpieczne dla oka jest promieniowanie w zakresie 400-1400nm. Wynika to głównie z niskiej absorbcji takiego promieniowania w wodzie. Gałka oczna zbudowana głównie z wody, przez co nie jest w stanie wcześniej pochłonąć promieniowania, które dociera bezpośrednio na siatkówkę, stwarzając zagrożenie trwałej utraty wzroku. W związku z powyższym przy podczas pracy z laserami, konieczne jest aby zarówno pacjent jak i operator używali okularów ochronnych!
+Ogólne zasady bezpieczeństwa podczas korzystania z urządzeń laserowych
+
+
+aparat może być użytkowany wyłącznie przez personel przeszkolony w obsłudze aparatu i posiada certyfikat wystawiony przez producenta/dystrybutora! Metrum Cryoflex nie odpowiada za szkody wyrządzone przez osoby, które nie posiadają wystawionego przez Metrum Cryoflex pisemnego certyfikatu potwierdzającego odbycie szkolenia  z obsługi urządzenia
+użytkowanie aparatu bez aktualnego dopuszczenia (przegląd techniczny)  potwierdzonego przez serwis producenta jest zabronione. W takim przypadku cała odpowiedzialność za ewentualne szkody wynikające z wady sprzętu spoczywa na użytkowniku
+użytkownik powinien zapoznać się z instrukcją obsługi i bezwzględnie przestrzegać nakazów i zaleceń w niej zawartych. Instrukcja powinna znajdować się w pobliżu aparatu.
+wiązka laserowa stanowi zagrożenie dla zdrowia! Jej skierowanie w stronę oczu może spowodować trwałe, nieodwracalne uszkodzenie wzroku. Należy zachować szczególną ostrożność, kiedy aparat jest w trybie READY!
+podczas pracy z laserem wszystkie osoby znajdujące się w pomieszczeniu powinny mieć założone specjalne okulary ochronne. Dotyczy to również pacjenta.
+włączone urządzenie nie powinno być pozostawione bez nadzoru. Należy bezwzględnie przed oddaleniem się od lasera (nawet chwilowym)  zabezpieczyć go przed użyciem przez osoby trzecie (np. poprzez wyjęcie kluczyka)
+bezwzględnie zabrania się patrzenia w wiązkę laserową (tj. zaglądania do otworu wyjściowego lasera, z którego jest emitowana wiązka); dotyczy to także wiązki odbitej.
+zabrania się zabaw wiązkami laserowymi polegającymi na oświetlaniu ludzi, a także materiałów niebezpiecznych, np. łatwopalnych, reaktywnych itp.
+Lasery w ofercie Metrum Cryoflex
+
+
+PRODUKCYJNE
+
+SALSA 940nm 280W
+
+Przezskórne zamykanie naczyń!
+Liposukcja wspierana laserem
+
+SWING 1470nm 15W
+
+EVLT (laserowe leczenie żylaków kończyn dolnych)
+Proktologia (hemoroidy, przetoki, torbiele)
+PLDD (laserowa dekompresja dysku)
+Liposukcja wspierana laserem
+laryngologie, ginekologie i inne chirurgiczne
+
+TWIST 1940nm 10W
+
+EVLT (laserowe leczenie żylaków kończyn dolnych)
+Proktologia (hemoroidy, przetoki, torbiele)
+Chirurgia (laryngologia, ginekologia, inne)
+
+HANDLOWE
+
+BIOXEL CO2 10600nm 40W
+
+Chirurgia + głowica frakcyjna + ginekologia estetyczna
+(dermatologia, medycyna estetyczna, ginekologia i ginekologia estetyczna, laryngologia, stomatologia)
+
+HESTIA CO2 10600nm 40W
+
+Chirurgia (dermatologia, ginekologia, chirurgia, weterynaria)
+
+Q-Master Plus – 1064nm/532nm
+
+Q-Switch
+Impulsy (ms, us, ns)
+(dermatologia, medycyna estetyczna, kosmetologia, redukcja tatuaży i makijażu permanentnego, grzybice paznoki)
+
+ANTIGE RF MIKROIGŁOWY
+
+Medycyna estetyczna (przebudowa skóry, rozstępy, leczenie nadpotliwości)
+
+Dodatkowe urządzenia w ofercie: Cryo-T Cooler + ewakuator EV1000
+
+Poprzednia Lekcja
+Wróć do kursu
+----------------------------------------
+

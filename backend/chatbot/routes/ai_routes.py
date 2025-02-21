@@ -50,12 +50,7 @@ async def ask_ai(request: AskAiRequest):
             {"$set": {"lastUpdated": datetime.utcnow()}}
         )
 
-        base_instructions = assistant.get('preprompt', '')
-        language_instruction = (
-            f"\nPlease respond in {request.language} as it is our client's choice. "
-            f"Use appropriate cultural context and language nuances for {request.language} speakers."
-        )
-        instructions = base_instructions + language_instruction
+        instructions = assistant.get('preprompt', '')
 
         if request.stream:
             stream = openai.beta.threads.runs.create(

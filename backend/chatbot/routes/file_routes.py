@@ -87,17 +87,8 @@ async def list_files(request: FetchFilesRequest):
     try:
         # Define the base query
         query = {}
-        
-        if request.vectorstore_id == "vs_3pMJW2Ylgb8X8UrKxWjcXQDU":
-            # For this specific vectorstore_id, fetch files with this id or no id
-            query = {
-                "$or": [
-                    {"vectorstore_id": "vs_3pMJW2Ylgb8X8UrKxWjcXQDU"},
-                    {"vectorstore_id": {"$exists": False}},
-                    {"vectorstore_id": None}
-                ]
-            }
-        elif request.vectorstore_id:
+
+        if request.vectorstore_id:
             # For any other vectorstore_id, fetch only files with that id
             query = {"vectorstore_id": request.vectorstore_id}
         else:

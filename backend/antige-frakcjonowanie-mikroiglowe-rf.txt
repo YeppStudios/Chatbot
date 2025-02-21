@@ -1,0 +1,848 @@
+
+ANTIGE
+Przełomowa technika frakcjonowania mikroigłowego RF w zasięgu ręki
+ 
+
+
+Działanie ablacyjne i nieablacyjne
+
+ANTIGE to ultranowoczesny aparat wykorzystywany w medycynie estetycznej, dermatologii i kosmetologii, pozwalający wykonywać zabiegi zarówno o działaniu ablacyjnym, jak i nieablacyjnym.
+
+
+Nowoczesna technologia
+
+Frakcyjna radiofrekwencja mikroigłowa to skuteczny zabieg odmładzania skóry oraz redukcji problemów skórnych, łączący nakłuwanie mikroigłowe z działaniem fal elektromagnetycznych RF.
+
+
+Łatwy w obsłudze
+
+Intuicyjny i przyjazny dla użytkownika interface ze zdefiniowanymi programami zabiegowymi. Całość zamknięta jest w wygodnym, dużym panelu dotykowym, umieszczonym na optymalnej dla operatora wysokości.
+
+
+
+
+Title: Budowa i działanie radiofrekwencji mikroigłowej Antige
+URL: https://edu.metrum.com.pl/lessons/budowa-i-dzialanie-radiofrekwencji-mikroiglowej-antige/
+Content:
+Budowa i działanie radiofrekwencji mikroigłowej Antige
+Antige – frakcjonowanie mikroigłowe RF  Budowa i działanie radiofrekwencji mikroigłowej Antige
+W TRAKCIE
+
+Antige to urządzenie wykorzystujące przełomowa technikę frakcjonowania mikroigłowego RF do modelowania i ujędrniania skóry twarzy i ciała. Zastosowana w Antige technologia izolowanych mikroigieł minimalizuje obrażenia termiczne naskórka, działając termicznie jedynie na zadanej głębokości skóry. Problemem niemal wszystkich aparatów do zabiegów kosmetycznych i estetycznych jest trudność w dokładnym przeniesieniu emitowanej energii. Często moc sprzętu jest niewystarczająca, by bezpiecznie (bez oparzenia czy uszkodzenia powierzchni skóry, a nawet bólu) wywołać efekt w interesującym nas obszarze Należy jeszcze uwzględnić straty energetyczne na granicy powietrze skóra oraz na każdej granicy dwóch struktur tkankowych wewnątrz organizmu. W RF mikroigłowej ANTIGE dzięki zastosowaniu kartridży z izolowanymi mikroigłami eliminujemy niemal wszystkie niedogodności, przekraczamy barierę skórno naskórkową i działamy w dokładnie zdefiniowanym miejscu. Dzięki temu parametry, które ustalamy są w 100 przewidywalne, efektywne i co najważniejsze bezpieczne.
+
+Antige zbudowany jest z elementów takich jak: jednostka główna ze zintegrowanym ekranem dotykowym, rękojeść zabiegowa z kablem. Do wykonania zabiegu niezbędna jest sterylna elektroda jednorazowego użytku.
+
+Wydajność, dane techniczne
+
+Częstotliwość	1 MHz / 2 MHz
+Rodzaj impulsu	Pojedynczy / Podwójny
+Przerwa 250 µs dla podwójnego
+Ilość igieł	36 (6 x 6)
+Obszar zabiegu	Kwadrat (15 x15 mm)
+Głębokość wnikania	0.5 - 4.0 mm (regulacja co 0.1 mm)
+Czas trwania impulsu	1 - 100 ms
+Czas powtórzenia	0.5 - 3.0 ms (regulacja co 0.5 ms), Off
+Maksymalna energia	Max. 6 J ± 20%
+Wymiar i waga	S: 380 × G: 440 x W: 1150 mm, 20 Kg
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Opis urządzenia ANTIGE
+URL: https://edu.metrum.com.pl/lessons/opis-urzadzenia-antige/
+Content:
+Opis urządzenia ANTIGE
+Antige – frakcjonowanie mikroigłowe RF  Opis urządzenia ANTIGE
+W TRAKCIE
+Zestaw podstawowy składa się z urządzenia ANTIGE oraz zestawu akcesoriów:
+
+
+Urządzenie ANTIGE
+Rękojeść zabiegowa  z przewodem
+Przełącznik nożny
+Okulary ochronne (Operator, Pacjent)
+Przewód zasilający
+Kluczyk
+Poprzednia Lekcja
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Obsługa urządzenia ANTIGE
+URL: https://edu.metrum.com.pl/lessons/obsluga-urzadzenia-antige/
+Content:
+Obsługa urządzenia ANTIGE
+Antige – frakcjonowanie mikroigłowe RF  Obsługa urządzenia ANTIGE
+W TRAKCIE
+Ekran urządzenia ANTIGE
+Przygotowanie urządzenia do użycia
+Podłącz kabel zasilający i przełącznik nożny do gniazd znajdujących się z tyłu głównego korpusu.
+Upewnij się, że stacyjka i wyłącznik awaryjny są w odpowiedniej pozycji
+Podłącz kabel rękojeści do części łączącej głównego korpusu, jak na poniższych zdjęciach.
+podłącz sterylną elektrodę do rękojeści zabiegowej
+UWAGA:
+prawidłowy montaż kartridża ułatwiają kolorowe kropki (ustawione obok siebie).
+
+prawidłowo zamontowany kartridż będzie podświetlony po uruchomieniu aparatu
+
+nieużywaną rękojeść umieść bezpiecznie w uchwycie jak na zdjęciu poniżej
+
+Poprzednia Lekcja
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: ANTIGE – mocne strony urządzenia, zastosowanie, zabiegi
+URL: https://edu.metrum.com.pl/lessons/antige-mocne-strony-urzadzenia-zastosowanie-zabiegi/
+Content:
+ANTIGE – mocne strony urządzenia, zastosowanie, zabiegi
+Antige – frakcjonowanie mikroigłowe RF  ANTIGE – mocne strony urządzenia, zastosowanie, zabiegi
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/3 Kroków
+Mocne strony oraz przewaga nad konkurencją
+Zastosowanie ANTIGE
+Zabiegi
+Poprzednia Lekcja
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Mocne strony oraz przewaga nad konkurencją
+URL: https://edu.metrum.com.pl/topics/mocne-strony-oraz-przewaga-metrum-cryoflex-nad-konkurencja-2/
+Content:
+Mocne strony oraz przewaga nad konkurencją
+Antige – frakcjonowanie mikroigłowe RF  ANTIGE – mocne strony urządzenia, zastosowanie, zabiegi  Mocne strony oraz przewaga nad konkurencją
+W TRAKCIE
+KRAJ POCHODZENIA – KOREA
+produkty koreańskie uznawane są za dobre jakościowo, większość konkurencji również ma lasery wyprodukowane w tym kraju
+ZABIEG CAŁOROCZNY
+nie ma ograniczenia ze względu na promienie słoneczne jak ma to miejsce w laserach (np. CO2)
+CERTFIKAT MEDYCZNY CE
+profesjonalne urządzenie, bezpieczne pod kątem zabiegowym i oferowanych parametrów
+MOŻLIWOŚĆ WYKONYWANIA ZABIEGÓW ABLACYJNYCH I NIEABLACYJNYCH
+wszechstronne działanie, również nieablacyjnie – brak okresu rekonwalescencji, brak ryzyka powikłań.
+POŁĄCZENIE DWÓCH NIEZALEŻNYCH PROCEDUR
+mikronakłuwania (uszkodzenie pobudzające  regenerację tkanki) oraz fali elektromagnetycznej o częstotliwości RF (produkcja nowego kolagenu)
+IZOLOWANE IGŁY
+minimalizuje obrażenia termiczne naskórka, oddziałując jedynie na zadanej głębokości.
+KARTRIDŻE Z 36 IGŁAMI
+ostre igły o dużej powierzchni oddziaływania zapewniają szybki i bezbolesny zabieg (z użyciem znieczulenia pod okluzją) oraz pozwalają na wykonanie kilku obszarów ciała jednocześnie
+REGULOWANIA GŁĘBOKOŚĆ WNIKANIA IGIEŁ
+możliwość regulacji w zakresie od 0.5 mm do aż 4 mm z krokiem co 0.1 mm co zapewnia precyzyjne działanie bezpośrednio w miejscu gdzie tego oczekujemy.
+ZDEFINIOWANE TRYBY PRACY
+eliminuje ryzyko związane z nieprawidłowym nastawieniem parametrów do zabiegu, przyspiesza obsługę urządzenia
+INTUICYJNY INTERFACE
+łatwy w obsłudze i intuicyjny interface znacznie przyspiesza obsługę urządzenia.
+
+
+Co METRUM CRYOFLEX zapewnia lekarzom:
+PEŁNY SERWIS SPRZEDAŻOWY I POSPRZEDAŻOWY
+lasery dostarczane do gabinetu, prezentacja u lekarza w gabinecie, asysta przy pierwszych zabiegach, szkolenie z obsługi, serwis gwarancyjny i pogwarancyjny
+URZĄDZENIA ZASTĘPCZE
+podczas dłuższego serwisu lub awarii udostępniamy urządzenia zastępcze
+REALNE PARAMETRY LASERA
+Metrum, jako producent innych urządzeń laserowych każde urządzenie dokładnie sprawdza, dokonuje pomiarów i ewentualnej kalibracji – wykwalifikowani inżynierowie.
+SZKOLENIA DLA LEKARZY
+możliwość szkolenia na zakupionym urządzeniu przeprowadzonego przez lekarza specjalistę, który również na co dzień na takim sprzęcie pracuje
+LASERY DOSTĘPNE OD RĘKI
+lekarz może zaczynać pracę niemal od razu po podjęciu decyzji o zakupie.
+MOŻLIWOŚĆ WYPOŻYCZENIA LASERA Z ASYSTĄ DOŚWIADCZONEGO PRZEDSTAWICIELA
+większy komfort lekarza, brak ryzyka błędnego ustawienia lasera, płynne wprowadzenia w zabiegi.
+
+
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Zastosowanie ANTIGE
+URL: https://edu.metrum.com.pl/topics/zastosowanie-antige/
+Content:
+Zastosowanie ANTIGE
+Antige – frakcjonowanie mikroigłowe RF  ANTIGE – mocne strony urządzenia, zastosowanie, zabiegi  Zastosowanie ANTIGE
+W TRAKCIE
+
+Zestaw standardowy w jaki wyposażony jest aparat ANTIGE to:
+
+Korpus urządzenia
+Rękojeść zabiegowa
+30 sztuk kartridży jednorazowych
+Okulary ochronne dla operatora
+Okulary ochronne dla pacjenta
+
+ANTIGE to ultranowoczesny aparat wykorzystywany w medycynie estetycznej, dermatologii i kosmetologii, pozwalający wykonywać zabiegi zarówno o działaniu ablacyjnym, jak i nieablacyjnym.
+
+Efekty jakie otrzymujemy po zabiegu:
+
+Pobudzenie regeneracji tkanki
+Poprawa gęstości i napięcia skóry
+Przyczynianie się do produkcji nowego kolagenu
+Redukcja nadpotliwości
+
+Połączenie dwóch niezależnych procedur – nakłuwania mikroigłowego oraz termicznego oddziaływania na skórę pozwoliło na uzyskanie niewiarygodnych rezultatów w przebudowie skóry – tzw. termolifting.
+
+Oddziaływanie na skórę fala elektromagnetyczna o częstotliwości radiowej (RF) przyczynia się do produkcji nowego kolagenu.
+Mikronakłuwanie z kolei, uszkadzając mechanicznie tkankę, pobudza jej regeneracje. Obszar oddziaływania, w zależności od ustawionej energii to ok. 0.5 mm, maksymalna głębokość wnikania igieł to aż 4 mm.
+
+ANTIGE to urządzenie wykorzystujące przełomowa technikę frakcjonowania mikroigłowego RF do modelowania i ujędrniania skóry twarzy i ciała. Zastosowana w urządzeniu technologia izolowanych mikroigieł minimalizuje obrażenia termiczne naskórka, działając termicznie jedynie na zadanej głębokości skóry.
+
+Problemem niemal wszystkich aparatów do zabiegów kosmetycznych i estetycznych jest trudność w dokładnym przeniesieniu emitowanej energii. Często moc sprzętu jest niewystarczająca, by bezpiecznie (bez oparzenia czy uszkodzenia powierzchni skóry, a nawet bólu) wywołać efekt w interesującym nas obszarze. Należy jeszcze uwzględnić straty energetyczne na granicy powietrze-skóra oraz na każdej granicy dwóch struktur tkankowych wewnątrz organizmu.
+
+W RF mikroigłowej ANTIGE dzięki zastosowaniu kartridży z izolowanymi mikroigłami eliminujemy niemal wszystkie niedogodności, przekraczamy barierę skórno-naskórkową i działamy w dokładnie zdefiniowanym miejscu. Dzięki temu parametry, które ustalamy są w 100% przewidywalne, efektywne i co najważniejsze bezpieczne.
+
+Zalety pracy urządzeniem RF ANTIGE
+
+PRECYZJA
+W RF mikroigłowej ANTIGE w sposób bezpieczny i kontrolowany możemy wykonać nakłucia na głębokości od 0,5 mm do nawet 4 mm (precyzja ustawienia wysuwu igieł co 0,1 mm!). Wiemy bardzo dokładnie na jaką głębokość skóry właściwe docieramy.
+Promieniowanie emitowane przez klasyczne lasery frakcyjne charakteryzuje się bardzo dużą mocą, jednak by zabieg był bezpieczny penetrują tkankę nie głębiej niż ok 1,8 mm.
+
+
+MINIMALNA BOLESNOŚĆ
+technika pracy z głowicą zakończoną 36 mikroigiełkami jest zdecydowanie mniej bolesna, niż przykładowo mezoterapia, przy której trzeba wykonać oddzielnie, jeden po drugim, około kilkadziesiąt nakłuć. Dodatkowo przed zabiegiem stosuje się krem znieczulający pod okluzją.
+
+
+BEZPIECZEŃSTWO
+certyfikacja medyczna: zarówno aparat jak i głowice z igłami posiadają certyfikaty medyczne.
+
+
+STERYLNOŚĆ
+głowice RF mikroigłowej są sterylne i jednorazowe – po zabiegu przekazywane do utylizacji.
+
+
+IZOLOWANE IGŁY
+ogrzewają skórę na precyzyjnie wybranej głębokości – nie ma mowy o poparzeniu czy uszkodzeniu naskórka.
+
+
+BRAK KRWAWIENIA
+brak ryzyka powstania siniaków czy blizn, brak lub minimalne ryzyko infekcji.
+
+
+ZABIEG CAŁOROCZNY
+RF mikroigłową można wykonywać niezależnie od pory roku, w przeciwieństwie do zabiegów laserowych przeciwwskazanych latem. RF nie uwrażliwia na światło słoneczne, brak łuszczenia naskórka minimalizuje ryzyko powstania przebarwień – fotoprotekcja w okresie letnim jest jednak zawsze wskazana.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Zabiegi
+URL: https://edu.metrum.com.pl/topics/zabiegi/
+Content:
+Zabiegi
+Antige – frakcjonowanie mikroigłowe RF  ANTIGE – mocne strony urządzenia, zastosowanie, zabiegi  Zabiegi
+W TRAKCIE
+Wskazania
+UTRATA JĘDRNOŚCI I OWALU TWARZY
+DROBNE ZMARSZCZKI (okolica oczu, szyja i dekolt)
+WIOTKOŚĆ SKÓRY (szyja, dekolt, brzuch, ramiona, okolica nad kolanami) – wzrost elastyczności, obkurczenie i „uniesienie skóry”
+ROZSTĘPY I BLIZNY – spłycenie blizn i rozstępów, zmniejszenie ich widoczności, zniwelowanie nierówności skóry
+NADMIERNIE WIDOCZNE, POSZERZONE UJŚCIA GRUCZOŁÓW ŁOJOWYCH – zmniejszenie widoczności „porów”, zmniejszenie błyszczenia cery
+NADPOTLIWOŚĆ (pachy) – na około pół roku redukuje nadpotliwość
+Przeciwwskazania
+ciąża i laktacja
+epilepsja oraz choroby psychiczne
+Metalowe implanty w miejscu zabiegu
+choroby skóry, schorzenia zakaźne i autoimmunologiczne
+posiadanie stymulatora serca lub defibrylatora
+choroby przewlekłe takie jak nowotwory, AIDS, cukrzyca
+stany zapalne naczyń żylnych i chłonnych, obecności dużych, bolesnych żylaków w miejscu wykonywania zabiegu
+aktywne zakażenia skóry o etiologii bakteryjnej, wirusowej oraz grzybiczej
+
+Pełny zabieg to 3 przejścia w danym obszarze zabiegowym.
+
+Robiąc 3 przejścia wykonujemy 3 różne procedury w tym samym czasie:
+
+Najgłębiej – strefy koagulacji skóry
+Pośrodku – strefy koagulacji, pogrubienia i przebudowy kolagenu
+Najpłycej – strefy pogrubienia i przebudowy kolagenu
+
+Dzięki takiemu schematowi zabiegowemu, że podczas jednego zabiegu uzyskujemy niejako efekt 3 różnych procedur.
+
+Zwykle cały cykl terapii opiera się 2 lub 3 zabiegach w odstępie 4-6 tygodni. W niektórych wskazaniach wystarcza jeden zabieg. Jedynie do usuwania rozstępów potrzeba serii 4 – 6 zabiegów (sporadycznie nawet więcej). W tym wypadku pełny efekt uzyskuje się po 8-10 miesiącach, jest on jednak trwały i po zakończeniu cyklu nie ma potrzeby okresowego powtarzania terapii. Ilość zabiegów i odstępy między nimi są ustalane indywidualnie. RF doskonale spełnia wymagania pacjentów oczekujących spektakularnego efektu przy małej inwazyjności i jak najmniejszym nakładzie poświęconego na terapię czasu.
+
+Cały zabieg (3 przejścia) trwa zwykle między 15 a 30 minut, jest porównywalny do  zabiegu z użyciem najpopularniejszego dotąd lasera frakcyjnego. Pierwsze efekty odczuwa się już w dniu zabiegu – zwiększone napięcie skóry i widoczna poprawa owalu. W dłuższej perspektywie, przez kilka tygodni następuje stymulacja powstawania nowego kolagenu oraz przebudowy i zagęszczania jego włókien. Rekomenduję wykonanie 2-3 zabiegów w odstępach 4-6 tygodniowych dla długotrwałych efektów.
+
+Procedura krok po kroku
+WYWIAD Z PACJENTEM I PODPISANIE ZGODY
+„ZMYCIE” PACJENTA
+ZNIECZULENIE KREM Z OKLUZJĄ (pod foliową maską) na 30 min
+„ZMYCIE” PACJENTA
+WYKONANIE ZABIEGU
+CHŁODZENIE PO ZABIEGU Coolerem
+NAŁOŻENIE KREMU lub innego środka na gojenie i regenerację skóry (laserat, zinalfat, cicaplast)
+PRZESTRZEGANIE ZALECEŃ PO ZABIEGU!!
+Bezpośrednio po zabiegu
+
+
+Po zabiegu lekarz smaruje skórę kremem ochronnym, dzięki czemu zostaje ona dobrze zabezpieczona przed ryzykiem infekcji i szybciej ulega wygojeniu. Warto też skorzystać z dodatkowej możliwości naświetlania lampą LED przez kilkanaście minut bezpośrednio po zakończeniu zabiegu RF. Pomoże to przyspieszyć gojenie mikro ranek po igłach, ukoi zmęczoną zabiegiem skórę oraz utrwali efekt.
+
+Po zabiegu odczuwalne jest silne rozgrzanie skóry (możliwe odczucia: ciepło, szczypanie, pieczenie) oraz widoczne mocne zaczerwienienie (jak po oparzeniu słonecznym). Odczucia te mijają po kilku/kilkunastu godzinach (w zależności od głębokości penetracji igieł/intensywności zabiegu – 4-24h). Przez kolejne 2-3 dni okolica zabiegowa jest lekko obrzęknięta. Do 7-14 dni po zabiegu na powierzchni wyczuwalne są delikatne nierówności lub „mikrostrupki” (w zależności od głębokości wbicia igieł/intensywności zabiegu, ‘krateczka/dziurki’ w miejscach przejścia igiełek). Po około tygodniu od zabiegu możliwe jest odczuwanie delikatnego świądu skóry w miejscach zabiegu – oznacza to aktywną fazę regeneracji skóry. Zabieg nie wyłącza z codziennego funkcjonowania i aktywności zawodowej.
+
+Zalecenia pozabiegowe
+w dniu zabiegu nie dotykamy miejsca objętego zabiegiem, unikamy skupisk ludzi oraz kontaktu ze zwierzętami (przytulanie) – ryzyko infekcji,
+po zabiegu należy wymienić poszewkę na poduszkę na czystą,
+przez 24 godz. nie wolno nakładać makijażu na obszarze poddanym zabiegowi, zalecane 48h,
+3 dni po zabiegu zakazany jest wysiłek fizyczny np. siłownia, fitness itp.
+7 dni po zabiegu nie stosować środków drażniących, ani złuszczania mechanicznego i chemicznego,
+7 dni po zabiegu nie stosować samoopalaczy, nie korzystać z sauny, basenu oraz nie opalać się.
+Postępowanie po zabiegu, zalecenia
+
+Całość, łącznie ze znieczuleniem, trwa około godziny (w zależności od wielkości obszaru czas ten może być różny). Zaraz po zabiegu, w zależności od zaleceń lekarza, stosować można kremy lub maści przyspieszające gojenie (tylko te zalecane do stosowania po zabiegach laserowych). Bezwzględnie przez okres 4 tygodni należy unikać ekspozycji miejsca zabiegu na promieniowanie słoneczne. Wychodząc z domu należy stosować filtr 50 (wg zaleceń producenta – kilka razy dziennie). Obszar zabiegowy myć wodą termalną/przegotowaną z dodatkiem mydła hipoalergicznego. Nie stosować toników, mleczka lub innym mogących powodować podrażnienia kosmetyków do momentu wstępnego wygojenia skóry. Miejsce zabiegu wycierać ręcznikiem papierowym poprzez przykładanie a nie pocieranie. W miejscu zabiegu odzież powinna być luźna, tak by nie powodować dodatkowych otarć. Unikać kontaktu ze zwierzętami, zwłaszcza w obszarze zabiegowym, by nie doprowadzić do zakażenia bakteryjnego. Wymieniać poszewki pościeli. Nie stosować leków czy ziół światło-uwrażliwiających po zabiegu. Niewskazane jest także korzystanie w pierwszych dniach po zabiegu z ogólnodostępnych basenów, sauny, jacuzzi czy siłowni.
+
+Okres gojenia nie może być ściśle określony w czasie, co wynika ze specyfiki zabiegu i może znacznie się różnić w zależności od osoby. Regeneracja skóry po zabiegu trwa od kilkunastu tygodni do nawet trzech miesięcy. Podczas tego okresu, zwłaszcza w początkowej fazie, może wystąpić zaczerwienienie i obrzęk skóry (do 24 godzin), bolesność, krwawienia, opuchnięcie. W dalszej kolejności zaobserwować można złuszczenie naskórka (5-7 doba przy odpowiedniej intensywności zabiegu). Charakterystyczne „dziurki” (siateczka) na powierzchni poddanej działaniu lasera, mogą pozostać nawet przez kilka miesięcy.
+
+Efekt końcowy
+
+Nie da się przewidzieć końcowego efektu terapeutycznego. Na powodzenie zabiegu wpływ ma wiele czynników – przestrzeganie zaleceń pozabiegowych, wiek pacjenta, kondycja skóry oraz wiele innych czynników. Pełna przebudowa skóry uzyskiwana jest po kilku tygodniach. W związku z tym zabieg powtarzamy nie wcześniej niż po upływie 6 tygodni. Dla najlepszego efektu zaleca się wykonanie 3 procedur.
+
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Opis przypadków
+URL: https://edu.metrum.com.pl/lessons/opis-przypadkow/
+Content:
+Opis przypadków
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków
+W TRAKCIE
+
+Radiofrekwencja mikroigłowa ANTIGE ma wbudowane pogramy zabiegowe. Pamiętać należy jednak, że są to jedynie orientacyjne wskazówki co do średniej energii i głębokości wnikania stosowanej w pracy tym urządzeniem. Każda procedura wymaga bowiem 3 przejść na różnych głębokościach (zadziałanie na całej grubości skóry dla lepszego efektu!).
+
+Parametry do zabiegów radiofrekwencją mikroigłową ANTIGE (wg producenta)
+
+Lesion	Level	Depth
+of Needle
+(mm)	Pass
+at each
+session	Depth
+of Needle
+for
+1st pass
+(mm)	Depth
+of Needle
+for
+2nd pass
+(mm)	Depth
+of Needle
+for
+3rd pass
+(mm)	Repeat Time	Total sessions	Interval
+(week)
+Wrinkle / Fine line	16 - 26	1.0 - 1.5	2 - 3	1.5	1.2	1.0	off	3 - 4	2 - 3
+Skin tightening	20 - 30	Forehead:
+0.8 - 1.3
+Chin:
+0.8 - 1.5
+Cheek:
+1.0 - 2.0	2 - 3	1.3
+1.5
+1.8 - 2.0	1.0
+1.2
+1.5	0.8
+0.8 - 1.0
+1.0	off	3 - 4	2 - 3
+Strech marks	30 - 40	2.5 - 3.0	2 - 3	3.0	2.8	2.5	off	3 - 4	2 - 3
+Acne / Acne scar	26 - 32	1.0 - 2.0	2 - 3	1.8 - 2.0	1.5 - 1.6	1.0 - 1.3	off	3 - 4	2 - 3
+Underarm odor
+(Hyperhidrosis)	40 - 50	3.3 - 3.7	2 - 3	3.7	3.5	3.3	off	3 - 4	2 - 3
+Skin rejuvenation	16 - 26	Forehead:
+0.8 - 1.3
+Chin:
+0.8 - 1.5
+Cheek:
+1.0 - 2.0	2 - 3	1.3
+1.5
+1.8 - 2.0	1.0
+1.2
+1.5 - 1.6	0.8
+0.8
+1.0 - 1.3	off	3 - 4	2 - 3
+Body tightening
+(Abdominal)	30 - 40	3.0 - 3.5	2 - 3	3.5	3.3	3.0	off	3 - 4	2 - 3
+Neck line	20 - 30	1.0 - 1.7	2 - 3	1.7	1.5	1.0 - 1.2	off	3 - 4	2 - 3
+Large Pore	16 - 26	1.0 - 2.0	2 - 3	1.8 - 2.0	1.5 - 1.6	1.0 - 1.3	off	3 - 4	2 - 3
+Whitening
+(Non-needle type)	10 - 20	N/A	2 - 3	N/A	N/A	N/A	off	2 - 3	2 - 3
+Lista tematów
+0% UKOŃCZONE
+0/7 Kroków
+Pacjent nr 1 – zabieg na twarzy
+Pacjent nr 2 – zabieg na skórze brzucha
+Pacjent nr 3 – zabieg na skórze brzucha
+Pacjent nr 4 – zabieg w okolicy lędźwiowej (plecy)
+Pacjent nr 5 – zabieg na twarzy
+Pacjent nr 6 – zabieg na skórze podbródka
+Pacjent nr 7 – zabieg na wewnętrznej stronie ramion
+Poprzedni Temat
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Pacjent nr 1 – zabieg na twarzy
+URL: https://edu.metrum.com.pl/topics/pacjent-nr-1-zabieg-na-twarzy/
+Content:
+Pacjent nr 1 – zabieg na twarzy
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków  Pacjent nr 1 – zabieg na twarzy
+W TRAKCIE
+Wskazania:
+Poprawa napięcia skóry
+Likwidacja drobnych zmarszczek
+Zmniejszenie widoczności ujść gruczołów łojowych
+Parametry zabiegu:
+Protokół: skin rejuvenation
+Moc: 25 W
+Częstotliwość: 1 MHz
+Głębokość wkłucia:
+Czoło: I- 1.0 mm; II- 1.0 mm; III- 0.8 mm
+Policzki: I- 1.5 mm; II- 1.2 mm; III- 0.8 mm
+Broda: I- 1.2 mm; II- 1.2 mm; III- 0.8 mm
+Znieczulenie:
+
+Tak, z okluzją
+
+Przebieg procesu gojenia:
+Bezpośrednio po zabiegu:
+
+Zabieg odczuwalny, ale nie bolesny, całkowity komfort zabiegu, odczuwane ukłucie, brak uczucia ciepła zaczerwienienie po zabiegu, dopiero ok 15min po zabiegu uczucie ciepła/szczypania („jak po silnym opalaniu”) brak powikłań.
+
+4h po zabiegu:
+
+Zaczerwienienie znacznie mniejsze, widoczne ślady po zabiegu w postaci „kratki” po przejściu głowicy, nierówności wyczuwalne przy dotyku, delikatny obrzęk, brak pieczenia.
+
+1 dzień po zabiegu:
+
+Skóra zaróżowiona, widoczne ślady po zabiegu w postaci „kratki” po przejściu głowicy, nierówności wyczuwalne przy dotyku, praktycznie brak mikrostrupków, uczucie delikatnego napięcia/ściągnięcia skóry w okolicy fałdów nosowo-wargowych, żuchwy i na bokach twarzy.
+
+2 dni po zabiegu:
+
+Skóra delikatnie zaróżowiona, nierówności „krateczka” wyczuwalne pod palcami, praktycznie brak mikrostrupków, uczucie ściągnięcia skóry w dolnym piętrze twarzy, niewielkie łuszczenie na brodzie.
+
+7 dni po zabiegu:
+
+Brak oznak przebytego zabiegu (wyrównany koloryt, skóra gładka bez nierówności, brak łuszczenia), większe błyszczenie cery.
+
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Pacjent nr 2 – zabieg na skórze brzucha
+URL: https://edu.metrum.com.pl/topics/pacjent-nr-2-zabieg-na-skorze-brzucha/
+Content:
+Pacjent nr 2 – zabieg na skórze brzucha
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków  Pacjent nr 2 – zabieg na skórze brzucha
+W TRAKCIE
+Wskazania:
+Utrata jędrności
+Parametry zabiegu:
+Protokół: body tightening – abdominal
+Moc: 35 W
+Częstotliwość: 1 MHz i 2 MHz
+Głębokość wkłucia:
+
+I – 3.5 mm; II – 3.0 mm (wykonano tylko 2 przejścia)
+
+Znieczulenie:
+
+Bez znieczulenia
+
+Przebieg procesu gojenia:
+Bezpośrednio po zabiegu:
+
+Zabieg odczuwalny, ale nie bolesny mimo braku znieczulenia. Lewa strona opracowana na częstotliwości 2 MHz – odczucia bardziej intensywne: ciepło/szczypanie podczas impulsu, większy dyskomfort; szybciej pojawiające się i silniejsze zaczerwienienie, ok. 15 minut po zabiegu uczucie ciepła/szczypania („jak po silnym opalaniu”), brak powikłań.
+
+4h po zabiegu:
+
+Zaczerwienienie znacznie mniejsze, widoczne ślady po zabiegu w postaci „kratki” po przejściu głowicy.
+
+1 dzień po zabiegu:
+
+Mikrostrupki widoczne w postaci „kratki” po przejściu głowicy, niewielki obrzęk poniżej pępka, bez tkliwości, brak jakichkolwiek innych odczuć, ubranie nie drażni skóry.
+
+2 dni po zabiegu:
+
+Mikrostrupki widoczne w postaci „kratki” po przejściu głowicy, niewielki obrzęk poniżej pępka, bez tkliwości, brak jakichkolwiek innych odczuć, ubranie nie drażni skóry.
+
+7 dni po zabiegu:
+
+Jednolity kolor skóry, brak strupków, nierówności wyczuwalne przy dotyku, od 4 dnia po zabiegu odczuwane swędzenie skóry szczególnie w dolnej partii i na bokach, niewielki obrzęk poniżej pępka.
+
+Skóra brzucha tuż po zabiegu
+Skóra brzucha 4 godziny po zabiegu
+Skóra brzucha 1 dzień po zabiegu
+Skóra brzucha 5 dni po zabiegu
+Skóra brzucha 5 dni po zabiegu
+Skóra brzucha tydzień po zabiegu
+Skóra brzucha tydzień po zabiegu
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Pacjent nr 3 – zabieg na skórze brzucha
+URL: https://edu.metrum.com.pl/topics/pacjent-nr-3-zabieg-na-skorze-brzucha/
+Content:
+Pacjent nr 3 – zabieg na skórze brzucha
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków  Pacjent nr 3 – zabieg na skórze brzucha
+W TRAKCIE
+Wskazania:
+Znaczna wiotkość skóry na brzuchu (po utracie wagi ok. 20 kg)
+Parametry zabiegu:
+Protokół: body tightening – abdominal
+Moc: 35 W
+Częstotliwość: 1 MHz
+Głębokość wkłucia:
+
+I – 3.5 mm; II – 3.0 mm; III – 2.8 mm
+
+Znieczulenie:
+
+Neocain pod okluzją (10 min.)
+
+Zalecenie po zabiegu:
+
+Krem Argosulfan
+
+Przebieg procesu gojenia:
+Bezpośrednio po zabiegu:
+
+Zabieg odczuwalny, ale nie bolesny, całkowity komfort zabiegu silne zaczerwienienie po  trzykrotnym przejściu głowicą, brak powikłań, zaplanowano 3 zabiegi w odstępach co 4 tygodnie.
+
+Dzień po zabiegu:
+
+Brak powikłań, widoczny lekki obrzęk, bardzo niewielka tkliwość przy dotyku, brak zaczerwienienia, wyczuwalne pod palcami nierówności w postaci „kratki” po kartridżu, mikrostrupki (dokumentacja zdjęciowa).
+
+7 dni po zabiegu:
+
+Brak powikłań, brak tkliwości i obrzęku, brak przebarwień, przy dotyku nadal wyczuwalne nierówności, mikrostrupki, odczuwalne intensywne swędzenie skóry.
+
+Skóra brzucha przed zabiegiem
+Skóra brzucha przed zabiegiem
+Skóra brzucha przed zabiegiem
+Skóra brzucha przed zabiegiem
+Skóra brzucha tuż po zabiegu
+Skóra brzucha tuż po zabiegu
+Skóra brzucha 1 dzień po zabiegu
+Skóra brzucha 1 dzień po zabiegu
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Pacjent nr 4 – zabieg w okolicy lędźwiowej (plecy)
+URL: https://edu.metrum.com.pl/topics/pacjent-nr-4-zabieg-w-okolicy-ledzwiowej-plecy/
+Content:
+Pacjent nr 4 – zabieg w okolicy lędźwiowej (plecy)
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków  Pacjent nr 4 – zabieg w okolicy lędźwiowej (plecy)
+W TRAKCIE
+Wskazania:
+Rozstępy na całej szerokości części lędźwiowej pleców
+Parametry zabiegu:
+Protokół: stretch marks
+Moc: 35 W
+Częstotliwość: 1 MHz
+Głębokość wkłucia:
+
+I – 2.8 mm; II – 2.5 mm; III – 2.1 mm
+
+Znieczulenie:
+
+Neocain pod okluzją (10 min.)
+
+Zalecenie po zabiegu:
+
+Krem Argosulfan
+
+Przebieg procesu gojenia:
+Bezpośrednio po zabiegu:
+
+Zabieg w odczuciach bardzo nieprzyjemny, bolesny, silne zaczerwienienie po trzykrotnym przejściu głowicą, brak powikłań.
+
+Dzień po zabiegu:
+
+Brak powikłań, obrzęk i delikatne zaczerwienienie, przy dotyku wyczuwalne nierówności, mikrostrupki.
+
+Rozstępy przed zabiegiem
+Rozstępy przed zabiegiem
+Lewa strona po 1 przejściu RF
+Lewa strona po 1 przejściu RF
+Lewa strona po 1 przejściu RF
+Rozstępy po 3 przejściach RF
+Rozstępy po 3 przejściach RF
+Rozstępy po 3 przejściach RF
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Pacjent nr 5 – zabieg na twarzy
+URL: https://edu.metrum.com.pl/topics/pacjent-nr-5-zabieg-na-twarzy/
+Content:
+Pacjent nr 5 – zabieg na twarzy
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków  Pacjent nr 5 – zabieg na twarzy
+W TRAKCIE
+Wskazania:
+Poprawa owalu twarzy
+Utrata jędrności
+Drobne zmarszczki
+Zmniejszenie widoczności ujść gruczołów łojowych
+Parametry zabiegu:
+Protokół: skin rejuvenation
+Moc: 23 W
+Częstotliwość: 1 MHz
+Głębokość wkłucia:
+Czoło: I – 1.0 mm; II – 1.0 mm; III – 0.8 mm
+Policzki: I – 1.5 mm; II – 1.2 mm; III – 0.8 mm
+Broda: I – 1.2 mm; II – 1.2 mm; III – 0.8 mm
+Znieczulenie:
+
+Neocain pod okluzją (15 min.)
+
+Zalecenie po zabiegu:
+
+Krem Argosulfan
+
+Przebieg procesu gojenia:
+Bezpośrednio po zabiegu:
+
+Zabieg odczuwalny, ale nie bolesny, całkowity komfort zabiegu. Zaczerwienienie po przejściu głowicą, ok. 20 min. po zabiegu uczucie ciepła/szczypania na twarzy („jak po silnym opalaniu”), odczucie napięcia skóry, brak powikłań.
+
+7 dni po zabiegu:
+
+Skóra gładka bez nierówności, brak mikrostrupków, brak uczucia swędzenia. W odczuciu pacjentki nasiliło się błyszczenie cery (pobudzenie aktywności gruczołów łojowych?), wzrost elastyczności skóry.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Pacjent nr 6 – zabieg na skórze podbródka
+URL: https://edu.metrum.com.pl/topics/pacjent-nr-6-zabieg-na-skorze-podbrodka/
+Content:
+Pacjent nr 6 – zabieg na skórze podbródka
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków  Pacjent nr 6 – zabieg na skórze podbródka
+W TRAKCIE
+Wskazania:
+Wyszczuplenie okolicy podbródka
+Poprawa napięcia skóry
+Poprawa owalu twarzy
+Parametry zabiegu:
+Protokół: skin rejuvenation
+Moc: 22 W
+Częstotliwość: 1 MHz
+Głębokość wkłucia:
+
+I – 1.2 mm; II – 1.0 mm; III – 0.8 mm
+
+Znieczulenie:
+
+Neocain pod okluzją (10 min.)
+
+Zalecenie po zabiegu:
+
+Krem Argosulfan
+
+Przebieg procesu gojenia:
+Bezpośrednio po zabiegu:
+
+Zabieg odczuwalny, ale nie bolesny, całkowity komfort zabiegu. Ominięto okolice brodawki łojotokowej, silne zaczerwienienie po zabiegu, ok. 20 min. po zabiegu uczucie ciepła/szczypania na twarzy („jak po silnym opalaniu”), odczucie napięcia skóry, brak powikłań.
+
+1 dzień po zabiegu:
+
+Zaczerwienienie utrzymywało się do wieczora w dniu zabiegu. Na drugi dzień skóra lekko zaróżowiona, delikatny obrzęk i uczucie napięcia (wrażenie naciągnięcia skóry do kątów żuchwy – pozytywne odczucia). Nierówności wyczuwalne przy dotyku, praktycznie brak mikrostrupków. Wszystkie oznaki zabiegu pacjentka bez problemu ukryła pod makijażem.
+
+3 dni po zabiegu:
+
+Brak zaczerwienienia, nierówności wyczuwalne przy dotyku. Uczucie delikatnego napięcia skóry.
+
+10 dni po zabiegu:
+
+Brak śladów zabiegu. Skóra jest gładka w dotyku, brak mikrostrupków. Odczuwalne delikatne swędzenie.
+
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Pacjent nr 7 – zabieg na wewnętrznej stronie ramion
+URL: https://edu.metrum.com.pl/topics/pacjent-nr-7-zabieg-na-wewnetrznej-stronie-ramion/
+Content:
+Pacjent nr 7 – zabieg na wewnętrznej stronie ramion
+Antige – frakcjonowanie mikroigłowe RF  Opis przypadków  Pacjent nr 7 – zabieg na wewnętrznej stronie ramion
+W TRAKCIE
+Wskazania:
+Znaczna wiotkość skóry ramion, u pacjentki w tej okolicy skóra jest cienka i delikatna, siniaki na ramionach po wcześniejszej aktywności fizycznej (treningi siłowe)
+Parametry zabiegu:
+Protokół: skin tightening
+Moc: 25 W
+Częstotliwość: 1 MHz
+Głębokość wkłucia:
+
+I – 2.5 mm; II – 2.2 mm; III – 1.9 mm
+
+Znieczulenie:
+
+Neocain pod okluzją (15 min.)
+
+Zalecenie po zabiegu:
+
+Krem Argosulfan
+
+Przebieg procesu gojenia:
+Bezpośrednio po zabiegu:
+
+Zabieg odczuwalny, ale nie bolesny, całkowity komfort zabiegu. Silne zaczerwienienie po zabiegu. Około 20 minut po zabiegu uczucie ciepła/szczypania („jak po silnym opalaniu”). Brak powikłań
+
+1 dzień po zabiegu:
+
+Niewielkie zaczerwienienie i obrzęk. Liczne i wyraźnie mikrostrupki. Odczuwalna tkliwość tej okolicy przy dotyku (choć pacjentka twierdzi, że mogą to być też zakwasy po treningu). Uczucie ciepła/szczypania („jak po silnym opalaniu”). Brak powikłań
+
+3 dni po zabiegu:
+
+Nadal odczuwalna delikatna tkliwość przy dotyku, widoczne mikrostrupki.
+
+10 dni po zabiegu:
+
+Skóra w odczuciu bardziej napięta, brak zaczerwienienia i mikrostrupków, delikatne nierówności wyczuwalne przy dotyku
+
+Skóra ramion przed zabiegiem
+Skóra ramion przed zabiegiem
+Skóra ramion przed zabiegiem
+Skóra ramion tuż po zabiegu
+Skóra ramion tuż po zabiegu
+Skóra ramion tuż po zabiegu
+Skóra ramion 1 dzień po zabiegu
+Skóra ramion 1 dzień po zabiegu
+Skóra ramion 1 dzień po zabiegu
+Skóra ramion 1 dzień po zabiegu
+Skóra ramion 3 dni po zabiegu
+Skóra ramion 3 dni po zabiegu
+Skóra ramion 3 dni po zabiegu
+Skóra ramion 10 dni po zabiegu
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Podsumowanie kursu
+URL: https://edu.metrum.com.pl/lessons/podsumowanie-kursu-4/
+Content:
+Podsumowanie kursu
+Antige – frakcjonowanie mikroigłowe RF  Podsumowanie kursu
+W TRAKCIE
+Informacje o urządzeniu ANTIGE:
+
+KRAJ POCHODZENIA – KOREA
+
+Produkty koreańskie uznawane są za dobre jakościowo, większość konkurencji również ma lasery wyprodukowane w tym kraju.
+
+ZABIEG CAŁOROCZNY
+
+Nie ma ograniczenia ze względu na promienie słoneczne jak ma to miejsce w laserach (np. CO2).
+
+CERTFIKAT MEDYCZNY CE
+
+Profesjonalne urządzenie, bezpieczne pod kątem zabiegowym i oferowanych parametrów.
+
+MOŻLIWOŚĆ WYKONYWANIA ZABIEGÓW ABLACYJNYCH I NIEABLACYJNYCH
+
+Wszechstronne działanie, również nieablacyjnie – brak okresu rekonwalescencji, brak ryzyka powikłań.
+
+POŁĄCZENIE DWÓCH NIEZALEŻNYCH PROCEDUR
+
+Mikronakłuwania (uszkodzenie pobudzające  regenerację tkanki) oraz fali elektromagnetycznej o częstotliwości RF (produkcja nowego kolagenu).
+
+IZOLOWANE IGŁY
+
+Minimalizuje obrażenia termiczne naskórka, oddziałując jedynie na zadanej głębokości.
+
+KARTRIDŻE Z 36 IGŁAMI
+
+Ostre igły o dużej powierzchni oddziaływania zapewniają szybki i bezbolesny zabieg (z użyciem znieczulenia pod okluzją) oraz pozwalają na wykonanie kilku obszarów ciała jednocześnie.
+
+REGULOWANIA GŁĘBOKOŚĆ WKŁUCIA IGIEŁ
+
+Możliwość regulacji w zakresie od 0.5 mm do aż 4 mm z krokiem co 0.1 mm zapewniająca precyzyjne działanie bezpośrednio w miejscu gdzie tego oczekujemy.
+
+ZDEFINIOWANE TRYBY PRACY
+
+Predefiniowane tryby eliminują ryzyko związane z nieprawidłowym nastawieniem parametrów do zabiegu oraz przyspieszają obsługę urządzenia.
+
+INTUICYJNY INTERFACE
+
+Łatwy w obsłudze i intuicyjny interface znacznie przyspiesza obsługę urządzenia.
+Co METRUM CRYOFLEX zapewnia lekarzom:
+
+PEŁNY SERWIS SPRZEDAŻOWY I POSPRZEDAŻOWY
+
+Lasery dostarczane do gabinetu, prezentacja u lekarza w gabinecie, asysta przy pierwszych zabiegach, szkolenie z obsługi, serwis gwarancyjny i pogwarancyjny.
+
+URZĄDZENIA ZASTĘPCZE
+
+Podczas dłuższego serwisu lub awarii udostępniamy urządzenia zastępcze.
+
+REALNE PARAMETRY LASERA
+
+METRUM CRYOFLEX, jako producent innych urządzeń laserowych, każde urządzenie dokładnie sprawdza, dokonuje pomiarów i ewentualnej kalibracji. Wszelkie operacje nastaw i kalibracji wykonują wykwalifikowani inżynierowie.
+
+SZKOLENIA DLA LEKARZY
+
+Możliwość szkolenia na zakupionym urządzeniu przeprowadzonego przez lekarza specjalistę, który również na co dzień na takim sprzęcie pracuje.
+
+LASERY DOSTĘPNE OD RĘKI
+
+Lekarz może zaczynać pracę niemal od razu po podjęciu decyzji o zakupie.
+
+MOŻLIWOŚĆ WYPOŻYCZENIA LASERA Z ASYSTĄ DOŚWIADCZONEGO PRZEDSTAWICIELA
+
+Większy komfort lekarza, brak ryzyka błędnego ustawienia lasera, płynne wprowadzenia w zabiegi.
+Efekty i zalety stosowania urządzenia ANTIGE:
+
+Efekty po przeprowadzonym zabiegu:
+
+Pobudzenie regeneracji tkanki
+Poprawa gęstości i napięcia skóry
+Wspomaga produkcję nowego kolagenu
+Redukcja nadpotliwości
+
+Połączenie dwóch niezależnych procedur – nakłuwania mikroigłowego oraz termicznego oddziaływania na skórę pozwoliło na uzyskanie niewiarygodnych rezultatów w przebudowie skóry – tzw. termolifting.
+
+Oddziaływanie na skórę falą elektromagnetyczną o częstotliwości radiowej (RF) przyczynia się do produkcji nowego kolagenu.
+Mikronakłuwanie z kolei, uszkadzając mechanicznie tkankę, pobudza jej regeneracje. Obszar oddziaływania, w zależności od ustawionej energii to około 0.5 mm, maksymalna głębokość wnikania igieł to aż 4 mm.
+
+ANTIGE to urządzenie wykorzystujące przełomowa technikę frakcjonowania mikroigłowego RF do modelowania i ujędrniania skóry twarzy i ciała. Zastosowana w ANTIGE technologia izolowanych mikroigieł minimalizuje obrażenia termiczne naskórka, działając termicznie jedynie na zadanej głębokości skóry.
+
+Zalety pracy z urządzeniem RF ANTIGE:
+
+Precyzja
+Minimalna bolesność zabiegów
+Bezpieczeństwo zabiegów
+Sterylność zabiegu i akcesoriów
+Izolowane igły
+Brak krwawienia
+Zabieg całoroczny
+
+Wskazania:
+
+UTRATA JĘDRNOŚCI I OWALU TWARZY
+DROBNE ZMARSZCZKI (okolica oczu, szyja i dekolt)
+WIOTKOŚĆ SKÓRY (szyja, dekolt, brzuch, ramiona, okolica nad kolanami) – wzrost elastyczności, obkurczenie i „uniesienie skóry”
+ROZSTĘPY I BLIZNY – spłycenie blizn i rozstępów, zmniejszenie ich widoczności, zniwelowanie nierówności skóry
+NADMIERNIE WIDOCZNE, POSZERZONE UJŚCIA GRUCZOŁÓW ŁOJOWYCH – zmniejszenie widoczności „porów”, zmniejszenie błyszczenia cery
+NADPOTLIWOŚĆ (pachy) – na około pół roku redukuje nadpotliwość.
+
+Pełny zabieg to trzy przejścia w danym obszarze zabiegowym. Wykonując trzy przejścia przeprowadzamy trzy różne procedury w tym samym czasie:
+
+Najgłębiej – strefy koagulacji skóry
+Pośrodku – strefy koagulacji, pogrubienia i przebudowy kolagenu
+Najpłycej – strefy pogrubienia i przebudowy kolagenu
+
+Dzięki temu, podczas jednego zabiegu, uzyskujemy efekt trzech, różnych procedur.
+
+Poprzedni Temat
+Wróć do kursu
+----------------------------------------
+

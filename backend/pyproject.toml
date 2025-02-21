@@ -24,6 +24,8 @@ deepgram-sdk = "^3.2.7"
 pyjwt = "^2.8.0"
 fuzzywuzzy = "^0.18.0"
 openai = "^1.52.0"
+playwright = "^1.50.0"
+playwright-stealth = "^1.0.6"
 
 [tool.poetry.scripts]
 start = "chatbot.main:start"

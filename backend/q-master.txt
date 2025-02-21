@@ -1,0 +1,873 @@
+Laser Q-MASTER PLUS to wszechstronny i uniwersalny laser Nd:YAG, opracowany dla profesjonalnych klinik medycyny estetycznej.
+
+Wielofunkcyjny
+
+Laser Q-Master Plus ma zdefiniowanych aż 31 programów zabiegowych obejmujących zarówno procedury lecznicze, kosmetyczne, jak i pielęgnacyjne. Laser pracuje na aż sześciu długościach fali.
+
+
+Łatwy w obsłudze
+
+Intuicyjny i przyjazny dla użytkownika interface zamknięty w wygodnym, dużym panelu dotykowym, umieszczonym na optymalnej dla operatora wysokości. Menu w języku polskim.
+
+
+Komfortowy w użyciu
+
+Głowice identyfikowane przez system lasera znacznie ułatwiają pracę operatorowi. System rozpoznając głowicę wskazuje jedynie te zabiegi, które mogą być nią wykonane.
+
+
+Title: Budowa i działanie lasera Q-MASTER PLUS
+URL: https://edu.metrum.com.pl/lessons/budowa-i-dzialanie-lasera-q-master-plus/
+Content:
+Budowa i działanie lasera Q-MASTER PLUS
+Q-MASTER – laser Nd:YAG  Budowa i działanie lasera Q-MASTER PLUS
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/2 Kroków
+Opis i parametry lasera Q-MASTER PLUS
+Wydajność i parametry
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Opis i parametry lasera Q-MASTER PLUS
+URL: https://edu.metrum.com.pl/topics/opis-i-parametry-lasera-q-master-plus/
+Content:
+Opis i parametry lasera Q-MASTER PLUS
+Q-MASTER – laser Nd:YAG  Budowa i działanie lasera Q-MASTER PLUS  Opis i parametry lasera Q-MASTER PLUS
+W TRAKCIE
+
+Laser neodymowo yagowy (Nd:YAG) Q-MASTER PLUS to laser zbudowany na bazie kryształu granatu itrowo-aluminiowego domieszkowanego jonami neodymu. Generuje promieniowanie o długości fali 1064nm oraz dzięki wykorzystaniu kryształów nieliniowych (np. KTP; K – potas, T -tytan, P – fosfor) drugą harmoniczną długość fali czyli 532nm. Niniejszy produkt emituje promienie lasera o dwóch długoścach fali – 1064nm i 532nm – w kierunku skóry w krótkim okresie czasu (nanosekunda) i przekształca energię optyczną w energię cieplną. Używając selektywnej fototermolizy (zasada, w której normalna skóra jest chroniona, podczas gdy obszary pigmentu są pochłaniane i niszczone zgodnie z wygenerowaną długością fali oraz użytym czynnikiem)  i zasady rozdziału ciepła, chroni normalną skórę oraz niszczy i leczy zmiany pigmentowe. Ponadto wchłania atrament do tatuażu, rozkładając pigment docelowy na cząsteczki. Promienie laserowe o długości 1064nm wnikają głęboko w skórę (90% promieniowania laserowego absorbowane jest na głębokości 0,4cm), podczas gdy promienie laserowe o długościach 532nm i 1064nm absorbują odpowiednio czerwoną oksyhemoglobinę i czerwonobrązową melaninę a więc penetracja jest znacznie płytsza.
+
+Dodatkowo laser Q-MASTER PLUS wyposażony jest w tryb GENESIS. Ten nie Q-Switchowy tryb pozwala przeniknąć skórę laserem o długości 1064nm z mikrosekundowym (nie nanosekundowym) impulsem. Laser o długim impulsie przenikając w skórę wytwarza wystarczającą ilość ciepła aby wspierać ponowną syntezę kolagenu. Powyższy efekt termiczny naturalnie wspiera ponowną syntezę kolagenu. Q-MASTER PLUS może również generować impulsu z zakresu milisekund co pozwala skutecznie zamykać drobne naczynia widoczne w postaci pajączków oraz wykonywać zabiegi epilacji (zwłaszcza ciemne i grube włosy). Dzięki możliwości pracy z podwójnym impulsem (PTP) oraz wysokiej częstotliwości (do 10Hz) laser Q-MASTER PLUS jest niezwykle szybkim i komfortowym narzędziem pracy.
+
+Właściwości impulsów laserowych, częstotliwość i wielkości plamki w laserze Q-MASTER PLUS
+Długość fali	532nm	1064nm (single)	1064 (double)	1064 (Genesis)	1064 (long pulse)
+Czas trwania impulsu	5-6ns	5-6ns	5-6ns	330us	5-30ms
+Energia	50-500mJ
+(0.1-15.9J/cm2)	100-1000mJ
+(0.1-31.8J/cm2)	100-1800mJ
+(0.1-57.3J/cm2)	100-4500mJ
+(0.1-143.3J/cm2)	1-50J
+Częstotliwość	1-10Hz
+(ustawiany co 1Hz)	1-10Hz
+(ustawiany co 1Hz)	1-10Hz
+(ustawiany co 1Hz)	1-10Hz
+(ustawiany co 1Hz)	- max 1592J/cm2 dla plamki 2mm
+- max 28J/cm2 dla plamki 15mm
+Wielkość plamki	2-10mm
+(ustawiany co 1mm)	2-10mm
+(ustawiany co 1mm)	2-10mm
+(ustawiany co 1mm)	2-10mm
+(ustawiany co 1mm)	2-10mm, 11-15mm
+Dwie głowice
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Wydajność i parametry
+URL: https://edu.metrum.com.pl/topics/wydajnosc-i-parametry/
+Content:
+Wydajność i parametry
+Q-MASTER – laser Nd:YAG  Budowa i działanie lasera Q-MASTER PLUS  Wydajność i parametry
+W TRAKCIE
+Moc wejściowa i częstotliwość	220-240V~, 50/60Hz
+Pobór mocy	4800VA
+Czynnik	Nd:YAG
+Długość fali	
+532nm
+
+
+1064nm
+
+Klasa bezpieczeństwa lasera według IEC60825-1	KLASA IV
+Czas trwania impulsu	
+532nm/1064nm: 5-6ns
+
+
+Tryb Źródłowy: 330µs
+
+
+Tryb Depilacji: 5-30ms (Regulowany co 5ms)
+
+Energia wyjściowa	
+532nm Pojedynczy/PTP: 50 - 500mJ (Regulowany co 25mJ)
+
+Gęstość energii: 0.1 - 15.9 J/cm2
+
+
+1064nm Pojedynczy: 100 - 1,000mJ (Regulowany co 50mJ)
+
+Gęstość energii: 0.1 - 31.8 J/cm2
+
+
+
+1064nm PTP: 100 - 1,800mJ (Regulowany co 50mJ)
+
+Gęstość energii: 0.1 - 57.3 J/cm2
+
+
+Tryb Źródłowy: 100 – 4,500mJ (Regulowany co 100mJ)
+
+Gęstość energii: 0.1 - 143.3 J/cm2
+
+
+Tryb Depilacji: 1 - 50J (Regulowany co 1J)
+
+Gęstość energii: 0.5 - 1592.4J/cm2
+
+Częstotliwość	
+532/1064/ Źródłowy: 1 - 10Hz (Regulowany co 1Hz)
+
+
+Depilacja: 1 - 3Hz (Auto)
+
+Rozmiar plamki	
+532/1064/ Źródłowy: 2 - 10mm (Regulowany co 1mm)
+
+
+Depilacja: 11 - 15mm (Regulowany co 1mm)
+
+Wiązka celująca	
+Czynnik: Laser Diodowy (LD)
+
+
+Długość fali: 635nm
+
+
+Moc: Mniej niż 5mW
+
+Układ chłodzący	Zamknięty obieg wody
+Wymiary	450(SZ) × 947(G) × 920(W) mm
+Waga	105kg
+Rodzaj i poziom ochrony przed porażeniem prądem	Klasa 1, Typ B
+Okulary ochronne	LASERVISION F18.P1L02.1001, EN207
+Uwaga!
+
+
+W celu ochrony kryształu KTP, tryb 532nm jest zaprojektowany tak, że wzrost energii zmniejsza automatycznie repetycję. Zależności pokazano poniżej:
+
+50-225mJ: Maks. 10Hz
+250-325mJ: Maks. 5Hz
+350-425mJ: Maks. 3Hz
+450-500mJ: Maks. 1Hz
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Obsługa lasera Q-MASTER PLUS
+URL: https://edu.metrum.com.pl/lessons/obsluga-lasera-q-master-plus/
+Content:
+Obsługa lasera Q-MASTER PLUS
+Q-MASTER – laser Nd:YAG  Obsługa lasera Q-MASTER PLUS
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/3 Kroków
+Opis urządzenia
+Zestaw standardowy i głowice
+Obsługa urządzenia
+Poprzedni Temat
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Opis urządzenia
+URL: https://edu.metrum.com.pl/topics/opis-urzadzenia/
+Content:
+Opis urządzenia
+Q-MASTER – laser Nd:YAG  Obsługa lasera Q-MASTER PLUS  Opis urządzenia
+W TRAKCIE
+Elementy wyposażenia lasera Q-MASTER PLUS
+Główny korpus
+Ramię przegubowe
+Rękojeści (2-10mm, 11-15mm)
+Przełącznik nożny
+Kabel zasilania
+Kluczyk
+Przełącznik blokady interlock
+Okulary ochronne
+Wkładka pod powieki
+Krem węglowy
+Głowice barwnikowe (opcjonalnie)
+Głowica frakcyjna (opcjonalnie)
+Instrukcja obsługi
+Wygląd urządzenia
+Elementy ramienia przegubowego
+Rękojeść zabiegowa
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Zestaw standardowy i głowice
+URL: https://edu.metrum.com.pl/topics/zestaw-standardowy-i-glowice/
+Content:
+Zestaw standardowy i głowice
+Q-MASTER – laser Nd:YAG  Obsługa lasera Q-MASTER PLUS  Zestaw standardowy i głowice
+W TRAKCIE
+Zestaw standardowy
+ 
+
+Zestaw standardowy w jaki wyposażony jest laser Q-Master PLUS to:
+
+głowica zoomowa 2-10mm
+głowica zoomowa 11-15mm (epilacja)
+wkładka pod powieki
+okulary ochronne dla operatora
+okulary ochronne dla pacjenta
+
+Taka konfiguracja pozwala na wykonanie wszystkich zabiegów wyszczególnionych w materiałach reklamowych a więc:
+
+usuwanie tatuaży czarnych i kolorowych
+usuwanie makijażu permanentnego
+przebarwienia (melasmy), zmiany (Oty, błękitne itp.), plamy na skórze (starcze)
+nieablacyjne zabiegi frakcyjne
+peeling węglowy
+zamykanie przezskórne naczyń
+epilacja
+Głowice barwnikowe
+
+Laser Q-Master Plus można wyposażyć aż w 4 dodatkowe głowice barwnikowe (585nm, 595nm, 650nm, 660nm), które rozszerzają możliwości zabiegowe urządzenia.
+
+Długość fali	585nm	595nm	650nm	660nm
+Energia	50-250mJ	50-250mJ	50-150mJ	50-150mJ
+Gęstość energii	(1.5-7.9J/cm2)	(0.7-3.5J/cm2)	(1.5-4.7J/cm2)	(0.7-2.1J/cm2)
+Wielkość plamki	2mm	3mm	2mm	3mm
+Częstotliwość	1 - 2Hz	1 - 2Hz	1 - 2Hz	1 - 2Hz
+Głowica 585nm (595nm)
+
+
+Stosowana podczas leczenia zmian pigmentowych, naczyniowych czy śladów po trądziku, skóra także stanie się rozjaśniona i piękniejsza
+
+Zastosowania:
+
+błękitne tatuaże
+naczynia
+zaczerwienienie
+melasma
+zmiany potrądzikowe
+Wskazanie 585nm	Gęstość energii	Hz	Przejścia	Sesje	Odstęp
+Zaczerwienienie potrądzikowe	2.39 ‐ 3.98	1 - 2	3 - 5	5	1 - 2 tygodnie
+Trądzik	3.18 ‐ 3.98	1 - 2	3 - 5	5	1 - 2 tygodnie
+Melasma	1.59 ‐ 3.18	1 - 2	2	4 - 8	1 - 2 tygodnie
+Zaczerwienienie twarzy, rumień	2.39 ‐ 3.98	1 - 2	2	5 - 10	2 tygodnie
+Trądzik różowaty	2.39 ‐ 3.98	1 - 2	3 - 5	5	1 - 2 tygodnie
+Niebieskie tatuaże	4.78 ‐ 5.58	1 - 2	1 - 2	2 - 4	4 tygodnie
+Głowica 650nm (660nm)
+
+
+Jest używana do zmian barwnikowych, jest bezpieczna ze względu na niższą absorbcję w melaninie i hemoglobinie. Działa selektywnie, nie niszcząc tkanek wokoło. Dobrze się sprawdza w leczeniu piegów a czas rekonwalescencji jest szybszy niż w przypadku 532nm oraz mniejsza jest liczba nawrotów zmian
+
+Zastosowania:
+
+zielony tatuaż
+piegi
+zmiany barwnikowe
+Wskazanie 650nm	Gęstość energii	Hz	Przejścia	Sesje	Odstęp
+Piegi
+Inne zmiany barwnikowe naskórka	1.59~	1 - 2	1	1 - 2	4-6 tygodni
+Zielone tatuaże	4.78	1 - 2	1	3	4 tygodnie
+Głowica frakcyjna
+
+Duża skuteczność dzięki głębokiej penetracji oraz równomiernie rozłożonym punktom
+Niskie ryzyko przebarwień i innych efektów ubocznych
+Zabieg nieablacyjny
+360 punktów na obszarze 16x16mm
+Bardzo dobrze radzi sobie z przebarwieniami typu melasma
+Wskazanie 650nm	Tryb	Plamka	Energia	Gęstość energii	Hz	Przejścia	Sesje	Odstęp
+Melasma / PIH
+(głowica frakcyjna)	1064 single
+lub
+1064 double
+	8	800 - 1000mJ	0.4	5	2 - 4	8 - 10	2 tygodnie
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Obsługa urządzenia
+URL: https://edu.metrum.com.pl/topics/obsluga-urzadzenia/
+Content:
+Obsługa urządzenia
+Q-MASTER – laser Nd:YAG  Obsługa lasera Q-MASTER PLUS  Obsługa urządzenia
+W TRAKCIE
+Główny ekran sterowania 1064/532/GENESIS
+
+① TRYB – Wyświetla obecnie wybrany tryb
+② Pojedynczy/PTP – Wyświetla obecnie wybrany tryb impulsu
+③ FLUENCE – Ustawienie gęstości energii wiązki laserowej
+④ ENERGY – Ustawienie energii wiązki laserowej
+⑤ SMART MODE – Wybór trybu asystowanego
+⑥ MEMORY – Służy do załadowania i zapisywania w pamięci często używanych ustawień
+⑦ MODE – Wybór trybu
+⑧ COUNT – Służy do resetowania do 0 wyświetlanej wartości wyjściowej wiązki laserowej
+⑨ NUMER PAMIĘCI – Wskazuje wybrany numer pamięci
+⑩ AIMING – Służy do ustawienia jasności wiązki kierunkowej
+⑪ GÓRA/DÓŁ – Służy do ustawienia wzrostu lub spadku wartości ustawień wyjściowych
+⑫ SPOT SIZE – Wyświetla rozmiar wyjściowej wiązki laserowej na rękojeści
+⑬ FREQUENCY – Służy do ustawienia ilości wyjściowej wiązki laserowej na sekundę
+⑭ STAND BY/READY – Wybór trybu gotowy i stan gotowości wyjściowej wiązki laserowej
+
+Główny ekran sterowania – tryb Depilacja/Naczynia
+
+① TRYB – Wyświetla obecnie wybrany tryb
+② FLUENCE – Ustawienie gęstości energii wiązki laserowej
+③ ENERGY – Ustawienie energii wiązki laserowej
+④ P.DURATION – Ustawienie czasu trwania impulsu wyjściowej wiązki laserowej
+⑤ SMART MODE – Wybór trybu Asystenta
+⑥ MEMORY – Służy do załadowania i zapisywania w pamięci często używanych ustawień
+⑦ MODE – Wybór trybu
+⑧ COUNT – Służy do resetowania do 0 wyświetlanej wartości wyjściowej wiązki laserowej
+⑨ NUMER PAMIĘCI – Wskazuje slot numer pamięci
+⑩ AIMING – Służy do ustawienia jasności wiązki kierunkowej
+⑪ GÓRA/DÓŁ – Służy do regulacji wartości ustawień wyjściowych
+⑫ SPOT SIZE – Wyświetla rozmiar wyjściowej wiązki laserowej na rękojeści
+⑬ FREQUENCY – Służy do ustawienia repetycji emisji wyjściowej wiązki laserowej na sekundę (AUTO)
+⑭ STAND BY/READY – Przełączanie pomiędzy trybem STAND BY i READY
+Ekran trybu frakcjonującego – brakuje w tekście
+
+
+lorem ipsum
+
+
+Procedury obsługowe
+
+
+Przygotowanie urządzenia do użycia
+
+Podłącz kabel zasilający i przełącznik nożny do gniazd znajdujących się z tyłu głównego korpusu.
+Upewnij się, że stacyjka i wyłącznik awaryjny są w odpowiedniej pozycji
+Upewnij się, że ramię przegubowe, rękojeść i złącze rękojeści są prawidłowo podłączone.
+Przygotuj okulary ochronne do zabiegu.
+
+Wprowadzenie parametrów zabiegowych
+
+Przekręć stacyjkę z przodu urządzenia na「WŁĄCZ」
+Sprawdź ekran dotykowy podczas ładowania danych i wyświetlania ekranu wyboru trybu.
+W celu zmiany parametru, przycisk parametru zostanie podświetlony jaśniej po jego dotknięciu. Użytkownik może ustawić wartość każdego parametru – Wavelenght (długość fali), Fluence (Gęstość energii), Energy (energia), Spot size (rozmiar plamki), Frequency (częstotliwość), Aiming (pilot) w zależności od wykonywanej procedury i kwalifikacji pacjenta, za pomocą przycisków ‘▲▼’ na ekranie.
+
+UWAGA!
+Jeśli wczytany rozmiar plamki różni się od rozmiaru plamki na rękojeści, wyświetlony zostanie ekran sprawdzania rozmiaru plamki. Wyrównaj rozmiar plamki, ekran sprawdzania zniknie automatycznie.
+
+Po zakończeniu wszystkich ustawień dotknij przycisku “STAND BY”, aby przejść w stan “READY”. Naciśnięcie przełącznika nożnego spowoduje emisję promieniowania laserowego.
+
+Procedura czyszczenia sprzętu
+
+Po użyciu tego urządzenia, operator (lekarz lub dermatolog) lub pielęgniarka musi wyczyścić główny korpus, rękojeść i okulary ochronne wacikiem lub papierową ściereczką do obiektywów zwilżoną alkoholem. Jeśli urządzenie jest zabrudzone pyłami lub plamami, wyczyść je miękką i suchą szmatką. (Nie używaj silnego roztworu chemicznego, takiego jak rozcieńczalnik lub benzen).
+
+Jak czyścić szkiełko ochronne:
+
+Zdejmij końcówkę (dystanser z soczewką) z rękojeści. Montowany na wcisk.
+Delikatnie wytrzyj kurz za pomocą wacika zwilżonego w przynajmniej 90% etanolu.
+Nie należy używać nadmiernej siły podczas wycierania bawełnianym wacikiem, ponieważ może to uszkodzić powłokę szkiełka.
+Upewnij się, że po czyszczeniu nie ma żadnych uszkodzeń ani plam na soczewce.
+
+Konserwacja urządzenia
+
+Urządzenie musi być regularnie konserwowane, kontrolowane i utrzymane w optymalnych warunkach eksploatacyjnych przez cały przewidywany okres użytkowania. Zalecany harmonogram okresowych przeglądów i konserwacji jakie powinien przeprowadzić operator:
+
+Sprawdź, czy końcówka rękojeści jest czysta
+
+Przed każdym zabiegiem
+
+Sprawdź, czy emisja wiązki lasera jest prawidłowo aktywowana
+
+Przed rozpoczęciem każdego zabiegu
+
+Sprawdź stan ogólny rękojeści i urządzenia np brud, plamy, zarysowania
+
+Przed rozpoczęciem każdego zabiegu
+
+Sprawdź obudowę pod kątem jakiegokolwiek luzu czy uszkodzeń
+
+Raz na tydzień
+
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Mocne strony oraz przewaga Metrum Cryoflex nad konkurencją
+URL: https://edu.metrum.com.pl/lessons/mocne-strony-oraz-przewaga-metrum-cryoflex-nad-konkurencja/
+Content:
+Mocne strony oraz przewaga Metrum Cryoflex nad konkurencją
+Q-MASTER – laser Nd:YAG  Mocne strony oraz przewaga Metrum Cryoflex nad konkurencją
+W TRAKCIE
+Q-MASTER PLUS, mocne strony lasera:
+KRAJ POCHODZENIA – KOREA
+
+Produkty koreańskie uznawane są za dobre jakościowo, większość konkurencji również ma lasery wyprodukowane w tym kraju
+
+31 ZDEFINIOWANYCH PROGRAMÓW ZABIEGOWYCH
+
+Eliminuje ryzyko związane z nieprawidłowym nastawieniem parametrów do zabiegu, przyspiesza obsługę urządzenia
+
+POLSKIE MENU
+
+Intuicyjne menu w języku polskim znacznie ułatwia i przyspiesza korzystanie z aparatu
+
+BOGATY ZESTAW STARTOWY
+2 głowice typu ZOOM 2-10mm oraz 11-15mm dla większego komfortu i szybkości pracy
+osłonki na oczy
+krem węglowy do zabiegów laserowego peelingu węglowego
+RÓŻNE DŁUGOŚCI IMPULSU
+
+Jedyny laser na rynku z możliwością pracy w 3 długościach impulsu)
+
+ns – nanosekundy (redukcja tatuaży, makijażu permanentnego, przebarwień)
+µs – mikrosekundy (nieablacyjne zabiegi odmładzania skóry, grzybice paznokci)
+ms – milisekundy (zamykanie naczynek, epilacja)
+
+BEZAWARYJNY
+
+DODATKOWE GŁOWICE ZABIEGOWE
+rozszerzają możliwości wykonywania zabiegów
+barwnikowe
+frakcyjna
+KRÓTKI, STABILNY IMPULS ZABIEGOWY 5-6ns
+
+Doskonałe rezultaty w usuwaniu tatuaży
+
+SZEŚĆ DŁUGOŚCI FAL
+
+Poza standardowymi długościami (532nm, 1064nm) istnieje możliwość uzupełnienia urządzenia o dodatkowe głowice barwnikowe (585nm, 595nm, 650nm, 660nm)
+
+IDENTYFIKOWALNE PRZEZ SYSTEM GŁOWICE LASERA
+
+Eliminuje to ryzyko pomyłki przy wyborze odpowiedniego trybu pracy
+
+Co METRUM CRYOFLEX zapewnia lekarzom:
+PEŁNY SERWIS SPRZEDAŻOWY I POSPRZESDAŻOWY
+
+lasery dostarczane do gabinetu, prezentacja u lekarza w gabinecie, asysta przy pierwszych zabiegach, szkolenie z obsługi, serwis gwarancyjny i pogwarancyjny
+
+URZĄDZENIA ZASTĘPCZE
+
+podczas dłuższego serwisu lub awarii udostępniamy urządzenia zastępcze
+
+REALNE PARAMETRY LASERA
+
+METRUM CRYOFLEX, jako producent innych urządzeń laserowych każde urządzenie dokładnie sprawdza, dokonuje pomiarów i ewentualnej kalibracji – wykwalifikowani inżynierowie
+
+SZKOLENIA DLA LEKARZY
+
+możliwość szkolenia na zakupionym urządzeniu przeprowadzonego przez lekarza specjalistę, który również na co dzień na takim sprzęcie pracuje
+
+MOŻLWIOŚĆ WYPOZYCZENIA LASERA Z ASYSTĄ DOŚWIADCZONEGO PRZEDSTAWICIELA
+
+większy komfort lekarza, brak ryzyka błędnego ustawienia lasera, płynne wprowadzenia w zabiegi
+
+Poprzedni Temat
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Zastosowanie lasera Q-MASTER PLUS
+URL: https://edu.metrum.com.pl/lessons/zastosowanie-lasera-q-master-plus/
+Content:
+Zastosowanie lasera Q-MASTER PLUS
+Q-MASTER – laser Nd:YAG  Zastosowanie lasera Q-MASTER PLUS
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/5 Kroków
+Usuwanie tatuaży / makijażu permanentnego
+Nieablacyjne zabiegi odmładzania skóry – GENESIS
+Przezskórne zamykanie naczyń
+Melasma
+Pozostałe zabiegi
+Poprzednia Lekcja
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Usuwanie tatuaży / makijażu permanentnego
+URL: https://edu.metrum.com.pl/topics/usuwanie-tatuazy-makijazu-permanentnego/
+Content:
+Usuwanie tatuaży / makijażu permanentnego
+Q-MASTER – laser Nd:YAG  Zastosowanie lasera Q-MASTER PLUS  Usuwanie tatuaży / makijażu permanentnego
+W TRAKCIE
+
+Dzięki impulsowi Q-Switch 5ns i długościom fali 1064/532nm Q-MASTER PLUS doskonale sprawdza się przy usuwaniu tatuaży (ciemnych i kolorowych). Laser wnika w tkankę, a zjawisko selektywnej fototermolizy pozwala na reakcje barwnika z promieniowaniem lasera. Laser Q-MASTER PLUS wykorzystuje falę 532nm (tatuaż czerwony, fioletowy i pomarańczowy) oraz 1064nm (tatuaż czarny, niebieski i brązowy). Można go rozbudować o głowice barwnikowe (np. 585nm i 650nm), co umożliwia usuwanie błękitnych i zielonych tatuaży.
+
+Przed zabiegiem
+Po 6 zabiegach
+
+Aby możliwe było usuwanie tatuaży konieczne jest aby laser był w stanie uzyskać na tkance efekt foto-mechaniczny (foto-rozerwanie). Możliwe jest to tylko przy bardzo wysokiej gęstości energii. Odpowiednią gęstość energii uzyskamy stosując bardzo krótki impuls laserowy rzędu nanosekund (10-9s), określany jako Q-Switched. W porównaniu z laserami rubinowymi czy aleksandrytowymi laser Nd:YAG Q-Switch jest znacznie lepszy w usuwaniu tatuaży czarnych, brązowych i granatowych (krótszy impuls i większa gęstość energii). Co ważne, również zmiana tekstury skóry, blizny czy hipopigmentacja po zastosowaniu lasera NdYAG są znacznie mniejsze. Do redukcji tatuaży o innych kolorach stosuje się inne długości fal – 532nm (czerwony, fioletowy, pomarańczowy) lub głowice barwnikowe (585nm, 650nm – tatuaże błękitne i zielone)
+
+Podczas wykonywania zabiegu należy także brać pod uwagę gdzie, jakim tuszem i jaką metodą tatuaż został wykonany. Inaczej będzie wyglądała procedura (zwłaszcza ilość sesji) w przypadku tatuaży wykonanych profesjonalnie i inaczej tych robionych domowymi sposobami. Tatuaż profesjonalny wymaga około 4-6 sesji, tusz w tym przypadku jest umieszczony równomiernie, głównie w tkance podskórnej. Jeśli tatuaż jest stary lub tusz położony płytko, sesji może być mniej.  
+
+W zabiegu wykorzystujemy zjawisko selektywnej fototermolizy – usuwamy barwnik selektywnie, bez uszkodzenia tkanek sąsiadujących. Energia światła laserowego powoduje rozdrobnienie barwnika, który ulega częściowemu odparowaniu poprzez mikrouszkodzenie naskórka oraz rozproszeniu w tkankach. Pomiędzy zabiegami pozostała część barwnika ulega wchłonięciu (fagocytozie) przez makrofagi (komórki odpornościowe). Proces usuwania czarnych tatuaży (zwłaszcza gdzie stosowano metodę wypełnień) może trwać kilka lat. Dzieję się tak, ponieważ w końcowym etapie należy wydłużyć odstępy między kolejnymi zabiegami do nawet 6-10 miesięcy.
+
+Przebieg zabiegu
+
+Aby skutecznie usunąć tatuaż konieczne jest wykonanie zabiegów w kilku seriach. Po każdej z nich, tatuaż ulega stopniowemu rozjaśnianiu. Tatuaż profesjonalny, zwłaszcza z dużym pokryciem, wymaga 6-10 sesji, amatorski od 3 do 8. Między każdą sesją obowiązkowa jest przerwa, min 4 tygodnie, podczas której rozdrobniony barwnik ulega fagocytozie. Należy pamiętać również, zwłaszcza przy tuszach o nieznanym składzie, że ilość sesji jest orientacyjna, a zdarzające się odstępstwa mogą skutkować brakiem przewidzianego rezultatu.
+
+Czynniki wpływające na redukcję tatuażu: gęstość i rodzaj tuszu, głębokość jego umieszczenia, miejsce występowania tatuażu, kolor skóry oraz wiek tatuażu. Nie bez znaczenia jest także wydolność układu immunologicznego.
+
+Przed rozpoczęciem zabiegu, powinna nastąpić kwalifikacja pacjenta by wykluczyć możliwe przeciwskazania oraz ustalić okoliczności powstania tatuażu. W drugim kroku wykonać należy próbę laserową w celu wykluczenia niepożądanej reakcji skórnej na promień laserowy (np. bliznowacenie – mało prawdopodobne, jednak możliwe). Zabieg wykonujemy bez znieczulenia lub gdy pacjent odczuwa ból lub duży dyskomfort – w znieczuleniu miejscowym. Stosujemy ustawienia zdefiniowane lasera         Q-MASTER PLUS. W przypadku zaobserwowania dużej agresywności zabiegu (duża ilość krwawień) parametry należy zmniejszyć. Prawidłowa reakcja skóry to początkowe zbielenie miejsca poddanego zabiegowi, a następnie zaróżowienie tego obszaru. Czas zabiegu: 1 sesja 15 – 30 min.
+
+Postępowanie po zabiegu
+
+Skóra przez kilka dni po zabiegu, może być bardziej wrażliwa dlatego też wskazane jest stosowanie preparatów dedykowanych leczeniu po laseroterapii jak np. Laserat, Cicaplast czy Zinalfat, preparaty te przyspieszają gojenie oraz redukują uczucie pieczenia. Obrzęk i zaczerwienie powinno ustąpić od 1 do 3 dni po zabiegu, do tego czasu należy unikać kąpieli, zwłaszcza gorących danego miejsca ale również ćwiczeń fizycznych, sauny, basenu publicznego czy ekspozycji na słońce. W przypadku silnego nasłonecznienia stosować kremy z wysokim filtrem UV (50) przez co najmniej 4 tygodnie od zabiegu.
+
+Objawy pozabiegowe, mogą występować w różnym nasileniu, w zależności od uwarunkowań indywidualnych pacjentów. Wśród nich najczęściej wyróżnia się:
+
+bezpośrednio po zabiegu: rumień, obrzęk, świąd a także zwiększenie wrażliwości skóry
+w obszarze poddanym zabiegowi nastąpić może uszkodzenie ciągłości skóry, pęcherzyki oraz strupki (zwłaszcza przy tatuażach kolorowych, gdzie chromoforem promieni laserowych jest także kolor czerwony (hemoglobina)
+w dłuższej perspektywie mogą występować zasinienia (ustępują w ciągu 5-20 dni); brązowe zabarwienie skóry (do 2-3 miesięcy); zmiany pigmentacji skóry (częściej u ciemnych fototypów, ustępują w ciągu 3-6 miesięcy); 
+Przeciwwskazania do usuwania tatuaży
+ciąża, karmienie piersią
+stosowanie ziół i leków światło-uczulających (antydepresanty, leki przeciwbólowe, nagietek, dziurawiec)
+problemy z krzepliwością krwi, cukrzyca
+zażywanie w okresie do 2 tygodnie przed zabiegiem leków przeciwbólowych, przeciwgorączkowych, witaminy E,A, aspiryny
+opalenizna – minimum 4 tygodnie przerwy od opalania (słońce, solarium)
+zmiany skórne lub aktywne choroby skóry w obszarze poddawanym zabiegowi
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Nieablacyjne zabiegi odmładzania skóry – GENESIS
+URL: https://edu.metrum.com.pl/topics/nieablacyjne-zabiegi-odmladzania-skory-genesis/
+Content:
+Nieablacyjne zabiegi odmładzania skóry – GENESIS
+Q-MASTER – laser Nd:YAG  Zastosowanie lasera Q-MASTER PLUS  Nieablacyjne zabiegi odmładzania skóry – GENESIS
+W TRAKCIE
+
+Laser Q-MASTER PLUS dzięki fali 1064nm oferuje tryb Genesis (długość impulsu 330us), który wykorzystując wnikającą głęboko w skórę energię, stymuluje ją do produkcji kolagenu. Jednoczenie podczas zabiegu górna warstwa skóry nie zostaje uszkodzona. Zabieg jest bezbolesny, nie ma ryzyka powikłań, nie wymaga znieczulenia ani okresu rekonwalescencji. Bezpośrednio po zabiegu widoczne jest zaczerwienie skóry, które ustępuje w ciągu kilku godzin. Jest to zabieg całoroczny, bez względu na nasłonecznienie i stopień opalenia i fototyp skóry. Uzyskanie optymalnych rezultatów zabiegowych a więc odmłodzenia skóry, poprawy jej napięcia, redukcja zmarszczek, redukcja rumienia i popękanych naczynek, następują po 3-5 sesjach. Efekt zabiegu utrzymuje się do kilku miesięcy
+
+Zabieg ma na celu
+odmłodzenie i poprawę struktury skóry,
+wygładzenie zmarszczek oraz zmniejszenie rozszerzonych porów,
+redukcję popękanych naczynek i rumienia
+redukcję cieni pod oczami
+Zalety zabiegu Genesis
+Brak bólu – podczas zabiegu pacjent odczuwana przyjemne ciepło (jak przy opalaniu)
+Pełne bezpieczeństwo dla lekarza i pacjenta
+Brak okresu rekonwalescencji
+Odpowiedni do każdego typu skóry, również opalonej
+Zabieg może być wykonany o każdej porze roku, również latem
+Długotrwały efekt odmładzania,
+Brak efektów ubocznych
+Zabieg
+
+Przygotowanie do zabiegu GENESIS polega na odstawieniu leków i ziół fotouczulających na jeden dzień przed zabiegiem. Na kilka dni przed zabiegiem unikać należy depilacji mechanicznej, opalania się czy podrażnienia skóry. Cała procura jest stosunkowo krótka – trwa około 30 minut. Lekarz wykonujący zabieg, przesuwa głowice lasera w dość energiczny sposób utrzymując od skóry 1-2 cm odległości. Taki sposób wykonania zabiegu pobudza skórę do regeneracji. Bezpośrednio po zabiegu zaleca się stosowanie kremów lub maści łagodzących zaczerwienienie. Nie jest wskazane drapanie czy intensywne pocieranie miejsca zabiegu, może prowadzić do jego podrażnienia. Przez kilka dni stosować należy kremy z wysokim filtrem UV.
+
+Przeciwwskazania do wykonania zabiegu:
+
+Jak każdy zabieg laseroterapii, również GENESIS obarczony jest przeciwwskazaniami. Należą do nich między innymi: ciąża i karmienie piersią, aktywne infekcje skórne, choroby zapalne skóry, nowotwory,  bielactwo, rany, duże otarcia oraz przerwana ciągłość skóry, stosowanie leków i ziół o działaniu fotouczulającym, stosowanie niektórych leków fotouczulających np. izotretynoiny.
+
+Parametry
+Gęstość energii: 12 J/cm2 (w zależności od pacjenta 10-14J/cm2)
+Częstotliwość: 7-9 Hz
+Plamka: 5
+Twarz: 10 000 impulsów (2 000 czoło; 4 każda strona twarzy)
+Szyja, dekolt: 2 000 impulsów każdy obszar
+
+UWAGA: odstęp od brwi – 0.5cm; nie przekraczać temperatury skóry 42oC; zanim wciśniemy włącznik nożny już ruszamy głowicą; ruch dość szybki i płynny, wg schematu by pokryć promieniowaniem laserowych wielokrotnie wszystkie miejsca (np. góra-dół, lewo-prawo, skos w jedną, drugą stronę). Przy szybszych ruchach ręki – częstotliwość 9Hz, przy wolniejszych 7Hz.
+
+Sesje: 4-5 w odstępach co miesiąc
+
+Efekt: po drugim zabiegu, nie jest spektakularny jak laserem CO2 ale widoczny dla pacjentów
+
+poprawia jakość skóry, jej napięcie i koloryt, redukuje naczynia
+eliminuje rozszerzone pory
+wspomaga leczenie trądziku
+wspomaganie leczenia rumienia
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Przezskórne zamykanie naczyń
+URL: https://edu.metrum.com.pl/topics/przezskorne-zamykanie-naczyn/
+Content:
+Przezskórne zamykanie naczyń
+Q-MASTER – laser Nd:YAG  Zastosowanie lasera Q-MASTER PLUS  Przezskórne zamykanie naczyń
+W TRAKCIE
+
+Przezskórne zamykanie naczyń laserem Q-MASTER PLUS jest możliwe dzięki dobrej absorpcji promieniowania o długości fali 1064nm i hemoglobinie. Laser Dzięki trybowi Long Pulse oraz dużej energii jest niezwykle skuteczny.
+
+Teleangiektazje, pajączki naczyniowe to rozszerzone powierzchowne naczynia krwionośne. Powstają głównie w przebiegu różnych schorzeń, np. w trądziku różowatym, toczniu rumieniowatym ale mogą być także efektem w ciąży, tryby pracy czy powstawać w wyniku zmian towarzyszących starzeniu się skóry. Przeważnie zlokalizowane są na twarzy (policzki, broda, nos) oraz nogach. Zamknięcie naczyń światłem lasera Nd:YAG Q-MASTER Plus następuje poprzez absorbcję tego światła (1064nm) przez naczynie krwionośne (zawartą w nim hemoglobinę – chromofor światła lasera 1064nm) zlokalizowanego w skórze właściwej, co skutkuje jego podgrzaniem i termiczną koagulacją (wyparowanie wody z krwi, rozpad ścian naczyń). Co bardzo istotne zamknięcie naczynia odbywa się poprzez zjawisko fototermolizy selektywnej czyli oddziaływania wybiórczego – jedynie na naczynie, bez uszkodzenia sąsiednich struktur. Naczynie ulega początkowo zblednięciu a w dalszej kolejności całkowicie zanikają – na twarzy do 2 tygodniu po zabiegu, na nogach do 6 tygodni.
+
+Zabieg
+
+Pierwszym etapem, jak w przypadku innych procedur z użyciem lasera, jest kwalifikacja pacjenta i określenie ewentualnych przeciwwskazań do wykonania zabiegu. Sama procedura charakteryzuje się wysokim bezpieczeństwem dla pacjenta, stosunkowo niewielką bolesnością (w zasadzie nie ma konieczności znieczulenia, przy większych obszarach warto zadbać o chłodzenie skóry np. CRYO-T COOLER). Skóra do zabiegu powinna być umyta i odtłuszczona. Lekarz wykonujący zabieg przykłada głowicę w miejsce występowania naczynia (czerwony pilot lasera wskazuje miejsce gdzie promień lasera będzie oddziaływał na skórę) i naciska przełącznik nożny. Cały zabieg należy poprzedzić aplikacją próbną w celu ustalenia minimalnych, skutecznych parametrów zabiegowych.
+
+Przeciwwskazania do zabiegu laserem:
+ciąża i karmienie piersią
+opryszczka i infekcje bakteryjne w okolicy zabiegowej; – łuszczyca, bielactwo,
+świeża opalenizna (słońce, solarium, samoopalacz na miesiąc przed zabiegiem);
+leki i zioła światłouczulające ( niektóre antybiotyki, retinoidy, dziurawiec, nagietek na 3 tygodnie przed zabiegiem); zaburzenia krzepnięcia lub substancje rozrzedzające krew (alkohol, aspiryna, antykoagulanty)
+skłonność do przebarwień i bliznowacenia.
+Parametry
+
+Zawsze dobierane indywidualnie dla każdego pacjenta. Pamiętać należy przy tym, że nie ma uniwersalnego lasera do zamykania wszystkich rodzajów naczyń. Skuteczność zabiegów naczyniowych z laserem Q-MASTER PLUS zależy głównie od wielkości naczynia, koloru, głębokości, fototypu skóry, grubości skóry itp. Właściwą, skuteczną dawkę energii dobieramy robiąc próbną aplikację – zaczynając od małych wartości energii, przykładowo:
+
+twarz od ok 40J/cm2
+małe naczynia na nogach od 60J/cm2
+duże naczynia na nogach od 80J/cm
+
+UWAGA: energia w trybach zdefiniowanych lasera Q-MASTER PLUS, często przekracza wyżej wymienione parametry
+
+Jeśli w miejscu w jakim promień laserowy dociera do skóry pojawia się zbielenie (biała plamka) należy zmniejszyć ilość energii jaką emituje laser gdyż może dojść do poparzenia skóry. Zaleca się zmniejszenie częstotliwości do 1Hz (jedno uderzenie lasera na sekundę) by unikać poparzeń spowodowanych wielokrotną emisją promieniowania laserowego w jeden punkt. Do uzyskania pełnego efektu wymagane jest przeprowadzenie od 1 do 5 sesji w odstępach od 3 do maksymalnie 6 tygodni.
+
+Po zabiegu
+
+Bezpośrednio po zabiegu mogą pojawić się zaczerwienienia, delikatny obrzęk lub drobne pęcherzyki – najczęściej ustępują w ciągu kilku dni. Kluczowa w rekonwalescencji jest dbałość o skórę po zabiegu. Bezpośrednio po stosujemy kremy lub maści po zabiegach laserowych (Laserat, Cicaplast, Zinalfat), unikamy ekspozycji na promieniowanie słoneczne (5-6 tygodni) oraz stosujemy krem z wysokim filtrem SPF (50).
+
+Przed
+Po zabiegach
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Melasma
+URL: https://edu.metrum.com.pl/topics/melasma/
+Content:
+Melasma
+Q-MASTER – laser Nd:YAG  Zastosowanie lasera Q-MASTER PLUS  Melasma
+W TRAKCIE
+
+Leczenie melasmy to jedno z trudniejszych wyzwań w gabinecie medycyny estetycznej/dermatologii. Często do gabinetów trafiają osoby po wcześniejszych nieskutecznych lub niewłaściwie przeprowadzonych zabiegach (np. zbyt wysoka energia, niewłaściwy dobór lasera mogą nasilić objawy). Melasma występują w kilku postaciach, najczęściej ma postać mieszaną (skórno-naskórkową). O ile w przypadku tej występującej w obrębie naskórka można radzić sobie stosując np. peelingi, o tyle w przypadku melasmy sięgającej skóry właściwej najskuteczniejszym narzędziem wydają się dedykowane lasery. Doniesienia literaturowe zwracają uwagę na niezwykle trudny proces redukcji melasmy, częste nasilenia dolegliwości w związku z czym warto stosować niskie wartości energii a efekt uzyskać przy większej ilości powtórzeń zabiegu. Z racji innego ryzyka – wystąpienia odbarwień skóry – doskonale sprawdza się głowica frakcyjna dedykowana do lasera Q-MASTER PLUS.
+
+Zabieg
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+
+Parametry
+Przed
+Po 4 zabiegach
+Poprzedni Temat
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Pozostałe zabiegi
+URL: https://edu.metrum.com.pl/topics/pozostale-zabiegi/
+Content:
+Pozostałe zabiegi
+Q-MASTER – laser Nd:YAG  Zastosowanie lasera Q-MASTER PLUS  Pozostałe zabiegi
+W TRAKCIE
+Przebarwienia
+
+Laser Nd:YAG Q-MASTER PLUS jest skutecznym narzędziem w leczeniu łagodnych zmian barwnikowych skóry. Do tego celu można używać zarówno długości fali 532nm, jak i 1064nm. Do usuwania plam typu Café–au-lait bardzo dobrze będzie sprawdzał się tryb lasera Q-MASTER PLUS – melasma. Skuteczny zabieg odbywa się z użyciem niskich wartości energii – ok 2–2,5 J/cm2, a odstęp między sesjami to ok 2-tyg. Działanie takie minimalizuje ryzyko nawrotów i wystąpienia zdarzeń niepożądanych
+
+Epilacja laserowa
+
+Tryb Long Pulse 5–30 ms w jaki wyposażony jest laser Q-MASTER PLUS pozwala na przeprowadzenie zabiegów epilacji laserowej. Plamka o średnicy do 15 mm oraz repetycja do 10 Hz umożliwia szybkie i sprawne przeprowadzenie zabiegu. Zaletą są predefiniowane programy dla każdego fototypu skóry oraz obszaru zabiegowego. Efekty widać już po 1–2 zabiegach. Zastosowanie urządzenia CRYO-T COOLER podnosi komfort zabiegu. Pamiętać należy, że długość fali 1064nm lepiej radzi sobie z włosami grubymi i ciemnymi, gorzej z jasnymi i cienkimi.
+
+Grzybica paznokci
+
+Laser Nd:YAG Q-MASTER PLUS jest skutecznym narzędziem w walce z grzybicą paznokci. Istnieje wiele doniesień literaturowych potwierdzających skuteczność oraz wysokie bezpieczeństwo laserów neodymowo-yagowych w terapii grzybicy paznokci.
+
+Laser pracuje w trybie GENESIS. Parametry zdefiniowane gwarantują bardzo dobre rezultaty. Aby zabieg był skuteczny należy powtórzyć go wielokrotnie (około 6-8 sesji co 4 tygodnie). Pojedyncze/podwójne przejście po płytce i wokół płytki, przesuwając głowicę w płynny, dość wolny sposób.
+
+Peeling węglowy
+
+Peeling węglowy z wykorzystaniem lasera Nd:YAG Q-MASTER PLUS to popularna procedura. Jest to nieinwazyjny, bezpieczny i szybki zabieg pozwalający oczyścić skórę i zlikwidować poszerzone pory. Specjalny krem węglowy, reagując z promieniem lasera odparowuje wraz z martwym naskórkiem. Jako, że nie przerywamy ciągłości skóry, okres rekonwalescencji jest bardzo krótki, zaczerwienienie ustępuje do kilku godzin. Zabieg wykonujemy stosując program zdefiniowany w laserze. Poddawany zabiegowi obszar pokrywamy cienką warstwą kremu węglowego, który całkowicie należy odparować z użyciem lasera. Procedurę można powtarzać co 2-4 tygodnie. Uzyskany efekt jest natychmiastowy i utrzymuje się do miesiąca po zabiegu.
+
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Publikacje o laserze Q-MASTER PLUS
+URL: https://edu.metrum.com.pl/lessons/publikacje-o-laserze-q-master-plus/
+Content:
+Publikacje o laserze Q-MASTER PLUS
+Q-MASTER – laser Nd:YAG  Publikacje o laserze Q-MASTER PLUS
+W TRAKCIE
+Dr Krzysztof Kaczyński,
+
+Miejsce lasera Nd:YAG w gabinecie medycyny estetycznej – doświadczenia własne (2021)
+
+Poprzedni Temat
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Nasza konkurencja
+URL: https://edu.metrum.com.pl/lessons/nasza-konkurencja/
+Content:
+Nasza konkurencja
+Q-MASTER – laser Nd:YAG  Nasza konkurencja
+W TRAKCIE
+SHAR-POL – Q-SWITCH Q10 PREMIUM
+
+INFO: Odpowiednik Q-Master Plus, produkowany przez IDS, firmę „siostrę” AMI
+WSKAZANIA: identyczne jak Q-MASTER PLUS
+PARAMETRY: identyczne jak Q-MASTER PLUS
+
+CENA: ok 250 000 zł
+ESLT MEDICAL – V-LASER
+
+INFO: typowy laser Nd:YAG długoimpulsowy do naczyń
+WSKAZANIA: zmiany naczyniowe, zmiany pigmentowe, odmładzanie nieablacyjne skóry
+PARAMETRY:
+532nm: 1-40ms, 10J, do 3Hz
+1064nm: 1-60ms, 50J, do 5Hz
+Genesis: 0.3ms, 4J, do 10Hz
+max gęstość energii – 350J/cm2
+ZALETY: głowica chłodzona szafirowym szkłem, long pulse w 532nm (rumień)
+WADY: brak możliwości usuwania tatuaży i makijażu permanentnego (brak Q-Switcha)
+
+CENA: ok 230 000 zł
+ESLT MEDICAL – PASTELLE
+
+INFO: Q-switch 1064nm/532nm
+WSKAZANIA: tatuaże, przebarwienia, Genesis mode
+PARAMETRY: Energia max 2.5J dla 1064 w PTP, tylko 0.5J dla 532nm
+WADY: brak ms (zamykanie naczyń), niska energia impulsu
+
+CENA: ok 200 000zł
+BIOTEC LASERS POLSKA – XLASE PLUS
+
+INFO: Q-Switch 1064/532nm
+WSKAZANIA: tatuaże, przebrawienia
+PARAMETRY:
+max 2.4J/cm2
+plamka do 7mm
+impuls 9ns
+do 6Hz
+WADY: znacznie gorsze parametry niż Q-MASTER
+
+CENA: ????
+LASER PROJEKT 2000 – SPECTRA XT
+
+INFO: laser Q-Switch 1064/532nm
+WSKAZANIA: tatuaże, przebarwienia
+PARAMETRY
+q-switch – 6ns
+plamka do 7mm
+gęstość energii do 120J/cm2
+CENA: ???
+BMED – LUCID (różne wersje)
+
+INFO/WSKAZANIA/PARAMETRY
+wersja 1064 long pulse – reklamowany do rumienia a ma tylko 1064nm
+wersja 1064 Qswitch – brak info o tatuażach – wskazania to głównie przebarwienia i melasmy
+wersja 1064/532 Q-switch PTP – tatuaże, przebarwienia, peeling itd., bez long pulse
+WADY: bardzo wybiórcze zastosowania (poza ostatnią wersją a i ta nie ma long pulse), kiepskie parametry techniczne
+
+CENA: ok 250 000 zł za wersję q-switch PTP
+NOVA GROUP – NANOSTAR
+
+INFO: Q-switch Ruby (694nm) + Nd:YAG 1064/532nm (w najwyższej wersji) dostępne tez pojedyncze długości fali
+WSKAZANIA: tatuaże, przebarwienia, nieablacyjne zabiegi odmładzania (wersja najdroższa)
+PARAMETRY: zbliżone do Q-MASETRA (wersja najdroższa)
+
+CENA: ok. 350 000 zł
+MSH – MAGNUM PRO
+
+INFO: laser Q-switch bez long pulse
+WSKAZANIA: tatuaże, przebarwienia, peeling węglowy
+PARAMETRY
+Niskie energie: do 2J dla q-switcha 1064
+plamka do 10mm
+do 10Hz
+q-switch 4ns
+WADY: brak long pulsa
+
+CENA: ok 200 000 zł
+Poprzednia Lekcja
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Podsumowanie kursu
+URL: https://edu.metrum.com.pl/lessons/podsumowanie-kursu/
+Content:
+Podsumowanie kursu
+Q-MASTER – laser Nd:YAG  Podsumowanie kursu
+W TRAKCIE
+Q-MASTER PLUS, mocne strony lasera:
+
+KRAJ POCHODZENIA – KOREA
+produkty koreańskie uznawane są za dobre jakościowo, większość konkurencji również ma lasery wyprodukowane w tym kraju
+
+31 ZDEFINIOWANYCH PROGRAMÓW ZABIEGOWYCH
+eliminuje ryzyko związane z nieprawidłowym nastawieniem parametrów do zabiegu, przyspiesza obsługę urządzenia
+
+POLSKIE MENU
+intuicyjne menu w języku polskim znacznie ułatwia i przyspiesza korzystanie z aparatu
+
+BOGATY ZESTAW STARTOWY
+2 głowice typu ZOOM 2-10mm oraz 11-15mm dla większego komfortu i szybkości pracy
+osłonki na oczy
+krem węglowy do zabiegów laserowego peelingu węglowego
+RÓŻNE DŁUGOŚCI IMPULSU Jedyny laser na rynku z możliwością pracy w 3 długościach impulsu)
+ns – nanosekundy (redukcja tatuaży, makijażu permanentnego, przebarwień)
+µs – mikrosekundy (nieablacyjne zabiegi odmładzania skóry, grzybice paznokci)
+ms – milisekundy (zamykanie naczynek, epilacja)
+BEZAWARYJNY DODATKOWE GŁOWICE ZABIEGOWE
+rozszerzają możliwości wykonywania zabiegów
+barwnikowe
+frakcyjna
+KRÓTKI, STABILNY IMPULS ZABIEGOWY 5-6ns
+doskonałe rezultaty w usuwaniu tatuaży
+Sześć długości fal
+Poza standardowymi długościami (532nm, 1064nm) istnieje możliwość uzupełnienia urządzenia o dodatkowe głowice barwnikowe (585nm, 595nm, 650nm, 660nm)
+IDENTYFIKOWALNE PRZEZ SYSTEM GŁOWICE LASERA
+Eliminuje to ryzyko pomyłki przy wyborze odpowiedniego trybu pracy
+Co Metrum Cryoflex zapewnia lekarzom:
+
+PEŁNY SERWIS SPRZEDAŻOWY I POSPRZESDAŻOWY
+Lasery dostarczane do gabinetu, prezentacja u lekarza w gabinecie, asysta przy pierwszych zabiegach, szkolenie z obsługi, serwis gwarancyjny i pogwarancyjny
+
+URZĄDZENIA ZASTĘPCZE
+Podczas dłuższego serwisu lub awarii udostępniamy urządzenia zastępcze
+
+REALNE PARAMETRY LASERA
+METRUM CRYOFLEX, jako producent innych urządzeń laserowych każde urządzenie dokładnie sprawdza, dokonuje pomiarów i ewentualnej kalibracji – wykwalifikowani inżynierowie.
+
+SZKOLENIA DLA LEKARZY
+Możliwość szkolenia na zakupionym urządzeniu przeprowadzonego przez lekarza specjalistę, który również na co dzień na takim sprzęcie pracuje
+
+LASERY DOSTĘPNE OD RĘKI
+Lekarz może zaczynać pracę niemal od razu po podjęciu decyzji o zakupie.
+
+MOŻLIWOŚĆ WYPOŻYCZENIA LASERA Z ASYSTĄ DOŚWIADCZONEGO PRZEDSTAWICIELA
+Większy komfort lekarza, brak ryzyka błędnego ustawienia lasera, płynne wprowadzenia w zabiegi.
+
+Zastosowanie
+
+Zestaw standardowy w jaki wyposażony jest laser Q-Master PLUS to:
+głowica zoomowa 2-10mm
+głowica zoomowa 11-15mm (epilacja)
+wkładka pod powieki
+krem węglowy
+okulary ochronne dla operatora
+okulary ochronne dla pacjenta
+Taka konfiguracja pozwala na wykonanie wszystkich zabiegów wyszczególnionych w materiałach reklamowych a więc:
+usuwanie tatuaży czarnych i kolorowych
+usuwanie makijażu permanentnego
+przebarwienia (melasmy), zmiany (Oty, błękitne itp.), plamy na skórze (starcze)
+nieablacyjne zabiegi frakcyjne
+peeling węglowy
+zamykanie przezskórne naczyń
+epilacja
+Dodatkowe głowice rozszerzają możliwości lasera Q-MASTER PLUS
+
+Głowica 585nm (595nm)
+błękitne tatuaże
+naczynia
+zaczerwienienie
+melasma
+zmiany potrądzikowe
+Głowica 650nm (660nm)
+zielony tatuaż
+piegi
+zmiany barwnikowe
+Głowica frakcyjna
+melasma
+PIH
+Poprzednia Lekcja
+Wróć do kursu
+----------------------------------------
+

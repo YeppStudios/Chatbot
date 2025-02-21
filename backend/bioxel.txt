@@ -1,0 +1,1178 @@
+BIOXEL
+Moc możliwości, wielozadaniowy, intuicyjny laser o mocy 40 W o szerokim spektrum działania
+
+Wielozadaniowy
+
+Laser BIOXEL to ultranowoczesne narzędzie pracy wykorzystywane w medycynie estetycznej, chirurgii, ginekologii estetycznej, laryngologii oraz stomatologii. Wysoka moc szczytowa trybu UltraPulse na poziomie 315 W pozwala na wykonywanie precyzyjnych zabiegów chirurgicznych.
+
+
+Łatwy w obsłudze
+
+Intuicyjny i przyjazny dla użytkownika interface w języku polskim zamknięty w wygodnym, dużym panelu dotykowym, umieszczonym na optymalnej dla operatora wysokości.
+
+
+Komfortowy w użyciu
+
+Laser posiada 45 zapisanych programów zabiegowych gwarantujących najwyższy komfort, skuteczność i bezpieczeństwo podczas pracy.
+
+
+
+
+Title: Budowa i działanie lasera BIOXEL
+URL: https://edu.metrum.com.pl/lessons/budowa-i-dzialanie-lasera-bioxel/
+Content:
+Budowa i działanie lasera BIOXEL
+BIOXEL – intuicyjny laser CO2  Budowa i działanie lasera BIOXEL
+W TRAKCIE
+
+Urządzenie składa się z korpusu głównego, generatora lasera (rura szklana CO2), prowadnicy wiązki laserowej, skanerów galwanometrycznych, panelu dotykowego LCD, zasilacza impulsowego, głównej płyty sterującej, pompy powietrza, wentylatora chłodzącego, ramienia przegubowego, rękojeści oraz przełącznika nożnego. Impulsowe napięcie prądu stałego zasila jednostkę generującą laser wytwarzając wiązki laserowe o długości fali 10,6µm, które są przesyłane przez ramię przegubowe i emitowane u wyjścia rękojeści.
+
+Elementy wyposażenia
+korpus główny, ramię przegubowe
+rękojeść frakcjonująca, rękojeści chirurgiczne (50mm, 100mm)
+przełącznik blokady INTERLOK, kluczyk 2szt., okulary ochronne 2 szt.
+włącznik nożny, kabel zasilania, instrukcja obsługi
+
+Laser frakcyjny to bardzo wszechstronne urządzenie, które pozwala w znaczący sposób poprawić jakość i wygląd skóry, zniwelować zmarszczki i przebarwienia a także zredukować blizny. Laser to urządzenie, które wykorzystuje zjawisko wymuszonej emisji promieniowania a samo promieniowanie świetlne ma określoną długości fali elektromagnetycznej. W tkankach skóry znajdują się substancje tzw fotoakceptory, które wchłaniają energię o określonej długości fali, wywołując tym samym w tkance konkretne efekty. Zabieg z wykorzystaniem lasera oparty jest na zjawisku fototermolizy. Energia generowana przez laser jest bardzo dobrze pochłaniana przez fotoakceptor jakim jest woda tkankowa. Następuje gwałtowne jej podgrzanie a następnie odparowanie, co doprowadza do powstawania mikrouszkodzeń skóry. Dostarczona energia cieplna zapoczątkowuje produkcję kolagenu oraz elastyny doprowadzając do przebudowy skóry. Uszkodzona tkanka otoczona jest przez zdrową, co dodatkowo przyspiesza jej regenerację i przebudowę. Laser Bioxel wyposażony jest także w głowice chirurgiczne. Głowice chirurgiczne o ogniskowych 50 i 100mm idealnie nadają się do odparowania zmian skórnych oraz cięcia tkanek miękkich w różnorodnych procedurach. Zabieg jest praktycznie bezkrwawy, szybki oraz pozwala na dużą kontrolę głębokości waporyzacji.
+
+Wydajność i parametry
+Moc wejściowa i częstotliwość	220-240V~, 50/60Hz
+Pobór mocy	1.5 KVA
+Czynnik	CO2
+Długość fali	10,600nm
+Klasa bezpieczeństwa lasera według IEC60825-1	KLASA Ⅳ
+Funkcje
+Tryb Frankcjonujący
+Energia	1-300 mJ
+Wielkość Obszaru	2x2-20x20 mm
+Kształt Obszaru	Kwadrat, Sześciokąt, Trójkąt, Okrąg
+Wzór	Szereg, Siatka, Losowy
+Głębia (penetracja)	Poziomy 1-5
+Czas Powtórzenia (Pauza)	0.5-2.5 sec, pojedynczy(WYŁĄCZONY)
+Nasycenie (gęstość)	Poziomy 1-23
+Tryb Chirurgiczny
+	U.CW	CW	Normal Puls	Super Puls	Ultra Puls
+Moc / Energia	1-15 Watt	1-40 Watt	215-290 mJ	60-130 mJ	10-55 mJ
+Czas Trwania Pulsu	∞	∞, 2-30 ms	5-20 ms	1.0-4.0 ms	90-900 us
+Czas Powtórzenia	wyłączony	wyłączony,
+2-500 ms	wyłączony,
+2-500 ms	wyłączony,
+2-500 ms	wyłączony,
+2-500 ms
+Wiązka pilotująca
+
+Czynnik: Laser Diodowy
+Długość Fali: 650nm
+Siła: Mniej niż 5mW
+Pozostałe parametry
+
+Układ Chłodzący: Chłodzenie wodne
+Wymiary: 420(S)×480(G)×1180(W) mm
+Waga: 51kg
+Rodzaj i poziom ochrony przed porażeniem prądem elektrycznym: Klasa 1, Typ B
+Okulary ochronne: OD8+, LASERVISION F18.P1G04.1001, EN207
+Warunki użytkowania
+
+Temperatura: 10 – 40 ℃
+Wilgotność: 30 – 75 %
+Ciśnienie powietrza: 700 – 1060 hPa
+Warunki przechowywania i transportu
+
+Temperatura: 0 – 60 ℃
+Wilgotność: 10 – 95 %
+Ciśnienie powietrza: 700 – 1060 hPa
+Stopień ochrony przed szkodliwym wnikaniem wody
+
+Główny Korpus: IPX0
+Przełącznik nożny: IP68
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Obsługa lasera BIOXEL
+URL: https://edu.metrum.com.pl/lessons/obsluga-lasera-bioxel/
+Content:
+Obsługa lasera BIOXEL
+BIOXEL – intuicyjny laser CO2  Obsługa lasera BIOXEL
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/2 Kroków
+Opis urządzenia
+Obsługa urządzenia
+Poprzednia Lekcja
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Opis urządzenia
+URL: https://edu.metrum.com.pl/topics/opis-urzadzenia-2/
+Content:
+Opis urządzenia
+BIOXEL – intuicyjny laser CO2  Obsługa lasera BIOXEL  Opis urządzenia
+W TRAKCIE
+Elementy wyposażenia lasera BIOXEL
+
+
+Urządzenie składa się z głównego korpusu oraz akcesoriów wymienionych poniżej.
+
+Ramię przegubowe
+Rękojeść frakcjonująca
+Rękojeści ogólne (50mm, 100mm)
+Przełącznik blokady interlock
+Przełącznik nożny
+Okulary ochronne (Operator, Pacjent)
+Kabel zasilania
+Instrukcja obsługi
+Kluczyk
+Wygląd urządzenia
+Elementy ramienia przegubowego
+
+Głowice chirurgiczne 50 mm i 100 mm
+
+Skaner frakcyjny
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Obsługa urządzenia
+URL: https://edu.metrum.com.pl/topics/obsluga-urzadzenia-2/
+Content:
+Obsługa urządzenia
+BIOXEL – intuicyjny laser CO2  Obsługa lasera BIOXEL  Obsługa urządzenia
+W TRAKCIE
+Wybór trybu pracy
+
+Ekran wyboru trybu pracy umożliwia wybranie właściwego programu. Do wyboru jest Tryb Chirurgiczny lub Tryb Frakcyjny. Żółta strzałka pokazuje wybrany tryb a na ekranie pojawia się informacja o konieczności podłączenia odpowiedniej głowicy. Do zatwierdzenia wybranego trybu służy przycisk OK.
+
+Panel chirurgiczny lasera BIOXEL
+Panel trybu frakcyjnego
+UWAGI
+Nie uruchamiaj urządzenia gdy wszystkie jego elementy nie sa prawidłowo połączone.
+Przed rozpoczęciem zabiegu sprawdź, czy wiązka lasera jest dopasowana do wiązki pilotujące. Próbę wykonaj na papierze.
+Podczas zabiegu trzymaj końcówkę rękojeści w odległości przynajmniej 10 mm od skóry.
+W przypadku gdy wiązka lasera nie jest dopasowana do wiązki pilotującej, skontaktuj się z producentem w celu naprawy urządzenia przed ponownym użyciem.
+Proszę naciskać ekran dotykowy za pomocą paznokcia lub pióra dotykowego, ponieważ ekran dotykowy jest bardzo czuły.
+Przygotowanie urządzenia do użycia
+Podłącz kabel zasilający i przełącznik nożny do gniazd znajdujących się z tyłu głównego korpusu.
+Upewnij się, że stacyjka i wyłącznik awaryjny są w odpowiedniej pozycji
+Upewnij się, że ramię przegubowe, rękojeść i złącze rękojeści są prawidłowo podłączone.
+Przygotuj okulary ochronne do zabiegu.
+Umieść rękojeść w uchwycie, gdy z niej nie korzystasz
+Używanie urządzenia
+Przekręć stacyjkę z przodu urządzenia na [WŁĄCZ]
+Sprawdź ekran dotykowy podczas ładowania danych i wyświetlania ekranu wyboru trybu.
+Wybierz TRYB i naciśnij przycisk OK, aby wybrać TRYB pracy
+UWAGA: Upewnij się, że podłączasz odpowiednią rękojeść dla trybu frakcjonującego lub chirurgicznego
+W celu zmiany parametru, przycisk parametru zostanie podświetlony jaśniej po jego dotknięciu. Użytkownik może ustawić wartość każdego parametru w zależności od wykonywanej procedury i kwalifikacji pacjenta, za pomocą przycisków ‘▲▼’ na ekranie.
+Laser wyposażony jest w 45 zdefiniowanych programów zabiegowych
+Procedury czyszczenia sprzętu
+
+Po użyciu tego urządzenia, operator (lekarz lub dermatolog) lub pielęgniarka musi wyczyścić główny korpus, rękojeść i okulary ochronne wacikiem lub papierową ściereczką do obiektywów zwilżoną alkoholem. Jeśli urządzenie jest zabrudzone pyłami lub plamami, wyczyść je miękką i suchą szmatką. (Nie używaj silnego roztworu chemicznego, takiego jak rozcieńczalnik lub benzen).
+
+Czyszczenie głowic
+Wyczyścić rękojeść zgodnie z poniższymi rysunkami.
+Rozłóż rękojeść jak pokazano poniżej.
+Rękojeść chirurgiczna (50mm)
+Rękojeść chirurgiczna (100mm)
+Rękojeść frakcjonująca
+
+Za pomocą bawełnianego wacika zanurzonego w co najmniej 90% etanolu na co najmniej 2 minuty zetrzyj delikatnie jakiekolwiek obce substancje (krew, płyn ustrojowy, fragmenty skóry itp.). Nie należy używać nadmiernej siły podczas czyszczenia, ponieważ może to uszkodzić powłokę soczewki.
+
+Rękojeść chirurgiczna
+
+Rękojeść frakcjonująca
+
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Mocne strony oraz przewaga Metrum Cryoflex nad konkurencją
+URL: https://edu.metrum.com.pl/lessons/mocne-strony-oraz-przewaga-metrum-cryoflex-nad-konkurencja-2/
+Content:
+Mocne strony oraz przewaga Metrum Cryoflex nad konkurencją
+BIOXEL – intuicyjny laser CO2  Mocne strony oraz przewaga Metrum Cryoflex nad konkurencją
+W TRAKCIE
+BIOXEL, mocne strony lasera
+KRAJ POCHODZENIA – KOREA
+
+produkty koreańskie uznawane są za dobre jakościowo, większość konkurencji również ma lasery wyprodukowane w tym kraju
+SPRAWDZONY SPRZĘT/WIELE URZĄDZEŃ NA RYNKU
+sprzedano już ponad 100 urządzeń w PL, awaryjność aparatów jest bardzo mała
+MOC 40 Watów
+wysoka moc urządzenia gwarantuje skuteczne i bezpieczne (niskie ryzyko powikłań, oparzeń) zabiegi
+315 Watów MOCY SZCZYTOWEJ W TRYBIE ULTRA PULSE
+gwarantuje bezkrwawe zabiegi chirurgiczne z pełną kontrolą głębokości ablacji
+SZEROKI WYBÓR GŁOWIC ZABIEGOWYCH
+w zestawie dwie głowice chirurgiczne (50 i 100mm) oraz skaner frakcyjny
+w zestawie z laserem ginekologicznym dwie głowice dopochwowe (90 i 360 stopni), extension bar oraz pierścień zastępujący koszyczek głowicy
+możliwość rozbudowania o dodatkowe głowice zabiegowe według potrzeb lekarza (ginekologia, laryngologia, stomatologia)
+POLSKIE MENU
+intuicyjne menu w języku polskim znacznie ułatwia i przyspiesza korzystanie z aparatu
+45 ZDEFINIOWANYCH TRYBÓW PRACY
+eliminuje ryzyko związane z nieprawidłowym nastawieniem parametrów do zabiegu, przyspiesza obsługę urządzenia
+SZKLANA RURA
+bardzo dobre parametry w trybach impulsowych, wytrzymałość porównywalna z rurą metalową
+WYGLĄD WKOMPONOWUJĄCY SIĘ W GABINET KOMPATIBILNY EWAKUATOR DYMÓW
+obsługiwany z jednego, wspólnego przycisku nożnego co ułatwia i przyspiesza pracę
+Co METRUM CRYOFLEX zapewnia lekarzom
+PEŁNY SERWIS GWARANCYJNY I POGWARANCYJNY
+
+lasery dostarczane do gabinetu, prezentacja u lekarza w gabinecie, asysta przy pierwszych zabiegach, szkolenie z obsługi, serwis gwarancyjny i pogwarancyjny
+URZĄDZENIA ZASTĘPCZE
+podczas dłuższego serwisu lub awarii udostępniamy urządzenia zastępcze
+REALNE PARAMETRY LASERA
+Metrum, jako producent innych urządzeń laserowych każde urządzenie dokładnie sprawdza, dokonuje pomiarów i ewentualnej kalibracji – wykwalifikowani inżynierowie.
+SZKOLENIA DLA LEKARZY
+możliwość szkolenia na zakupionym urządzeniu przeprowadzonego przez lekarza specjalistę, który również na co dzień na takim sprzęcie pracuje
+LASERY DOSTĘPNE OD RĘKI
+lekarz może zaczynać pracę niemal od razu po podjęciu decyzji o zakupie.
+MOŻLIWOŚĆ WYPOŻYCZENIA LASERA Z ASYSTĄ DOŚWIADCZONEGO PRZEDSTAWICIELA
+większy komfort lekarza, brak ryzyka błędnego ustawienia lasera, płynne wprowadzenia w zabiegi.
+Poprzedni Temat
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Zastosowanie
+URL: https://edu.metrum.com.pl/lessons/zastosowanie/
+Content:
+Zastosowanie
+BIOXEL – intuicyjny laser CO2  Zastosowanie
+W TRAKCIE
+Lista tematów
+0% UKOŃCZONE
+0/2 Kroków
+Zestaw startowy
+Zestaw do ginekologii estetycznej
+Poprzednia Lekcja
+Wróć do kursu
+Następny Temat
+----------------------------------------
+
+Title: Zestaw startowy
+URL: https://edu.metrum.com.pl/topics/zestaw-startowy/
+Content:
+Zestaw startowy
+BIOXEL – intuicyjny laser CO2  Zastosowanie  Zestaw startowy
+W TRAKCIE
+Zestaw standardowy lasera BIOXEL
+głowica chirurgiczna 50mm
+głowica chirurgiczna 100mm
+skaner frakcyjny
+okulary ochronne dla operatora
+okulary ochronne dla pacjenta
+Taka konfiguracja pozwala na wykonanie poniższych procedur:
+
+Głowice chirurgiczne
+
+usuwanie zmian nie wymagających badania histopatologicznego m.in. włókniaki, znamiona naskórkowe (brodawki łojotokowe), kępki żółte, brodawki wirusowe, kłykciny kończyste (tu warto pomyśleć o ewakuatorze dymów zabiegowych)
+redukcja zmian związanych z przerostową postacią trądziku różowatego (rhinophyma)
+rogowacenia słoneczne (actinic keratosis)
+usuwanie raka podstawnokomórkowego powierzchownego (superficial basal cel carcinoma) – potwierdzony w badaniu HP
+redukcja zmian w liszaju twardzinowym, chorobie Haileya-Haileya
+blefaroplastyka i lablioplastyka laserowa
+
+Skaner frakcyjny
+
+redukcja objawów fotostarzenia, płytkich zmarszczek (w tym zmarszczki wokół oczu oraz ust), tzw rozszerzonych porów skóry
+redukcja płytko zlokalizowanych przebarwień, plam starczych, piegów
+redukcja blizn potrądzikowych
+redukcja blizn pourazowych, blin przerostowych, bliznowców, blizn zanikowych, rozstępów
+redukcja wiotkości skóry, poprawa napięcia skóry
+Laser CO2 może być stosowany praktycznie na całej powierzchni ciała!
+Poprzednia Lekcja
+Wróć do lekcji
+Następny Temat
+----------------------------------------
+
+Title: Zestaw do ginekologii estetycznej
+URL: https://edu.metrum.com.pl/topics/zestaw-do-ginekologii-estetycznej/
+Content:
+Zestaw do ginekologii estetycznej
+BIOXEL – intuicyjny laser CO2  Zastosowanie  Zestaw do ginekologii estetycznej
+W TRAKCIE
+
+Laser BIOXEL może występować również w wersji z zestawem do ginekologii estetycznej. W skład zestawu wchodzą:
+
+głowica 90o wraz z koszyczkiem (wspomaganie leczenia wysiłkowego nietrzymania moczu)
+głowica 360o wraz z koszyczkiem (rewitalizacja pochwy)
+układ soczewek do zestawu ginekologicznego
+extension bar (przedłużka do końcówek chirurgicznych
+pierścień zabiegowy (używany zamiast koszyczka)
+kluczyk
+Budowa zestawu ginekologicznego
+Dodatkowym elementem jest kluczyk służący do sprawdzenia i zmiany soczewki skupiającej
+Prawidłowo zamocowaną głowicę ginekologiczną pokazuje rysunek poniżej.
+UWAGA:
+Aby zamontować głowicę ginekologiczną odkręć dystanser skanera frakcyjnego
+Poprzedni Temat
+Wróć do lekcji
+Następna Lekcja
+----------------------------------------
+
+Title: Głowice chirurgiczne
+URL: https://edu.metrum.com.pl/lessons/glowice-chirurgiczne/
+Content:
+Głowice chirurgiczne
+BIOXEL – intuicyjny laser CO2  Głowice chirurgiczne
+W TRAKCIE
+
+Zabiegi chirurgiczne laserem BIOXEL polegają na odparowaniu, waporyzacji, cięciu i koagulacji tkanek miękkich. Dostępne są dwie głowice zabiegowe:
+
+50mm – cięcie
+100mm – odparowanie zmian skórnych
+Parametry pracy:
+
+Laser BIOXEL ma wbudowane kilkadziesiąt predefiniowanych programów zabiegowych do chirurgii tkanek miękkich. Każdy operator w przypadku zabiegów chirurgicznych sam decyduje jakie parametry będą najbardziej odpowiednie biorąc pod uwagę rodzaj zmiany czy jej wielkość a zdefiniowane tryby pracy mają być jedynie wskazówką do ich wyboru.
+
+Kluczową zasadą w przypadku pracy chirurgicznej jest to by usunąć zmianę z minimalną ingerencją w tkanki zdrowe.
+
+Niedoświadczony operator powinien korzystać z trybu UltraPulse (moc szczytowa do 315W) dla zapewniania maksymalnej kontroli wnikania promieniowania laserowego w skórę a tym samym maksymalnej kontroli nad głębokością ablacji.
+
+Proponowane parametry zabiegowe dla mniejszych zmian skórnych dla niedoświadczonego użytkownika to:
+
+TRYB: UltraPulse
+CZAS TRWANIA IMPULSU: 400-500us
+CZAS PRZERWY (PAUZA): 30-50ms
+UWAGA:
+
+Aby przyspieszyć szybkość wykonywania zabiegu najwłaściwsze będzie regulowanie tempa poprzez zmianę czasu przerwy między impulsami. 50ms to czas przerwy dla bardzo wolnej procedury, 30ms to czas standardowy, czas poniżej 10ms będzie bliski pracy trybu ciągłego a więc cięcia tkanek.
+
+Drugim sposobem na przyspieszenie wykonywanej procedury (zwiększenia agresywności zabiegu) jest zmiana trybu pracy na tryb o dłuższym impulsie np. SuperPulse lub NormalPulse (czas w ms) lub przejście na tryb ciągły (CW, UCW).
+
+UWAGA:
+Tryb ciągły to bardzo agresywny tryb pracy – ze względu bezpieczeństwa  nie zaleca się używania większej mocy niż kilka Watów.
+Procedura krok po kroku
+Ocena zmiany (dermatoskop lub badanie histopatolog-giczne)
+Dezynfekcja skóry (np. Octenisept, Skinsept)
+Ewentualne znieczulenie (nasiękowe lub krem z okluzją)
+Wykonanie zabiegu
+
+Zabieg wykonujemy głowicą ustawioną prostopadle do powierzchni skóry. Czerwony wskaźnik pilota pokazuje miejsce gdzie promień laserowy będzie oddziaływał na skórę.
+
+Podczas dłuższego zabiegu będzie dochodziło do karbonizacji tkanki w miejscu ablacji. Zwęgloną tkankę należy przetrzeć suchym gazikiem w przeciwnym razie dalsze odparowanie tkanki może być utrudnione lub niemożliwe.
+
+W przypadku niewielkich krwawień koagulację uzyskamy poprzez oddalenie głowicy zabiegowej od pola zabiegowego (na kilka, kilkanaście centymetrów).
+
+Po przeprowadzonym zabiegu miejsce zabiegowe na skórze należy zabezpieczyć plastrem opatrunkowym.
+
+Parametry pracy według producenta
+Zmiana	
+Tryb
+	
+Energia
+	
+Czas trwania impulsu
+	
+Czas powtórzenia
+
+Odciski, brodawki	
+Ultra Puls
+	
+30 mJ
+	
+400 µs
+	
+50 ms
+
+Piegi	
+Ultra Puls
+	
+20 mJ
+	
+200 µs
+	
+50 ms
+
+Znamiona	
+Ultra Puls
+	
+30 mJ
+	
+400 µs
+	
+50 ms
+
+Odświeżanie skóry	
+Ultra Puls
+	
+18 mJ
+	
+150 µs
+	
+40 ms
+
+Phimosiektomia	
+Ultra Puls
+	
+20 mJ
+	
+200 µs
+	
+5 ms
+
+Eliminacja guza	
+Ultra Puls
+	
+35 mJ
+	
+500 µs
+	
+20 ms
+
+Hemoroidy i przetoki odbytu	
+Ultra Puls
+	
+35 mJ
+	
+500 µs
+	
+5 ms
+
+Kłykciny	
+Super Puls
+	
+60 mJ
+	
+1.0 ms
+	
+40 ms
+
+Drobne zmarszczki	
+Ultra Puls
+	
+25 mJ
+	
+300 µs
+	
+50 ms
+
+Syringoma	
+Super Puls
+	
+65 mJ
+	
+1.1 ms
+	
+50 ms
+
+Alergiczny nieżyt nosa	
+Ultra Puls
+	
+55 mJ
+	
+900 µs
+	
+50 ms
+
+Chrapanie	
+Ultra Puls
+	
+25 mJ
+	
+300 µs
+	
+5 ms
+
+ALVR1 (Niski)	
+Tryby pracy ginekologiczne (z automatem do głowicy)
+
+ALVR2 (Średni)	
+Tryby pracy ginekologiczne (z automatem do głowicy)
+
+ALVR3 (Wysoki)	
+Tryby pracy ginekologiczne (z automatem do głowicy)
+Poprzedni Temat
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Zabiegi z użyciem skanera frakcyjnego
+URL: https://edu.metrum.com.pl/lessons/zabiegi-z-uzyciem-skanera-frakcyjnego/
+Content:
+Zabiegi z użyciem skanera frakcyjnego
+BIOXEL – intuicyjny laser CO2  Zabiegi z użyciem skanera frakcyjnego
+W TRAKCIE
+
+Gdy wykonywane są ablacyjne zabiegi frakcyjne laser, za pośrednictwem skanera sprawia, że na powierzchni skóry powstają mikro uszkodzenia (o średnicy 200µm). Jednocześnie do tkanki zostaje dostarczona energia cieplna, która jest na tyle duża, by pobudzić skórę do produkcji nowych włókien kolagenowych, a tym samym przebudowywać ją, i na tyle zbalansowana by jej nie przegrzać i poparzyć. Działanie ablacyjne pozwala na częściowe odparowanie wierzchniej warstwy naskórka, a powstanie jedynie mikro uszkodzeń skóry minimalizuje ryzyko infekcji.
+
+Laser Bioxel ma wbudowane wiele programów zabiegowych do przebudowy skóry. Dla osiągnięcia efektu terapeutycznego oraz zapewnianie bezpieczeństwa dla pacjenta konieczne jest, aby przestrzegać zaleceń producenta co do sugerowanych parametrów zabiegowych. Oczywiście parametry te należy odpowiednio modyfikować zależnie od kondycji skóry, jej uwodnienia, wieku pacjenta, przyjmowanych leków, innych schorzeń czy wcześniej przeprowadzonych zabiegów. Mając na uwadze powyższe intensywność zabiegu należy zredukować u pacjentów gdzie:
+
+kondycja skóry, jej uwodnienie czy naczyniowość budzą wątpliwości
+zabieg wykonywany jest pierwszy raz i nie ma pewności co do przebiegu procesu gojenia
+pacjent jest osobą w starszym wieku
+nie ma pewności co do prawidłowości przeprowadzonego wywiadu
+
+Jednym z kluczowych elementów końcowego sukcesu terapeutycznego jest prawidłowa kwalifikacja pacjenta poprzedzona starannym wywiadem. Istnieje bowiem wiele przeciwwskazań do wykonywania procedur laserowych. Wśród nich wyróżnić można:
+
+Ciąża
+Stosowanie sterydów (krem lub tabletki)
+Stosowanie leków światło-uwrażliwiających (retinoidy, tetracykliny do 6 miesięcy przed zabiegiem)
+Stosowanie ziół (dziurawiec, nagietek do 3 tygodni przed zabiegiem)
+Świeża opalenizna (do 5 tyg. przed zabiegiem)
+Nałożenie na skórę w okolicy, gdzie będzie dokonywany zabieg substancji samoopalającej lub zabarwiającej skórę (także metodą natryskową) do 4 tyg. przed zabiegiem.
+Depilacja woskiem lub pęsetą w okolicy poddawanej zabiegowi – na 2 tyg. przed zabiegiem.
+Cukrzyca
+Peelingi (na 4 tyg. przed zabiegiem)
+Rozrusznik serca
+Czynna infekcja skóry (np. opryszczka, liszajec)
+Aktywne choroby skóry i tkanki podskórnej (np. łuszczyca, liszaj, kolagenoza)
+Duża skłonność do przebarwień, blizn hipertroficznych i bliznowców (keloidów)
+Padaczka
+Czynne choroby autoimmunologiczne (np. toczeń układowy, twardzina)
+Zakażenia wirusowe: HIV, WZW
+Bielactwo, bardzo sucha i wrażliwa skóra
+Nadmierne oczekiwania wobec efektów zabiegu
+Procedura krok po kroku
+Wywiad z pacjentem i podpisanie zgody
+„Zmycie” pacjenta
+Znieczulenie – krem z okluzją (pod foliową maską) na 30 min
+„Zmycie” pacjenta
+Wykonanie zabiegu laserem z użyciem urządzenia CRYO-T Cooler. Pacjent w okularach ochronnych.
+Chłodzenie po zabiegu laserem przy użyciu urządzenia CRYO-T Cooler.
+Nałożenie kremu lub innego środka ułatwiającego gojenie i regenerację skóry (laserat, zinalfat, cicaplast)
+
+Zabieg wykonujemy na całej powierzchni starając się maksymalnie dokładnie pokryć ten obszar promieniowaniem laserowym. Im dokładniej wykonana procedura tym lepsze efekty estetyczne uzyskamy. Po kilku pierwszych przejściach skanera obserwujemy reakcję skóry celem potwierdzenia prawidłowości dobranych parametrów zabiegowych. Zbyt szybkie i intensywne zaczerwienie oraz obrzęk mogą sugerować konieczność redukcji energii używanej podczas zabiegu. Podczas zabiegu frakcyjnego omijamy zmiany i znamiona skórne.
+
+Zabieg z powodzeniem może być wykonany na niemal całej powierzchni ciała.
+
+Zabieg na twarzy
+Zabieg na twarzy
+Zabieg na szyi i dekolcie
+Zabieg na szyi i dekolcie
+Zabieg na dłoni
+Zabieg na brzuchu
+Poprzednie
+Następne
+Postepowanie po zabiegu, zalecenia
+
+Całość, łącznie ze znieczuleniem, trwa około godziny (w zależności od wielkości obszaru czas ten może być różny).
+
+Zaraz po zabiegu, w zależności od zaleceń lekarza, stosować można kremy lub maści przyspieszające gojenie (tylko te zalecane do stosowania po zabiegach laserowych). Bezwzględnie przez okres 4 tygodni należy unikać ekspozycji miejsca zabiegu na promieniowanie słoneczne. Wychodząc z domu należy stosować filtr 50 (wg zaleceń producenta – kilka razy dziennie). Obszar zabiegowy myć wodą termalną/przegotowaną z dodatkiem mydła hipoalergicznego. Nie stosować toników, mleczka lub innym mogących powodować podrażnienia kosmetyków do momentu wstępnego wygojenia skóry. Miejsce zabiegu wycierać ręcznikiem papierowym poprzez przykładanie a nie pocieranie. W miejscu zabiegu odzież powinna być luźna, tak by nie powodować dodatkowych otarć. Unikać kontaktu ze zwierzętami, zwłaszcza w obszarze zabiegowym, by nie doprowadzić do zakażenia bakteryjnego. Wymieniać poszewki pościeli. Nie stosować leków czy ziół światło-uwrażliwiających po zabiegu. Niewskazane jest także korzystanie w pierwszych dniach po zabiegu z ogólnodostępnych basenów, sauny, jacuzzi czy siłowni.
+
+Okres gojenia nie może być ściśle określony w czasie, co wynika ze specyfiki zabiegu i może znacznie się różnić w zależności od osoby.
+
+Regeneracja skóry po zabiegu trwa od kilkunastu tygodni do nawet trzech miesięcy. Podczas tego okresu, zwłaszcza w początkowej fazie, może wystąpić zaczerwienienie i obrzęk skóry (do 24 godzin), bolesność, krwawienia, opuchnięcie. W dalszej kolejności zaobserwować można złuszczenie naskórka (5-7 doba przy odpowiedniej intensywności zabiegu). Charakterystyczne „dziurki” (siateczka) na powierzchni poddanej działaniu lasera, mogą pozostać nawet przez kilka miesięcy.
+
+Efekt końcowy
+
+Nie da się przewidzieć końcowego efektu terapeutycznego. Na powodzenie zabiegu wpływ ma wiele czynników – przestrzeganie zaleceń pozabiegowych, wiek pacjenta, kondycja skóry oraz wiele innych czynników. Pełna przebudowa skóry uzyskiwana jest po kilku tygodniach. W związku z tym zabieg powtarzamy nie wcześniej niż po upływie 6 tygodni. Dla najlepszego efektu zaleca się wykonanie 3 procedur.
+
+Możliwe powikłania po zabiegu laserem CO2
+zaczerwienienia – to właściwie nie jest powikłanie a naturalna reakcja skóry na wysoką temperaturę. Może utrzymywać się od kilku dni do kilku tygodni po zabiegu
+przebarwienia – powikłanie występujące najczęściej – średnio od 10% do 30% pacjentów może mieć przebarwienia lub odbarwienia skóry po wykonanej procedurze laserem frakcyjnym. Im mocniejszy zabieg (intensywniejsze parametry lasera) tym ryzyko przebarwień większe. Duża część przebarwień powinna sama zniknąć po jakimś czasie od zabiegu.
+infekcje – jak np. opryszczka wirusowa – u nosiciela wirusa może pokazać się w miejscu gdzie zabieg został wykonany, sam przebieg infekcji jest nieco inny. Pojawia się zazwyczaj po 3 dobach od zabiegu, goi się szybko i nie zostawia blizn.
+nadkażenie bakteryjne – dochodzi do niego bardzo rzadko i w dużej mierze związane jest to z nieprzestrzeganiem zaleceń pozabiegowych.
+blizny przerostowe lub zanikowe – osoby mające skłonność do powstawania blizn lub mające trudności z gojeniem powinny unikać zabiegów laserem CO2.
+Parametry do zabiegów frakcyjnych wg producenta (z uwagami)
+Zmiana	
+Energia / Punkt
+	
+Głębia
+	
+Czas powtórzenia
+	
+Poziom nasycenia
+	
+Kształt
+	
+Rozmiar
+	
+Wzór
+
+Napinanie skóry	
+36 mJ
+	
+1
+	
+wył.
+	
+13
+	
+	
+15x15
+	
+szereg
+
+Zmarszczki	
+45 mJ
+	
+1
+	
+wył.
+	
+12
+	
+	
+15x15
+	
+szereg
+
+Duże pory	
+45 mJ
+	
+1
+	
+wył.
+	
+12
+	
+	
+15x15
+	
+szereg
+
+Blizny potrądzikowe	
+42 mJ (50) mJ
+	
+1
+	
+wył.
+	
+12
+	
+	
+15x15
+	
+szereg
+
+Odświeżanie skóry	
+45 mJ
+	
+1
+	
+wył.
+	
+15
+	
+	
+15x15
+	
+szereg
+
+Rozstępy	
+50 mJ (42) mJ
+	
+1
+	
+wył.
+	
+15
+	
+	
+15x15
+	
+szereg
+
+Peeling laserowy	
+18 mJ
+	
+1
+	
+wył.
+	
+15
+	
+	
+15x15
+	
+szereg
+
+Tryb użytkownika	
+10 mJ
+	
+1
+	
+wył.
+	
+13
+	
+	
+15x15
+	
+szereg
+
+Tryb ścierania	
+18 mJ
+	
+1
+	
+0.5
+	
+15
+	
+	
+15x15
+	
+szereg
+
+Plamy starcze	
+12 mJ
+	
+1
+	
+wył.
+	
+21
+	
+	
+8x8
+	
+szereg
+Poprzednia Lekcja
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Zabiegi ginekologii estetycznej
+URL: https://edu.metrum.com.pl/lessons/zabiegi-ginekologii-estetycznej/
+Content:
+Zabiegi ginekologii estetycznej
+BIOXEL – intuicyjny laser CO2  Zabiegi ginekologii estetycznej
+W TRAKCIE
+
+Głowica ginekologiczna (M.L.V.R) jest urządzeniem służącym do rewitalizacji pochwy. Głowica jest skonstruowana w taki sposób, by równomiernie dostarczyć promieniowanie laserowe do miejsc gdzie jest to wymagane. Odpowiednie ustawienie gwarantuje grawerowane oznaczenie cyframi na rękojeści oraz dodatkowy podział na 360oC umożliwiający kontrolę pozycji wprowadzonej głowicy. Głowica ma możliwość odprowadzenia oparów zabiegowych i innych substancji obcych tak by zminimalizować ich osadzanie na lustrach co gwarantuje prawidłowe dostarczenie promieniowania do miejsca zabiegu. W połączeniu z systemem laserowym Bioxel głowice ginekologiczne pozwalają uzyskać oczekiwany efekt zabiegowy przy odpowiednio niskiej energii promieniowania co skraca czas rekonwalescencji. Długą żywotność zestawu zapewnia możliwość wymiany koszyczków oraz luster głowicy.
+
+Rewitalizacja okolic intymnych
+
+Kobiety w okresie menopauzalnym oraz po porodach zaczynają odczuwać dolegliwości w miejscach intymnych. Srom traci jędrność i sprężystość, pochwa staje się luźniejsza, zmniejsza się również poziom jej nawilżenia. Uszkodzenia poporodowe mogą mieć różną postać i stopień zaawansowania. Najczęściej występuje zespół rozluźnienia pochwy, opisywany od niedawna w światowej literaturze medycznej jako vaginal laxity syndrom (VLS). Zespół ten powinien być i jest obecnie coraz częściej opisywany jako schorzenie wymagające leczenia, ponieważ spełnia kryteria opisu choroby wg WHO.
+
+Objawy zespołu rozluźnienia pochwy są następujące:
+
+Słabe odczuwanie partnera podczas stosunku
+Uczucie utraty ciasności pochwy
+Uczucie nabierania powietrza (pompowania) do pochwy w czasie współżycia lub nawet podczas ćwiczeń czy chodzenia.
+Uczucie nieprzyjemnego wydostawania się powietrza z pochwy w czasie współżycia z towarzyszącymi efektami dźwiękowymi
+Niezadowolenie z wyglądu wejścia do pochwy (ziejący srom)
+Podatność na częste otarcia i podrażnienia okolicy wejścia do pochwy
+Częste infekcje okolic intymnych
+Gorsza jakość orgazmów (spadek intensywności, częstości, długości)
+Brak samoakceptacji, spadek libido, pogorszenie relacji partnerskich.
+
+Również około 50% kobiet, które przeszły menopauzę skarży się na objawy atrofii narządów płciowych czyli suchość pochwy, ból podczas stosunku płciowego, podrażnienie objawiające się swędzeniem i pieczeniem. Te czynniki powodują obniżenie samooceny, pogorszenie jakości współżycia seksualnego oraz uczucie dyskomfortu. Badania dowodzą również, że objawy suchości pochwy występują u jednej na sześć kobiet. Suchość pochwy i/lub sromu może wystąpić u kobiet w każdym wieku jako dolegliwość w następstwie przyjmowania m.in. izotretynoiny, leków antydepresyjnych, przeciwpsychotycznych itp. lub jako objaw towarzyszący menopauzie, zwłaszcza w przypadku niestosowania hormonalnej terapii zastępczej.
+
+Wskazania do zabiegu rewitalizacji pochwy
+
+Szczególnie narażone na nieprzyjemne dolegliwości są kobiety aktywne.  Wiele kobiet w takich sytuacjach zaczyna rezygnować z ulubionych zajęć. Wskazania do zabiegu to min.:
+
+Chęć zmiany wyglądu okolic intymnych; – uczucie utraty ciasności pochwy
+Częste infekcje okolic intymnych, – podrażnienie powodujące świąd i dyskomfort;
+Hipotrofia lub atrofia i wiotkość skóry warg sromowych większych i wzgórka łonowego;
+Uczucie napięcia i pieczenia u kobiet w wieku okołomenopauzalnym;
+Rozluźnienie i przebudowa blizn po nacięciu krocza podczas porodu
+Wiotka, sucha skóra łechtaczki i warg sromowych
+Suchość w obrębie śluzówki pochwy
+Utrata objętości tkanki okolic intymnych np. po znacznej utracie wagi ciała lub w przypadkach, kiedy zaczynają postępować zaniki tkanki związane z procesem starzenia
+Przebieg zabiegu
+
+Do wykonania tego zabiegu używana jest głowica 360o.
+
+Wywiad i kwalifikacja pacjenta
+Przygotowanie pacjenta (znieczulenie nie jest wymagane)
+Wykonanie zabiegu głowicą 360o (około 5-10minut)
+ możliwie dokładnie osusz pochwę przed rozpoczęciem zabiegu
+umieść koszyczek stabilnie w pochwie
+wykonaj pierwszą emisję lasera – laser emituje promieniowanie w zakresie 360o przez co nie jest konieczny obrót głowicy wokół własnej osi
+wysuń głowicę z koszyczka o jedną pozycję (do kliknięcia)
+naciśnij włącznik nożny by ponownie wyzwolić energię laserową
+powtórz dwa powyższe punkty na całej długości pochwy
+
+UWAGA: możliwe jest również wykonanie całej procedury z użyciem głowicy 90o, gdzie poza wysunięciem głowicy należy również obracać ją wokół własnej osi (słychać kliknięcie w prawidłowej pozycji. Istotne jest tu prawidłowe ustawienie pierścienia oznaczającego start zabiegu względem lustra głowicy. Prawidłowe ustawienie pokazano na zdjęciu. Emisję promieniowania prowadzimy od punktu 1 do 7. Ostatnim etapem jest powrót do pozycji wyjściowej (S) oraz wysunięcie głowicy z koszyczka o jedna pozycję.
+
+Wysiłkowe nietrzymanie moczu
+
+Nietrzymanie moczu (NTM) jest niezależnym od woli stanem częściowego bądź całkowitego wycieku moczu, który stanowi poważny problem natury higienicznej i socjalnej dla osoby dotkniętej. Zdolność prawidłowego utrzymania moczu uzależniona jest od stanu dolnego odcinka dróg moczowych i jego właściwego unerwienia. Do wycieku moczu dochodzi w momencie kiedy ciśnienie w pęcherzu moczowym jest wyższe od ciśnienia, które wywiera cewka moczowa.
+
+Kłopoty z nietrzymaniem moczu są najczęściej wynikiem zaburzeń czynnościowych oraz patologii ze strony układu moczowego. Mogą to być wady rozwojowe lub zaburzenia w obrębie połączeń pomiędzy pęcherzem moczowym a narządem miednicy (przetoki moczowe). Nietrzymanie moczu może być również spowodowane nieprawidłowościami ze strony układu nerwowego, takimi jak urazy i guzy rdzenia kręgowego, przepuklina oponowo-rdzeniowa lub stwardnienia rozsianego.
+
+Typowym objawem wysiłkowego nietrzymania moczu jest jego nieświadome oddawanie, zazwyczaj niewielkich objętości bez uczucia parcia. U osób, dotkniętych schorzeniem, nie obserwuje się większej ilości mikcji w dzień oraz w nocy.
+
+Przyjmuje się, iż wysiłkowe nietrzymanie moczu jest problemem głównie kobiet w starszym wieku, analizy jednak wskazują, iż jest to również dolegliwość, która może wystąpić również u młodszych kobiet. Potwierdzają to przeprowadzone badania epidemiologiczne, z których wynika, iż na wysiłkowe nietrzymanie moczu cierpi około 24% kobiet mających od 18 do 48 lat. Niespełna 37% kobiet w wieku 35-54 deklaruje, iż wystąpiły u nich dolegliwości wysiłkowego nietrzymania moczu. U ponad 60% kobiet zmagających się z WNM  pierwsze objawy wystąpiły przed 50 rokiem życia.
+
+Dolegliwość związaną z nietrzymaniem moczu (NTM) specjaliści dzielą obecnie na trzy rodzaje:
+
+1.
+
+Wysiłkowe nietrzymanie moczu wynikające z nieprawidłowego mechanizmu zamykania się cewki moczowej. Gdy zwiększa się ciśnienie w śródbrzuszu na przykład podczas wysiłku fizycznego czy zwykłego kichnięcia, dochodzi do wycieku moczu z pęcherza moczowego. Przyczyną jest osłabienie mięśni dna miednicy (przez co zmienia się kąt nachylenia cewki moczowej), które może nastąpić wskutek działania wielu czynników. Wśród nich jest:
+
+poród;
+ciężka praca fizyczna;
+zbyt niski poziom estrogenów, towarzyszący menopauzie;
+częste infekcje dróg moczowych;
+zaparcia;
+palenie papierosów, które powoduje uszkodzenie śródbłonka naczyń krwionośnych i prowadzi do zaburzeń ukrwienia narządów wewnętrznych i mięśni.
+
+2.
+
+Naglące nietrzymanie moczu spowodowane zaburzeniami dolnych dróg moczowych, pojawia się wskutek silnego parcia na cewkę moczową i pęcherz. Konsekwencją jest wyciek moczu – od kilku kropel do całkowitego opróżnienia pęcherza. Przyczyną naglącego nietrzymania moczu mogą być nawracające infekcje układu moczowego, choroby ogólnoustrojowe (np.: cukrzyca, stwardnienie rozsiane), ale także chociażby leki odwadniające.
+
+3.
+
+Nietrzymanie moczu z przepełniania, gdzie do utraty moczu może dochodzić na skutek przepełniania pęcherza moczowego.
+
+Wskazania do zabiegu wspomagania leczenia wysiłkowego nietrzymania moczu
+
+U kobiet wysiłkowe nietrzymanie moczu jest najczęściej spowodowane osłabieniem mięśni dna miednicy. Główną przyczyną takiego stanu mogą być wielokrotne porody, niedobór estrogenów lub obniżenie narządów małej miednicy. Problem najczęściej pojawia się po przebytych porodach. Wynika to głównie z tego, iż w czasie ciąży i porodu dochodzi do rozciągania oraz nadrywania mięśni. Podczas przechodzenia płodu przez kanał rodny uszkodzeniu ulegają struktury nerwowo mięśniowe dna miednicy oraz dochodzi do rozwarstwienia powięzi trzewnych miednicy.
+
+Czynniki, związane z przebytymi ciążami, które mogą predysponować do wysiłkowego nietrzymania moczu, to:
+
+liczba porodów powyżej 2;
+długotrwałe porody przekraczające 24 godziny;
+porody naturalne;
+waga płodu większa niż 4000 g;
+poród przeprowadzony po 42 tygodniach ciąży;
+wywołanie porodu za pomocą oksytocyny.
+
+Ponadto ryzyko wystąpienia wysiłkowego nietrzymania moczu u kobiet wzrasta w wyniku:
+
+nadwagi lub otyłości;
+operacji w obrębie podbrzusza (zwłaszcza  histerektomii);
+nieprawidłowej biosyntezy kolagenów włóknikowych (zespół Ehlersa-Danlosa);
+schorzeń ogólnoustrojowych jak np. zaparcia, przewlekła choroba płuc, udar mózgu, neuropatie cukrzycowe, praca fizyczna, palenie tytoniu.
+
+Stopień zaawansowania schorzenia można określić na podstawie stopnia zaawansowania jego objawów, a mianowicie:
+
+I stopień: gdy do wycieku moczu dochodzi jedynie w pozycji stojącej w trakcie nagłego oraz znacznego podwyższenia ciśnienia śródbrzusznego np. podczas śmiechu, kichania lub kaszlu;
+
+II stopień: gdy nietrzymanie moczu pojawia się zawsze na skutek wysiłku fizycznego, który wiąże się z napięciem mięśni brzucha np. w czasie noszenia ciężarów po schodach. Niekiedy wyciek moczu może wystąpić w pozycji leżącej bądź w trakcie jej gwałtownej zmiany z leżącej na stojącą;
+
+III stopień: gdy moczenie następuje w pozycji leżącej nawet podczas nieznacznego wzrostu ciśnienia wewnątrzbrzusznego. 
+
+Laseroterapia może wspomagać leczenie wysiłkowego nietrzymania moczu w przypadku stopnia 1 tego schorzenia.
+Przebieg zabiegu wspomagania leczenia wysiłkowego nietrzymania moczu
+
+Do wykonania tego zabiegu używana jest głowica 90o.
+
+Wywiad i kwalifikacja pacjenta
+Przygotowanie pacjenta (znieczulenie nie jest wymagane)
+Wykonanie zabiegu głowicą 90o (około 5-10minut)
+możliwie dokładnie osusz pochwę przed rozpoczęciem zabiegu
+umieść koszyczek stabilnie w pochwie
+ustaw odpowiednio pierścień kierunkowy oraz lustro głowicy (jak pokazano na zdjęciach wyżej)
+wykonaj podcewkowo emisję promieniowania laserowego w pozycjach: 7, S, 1
+wysuń głowicę z koszyczka do kliknięcia
+powtórz procedurę z dwóch poprzednich punktów na całej długości cewki
+Przygotowanie pacjentki do laserowych zabiegów pochwy (rewitalizacja i WNM)
+estrogenizowanie pochwy u starszych pacjentek na miesiąc przed (jak w przypadku operacji)
+badanie ginekologiczne +aktualna cytologia,
+kwestionariusz (lub wywiad na nim oparty) ICIQ-UI SF służący do oceny stopnia nietrzymania moczu i jego wpływu na jakość życia,
+test patyczkowy (Q-tip test) pozwalający na ocenę ruchomości cewki moczowej oraz szyjki pęcherza moczowego,
+PISQ-12 do oceny jakości życia w obszarze seksualności, a także manometr pochwowy służący do pomiaru siły mięśniowej.
+wymaz z pochwy, czasem z szyjki w celu wykluczenia infekcji
+posiew moczu
+badanie USG – wykluczenie zastoju moczu, anatomicznych wad nerek i pęcherza; ocena długości i ruchomości cewki moczowej; ocena stopnia otwarcia szyi pęcherza moczowego
+Przeciwwskazania
+miesiączka;
+ciąża;
+karmienie piersią;
+stany zapalne dróg rodnych;
+uszkodzenia naskórka w okolicy zabiegowej
+nieprawidłowy wynik badania cytologicznego;
+schorzenia autoimmunologiczne
+padaczka;
+przyjmowanie leków, które wywołują podwyższoną wrażliwość na światło (doksycyklina, -sulfonamidy), środków uspokajających (chlorpromazyna), leków doustnych dla cukrzyków, środków moczopędnych (np. furosemid), leków przeciarytmicznych, hormonów takich jak progesteron oraz estrogen, leków przeciwpadaczkowych, cystostatyków oraz antybiotyków chinolowych
+stosowanie leków przeciwkrzepliwych
+nieuregulowana cukrzyca
+choroby nowotworowe
+Opieka po zabiegu, zalecenia i ograniczenia
+
+Przez pierwsze kilka dni pacjentka może odczuwać lekki dyskomfort w okolicy wykonania zabiegu. Może również pojawić się wysięk surowiczy wymagający noszenia wkładek higienicznych. Powyższe dolegliwości powinny ustąpić po około tygodniu po zabiegu.
+
+Zabiegi laserowe: po wykonaniu zabiegu zalecane jest ograniczenie wysiłku fizycznego, unikanie gorących kąpieli i podnoszenia ciężarów, a także wstrzemięźliwość seksualna do 14 dni. Należy przez 4-5 dni unikać czynników powodujących infekcje bakteryjne (basen, sauna, współżycie). Nie można w tym czasie stosować mydła, spirytusu i środków myjących na bazie alkoholu. Nie wolno również wykonywać irygacji; zamiast wycierać miejsca po zabiegu, należy je delikatnie osuszać gąbką lub ręcznikiem. Niewskazane jest także drażnienie skóry w tych okolicach, gdzie został wykonany zabieg. Przez 2 tygodnie nie należy wykonywać innych zabiegów na sromie, np. depilacji. Wskazane jest nawilżanie miejsc po zabiegu preparatami nawilżającymi 2-3 razy dziennie. Po 4-6 tygodniach pacjentka powinna przyjść na wizytę kontrolną. W przypadku wystąpienia jakichkolwiek powikłań należy skontaktować się z lekarzem.
+
+Po labioplastyce nie należy uprawiać sportu i wykonywać intensywnych ćwiczeń fizycznych; nie można także współżyć przez okres 4-6 tygodni.
+
+Rewitalizacja i wybielanie okolic intymnych
+
+W okolicach intymnych kobiet mogą występować przebarwienia. Ciemniejszy kolor tej okolicy najczęściej ma podłoże dziedziczne powodujące nadmierne nagromadzenie melaniny. Nierzadko ten problem powoduje obniżenie poczucia własnej wartości pacjentek oraz zmniejszenie satysfakcji seksualnej. Zabieg przy użyciu lasera powoduje rozjaśnienie okolic intymnych oraz ujędrnienie i nawilżenie tkanek.
+
+Przygotowanie do laserowego wybielania warg sromowych
+
+W przypadku kobiet warunkiem wykonania zabiegu jest ważne badanie cytologiczne. Do każdego zabiegu wymagana jest kwalifikacja przeprowadzona przez lekarza ginekologa. Sam zabieg nie wymaga większego przygotowania.
+
+Opis zabiegu
+
+Zabieg jest przeprowadzany za pomocą lasera i polega na naświetlaniu obszaru wiązką lasera. Dzięki takiemu naświetlaniu miejsce przebarwienia ulega rozjaśnieniu. Dodatkową zaletą działania lasera jest odmłodzenie i ujędrnienie okolic intymnych. Ilość zabiegów, które wpłyną na efekty jest ustalana z lekarzem na wizycie konsultacyjnej. Zabieg jest bezpieczny wykonywany przez specjalistów ginekologii. Ze względu na to, że zabieg może okazać się lekko bolesny lekarz może zastosować znieczulenie w postaci kremu znieczulającego pod okluzją.
+
+Przeciwskazania
+infekcje pochwy i sromu
+uszkodzenia naskórka w okolicy zabiegowej
+ciąża; karmienie piersią
+nowotwory
+Zalecenia po zabiegu
+
+Pacjent po wykonanym zabiegu może odczuwać dyskomfort oraz podrażnienie i zaczerwienienie. W takich sytuacjach zaleca się nawilżanie okolicy zabiegowej i powstrzymywanie się od stosunków do momentu wygojenia.
+
+Parametry zabiegu wg producenta (zewnętrzne narządy płciowe) oraz sugerowane przez Metrum (w nawiasie)
+Zabieg	
+Energia
+	
+Penetracja
+	
+Pauza
+	
+Gęstość
+	
+Kształt
+	
+Rozmiar
+	
+Pokrycie
+
+LVR 1	
+90°
+	
+80
+	
+2
+	
+Off
+	
+23 (17)!!!
+	
+	
+4x4
+	
+szereg
+
+
+360°
+	
+140
+	
+	
+5x5
+	
+szereg
+
+LVR 2	
+90°
+	
+100
+	
+2
+	
+Off
+	
+23 (17)!!!
+	
+	
+4x4
+	
+szereg
+
+
+360°
+	
+160
+	
+	
+5x5
+	
+szereg
+
+LVR 3	
+90°
+	
+160
+	
+2
+	
+Off
+	
+23 (17)!!!
+	
+	
+4x4
+	
+szereg
+
+
+360°
+	
+200
+	
+	
+5x5
+	
+szereg
+
+Zewnętrzne narządy (niski)	
+33
+	
+1
+	
+0.5 s (Off)
+	
+13
+	
+	
+8x8
+	
+losowy
+
+Zewnętrzne narządy (średni)	
+36
+	
+1
+	
+0.5 s (Off)
+	
+13
+	
+	
+8x8
+	
+losowy
+Poprzednia Lekcja
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Konkurencja
+URL: https://edu.metrum.com.pl/lessons/konkurencja/
+Content:
+Konkurencja
+BIOXEL – intuicyjny laser CO2  Konkurencja
+W TRAKCIE
+LASER	PRODUCENT	DYSTRYBUTOR
+W POLSCE	MOC	RURA	CENA
+BEZ GINEKOLOGII	CENA
+Z GINEKOLOGIĄ
+BIOXEL	AMI
+Korea	METRUM CRYOFLEX	40W	SZKLANA	85 000 zł	99 000 zł
+NEOSKIN	AMI
+Korea	ESLT Medical	40W	METALOWA	99 000 zł CENNIK
+65 000 zł RABAT	140 000 zł CENNIK
+80 000 zł RABAT
+SMAXEL	IDS (AMI)
+Korea	SHAR-POL	40W	SZKLANA	brak danych	120 000 zł CENNIK
+68 000 zł RABAT
+
+MICROSYS	IDS (AMI)
+Korea	SHAR-POL	40W	METALOWA	brak danych	brak danych
+BELADONA	WON-TECH
+Korea	SHAR-POL	brak danych	brak danych	brak danych	brak danych
+UNILAS
+TOUCH	LIMMER
+Niemcy	SHAR-POL	30W, 60W	brak danych	CENA BARDZO WYSOKA	BRAK FUNKCJI
+SCO2
+Galvano	DANA
+Korea	MSH	35W	METALOWA	ok 100 000 zł CENNIK
+RABAT - brak danych	130 000 zł CENNIK
+RABAT - brak danych
+FIRE-XEL	BISON
+Korea	BMED	30W	SZKLANA	60 000 zł RABAT	BRAK FUNKCJI
+APHROIDITE	BISON
+Korea	BMED	30W	METALOWA	brak danych	brak danych
+PERFECTUS	Prawdopodobnie
+Chiny	Lestheezone	40W	METALOWA	65 000 zł	75 000 zł
+ULTRAFRAX	w teorii PL
+pewnie OEM Chiny	LASMED	40W	SZKLANA	brak danych	88 000 zł
+eCO2	Lutronic
+Korea	Laser Projekt 2000	30W	METALOWA	ok. 140 000 zł	brak danych
+FINEXEL	Korea	Nova Group	40W	METALOWA	100 000 zł CENNIK
+69 000 zł RABAT
+	brak danych
+FRAXIS	ILOODA
+Korea	EuroScaleMed	30W	METALOWA	brak danych	125 000 zł
+EDGE ONE	JEYSIS
+Jap.-Kor	EuroScaleMed	30W	SZKLANA	brak danych	80 000 zł
+PIXEL CO2	ALMA
+Izrael	ITP.	30W	METALOWA	powyżej 150 000 zł	brak danych
+SMARTXIDE
+MONALISA	DEKA
+Włochy	ITP.	40W, 60W, 80W	METALOWA	BRAK FUNKCJI	od 200 000 zł
+PENTAGON
+GRAND	DAEJU MEDI
+Korea	BTL	30W	METALOWA	brak danych	brak danych
+REFINE III	brak danych	VENUS BEAUTY	30W	METALOWA	68 000 zł	brak danych
+Poprzednia Lekcja
+Wróć do kursu
+Następna Lekcja
+----------------------------------------
+
+Title: Posdumowanie kursu
+URL: https://edu.metrum.com.pl/lessons/posdumowanie-kursu/
+Content:
+Posdumowanie kursu
+BIOXEL – intuicyjny laser CO2  Posdumowanie kursu
+W TRAKCIE
+BIOXEL – mocne strony lasera
+KRAJ POCHODZENIA – KOREA
+
+produkty koreańskie uznawane są za dobre jakościowo, większość konkurencji również ma lasery wyprodukowane w tym kraju
+SPRAWDZONY SPRZĘT/WIELE URZĄDZEŃ NA RYNKU
+sprzedano już ponad 100 urządzeń w PL, awaryjność apartów jest bardzo mała
+MOC 40 Watów
+wysoka moc urządzenia gwarantuje skuteczne i bezpieczne (niskie ryzyko powikłań, oparzeń) zabiegi
+315 Watów MOCY SZCZYTOWEJ W TRYBIE ULTRA PULSE
+gwarantuje bezkrwawe zabiegi chirurgiczne z pełną kontrolą głębokości ablacji
+SZEROKI WYBÓR GŁOWIC ZABIEGOWYCH
+w zestawie dwie głowice chirurgiczne (50 i 100mm) oraz skaner frakcyjny
+w zestawie z laserem ginekologicznym dwie głowice dopochwowe (90 i 360 stopni), extension bar oraz pierścień zastępujący koszyczek głowicy
+możliwość rozbudowania o dodatkowe głowice zabiegowe według potrzeb lekarza (ginekologia, laryngologia, stomatologia)
+POLSKIE MENU
+intuicyjne menu w języku polskim znacznie ułatwia i przyspiesza korzystanie z aparatu
+45 ZDEFINIOWANYCH TRYBÓW PRACY
+eliminuje ryzyko związane z nieprawidłowym nastawieniem parametrów do zabiegu, przyspiesza obsługę urządzenia
+SZKLANA RURA
+bardzo dobre parametry w trybach impulsowych, wytrzymałość porównywalna z rurą metalową
+WYGLĄD WKOMPONOWUJĄCY SIĘ W GABINET KOMPATIBILNY EWAKUATOR DYMÓW
+obsługiwany z jednego, wspólnego przycisku nożnego co ułatwia i przyspiesza pracę
+Co METRUM CRYOFLEX zapewnia lekarzom
+PEŁNY SERWIS GWARANCYJNY I POGWARANCYJNY
+
+lasery dostarczane do gabinetu, prezentacja u lekarza w gabinecie, asysta przy pierwszych zabiegach, szkolenie z obsługi, serwis gwarancyjny i pogwarancyjny
+URZĄDZENIA ZASTĘPCZE
+podczas dłuższego serwisu lub awarii udostępniamy urządzenia zastępcze
+REALNE PARAMETRY LASERA
+Metrum, jako producent innych urządzeń laserowych każde urządzenie dokładnie sprawdza, dokonuje pomiarów i ewentualnej kalibracji – wykwalifikowani inżynierowie.
+SZKOLENIA DLA LEKARZY
+możliwość szkolenia na zakupionym urządzeniu przeprowadzonego przez lekarza specjalistę, który również na co dzień na takim sprzęcie pracuje
+LASERY DOSTĘPNE OD RĘKI
+lekarz może zaczynać pracę niemal od razu po podjęciu decyzji o zakupie.
+MOŻLIWOŚĆ WYPOŻYCZENIA LASERA Z ASYSTĄ DOŚWIADCZONEGO PRZEDSTAWICIELA
+większy komfort lekarza, brak ryzyka błędnego ustawienia lasera, płynne wprowadzenia w zabiegi.
+Wskazania lasera CO2
+
+GŁOWICE CHIRURGICZNE
+
+
+usuwanie zmian nie wymagających badania histopatologicznego m.in. włókniaki, znamiona naskórkowe (brodawki łojotokowe), kępki żółte, brodawki wirusowe, kłykciny kończyste (tu warto pomyśleć o ewakuatorze dymów zabiegowych)
+redukcja zmian związanych z przerostową postacią trądziku różowatego (rhinophyma)
+rogowacenia słoneczne (actinic keratosis)
+usuwanie raka podstawnokomórkowego powierzchownego (superficial basal cel carcinoma) – potwierdzony w badaniu HP
+redukcja zmian w liszaju twardzinowym, chorobie Haileya-Haileya
+blefaroplastyka i lablioplastyka laserowa
+
+SKANER FRAKCYJNY
+
+redukcja objawów fotostarzenia, płytkich zmarszczek (w tym zmarszczki wokół oczu oraz ust), tzw rozszerzonych porów skóry
+redukcja płytko zlokalizowanych przebarwień, plam starczych, piegów
+redukcja blizn potrądzikowych
+redukcja blizn pourazowych, blin przerostowych, bliznowców, blizn zanikowych, rozstępów
+redukcja wiotkości skóry, poprawa napięcia skóry
+
+GINEKOLOGIA ESTETYCZNA
+
+wspomaganie leczenia wysiłkowego nietrzymania moczu
+rewitalizacja okolic intymnych
+rewitalizacja i wybielanie zewnętrznych narządów płciowych
+
+Laser CO2 może być stosowany praktycznie na całej powierzchni ciała!
+
+Kluczową zasadą w przypadku pracy chirurgicznej jest to by usunąć zmianę z minimalną ingerencją w tkanki zdrowe.
+
+UWAGA:
+Tryb ciągły to bardzo agresywny tryb pracy – ze względu bezpieczeństwa  nie zaleca się używania większej mocy niż kilka Watów.
+
+Okres gojenia po zabiegu frakcyjnym nie może być ściśle określony w czasie, co wynika ze specyfiki zabiegu i może znacznie się różnić w zależności od osoby. Nie da się także przewidzieć końcowego efektu terapeutycznego.
+
+Poprzednia Lekcja
+Wróć do kursu
+----------------------------------------
+
