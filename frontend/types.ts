@@ -22,7 +22,7 @@ type Message = {
 export interface Conversation {
   threadId: string;
   user: string;
-  avatar: string;
+  chatbot: string;
   startTime: string;
   lastUpdated: string;
   title: string;
@@ -58,12 +58,12 @@ export interface APIOrder {
 }
 
 export interface WebSocketMessage {
-  type: 'new_item' | 'session_updated';
-  order_id: string;  // ID of the specific order being updated
-  session_id: string;  // ID of the parent session
+  type: "new_item" | "session_updated";
+  order_id: string; // ID of the specific order being updated
+  session_id: string; // ID of the parent session
   table_number?: number;
-  item?: any;  // The new item being added
-  order?: OrderItem;  // The complete updated order
+  item?: any; // The new item being added
+  order?: OrderItem; // The complete updated order
 }
 
 export interface RootState {
@@ -91,4 +91,13 @@ export interface RootState {
     token: string;
     language: string;
   };
+}
+
+export interface Conversation {
+  threadId: string;
+  user: string;
+  chatbot: string;
+  startTime: string;
+  lastUpdated: string;
+  title: string;
 }
