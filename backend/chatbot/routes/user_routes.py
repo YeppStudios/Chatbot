@@ -14,18 +14,15 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 router = APIRouter()
 class UserCreate(BaseModel):
     role: str
+    email: str
 
 class UserAuth(BaseModel):
     email: str
     name: Optional[str] = None
-    language: str
 
 class CodeLogin(BaseModel):
     code: str
 
-class LanguageUpdate(BaseModel):
-    language: str
-    
 @router.post("/login", response_model=Dict[str, Any])
 async def login_user(user_data: UserAuth = Body(...)):
     try:
@@ -38,7 +35,6 @@ async def login_user(user_data: UserAuth = Body(...)):
             new_user = {
                 "name": user_data.name,
                 "email": user_data.email,
-                "language": user_data.language,
                 "role": "user",
                 "conversations": []
             }
@@ -46,8 +42,7 @@ async def login_user(user_data: UserAuth = Body(...)):
             result = await collection.insert_one(new_user)
             new_user['_id'] = result.inserted_id
             user = User.parse_obj(new_user)
-        
-        access_token = create_access_token(data={"code": user.code})
+        access_token = create_access_token(data={"id": str(user.id)})
         
         return {
             "access_token": access_token,
@@ -56,24 +51,6 @@ async def login_user(user_data: UserAuth = Body(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-
-@router.post("/login/code", response_model=Dict[str, Any])
-async def login_with_code(login_data: CodeLogin):
-    try:
-        user = await db['users'].find_one({"code": login_data.code})
-        if user is None:
-            raise HTTPException(status_code=404, detail="Invalid code")
-        
-        # Generate JWT token
-        access_token = create_access_token(data={"code": login_data.code})
-        user_response = User.parse_obj(user)
-        
-        return {
-            "access_token": access_token,
-            "user": user_response
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
     
 @router.post("/user", response_model=User)
 async def create_user(user_data: UserCreate):
@@ -81,8 +58,8 @@ async def create_user(user_data: UserCreate):
         collection = db['users'] 
         
         user_dict = {
-            "language": 'English',
             "role": user_data.role,
+            "email": user_data.email,
             "conversations": []
         }
 
@@ -125,20 +102,7 @@ async def delete_user(user_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.post("/login", response_model=Dict[str, Any])
-async def check_user_code(code: str = Body(..., embed=True)):
-    user = await db['users'].find_one({"code": code}) 
-    if user is None:
-        raise HTTPException(status_code=404, detail="User not found")
-    
-    # Generate JWT token
-    access_token = create_access_token(data={"code": code})
-    user_response = User(**user)
-    
-    return {
-        "access_token": access_token,
-        "user": user_response
-    }
+
 
 @router.get("/check_user/{user_id}")
 async def check_user_exists(user_id: str = Path(..., description="The user ID to check"), token: str = Depends(oauth2_scheme)):
@@ -163,34 +127,5 @@ async def get_all_users():
 
         users = await users_cursor.to_list(length=100)
         return users
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    
-@router.patch("/user/{user_id}/language")
-async def update_user_language(user_id: str, language_data: LanguageUpdate):
-    try:
-        # Validate user exists
-        user = await db['users'].find_one({"_id": ObjectId(user_id)})
-        if not user:
-            raise HTTPException(status_code=404, detail="User not found")
-        
-        # Check if the language is actually changing
-        if user.get('language') == language_data.language:
-            # If language is the same, just return the current user
-            return User(**user)
-        
-        # Update the language field
-        result = await db['users'].update_one(
-            {"_id": ObjectId(user_id)},
-            {"$set": {"language": language_data.language}}
-        )
-        
-        if result.matched_count == 0:
-            raise HTTPException(status_code=404, detail="User not found")
-            
-        # Get updated user
-        updated_user = await db['users'].find_one({"_id": ObjectId(user_id)})
-        return User(**updated_user)
-        
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

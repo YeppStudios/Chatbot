@@ -7,7 +7,7 @@ const ChatWindow = ({ isOpen }: { isOpen: boolean }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bottom-14 px-2 pt-4 right-5 bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col"
+          className="fixed bottom-14 px-2 pt-4 right-5 bg-white border-gray-100 border-2 rounded-2xl shadow-lg overflow-hidden flex flex-col"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{
             opacity: 1,
@@ -26,8 +26,8 @@ const ChatWindow = ({ isOpen }: { isOpen: boolean }) => {
             transition: { duration: 0.2 },
           }}
           style={{
-            width: "350px",
-            height: "450px",
+            width: "450px",
+            height: "550px",
             transformOrigin: "bottom right",
           }}
         >

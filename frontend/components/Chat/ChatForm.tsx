@@ -51,7 +51,7 @@ const ChatForm = () => {
         />
         <button
           type="submit"
-          className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-xl p-2 ml-3 w-10 h-10"
+          className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-xl p-2 ml-3 min-w-10 h-10 flex items-center justify-center"
         >
           <Image
             src="/send_white.png"

@@ -7,7 +7,6 @@ class User(BaseModel):
     id: PyObjectId = Field(default_factory=PyObjectId, alias='_id')
     name: Optional[str] = None
     email: Optional[str] = None
-    language: str = Field(default='English')
     role: str
     conversations: List[str] = []
 
