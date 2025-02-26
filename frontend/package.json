@@ -21,6 +21,7 @@
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "next-auth": "^4.24.8",
     "react-markdown": "^9.0.3",
     "react-redux": "^9.2.0",
     "react-type-animation": "^3.2.0",

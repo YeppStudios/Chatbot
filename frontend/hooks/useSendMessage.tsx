@@ -153,8 +153,8 @@ const useSendMessage = ({
 
         const reader = await askAI(
           input,
-          "gpt-4o",
-          "thread_KPVZaOjDsx1DZgJd5iDwrDLV",
+          "gpt-4-turbo",
+          "thread_tx6lReAKRAZVyfSZV2p5FvuC",
           true,
           "asst_x6MKYmAnK0IPjMSRp0dafCwF",
           runId,
