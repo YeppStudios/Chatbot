@@ -45,8 +45,8 @@ const OpenChatButton = ({
           >
             <Image
               src="/chatIcon.webp"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               alt="Chat bot icon"
               className="rounded-t-2xl rounded-bl-2xl"
             />
