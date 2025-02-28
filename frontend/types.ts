@@ -101,3 +101,18 @@ export interface Conversation {
   lastUpdated: string;
   title: string;
 }
+
+
+export interface LoginResponse {
+  success: boolean;
+  user?: {
+    _id: string;
+    name: string;
+    email: string;
+    role: string;
+    language: string;
+    code: string;
+  };
+  access_token?: string;
+  error?: string;
+}

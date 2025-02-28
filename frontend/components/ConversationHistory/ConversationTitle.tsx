@@ -19,7 +19,7 @@ const ConversationTitle = ({
     <div className="bg-white p-5 text-center flex justify-center shadow-lg">
       <div className="flex justify-between lg:w-[60%] items-center">
         <p className="font-medium">Conversation History</p>
-        <div className="flex">
+        <div className="flex bg-white">
           <Image
             src="/filter.png"
             alt=""

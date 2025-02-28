@@ -23,6 +23,10 @@ const ConversationHistory = () => {
     currentPage,
   });
 
+  if (loading) {
+    return;
+  }
+
   return (
     <div className="bg-white h-screen w-full overflow-hidden">
       <ConversationTitle
