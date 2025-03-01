@@ -1,6 +1,7 @@
 import { getConversations } from "@/utils/getConversations";
 import { useState, useEffect } from "react";
 import { Conversation } from "@/types";
+import { getAuthToken } from "@/utils/auth/getToken";
 interface props {
   token: string;
   currentPage: number;
@@ -14,15 +15,20 @@ const useGetConversations = ({ token, currentPage = 1 }: props) => {
 
   useEffect(() => {
     const fetchConversations = async () => {
-      if (!token) {
+      const authToken = getAuthToken();
+      if (!authToken) {
         console.log("No token available, skipping conversation fetch");
         return;
       }
 
       try {
         setLoading(true);
-        const conversations = await getConversations(currentPage, 20, token);
-        setConversationsList(conversations.data);
+        const conversations = await getConversations(
+          currentPage,
+          20,
+          authToken
+        );
+        setConversationsList(conversations);
         setError(null);
       } catch (error) {
         console.error("Error fetching conversations:", error);

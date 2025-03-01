@@ -1,10 +1,11 @@
 import ConversationHistory from "@/components/ConversationHistory/idex";
+import AuthWrapper from "./AuthWrapper";
 
 const page = () => {
   return (
-    <div>
+    <AuthWrapper>
       <ConversationHistory />
-    </div>
+    </AuthWrapper>
   );
 };
 export default page;
