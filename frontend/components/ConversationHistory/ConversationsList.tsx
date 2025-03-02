@@ -40,10 +40,10 @@ const ConversationsList = ({
       )}
       {conversationList &&
         conversationList.map((conversation: Conversation, index: number) => {
-          let date = new Date(conversation.lastUpdated);
+          const date = new Date(conversation.lastUpdated);
 
-          let formattedDate = date.toLocaleDateString("en-GB");
-          let formattedHour = date.toLocaleTimeString("en-US", {
+          const formattedDate = date.toLocaleDateString("en-GB");
+          const formattedHour = date.toLocaleTimeString("en-US", {
             hourCycle: "h23",
             hour: "2-digit",
             minute: "2-digit",
