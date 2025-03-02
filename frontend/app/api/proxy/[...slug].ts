@@ -10,7 +10,7 @@ export const config = {
   },
 };
 
-const API_URL = 'http://167.172.179.174';
+const API_URL = 'http://167.172.179.174:8000';
 
 const proxy = httpProxy.createProxyServer();
 
