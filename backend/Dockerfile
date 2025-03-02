@@ -37,7 +37,7 @@ COPY requirements.txt /code/requirements.txt
 
 
 # Copy application code
-COPY ./minerva /code/minerva
+COPY ./chatbot /code/chatbot
 
 # Command to run the application
 CMD ["uvicorn", "chatbot.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
