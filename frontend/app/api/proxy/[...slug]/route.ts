@@ -6,25 +6,27 @@ const API_URL = 'http://167.172.179.174:8000';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(req: NextRequest, { params }: { params: { slug: string[] } }) {
+type RouteParams = { params: { slug: string[] } };
+
+export async function GET(req: NextRequest, { params }: RouteParams) {
   return proxyRequest(req, params.slug);
 }
 
-export async function POST(req: NextRequest, { params }: { params: { slug: string[] } }) {
+export async function POST(req: NextRequest, { params }: RouteParams) {
   return proxyRequest(req, params.slug);
 }
 
-export async function PUT(req: NextRequest, { params }: { params: { slug: string[] } }) {
+export async function PUT(req: NextRequest, { params }: RouteParams) {
   return proxyRequest(req, params.slug);
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { slug: string[] } }) {
+export async function DELETE(req: NextRequest, { params }: RouteParams) {
   return proxyRequest(req, params.slug);
 }
 
-// General proxy handler
-async function proxyRequest(req: NextRequest, slug: string[]) {
-  const url = `${API_URL}/${slug.join('/')}`;
+async function proxyRequest(req: NextRequest, slug?: string[]) {
+  const path = slug ? slug.join('/') : '';
+  const url = `${API_URL}/${path}`;
 
   const headers = new Headers(req.headers);
   headers.set('host', new URL(API_URL).host);
@@ -32,13 +34,11 @@ async function proxyRequest(req: NextRequest, slug: string[]) {
   const response = await fetch(url, {
     method: req.method,
     headers,
-    body: req.method !== 'GET' && req.method !== 'HEAD' ? req.body : undefined,
+    body: req.method !== 'GET' && req.method !== 'HEAD' ? await req.text() : undefined,
   });
-
-  const responseHeaders = new Headers(response.headers);
 
   return new Response(response.body, {
     status: response.status,
-    headers: responseHeaders,
+    headers: response.headers,
   });
 }
