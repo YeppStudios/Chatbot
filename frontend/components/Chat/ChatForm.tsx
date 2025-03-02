@@ -1,13 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, FormEvent } from "react";
 import { useChatStore } from "@/store/ChatStore";
 import useSendMessage from "@/hooks/useSendMessage";
 
 const ChatForm = () => {
   const [inputValue, setInputValue] = useState("");
-  const { messages, isThinking, setIsThinking } = useChatStore();
+  
+  const {
+    messages,
+    isThinking,
+    isStreaming,
+    setIsThinking,
+    setIsStreaming,
+    threadId,          // <-- Grab the threadId here
+  } = useChatStore();
 
   // Use a ref for tool actions
   const toolActionRef = useRef([]);
@@ -17,7 +25,7 @@ const ChatForm = () => {
     toolActionRef.current = action;
   };
 
-  // A helper that updates Zustand’s messages by referencing the latest state
+  // A helper that updates Zustand's messages by referencing the latest state
   const setMessages = (updater: any) => {
     useChatStore.setState((state) => {
       if (typeof updater === "function") {
@@ -33,25 +41,39 @@ const ChatForm = () => {
     setMessages,
     setInput: setInputValue,
     setAiThinking: setIsThinking,
+    setIsStreaming,
     toolAction: toolActionRef.current,
     setToolAction,
     mediaElement: null,
     session: null,
   });
 
+  // We prevent sending if no threadId is present
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!threadId) {
+      console.warn("No thread ID yet. Please wait until the conversation is initialized.");
+      return;
+    }
+    sendMessage(e);
+  };
+
   return (
-    <form onSubmit={sendMessage} className="border-t border-gray-200 p-2 bg-white">
+    <form onSubmit={handleSubmit} className="border-t border-gray-200 p-2 rounded-xl bg-white">
       <div className="flex">
         <input
           type="text"
           placeholder="Zadaj pytanie..."
-          className="w-full p-2 shadow-inner outline-none shadow-black/15 border border-black/5 bg-slate-50 rounded-md"
+          className="w-full p-2 shadow-inner outline-none shadow-black/15 border border-black/5 bg-slate-50 rounded-lg"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
+
+        {/* Disable the button if no threadId */}
         <button
           type="submit"
-          className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-xl p-2 ml-3 min-w-10 h-10 flex items-center justify-center"
+          className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 min-w-10 h-10 flex items-center justify-center"
+          disabled={!threadId} // <-- disabled if no conversation is active
         >
           <Image
             src="/send_white.png"

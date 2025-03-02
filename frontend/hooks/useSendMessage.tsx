@@ -2,6 +2,8 @@
 
 import { useCallback, useRef, useEffect } from "react";
 import { askAI } from "@/utils/askAi";
+import { useChatStore } from "@/store/ChatStore";
+import { assistantId } from "@/constants/chatbot";
 
 interface FunctionCall {
   name: string;
@@ -15,11 +17,15 @@ const useSendMessage = ({
   setMessages,
   setInput,
   setAiThinking,
+  setIsStreaming, // New prop for tracking streaming state
   toolAction,
   setToolAction,
   mediaElement,
   session,
 }: any) => {
+  // Retrieve the conversation's threadId from ChatStore
+  const threadId = useChatStore((state) => state.threadId);
+
   const jsonChunkBuffer = useRef("");
   const responseBuffer = useRef("");
   const functionCallRef = useRef<FunctionCall[]>([]);
@@ -41,23 +47,20 @@ const useSendMessage = ({
       let startIndex = 0;
       let endIndex;
 
-      while (
-        (endIndex = jsonChunkBuffer.current.indexOf("}", startIndex)) !== -1
-      ) {
+      while ((endIndex = jsonChunkBuffer.current.indexOf("}", startIndex)) !== -1) {
         const possibleJson = jsonChunkBuffer.current.substring(0, endIndex + 1);
 
         try {
           const json = JSON.parse(possibleJson);
           // Remove the parsed JSON from the buffer
-          jsonChunkBuffer.current = jsonChunkBuffer.current
-            .substring(endIndex + 1)
-            .trim();
+          jsonChunkBuffer.current = jsonChunkBuffer.current.substring(endIndex + 1).trim();
           startIndex = 0;
 
           // Handle partial or completed text chunk
           if (json.type === "text" && json.data) {
             if (!isStreamingRef.current) {
               isStreamingRef.current = true;
+              setIsStreaming(true);
             }
             responseBuffer.current += json.data;
 
@@ -69,12 +72,10 @@ const useSendMessage = ({
                   : msg
               )
             );
-
-            // If we receive any text chunk, we know the AI is already “speaking”
             setAiThinking(false);
           }
 
-          // Handle function call, tool actions, etc. ...
+          // Handle function calls
           if (json.type === "function_call") {
             const newFunctionCall: FunctionCall = {
               name: json.data.name,
@@ -89,10 +90,7 @@ const useSendMessage = ({
                 msg.id === currentMessageIdRef.current
                   ? {
                       ...msg,
-                      functionCall: [
-                        ...(msg.functionCall || []),
-                        newFunctionCall,
-                      ],
+                      functionCall: [...(msg.functionCall || []), newFunctionCall],
                     }
                   : msg
               )
@@ -100,8 +98,8 @@ const useSendMessage = ({
             setAiThinking(false);
           }
 
+          // Handle tool actions
           if (json.type === "tool_action") {
-            // ...
             setToolAction([
               {
                 id: json.data[0].id,
@@ -109,11 +107,10 @@ const useSendMessage = ({
                 function: json.data[0].function,
               },
             ]);
-            // ...
           }
 
           if (json.type === "tool_outputs") {
-            // ...
+            // ... handle tool outputs if needed
           }
         } catch (error) {
           // Incomplete/partial JSON, keep accumulating
@@ -121,28 +118,26 @@ const useSendMessage = ({
         }
       }
     },
-    [setMessages, setAiThinking, setToolAction]
+    [setMessages, setAiThinking, setIsStreaming, setToolAction]
   );
 
   const sendMessage = useCallback(
     async (e: any) => {
       e.preventDefault();
 
-      // Create user message
+      // Create and add the user message
       const userMessage = {
         id: Date.now().toString(),
         text: input,
         sender: "You",
       };
-
-      // Add user message to store
       setMessages((messages: any) => [...messages, userMessage]);
 
-      // Clear input, set "thinking" to true
+      // Clear input and set thinking state
       setInput("");
       setAiThinking(true);
-
       isStreamingRef.current = false;
+      setIsStreaming(false);
       jsonChunkBuffer.current = "";
       responseBuffer.current = "";
       functionCallRef.current = [];
@@ -151,12 +146,18 @@ const useSendMessage = ({
         const runId = toolAction[0]?.run_id || "";
         const callId = toolAction[0]?.id || "";
 
+        if (!threadId) {
+          console.error("No threadId found. Cannot send message to an uninitialized conversation.");
+          return;
+        }
+
+        // Use the dynamic threadId from ChatStore
         const reader = await askAI(
           input,
           "gpt-4-turbo",
-          "thread_tx6lReAKRAZVyfSZV2p5FvuC",
+          threadId,
           true,
-          "asst_x6MKYmAnK0IPjMSRp0dafCwF",
+          assistantId,
           runId,
           callId
         );
@@ -169,10 +170,9 @@ const useSendMessage = ({
           throw new Error("Stream reader not available");
         }
 
-        // Create an "Assistant" message to stream into
+        // Create an assistant message in the store to stream into
         const assistantMessageId = Date.now().toString();
         currentMessageIdRef.current = assistantMessageId;
-
         setMessages((messages: any) => [
           ...messages,
           {
@@ -183,13 +183,13 @@ const useSendMessage = ({
           },
         ]);
 
-        // Continuously read from the stream
+        // Continuously read from the stream and process chunks
         const read = () => {
           reader.read().then(({ done, value }: any) => {
             if (done) {
-              // End of the stream
               currentMessageIdRef.current = null;
               isStreamingRef.current = false;
+              setIsStreaming(false);
               setAiThinking(false);
               return;
             }
@@ -203,6 +203,7 @@ const useSendMessage = ({
       } catch (error) {
         console.error("Failed to send to AI:", error);
         setAiThinking(false);
+        setIsStreaming(false);
       }
     },
     [
@@ -210,10 +211,12 @@ const useSendMessage = ({
       setMessages,
       setInput,
       setAiThinking,
+      setIsStreaming,
       setToolAction,
       toolAction,
       mediaElement,
-      processChunk
+      processChunk,
+      threadId,
     ]
   );
 

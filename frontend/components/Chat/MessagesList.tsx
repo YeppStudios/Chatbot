@@ -1,71 +1,78 @@
 "use client";
 
-import { useScrollToBottom } from "@/hooks/useScrollToBottom";
-import { useVisibilityScrolling } from "@/hooks/useVisibilityScrolling";
+import React, { useEffect, useState } from "react";
 import { useChatStore } from "@/store/ChatStore";
-import { cn } from "@/utils/cn";
-import { useRef, useEffect } from "react";
-import AiThinking from "./AiThinking";
 import ReactMarkdown from "react-markdown";
+import AiThinking from "./AiThinking";
+import useAutoScroll from "@/hooks/useAutoScroll";
+import Typewriter from "./Typewriter";
+
 
 const MessagesList = () => {
-  const { messages, isThinking } = useChatStore();
-  const messagesEndRef = useScrollToBottom([messages]);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useVisibilityScrolling(messagesEndRef);
-
-  // Ensure container scrolls to the bottom on initial render and when messages change
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.scrollTop = containerRef.current.scrollHeight;
-    }
-  }, [messages]);
+  const { messages, isThinking, isStreaming } = useChatStore();
+  
+  const { containerRef, isFollowingScroll, resetScrollFollow } = useAutoScroll({
+    messages,
+    isThinking,
+    isStreaming
+  });
+  
+  const showScrollIndicator = isStreaming && !isFollowingScroll;
 
   return (
-    <div className="relative h-full">
-      <div
-        ref={containerRef}
-        className="flex flex-col h-full overflow-y-auto hide-scrollbar p-2 pb-12 pt-20 justify-end"
+    <div className="relative h-full w-full">
+      <div 
+        ref={containerRef} 
+        className="p-4 pt-8 pb-8 overflow-y-auto h-full hide-scrollbar"
       >
-        {/* Fade overlay at top */}
-        <div className="absolute top-8 left-0 right-0 h-12 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
-        
-        {/* Spacer that pushes content to the bottom */}
-        <div className="flex-grow" />
-        
-        {/* Messages container */}
-        <div className="flex flex-col">
-          {messages.map((chat) =>
-            chat.text === "" ? null : (
+        {messages.map((chat) =>
+          // If this message has typed=true, use the Typewriter component
+          chat.text ? (
+            <div
+              key={chat.id}
+              className={
+                chat.sender === "You"
+                  ? "flex justify-end w-full my-2" 
+                  : "flex justify-start w-full my-2"
+              }
+            >
               <div
-                className={cn(
-                  "my-2 p-2 max-w-[95%]",
+                className={
                   chat.sender === "You"
-                    ? "bg-purple-chat px-3 rounded-b-xl rounded-tl-xl self-end text-white"
-                    : "bg-purple-chat/15 px-3 rounded-b-xl rounded-tr-xl self-start text-gray-600"
-                )}
-                key={chat.id}
+                    ? "bg-purple-chat px-3 rounded-b-xl rounded-tl-xl text-white p-2 max-w-[90%]"
+                    : "bg-purple-chat/15 px-3 rounded-b-xl rounded-tr-xl text-gray-600 p-2 max-w-[90%]"
+                }
               >
-                <ReactMarkdown>{chat.text}</ReactMarkdown>
-              </div>
-            )
-          )}
-
-          {isThinking && (
-            <div className="my-2 self-start">
-              <div className="px-4 py-4 bg-purple-chat/15 w-auto rounded-b-xl rounded-tr-xl text-gray-600 inline-block">
-                <AiThinking />
+                {chat.typed ? (
+                  <Typewriter text={chat.text} />
+                ) : (
+                  <ReactMarkdown>{chat.text}</ReactMarkdown>
+                )}
               </div>
             </div>
-          )}
+          ) : null
+        )}
 
-          <div ref={messagesEndRef} />
-        </div>
+        {isThinking && (
+          <div className="flex justify-start w-full my-2">
+            <div className="bg-purple-chat/15 px-4 py-4 rounded-b-xl rounded-tr-xl text-gray-600">
+              <AiThinking />
+            </div>
+          </div>
+        )}
       </div>
       
-      {/* Fade overlay at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
+      {showScrollIndicator && (
+        <div 
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 
+                     bg-purple-chat/80 text-white text-xs py-1 px-3 
+                     rounded-full opacity-80 cursor-pointer 
+                     transition-opacity hover:opacity-100 shadow-md animate-pulse"
+          onClick={resetScrollFollow}
+        >
+          New messages ↓
+        </div>
+      )}
     </div>
   );
 };

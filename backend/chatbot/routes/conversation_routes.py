@@ -72,7 +72,7 @@ async def create_conversation(request: ConversationCreateRequest):
         user = await db['users'].find_one({"_id": ObjectId(request.userId)})
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
-        
+
         # Convert to User model for type safety
         user_model = User(**user)
 
@@ -83,13 +83,20 @@ async def create_conversation(request: ConversationCreateRequest):
         
         assistant_model = Assistant(**assistant)
 
-        # Create first message with the assistant's preprompt if it exists
+        # (1) If there is a preprompt, add it
         if assistant_model.preprompt:
             openai.beta.threads.messages.create(
                 thread.id,
                 role="assistant",
                 content=assistant_model.preprompt
             )
+
+        # (2) Always add your custom greeting as the next message
+        openai.beta.threads.messages.create(
+            thread.id,
+            role="assistant",
+            content=request.text
+        )
 
         # Create new conversation document
         new_conversation = Conversation(
@@ -105,6 +112,7 @@ async def create_conversation(request: ConversationCreateRequest):
         new_conversation_dict = new_conversation.dict()
         new_conversation_dict["_id"] = str(result.inserted_id)
 
+        # Add this conversation to the user's conversation list
         user_conversations = user_model.conversations
         user_conversations.append(thread.id)
         await db['users'].update_one(
