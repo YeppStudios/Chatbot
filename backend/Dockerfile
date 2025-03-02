@@ -36,7 +36,7 @@ WORKDIR /code
 COPY requirements.txt /code/requirements.txt
 
 
-
+RUN pip install --upgrade pip setuptools
 # Install Python dependencies in steps with error checking
 RUN echo "Installing urllib3..." && \
     pip install 'urllib3<2.0' && \
