@@ -23,7 +23,7 @@ const ConversationSorterDropdown: React.FC<ConversationSorterDropdownProps> = ({
     <DropdownMenu open={isOpen} onOpenChange={setOpen}>
       <DropdownMenuTrigger />
 
-      <DropdownMenuContent className="mt-3 p-2 text-xs flex flex-col ">
+      <DropdownMenuContent className="mt-3 p-2 text-xs flex flex-col bg-white ">
         <ConversationSorterItem
           imgSrc="/clock.png"
           sortMessages={sortMessages}

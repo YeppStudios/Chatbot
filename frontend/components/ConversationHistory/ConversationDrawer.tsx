@@ -1,9 +1,15 @@
-import React, { useEffect, useState, useRef, Dispatch, SetStateAction } from "react";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import ReactMarkdown from "react-markdown";
 import { MultiLineSkeletonLoader } from "../Loaders";
 import { cn } from "@/utils/cn";
 import { getConversation } from "@/utils/getConversation";
-import { Sheet, SheetContent } from "../ui/sheet";
+import { Sheet, SheetContent, SheetTitle } from "../ui/sheet";
 
 interface ConversationDrawerProps {
   isDrawerOpen: boolean;
@@ -66,6 +72,9 @@ const ConversationDrawer: React.FC<ConversationDrawerProps> = ({
         handleDrawerClose={handleDrawerClose}
         isDrawerOpen={isDrawerOpen}
       >
+        {/* sheet title is for preventing error we are not using it*/}
+        <SheetTitle>{""}</SheetTitle>
+
         {loading ? (
           <div className="w-full mt-10">
             <MultiLineSkeletonLoader lines={5} justifyContent="left" />
