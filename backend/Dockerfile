@@ -23,7 +23,7 @@ RUN pip install pytest==8.3.4 pytest-asyncio==0.25.1 && \
     echo "Pytest version:" && \
     pytest --version
 
-# Try to export requirements with debug info
+# Export requirements with debug info
 RUN echo "Attempting to export requirements..." && \
     poetry config --list && \
     poetry export -f requirements.txt --output requirements.txt --without-hashes --verbose
@@ -32,9 +32,11 @@ RUN echo "Attempting to export requirements..." && \
 FROM python:3.12
 WORKDIR /code
 
-# Copy requirements
-COPY requirements.txt /code/requirements.txt
+# Copy requirements file from the build stage
+COPY --from=requirements-stage /tmp/requirements.txt /code/requirements.txt
 
+# Install dependencies (including uvicorn if it's listed in your pyproject.toml)
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY ./chatbot /code/chatbot
