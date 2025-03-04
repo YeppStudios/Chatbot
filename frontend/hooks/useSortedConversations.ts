@@ -1,13 +1,24 @@
 import { Conversation } from "@/types";
+
 interface useSortedConversationsProps {
   sortType: string;
-  conversations: Conversation[];
+  conversations: Conversation[] | null | undefined;
 }
 
 const useSortedConversations = ({
   conversations,
   sortType,
 }: useSortedConversationsProps) => {
+  // Check if conversations is an array
+  if (!Array.isArray(conversations)) {
+    return [];
+  }
+  
+  // Handle empty array
+  if (conversations.length === 0) {
+    return [];
+  }
+
   const sorted = [...conversations].sort((a, b) => {
     switch (sortType) {
       case "latest":

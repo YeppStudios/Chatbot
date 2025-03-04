@@ -44,7 +44,8 @@ const ConversationDrawer: React.FC<ConversationDrawerProps> = ({
           (a: { created_at: number }, b: { created_at: number }) =>
             a.created_at - b.created_at
         );
-        setConversation(sortedMessages);
+        // Skip the first message (system prompt) by slicing from index 1
+        setConversation(sortedMessages.slice(1));
       }
       setLoading(false);
     };

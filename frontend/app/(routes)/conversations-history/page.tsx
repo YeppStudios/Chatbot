@@ -1,4 +1,4 @@
-import ConversationHistory from "@/components/ConversationHistory/idex";
+import ConversationHistory from "@/components/ConversationHistory";
 import AuthWrapper from "./AuthWrapper";
 
 const page = () => {

@@ -79,8 +79,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def start():
-    uvicorn.run("chatbot.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("chatbot.main:app", host="0.0.0.0", port=8001, reload=True)
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
