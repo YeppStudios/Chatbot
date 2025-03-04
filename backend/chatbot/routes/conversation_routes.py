@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from chatbot.models.request.create_conversation import ConversationCreateRequest
 from chatbot.models.user import User
 from chatbot.models.assistant import Assistant
@@ -49,7 +49,18 @@ async def get_conversation(threadId: str, messageLimit: int = Query(20, ge=1, le
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@router.get("/conversations")
+
+def serialize_doc(doc):
+    """Convert MongoDB document to dict with string IDs."""
+    if doc.get('_id') and isinstance(doc['_id'], ObjectId):
+        doc['_id'] = str(doc['_id'])
+    return doc
+
+class ConversationResponse(BaseModel):
+    conversations: List[Dict[str, Any]]
+    total: int
+
+@router.get("/conversations", response_model=ConversationResponse)
 async def get_all_conversations(page: int = Query(1, description="Page number, starting from 1"),
                               limit: int = Query(20, description="Number of conversations per page", gt=0),
                               token: str = Depends(oauth2_scheme)):
@@ -63,14 +74,16 @@ async def get_all_conversations(page: int = Query(1, description="Page number, s
         cursor = db['conversations'].find({}).sort('lastUpdated', -1).skip(skip).limit(limit)
         conversations = await cursor.to_list(length=limit)
         
+        # Convert ObjectId to string for each conversation
+        serialized_conversations = [serialize_doc(conv) for conv in conversations]
+        
         # Return both the conversations and the total count
         return {
-            "conversations": conversations,
+            "conversations": serialized_conversations,
             "total": total_count
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
 @router.post("/conversation")
 async def create_conversation(request: ConversationCreateRequest):
     try:
