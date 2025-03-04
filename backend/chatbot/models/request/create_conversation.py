@@ -6,3 +6,4 @@ class ConversationCreateRequest(BaseModel):
     assistantId: str
     title: str
     text: Optional[str] = None
+

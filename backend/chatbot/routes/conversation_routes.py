@@ -48,19 +48,28 @@ async def get_conversation(threadId: str, messageLimit: int = Query(20, ge=1, le
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.get("/conversations", response_model=List[Conversation])
+
+@router.get("/conversations")
 async def get_all_conversations(page: int = Query(1, description="Page number, starting from 1"),
                               limit: int = Query(20, description="Number of conversations per page", gt=0),
                               token: str = Depends(oauth2_scheme)):
     await get_current_admin_user(token)
     skip = (page - 1) * limit
     try:
+        # Get total count of conversations
+        total_count = await db['conversations'].count_documents({})
+        
+        # Get paginated conversations
         cursor = db['conversations'].find({}).sort('lastUpdated', -1).skip(skip).limit(limit)
         conversations = await cursor.to_list(length=limit)
-        return conversations
+        
+        # Return both the conversations and the total count
+        return {
+            "conversations": conversations,
+            "total": total_count
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
 
 @router.post("/conversation")
 async def create_conversation(request: ConversationCreateRequest):
@@ -217,3 +226,24 @@ async def get_assistant_conversations(
             status_code=500, 
             detail=f"Error fetching conversations: {str(e)}"
         )
+    
+
+
+@router.delete("/conversation/{conversation_id}")
+async def delete_conversation(conversation_id: str):
+    try:
+        result = await db['conversations'].delete_one({"_id": ObjectId(conversation_id)})
+
+        if result.deleted_count == 0:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+
+        # Optionally, remove conversation ID references from user documents
+        await db['users'].update_many(
+            {"conversations": conversation_id},
+            {"$pull": {"conversations": ObjectId(conversation_id)}}
+        )
+
+        return {"message": "Conversation deleted successfully"}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
