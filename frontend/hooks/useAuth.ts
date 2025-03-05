@@ -11,11 +11,8 @@ const useAuth = () => {
     const handleUserData = async () => {
       if (session?.user?.email) {
         const userEmail = session.user.email;
-        console.log("User email:", userEmail);
-
         try {
           const userData = await login();
-          console.log(userData, "authData");
           setAuthData(userData);
         } catch (error) {
           console.error("Login error:", error);

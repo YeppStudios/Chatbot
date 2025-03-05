@@ -20,6 +20,7 @@ type Message = {
 };
 
 export interface Conversation {
+  _id: string;
   threadId: string;
   user: string;
   chatbot: string;

@@ -11,7 +11,11 @@ export default function SignInButton() {
   }
 
   return (
-    <AuthButton onClick={() => signIn("google", { callbackUrl: "/" })}>
+    <AuthButton
+      onClick={() =>
+        signIn("google", { callbackUrl: "/conversations-history" })
+      }
+    >
       Login with Google
     </AuthButton>
   );

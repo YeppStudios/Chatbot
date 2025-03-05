@@ -1,11 +1,13 @@
 "use client";
 
-import useGetConversations from "@/hooks/useGetConverstaions";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ConversationTitle from "./ConversationTitle";
 import ConversationsList from "./ConversationsList";
 import ConversationDrawer from "./ConversationDrawer";
 import ConversationHistoryFooter from "./ConversationHistoryFooter";
+import { getAuthToken } from "@/utils/auth/getToken";
+import useGetConversations from "@/hooks/useGetConverstaions";
+import useConversationStore from "@/store/useConversationStore";
 
 const ConversationHistory = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -16,12 +18,34 @@ const ConversationHistory = () => {
   const [sortType, setSortType] = useState("latest");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(10);
 
-  const { conversationsList, loading } = useGetConversations({
-    token: "",
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    const authToken = getAuthToken();
+    if (authToken) {
+      setToken(authToken);
+    }
+  }, []);
+
+  const deletedConversationId = useConversationStore(
+    (state) => state.deletedConversationId
+  );
+
+  const { conversationsList, loading, totalPages } = useGetConversations({
+    token,
     currentPage,
   });
+
+  useEffect(() => {
+    if (
+      deletedConversationId &&
+      deletedConversationId === selectedConversation
+    ) {
+      setIsDrawerOpen(false);
+      setSelectedConversation(null);
+    }
+  }, [deletedConversationId, selectedConversation]);
 
   return (
     <div className="bg-white h-screen w-full overflow-hidden">
