@@ -1,35 +1,34 @@
 import { backend } from "@/config/apiConfig";
 
-export const getConversations = async (
-  page = 1,
-  limit = 20,
+export const deleteConversation = async (
+  conversationId: string,
   token: string | null
 ) => {
   if (!token) {
     console.error("Token is missing!");
-    return [];
+    return false;
   }
 
   try {
     const response = await fetch(
-      `${backend.serverUrl}/conversations?page=${page}&limit=${limit}`,
+      `${backend.serverUrl}/conversation/${conversationId}`,
       {
-        method: "GET",
+        method: "DELETE",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
       }
     );
+
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const data = await response.json();
-    console.log("Fetched conversations:", data);
-    return data;
+    console.log(`Successfully deleted conversation: ${conversationId}`);
+    return true;
   } catch (err) {
-    console.error("Failed to fetch the conversations:", err);
-    return [];
+    console.error(`Failed to delete conversation ${conversationId}:`, err);
+    return false;
   }
 };
