@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import Any, Dict, List, Optional
-from chatbot.models.request.create_conversation import ConversationCreateRequest
+from chatbot.models.request.conversation import ConversationCreateRequest
 from chatbot.models.user import User
 from chatbot.models.assistant import Assistant
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -84,6 +84,7 @@ async def get_all_conversations(page: int = Query(1, description="Page number, s
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
 @router.post("/conversation")
 async def create_conversation(request: ConversationCreateRequest):
     try:
@@ -130,8 +131,8 @@ async def create_conversation(request: ConversationCreateRequest):
             title=request.title
         )
         
-        result = await db['conversations'].insert_one(new_conversation.dict())
-        new_conversation_dict = new_conversation.dict()
+        result = await db['conversations'].insert_one(new_conversation.model_dump())
+        new_conversation_dict = new_conversation.model_dump()
         new_conversation_dict["_id"] = str(result.inserted_id)
 
         # Add this conversation to the user's conversation list
