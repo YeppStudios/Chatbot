@@ -1,4 +1,5 @@
 from datetime import datetime
+import traceback
 from typing import Any, Dict, List, Optional
 from chatbot.models.request.conversation import ConversationCreateRequest
 from chatbot.models.user import User
@@ -12,6 +13,7 @@ from dotenv import load_dotenv
 from bson import ObjectId
 from openai import OpenAI
 from pydantic import BaseModel
+from chatbot.models.message import Message
 
 load_dotenv()
 
@@ -84,60 +86,71 @@ async def get_all_conversations(page: int = Query(1, description="Page number, s
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
+
+
+
 @router.post("/conversation")
 async def create_conversation(request: ConversationCreateRequest):
     try:
-        # Create new thread
-        thread = openai.beta.threads.create()
-        
-        # Find user and verify existence
+        thread = None
+        if request.assistantId:
+            thread = openai.beta.threads.create()
+
         user = await db['users'].find_one({"_id": ObjectId(request.userId)})
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
-
-        # Convert to User model for type safety
         user_model = User(**user)
 
-        # Get the assistant
-        assistant = await db['assistants'].find_one({"openaiAssistantId": request.assistantId})
-        if not assistant:
-            raise HTTPException(status_code=404, detail="Assistant not found")
-        
-        assistant_model = Assistant(**assistant)
+        assistant_model = None
+        if request.assistantId:
+            print("Fetching assistant with openaiAssistantId:", request.assistantId)
+            assistant = await db['assistants'].find_one({"openaiAssistantId": request.assistantId})
+            if not assistant:
+                raise HTTPException(status_code=404, detail="Assistant not found")
+            assistant_model = Assistant(**assistant)
 
-        # (1) If there is a preprompt, add it
-        if assistant_model.preprompt:
+        if thread and assistant_model and assistant_model.preprompt:
             openai.beta.threads.messages.create(
                 thread.id,
                 role="assistant",
                 content=assistant_model.preprompt
             )
 
-        # (2) Always add your custom greeting as the next message
-        openai.beta.threads.messages.create(
-            thread.id,
-            role="assistant",
-            content=request.text
-        )
+        if thread and request.text:
+            openai.beta.threads.messages.create(
+                thread.id,
+                role="assistant",
+                content=request.text
+            )
 
-        # Create new conversation document
+        initial_messages = []
+        if not thread and request.text:
+            message = Message(
+                role="assistant",
+                content=request.text,
+                timestamp=datetime.utcnow()
+            )
+            initial_messages.append(message)
+
         new_conversation = Conversation(
-            threadId=thread.id,
-            user=str(ObjectId(request.userId)),
+            threadId=thread.id if thread else "",  # Use empty string instead of None
+            user=request.userId,
             startTime=datetime.utcnow(),
             lastUpdated=datetime.utcnow(),
-            assistantId=request.assistantId,
-            title=request.title
+            assistantId=request.assistantId if request.assistantId else "",  # Use empty string
+            title=request.title,
+            messages=initial_messages
         )
-        
-        result = await db['conversations'].insert_one(new_conversation.model_dump())
-        new_conversation_dict = new_conversation.model_dump()
+
+        result = await db['conversations'].insert_one(new_conversation.model_dump(exclude_none=True))
+        new_conversation_dict = new_conversation.model_dump(exclude_none=True)
         new_conversation_dict["_id"] = str(result.inserted_id)
 
-        # Add this conversation to the user's conversation list
-        user_conversations = user_model.conversations
-        user_conversations.append(thread.id)
+        user_conversations = user_model.conversations or []
+        if thread:
+            user_conversations.append(thread.id)
+
         await db['users'].update_one(
             {"_id": ObjectId(request.userId)},
             {"$set": {"conversations": user_conversations}}
@@ -147,8 +160,9 @@ async def create_conversation(request: ConversationCreateRequest):
             "thread": thread,
             "conversation": new_conversation_dict
         }
-
     except Exception as e:
+        print("Error in /conversation:", str(e))
+        print("Stack trace:", traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(e))
 
 class PaginationInfo(BaseModel):

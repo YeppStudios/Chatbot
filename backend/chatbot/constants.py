@@ -15,21 +15,22 @@ class ErrorCodes(str, Enum):
 OPENAI_SEARCH_TOOL = [
     {
         "type": "function",
-        "name": "search_vector_store",
-        "description": "Search the vector store for information relevant to the query when course or client-related data is needed.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "query": {
-                    "type": "string",
-                    "description": "The search query to retrieve relevant information from the vector store."
-                }
-            },
-            "required": ["query"]
+        "function": {
+            "name": "search_vector_store",
+            "description": "Search the vector store for information relevant to the query when course or client-related data is needed.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "The search query to retrieve relevant information from the vector store."
+                    }
+                },
+                "required": ["query"]
+            }
         }
     }
 ]
-
 # Anthropic tool definition
 ANTHROPIC_SEARCH_TOOL = [
     {

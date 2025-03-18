@@ -1,42 +1,40 @@
+// components/Chat/ChatForm.tsx
 "use client";
 
 import Image from "next/image";
 import React, { useState, useRef, FormEvent } from "react";
 import { useChatStore } from "@/store/ChatStore";
-import useSendMessage from "@/hooks/useSendMessage";
+import useSendAssistantMessage from "@/hooks/useSendAssistantMessage";
+import useSendLLMMessage from "@/hooks/useSendLLMMessage";
+import { usePathname } from "next/navigation";
 
 const ChatForm = () => {
   const [inputValue, setInputValue] = useState("");
-  
+  const pathname = usePathname();
+  const isOpenAIRoute = pathname === "/";
+
   const {
     messages,
     isThinking,
     isStreaming,
     setIsThinking,
     setIsStreaming,
-    threadId,          // <-- Grab the threadId here
+    threadId,
+    conversationId,
   } = useChatStore();
 
-  // Use a ref for tool actions
   const toolActionRef = useRef([]);
-
-  // Callback for setting new tool actions
   const setToolAction = (action: any) => {
     toolActionRef.current = action;
   };
 
-  // A helper that updates Zustand's messages by referencing the latest state
   const setMessages = (updater: any) => {
-    useChatStore.setState((state) => {
-      if (typeof updater === "function") {
-        return { messages: updater(state.messages) };
-      }
-      return { messages: updater };
-    });
+    useChatStore.setState((state) => ({
+      messages: typeof updater === "function" ? updater(state.messages) : updater,
+    }));
   };
 
-  // Our custom hook that returns the sendMessage function
-  const sendMessage = useSendMessage({
+  const sendMessageOpenAI = useSendAssistantMessage({
     input: inputValue,
     setMessages,
     setInput: setInputValue,
@@ -44,15 +42,26 @@ const ChatForm = () => {
     setIsStreaming,
     toolAction: toolActionRef.current,
     setToolAction,
-    mediaElement: null,
-    session: null,
   });
 
-  // We prevent sending if no threadId is present
+  const sendMessageLLM = useSendLLMMessage({
+    input: inputValue,
+    setMessages,
+    setInput: setInputValue,
+    setAiThinking: setIsThinking,
+    setIsStreaming,
+  });
+
+  const sendMessage = isOpenAIRoute ? sendMessageOpenAI : sendMessageLLM;
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (!threadId) {
-      console.warn("No thread ID yet. Please wait until the conversation is initialized.");
+    if (isOpenAIRoute && !threadId) {
+      console.warn("No thread ID yet.");
+      return;
+    }
+    if (!isOpenAIRoute && !conversationId) {
+      console.warn("No conversation ID yet.");
       return;
     }
     sendMessage(e);
@@ -68,12 +77,10 @@ const ChatForm = () => {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-
-        {/* Disable the button if no threadId */}
         <button
           type="submit"
           className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 min-w-10 h-10 flex items-center justify-center"
-          disabled={!threadId} // <-- disabled if no conversation is active
+          disabled={isOpenAIRoute ? !threadId : !conversationId}
         >
           <Image
             src="/send_white.png"

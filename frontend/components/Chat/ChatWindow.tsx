@@ -1,4 +1,4 @@
-// ChatWindow.tsx
+// components/Chat/ChatWindow.tsx
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,36 +6,52 @@ import MessagesList from "./MessagesList";
 import ChatForm from "./ChatForm";
 import { useEffect } from "react";
 import { useChatStore } from "@/store/ChatStore";
+import { usePathname, useParams } from "next/navigation";
 
 const ChatWindow = ({ isOpen }: { isOpen: boolean }) => {
-  const { resetChatState, createNewConversation } = useChatStore();
+  const {
+    resetChatState,
+    createNewConversation,
+    setLlmProvider,
+    setModel,
+    setVectorstore,
+  } = useChatStore();
+  const pathname = usePathname();
+  const isOpenAIRoute = pathname === "/";
+  const { llmProvider, model, vectorstore } = useParams();
 
   useEffect(() => {
     if (isOpen) {
       resetChatState();
-      createNewConversation()
+      if (!isOpenAIRoute) {
+        setLlmProvider(llmProvider as string);
+        setModel(model as string);
+        setVectorstore(vectorstore as string);
+      }
+      createNewConversation(isOpenAIRoute)
         .catch((err) => console.error("Failed to create conversation:", err));
     }
-  }, [isOpen, resetChatState, createNewConversation]);
-  
+  }, [
+    isOpen,
+    resetChatState,
+    createNewConversation,
+    setLlmProvider,
+    setModel,
+    setVectorstore,
+    isOpenAIRoute,
+    llmProvider,
+    model,
+    vectorstore,
+  ]);
+
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bottom-14 right-5 w-[450px] h-[550px] bg-white border-2 border-gray-100 rounded-2xl shadow-lg flex flex-col"
+          className="fixed bottom-14 right-5 w-[450px] h-[550px] bg-white border-2 border-gray-200 rounded-2xl shadow-lg flex flex-col"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            transition: { stiffness: 300, damping: 25 },
-          }}
-          exit={{
-            opacity: 0,
-            scale: 0.9,
-            y: 20,
-            transition: { duration: 0.2 },
-          }}
+          animate={{ opacity: 1, scale: 1, y: 0, transition: { stiffness: 300, damping: 25 } }}
+          exit={{ opacity: 0, scale: 0.9, y: 20, transition: { duration: 0.2 } }}
           style={{ transformOrigin: "bottom right" }}
         >
           <div className="relative" style={{ height: "calc(100% - 60px)" }}>

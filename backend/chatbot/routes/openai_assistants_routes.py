@@ -19,7 +19,7 @@ openai = OpenAI()
 router = APIRouter()
 
 
-@router.post("/askAI")
+@router.post("/ask-openai-assistant")
 async def ask_ai(request: AskAiRequest):
     try:
         # Note: using request.assistantId as defined in your model
