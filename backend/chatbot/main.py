@@ -1,6 +1,6 @@
 from chatbot.constants import ErrorCodes
 from chatbot.models.request.error import ErrorResponse
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 import uvicorn
@@ -10,7 +10,10 @@ from chatbot.routes.file_routes import router as file_router
 from chatbot.routes.assistant_routes import router as assistant_router
 from chatbot.routes.scraping_roues import router as scraping_router
 from chatbot.routes.conversation_routes import router as conversation_router
-from chatbot.routes.ai_routes import router as ai_router
+from chatbot.routes.upserting_routes import router as upserting_router
+from chatbot.routes.querying_routes import router as querying_router
+from chatbot.routes.openai_assistants_routes import router as openai_assistants_router
+from chatbot.routes.ai_response_routes import router as ai_response_router
 from chatbot.database.database import client
 import logging
 from fastapi.middleware.cors import CORSMiddleware
@@ -41,8 +44,11 @@ app.include_router(user_router)
 app.include_router(assistant_router)
 app.include_router(conversation_router)
 app.include_router(scraping_router)
-app.include_router(ai_router)
+app.include_router(openai_assistants_router)
+app.include_router(ai_response_router)
 app.include_router(file_router)
+app.include_router(upserting_router)
+app.include_router(querying_router)
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request, exc):
@@ -79,8 +85,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def start():
-    uvicorn.run("chatbot.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("chatbot.main:app", host="0.0.0.0", port=8001, reload=True)
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)

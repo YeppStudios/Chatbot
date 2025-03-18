@@ -19,7 +19,7 @@ openai = OpenAI()
 router = APIRouter()
 
 
-@router.post("/askAI")
+@router.post("/ask-openai-assistant")
 async def ask_ai(request: AskAiRequest):
     try:
         # Note: using request.assistantId as defined in your model
@@ -92,73 +92,3 @@ async def ask_ai(request: AskAiRequest):
         print(e)
         return JSONResponse(status_code=500, content={"detail": str(e)})
 
-
-@router.post("/submit-tool-response")
-async def submit_tool_response(request: SubmitToolResponse):
-    try:
-        print(f"Received request: {request.dict()}")
-        stream = openai.beta.threads.runs.submit_tool_outputs(
-            thread_id=request.threadId,
-            run_id=request.runId,
-            tool_outputs=request.toolOutputs,
-            stream=True
-        )
-        return StreamingResponse(event_stream(stream), media_type="text/event-stream")
-    except ValidationErr as e:
-        print(f"Validation error: {e.json()}")
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        print(f"Unexpected error: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@router.get("/runs")
-async def get_runs(request: ListRuns):
-    try:
-        runs = openai.beta.threads.runs.list(
-            request.threadId
-        )
-        return runs
-    
-    except Exception as e:
-        return JSONResponse(status_code=500, content={"detail": str(e)})
-
-
-@router.delete("/run")
-async def cancel_run(request: CancelRun):
-    try:
-        run = openai.beta.threads.runs.cancel(
-            thread_id=request.threadId,
-            run_id=request.runId
-        )
-        return run
-    
-    except Exception as e:
-        return JSONResponse(status_code=500, content={"detail": str(e)})
-
-
-@router.post("/transcribe")
-async def transcribe_audio(
-    language: str = Form(...), 
-    file: UploadFile = File(...), 
-    token: str = Depends(oauth2_scheme)
-):
-    verify_access_token(token)
-    try:
-        contents = await file.read()
-        with open("temp_audio.webm", "wb") as f:
-            f.write(contents)
-
-        with open("temp_audio.webm", "rb") as audio_file:
-            transcription = openai.audio.transcriptions.create(
-                model="whisper-1", 
-                file=audio_file, 
-                response_format="text",
-                language=language
-            )
-            return {"transcription": transcription}
-    except Exception as e:
-        return JSONResponse(status_code=500, content={"detail": str(e)})
-    finally:
-        if os.path.exists("temp_audio.webm"):
-            os.remove("temp_audio.webm")

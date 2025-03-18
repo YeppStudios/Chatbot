@@ -1,7 +1,8 @@
+// hooks/useSendAssistantMessage.tsx
 "use client";
 
 import { useCallback, useRef, useEffect } from "react";
-import { askAI } from "@/utils/askAi";
+import { askOpenaiAssistant } from "@/utils/askOpenaiAssistant";
 import { useChatStore } from "@/store/ChatStore";
 import { assistantId } from "@/constants/chatbot";
 
@@ -12,19 +13,16 @@ interface FunctionCall {
   call_id: string | null;
 }
 
-const useSendMessage = ({
+const useSendAssistantMessage = ({
   input,
   setMessages,
   setInput,
   setAiThinking,
-  setIsStreaming, // New prop for tracking streaming state
+  setIsStreaming,
   toolAction,
   setToolAction,
-  mediaElement,
-  session,
 }: any) => {
-  // Retrieve the conversation's threadId from ChatStore
-  const threadId = useChatStore((state) => state.threadId);
+  const { threadId } = useChatStore();
 
   const jsonChunkBuffer = useRef("");
   const responseBuffer = useRef("");
@@ -32,15 +30,8 @@ const useSendMessage = ({
   const currentMessageIdRef = useRef<string | null>(null);
   const isStreamingRef = useRef(false);
 
-  // Store the latest session in a ref if you need to re-use it
-  const sessionRef = useRef(session);
-  useEffect(() => {
-    sessionRef.current = session;
-  }, [session]);
-
   const processChunk = useCallback(
     (chunk: string) => {
-      // Remove any SSE prefix ("data: ") and accumulate
       chunk = chunk.replace(/data: /g, "").trim();
       jsonChunkBuffer.current += chunk;
 
@@ -52,11 +43,9 @@ const useSendMessage = ({
 
         try {
           const json = JSON.parse(possibleJson);
-          // Remove the parsed JSON from the buffer
           jsonChunkBuffer.current = jsonChunkBuffer.current.substring(endIndex + 1).trim();
           startIndex = 0;
 
-          // Handle partial or completed text chunk
           if (json.type === "text" && json.data) {
             if (!isStreamingRef.current) {
               isStreamingRef.current = true;
@@ -64,7 +53,6 @@ const useSendMessage = ({
             }
             responseBuffer.current += json.data;
 
-            // Update the correct assistant message in the store
             setMessages((prevMessages: any) =>
               prevMessages.map((msg: any) =>
                 msg.id === currentMessageIdRef.current
@@ -75,7 +63,6 @@ const useSendMessage = ({
             setAiThinking(false);
           }
 
-          // Handle function calls
           if (json.type === "function_call") {
             const newFunctionCall: FunctionCall = {
               name: json.data.name,
@@ -88,17 +75,13 @@ const useSendMessage = ({
             setMessages((prevMessages: any) =>
               prevMessages.map((msg: any) =>
                 msg.id === currentMessageIdRef.current
-                  ? {
-                      ...msg,
-                      functionCall: [...(msg.functionCall || []), newFunctionCall],
-                    }
+                  ? { ...msg, functionCall: [...(msg.functionCall || []), newFunctionCall] }
                   : msg
               )
             );
             setAiThinking(false);
           }
 
-          // Handle tool actions
           if (json.type === "tool_action") {
             setToolAction([
               {
@@ -108,12 +91,7 @@ const useSendMessage = ({
               },
             ]);
           }
-
-          if (json.type === "tool_outputs") {
-            // ... handle tool outputs if needed
-          }
         } catch (error) {
-          // Incomplete/partial JSON, keep accumulating
           startIndex = endIndex + 1;
         }
       }
@@ -125,15 +103,14 @@ const useSendMessage = ({
     async (e: any) => {
       e.preventDefault();
 
-      // Create and add the user message
-      const userMessage = {
-        id: Date.now().toString(),
-        text: input,
-        sender: "You",
-      };
+      if (!threadId) {
+        console.error("No threadId found.");
+        return;
+      }
+
+      const userMessage = { id: Date.now().toString(), text: input, sender: "You" };
       setMessages((messages: any) => [...messages, userMessage]);
 
-      // Clear input and set thinking state
       setInput("");
       setAiThinking(true);
       isStreamingRef.current = false;
@@ -146,13 +123,7 @@ const useSendMessage = ({
         const runId = toolAction[0]?.run_id || "";
         const callId = toolAction[0]?.id || "";
 
-        if (!threadId) {
-          console.error("No threadId found. Cannot send message to an uninitialized conversation.");
-          return;
-        }
-
-        // Use the dynamic threadId from ChatStore
-        const reader = await askAI(
+        const reader = await askOpenaiAssistant(
           input,
           "gpt-4-turbo",
           threadId,
@@ -162,28 +133,17 @@ const useSendMessage = ({
           callId
         );
 
-        if (mediaElement?.current) {
-          mediaElement.current.muted = false;
-        }
-
         if (!reader) {
           throw new Error("Stream reader not available");
         }
 
-        // Create an assistant message in the store to stream into
         const assistantMessageId = Date.now().toString();
         currentMessageIdRef.current = assistantMessageId;
         setMessages((messages: any) => [
           ...messages,
-          {
-            id: assistantMessageId,
-            text: "",
-            sender: "Assistant",
-            functionCall: [],
-          },
+          { id: assistantMessageId, text: "", sender: "Assistant", functionCall: [] },
         ]);
 
-        // Continuously read from the stream and process chunks
         const read = () => {
           reader.read().then(({ done, value }: any) => {
             if (done) {
@@ -214,7 +174,6 @@ const useSendMessage = ({
       setIsStreaming,
       setToolAction,
       toolAction,
-      mediaElement,
       processChunk,
       threadId,
     ]
@@ -223,4 +182,4 @@ const useSendMessage = ({
   return sendMessage;
 };
 
-export default useSendMessage;
+export default useSendAssistantMessage;

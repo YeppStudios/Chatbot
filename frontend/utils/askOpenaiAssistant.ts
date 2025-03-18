@@ -1,6 +1,6 @@
 import { backend } from "@/config/apiConfig";
 
-export const askAI = async (
+export const askOpenaiAssistant = async (
   text: string,
   model: string,
   conversationId: string,
@@ -20,7 +20,7 @@ export const askAI = async (
   };
 
   try {
-    const response = await fetch(`${backend.serverUrl}/askAI`, {
+    const response = await fetch(`${backend.serverUrl}/ask-openai-assistant`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
