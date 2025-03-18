@@ -93,7 +93,6 @@ export const useChatStore = create<ChatStore>((set, get) => ({
           title: `${currentDate} conversation`,
           text: greetingMessage,
         };
-        console.log("Creating conversation with payload:", JSON.stringify(payload, null, 2));
     
         const response = await fetch(`${backend.serverUrl}/conversation`, {
           method: "POST",

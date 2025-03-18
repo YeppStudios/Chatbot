@@ -8,8 +8,9 @@ import useAutoScroll from "@/hooks/useAutoScroll";
 import Typewriter from "./Typewriter";
 import { Paperclip } from "lucide-react";
 import { motion } from "framer-motion";
-import remarkGfm from 'remark-gfm'; // Add GitHub Flavored Markdown support
-import remarkBreaks from 'remark-breaks'; // Better handling of line breaks
+import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
+import rehypeHighlight from 'rehype-highlight';
 
 // Define TypeScript interfaces
 interface Attachment {
@@ -72,7 +73,7 @@ const MessagesList: React.FC = () => {
     return attachment.name || attachment.file_id || 'Unnamed file';
   };
 
-  const renderAttachments = (attachments?: Attachment[], isUserMessage: boolean): React.ReactNode => {
+  const renderAttachments = (isUserMessage: boolean, attachments?: Attachment[]): React.ReactNode => {
     if (!attachments?.length) return null;
 
     return (
@@ -108,7 +109,7 @@ const MessagesList: React.FC = () => {
     <div className="relative h-full w-full">
       <div 
         ref={containerRef} 
-        className="p-4 pt-8 pb-8 overflow-y-auto h-full hide-scrollbar"
+        className="p-4 pt-6 pb-8 overflow-y-auto h-full hide-scrollbar"
       >
         {messages.map((message) => {
           const isUserMessage = message.sender === "You";
@@ -119,23 +120,24 @@ const MessagesList: React.FC = () => {
               key={message.id}
               className={
                 isUserMessage
-                  ? "flex justify-end w-full my-3"
-                  : "flex justify-start w-full my-3"
+                  ? "flex justify-end w-full my-4"
+                  : "flex justify-start w-full my-4"
               }
             >
               <div
                 className={
                   isUserMessage
-                    ? "bg-purple-chat px-4 py-2 rounded-b-xl rounded-tl-xl text-white max-w-[90%] shadow-sm"
-                    : "bg-purple-chat/15 px-4 py-2 rounded-b-xl rounded-tr-xl text-gray-700 max-w-[90%] shadow-sm"
+                    ? "bg-purple-chat shadow-md px-3 py-1.5 rounded-b-xl rounded-tl-xl text-white max-w-[95%]"
+                    : "bg-purple-chat/15 shadow-md px-3 py-1.5 rounded-b-xl rounded-tr-xl text-gray-700 max-w-[95%]"
                 }
               >
                 {message.typed ? (
-                  <Typewriter text={message.text} />
+                  <Typewriter text={message.text} isUserMessage={isUserMessage} />
                 ) : (
                   <div className="prose prose-sm dark:prose-invert break-words" style={{ maxWidth: '100%' }}>
                     <ReactMarkdown
                       remarkPlugins={[remarkGfm, remarkBreaks]}
+                      rehypePlugins={[rehypeHighlight]}
                       components={{
                         h1: ({ node, ...props }) => <h1 className="text-xl font-bold mt-4 mb-2" {...props} />,
                         h2: ({ node, ...props }) => <h2 className="text-lg font-bold mt-3 mb-2" {...props} />,
@@ -258,7 +260,7 @@ const MessagesList: React.FC = () => {
                 {message.functionCall && (
                   <p className="text-sm text-gray-300 mt-1">{message.functionCall}</p>
                 )}
-                {renderAttachments(message.attachments, isUserMessage)}
+                {renderAttachments(isUserMessage, message.attachments)}
               </div>
             </div>
           ) : null;
@@ -266,7 +268,7 @@ const MessagesList: React.FC = () => {
 
         {isThinking && (
           <div className="flex justify-start w-full my-2">
-            <div className="bg-purple-chat/15 px-4 py-4 rounded-b-xl rounded-tr-xl text-gray-600 shadow-sm">
+            <div className="bg-purple-chat/15 px-3 py-1.5 rounded-b-xl rounded-tr-xl text-gray-600 shadow-sm">
               <AiThinking />
             </div>
           </div>
