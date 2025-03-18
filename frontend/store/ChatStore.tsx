@@ -1,7 +1,7 @@
 // store/ChatStore.tsx
 import { create } from "zustand";
 import { backend } from "@/config/apiConfig";
-import { greetingMessage, userId } from "@/constants/chatbot";
+import { assistantId, greetingMessage, userId } from "@/constants/chatbot";
 
 interface Message {
   typed: boolean;
@@ -89,7 +89,7 @@ export const useChatStore = create<ChatStore>((set, get) => ({
         const currentDate = new Date().toISOString().split("T")[0];
         const payload = {
           userId,
-          assistantId: isOpenAI ? "your-openai-assistant-id" : null,
+          assistantId: isOpenAI ? assistantId : null,
           title: `${currentDate} conversation`,
           text: greetingMessage,
         };

@@ -1,20 +1,32 @@
+// hooks/useSendAssistantMessage.tsx
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useEffect } from "react";
+import { askOpenaiAssistant } from "@/utils/askOpenaiAssistant";
 import { useChatStore } from "@/store/ChatStore";
-import { askLlmConversation } from "@/utils/askLlmConversation";
+import { assistantId } from "@/constants/chatbot";
 
-const useSendLLMMessage = ({
+interface FunctionCall {
+  name: string;
+  status: "queued" | "pending" | "completed";
+  outputs: any;
+  call_id: string | null;
+}
+
+const useSendAssistantMessage = ({
   input,
   setMessages,
   setInput,
   setAiThinking,
   setIsStreaming,
+  toolAction,
+  setToolAction,
 }: any) => {
-  const { conversationId, llmProvider, model, vectorstore } = useChatStore();
+  const { threadId } = useChatStore();
 
   const jsonChunkBuffer = useRef("");
   const responseBuffer = useRef("");
+  const functionCallRef = useRef<FunctionCall[]>([]);
   const currentMessageIdRef = useRef<string | null>(null);
   const isStreamingRef = useRef(false);
 
@@ -34,32 +46,32 @@ const useSendLLMMessage = ({
           jsonChunkBuffer.current = jsonChunkBuffer.current.substring(endIndex + 1).trim();
           startIndex = 0;
 
-          if (json.type === "text") {
-            const textContent = json.data || json.content || "";
+          if (json.type === "text" && json.data) {
             if (!isStreamingRef.current) {
               isStreamingRef.current = true;
               setIsStreaming(true);
             }
-            responseBuffer.current += textContent;
+            responseBuffer.current += json.data;
 
             setMessages((prevMessages: any) =>
               prevMessages.map((msg: any) =>
                 msg.id === currentMessageIdRef.current
-                  ? { ...msg, text: msg.text + textContent }
+                  ? { ...msg, text: msg.text + json.data }
                   : msg
               )
             );
             setAiThinking(false);
-          } else if (json.type === "retrieving") {
-            console.log("Retrieving:", json.content); // Log or handle in UI if needed
-          } else if (json.type === "function_call") {
-            const funcData = json.data || json; // Handle both formats
-            const newFunctionCall = {
-              name: funcData.name,
-              status: "queued" as const,
+          }
+
+          if (json.type === "function_call") {
+            const newFunctionCall: FunctionCall = {
+              name: json.data.name,
+              status: "queued",
               outputs: null,
               call_id: null,
             };
+            functionCallRef.current.push(newFunctionCall);
+
             setMessages((prevMessages: any) =>
               prevMessages.map((msg: any) =>
                 msg.id === currentMessageIdRef.current
@@ -69,24 +81,34 @@ const useSendLLMMessage = ({
             );
             setAiThinking(false);
           }
+
+          if (json.type === "tool_action") {
+            setToolAction([
+              {
+                id: json.data[0].id,
+                run_id: json.data[0].run_id,
+                function: json.data[0].function,
+              },
+            ]);
+          }
         } catch (error) {
           startIndex = endIndex + 1;
         }
       }
     },
-    [setMessages, setAiThinking, setIsStreaming]
+    [setMessages, setAiThinking, setIsStreaming, setToolAction]
   );
 
   const sendMessage = useCallback(
     async (e: any) => {
       e.preventDefault();
 
-      if (!conversationId || !llmProvider || !model || !vectorstore) {
-        console.error("Missing conversationId, llmProvider, model, or vectorstore.");
+      if (!threadId) {
+        console.error("No threadId found.");
         return;
       }
 
-      const userMessage = { id: Date.now().toString(), text: input, sender: "You", typed: false };
+      const userMessage = { id: Date.now().toString(), text: input, sender: "You" };
       setMessages((messages: any) => [...messages, userMessage]);
 
       setInput("");
@@ -95,15 +117,20 @@ const useSendLLMMessage = ({
       setIsStreaming(false);
       jsonChunkBuffer.current = "";
       responseBuffer.current = "";
+      functionCallRef.current = [];
 
       try {
-        const reader = await askLlmConversation(
+        const runId = toolAction[0]?.run_id || "";
+        const callId = toolAction[0]?.id || "";
+
+        const reader = await askOpenaiAssistant(
           input,
-          conversationId,
-          llmProvider,
-          model,
-          vectorstore,
-          true
+          "gpt-4-turbo",
+          threadId,
+          true,
+          assistantId,
+          runId,
+          callId
         );
 
         if (!reader) {
@@ -114,7 +141,7 @@ const useSendLLMMessage = ({
         currentMessageIdRef.current = assistantMessageId;
         setMessages((messages: any) => [
           ...messages,
-          { id: assistantMessageId, text: "", sender: "Assistant", functionCall: [], typed: false },
+          { id: assistantMessageId, text: "", sender: "Assistant", functionCall: [] },
         ]);
 
         const read = () => {
@@ -134,7 +161,7 @@ const useSendLLMMessage = ({
         };
         read();
       } catch (error) {
-        console.error("Failed to send to LLM:", error);
+        console.error("Failed to send to AI:", error);
         setAiThinking(false);
         setIsStreaming(false);
       }
@@ -145,15 +172,14 @@ const useSendLLMMessage = ({
       setInput,
       setAiThinking,
       setIsStreaming,
+      setToolAction,
+      toolAction,
       processChunk,
-      conversationId,
-      llmProvider,
-      model,
-      vectorstore,
+      threadId,
     ]
   );
 
   return sendMessage;
 };
 
-export default useSendLLMMessage;
+export default useSendAssistantMessage;

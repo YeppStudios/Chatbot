@@ -268,7 +268,7 @@ const MessagesList: React.FC = () => {
 
         {isThinking && (
           <div className="flex justify-start w-full my-2">
-            <div className="bg-purple-chat/15 px-3 py-1.5 rounded-b-xl rounded-tr-xl text-gray-600 shadow-sm">
+            <div className="bg-purple-chat/15 px-3 py-4 rounded-b-xl rounded-tr-xl text-gray-600 shadow-sm">
               <AiThinking />
             </div>
           </div>
