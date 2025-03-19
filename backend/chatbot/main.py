@@ -28,7 +28,8 @@ origins = [
     "http://localhost:3000",
     "http://localhost:3001",
     "http://127.0.0.1:3000",
-    "https://chatbot-eight-sage.vercel.app" 
+    "https://chatbot-eight-sage.vercel.app",
+    "https://chatbot-yepp.vercel.app"
 ]
 
 
