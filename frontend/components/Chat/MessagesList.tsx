@@ -109,7 +109,7 @@ const MessagesList: React.FC = () => {
     <div className="relative h-full w-full">
       <div 
         ref={containerRef} 
-        className="p-4 pt-6 pb-8 overflow-y-auto h-full hide-scrollbar"
+        className="p-3 pt-6 pb-8 overflow-y-auto h-full hide-scrollbar"
       >
         {messages.map((message) => {
           const isUserMessage = message.sender === "You";
@@ -276,29 +276,31 @@ const MessagesList: React.FC = () => {
       </div>
       
       {showScrollIndicator && (
-        <motion.div 
-          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 
-                     bg-purple-chat/80 text-white text-xs py-1.5 px-4 
-                     rounded-full opacity-80 cursor-pointer 
-                     transition-opacity hover:opacity-100 shadow-md"
-          onClick={resetScrollFollow}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ 
-            opacity: 0.8, 
-            y: 0,
-            transition: {
-              duration: 0.3
-            }
-          }}
-          whileHover={{ 
-            opacity: 1,
-            scale: 1.05,
-            transition: { duration: 0.2 }
-          }}
-          whileTap={{ scale: 0.95 }}
-        >
-          New messages ↓
-        </motion.div>
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+          <motion.div 
+            className="bg-purple-chat/80 text-white text-xs py-1.5 px-4 
+                      rounded-full opacity-80 cursor-pointer 
+                      transition-opacity hover:opacity-100 shadow-md
+                      flex items-center justify-center mx-auto"
+            onClick={resetScrollFollow}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ 
+              opacity: 0.8, 
+              y: 0,
+              transition: {
+                duration: 0.3
+              }
+            }}
+            whileHover={{ 
+              opacity: 1,
+              scale: 1.05,
+              transition: { duration: 0.2 }
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            New messages ↓
+          </motion.div>
+        </div>
       )}
     </div>
   );

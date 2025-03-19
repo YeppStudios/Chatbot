@@ -14,6 +14,7 @@ from chatbot.routes.upserting_routes import router as upserting_router
 from chatbot.routes.querying_routes import router as querying_router
 from chatbot.routes.openai_assistants_routes import router as openai_assistants_router
 from chatbot.routes.ai_response_routes import router as ai_response_router
+from chatbot.routes.llm_arena_routes import router as llm_arena_router
 from chatbot.database.database import client
 import logging
 from fastapi.middleware.cors import CORSMiddleware
@@ -49,6 +50,7 @@ app.include_router(ai_response_router)
 app.include_router(file_router)
 app.include_router(upserting_router)
 app.include_router(querying_router)
+app.include_router(llm_arena_router)
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request, exc):

@@ -1,4 +1,7 @@
+from chatbot.services.retrieval.vector_search import VectorSearchService
 from chatbot.routes.ai_response_routes import LLMConfig, SearchResult, VectorStoreConfig
+from chatbot.services.llm.anthropic import AnthropicLLM
+from chatbot.services.llm.openai import OpenAILLM
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional, Literal
@@ -7,8 +10,6 @@ import logging
 import pandas as pd
 import time
 from dotenv import load_dotenv
-from openai import OpenAI
-import anthropic
 
 # Set up logging - console only
 logging.basicConfig(
@@ -22,6 +23,7 @@ load_dotenv()
 
 router = APIRouter()
 
+vector_search_service = VectorSearchService()
 
 class ComparisonLLMResponse(BaseModel):
     provider: str
@@ -51,24 +53,36 @@ async def compare_llms(request: MultiLLMComparisonRequest):
     for idx, query in enumerate(request.queries):
         try:
             # 1. Perform vector search (once per query)
-            search_results = await perform_vector_search(query, request.vector_store)
+            search_results = await vector_search_service.perform_vector_search(query, request.vector_store)
 
-            # 2. Prepare context (if you plan to feed it to the LLMs)
-            context = prepare_context(search_results)
+            # 2. Prepare context
+            context = vector_search_service.prepare_context(search_results)
 
             # 3. For each LLM, generate a response
             llm_responses = []
             for llm_config in request.llms:
-                llm_response, llm_provider, llm_model = await generate_llm_response(
-                    query=query,
-                    context=context,
-                    llm_config=llm_config,
-                    request_id=f"{request_id}_{idx}"
+                # Prepare messages with context in the user message, not system message
+                messages = [
+                    {"role": "user", "content": f"Context:\n{context}\n\nQuery:\n{query}"}
+                ]
+                
+                # Instantiate the appropriate LLM service
+                llm = (OpenAILLM if llm_config.provider == "openai" else AnthropicLLM)(
+                    model=llm_config.model,
+                    stream=False,  # No streaming for comparison
+                    temperature=llm_config.temperature,
+                    max_tokens=llm_config.max_tokens,
+                    instructions=llm_config.system_message  # System message as instructions
                 )
+                
+                # Generate response
+                response = await llm.generate_response(messages)
+                llm_response = response if isinstance(response, str) else ""
+                
                 llm_responses.append(
                     ComparisonLLMResponse(
-                        provider=llm_provider,
-                        model=llm_model,
+                        provider=llm_config.provider,
+                        model=llm_config.model,
                         response=llm_response
                     )
                 )
@@ -78,7 +92,7 @@ async def compare_llms(request: MultiLLMComparisonRequest):
                 ComparisonQueryResult(
                     query=query,
                     vector_search_results=[
-                        SearchResult(text=res["text"], score=res["score"])
+                        SearchResult(text=res["text"], score=res["score"], filename=res["filename"])
                         for res in search_results
                     ],
                     llm_responses=llm_responses

@@ -162,7 +162,6 @@ async def llm_search_with_conversation(
                 vector_config=request.vector_store
             )
             context = vector_search_service.prepare_context(search_results)
-            print(context)
             last_user_message = message_list[-1]
             if last_user_message["role"] == "user":
                 message_list[-1] = {

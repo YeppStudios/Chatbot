@@ -25,13 +25,14 @@ const ConversationsList = ({
     setIsDrawerOpen(true);
   };
 
-  // Only sort conversations if they exist and we're not loading
-  const conversationList = loading
-    ? []
-    : useSortedConversations({
-        conversations: conversationsList || [],
-        sortType,
-      });
+  // Always call the hook, regardless of loading state
+  const sortedConversations = useSortedConversations({
+    conversations: conversationsList || [],
+    sortType,
+  });
+
+  // Then decide what to display based on loading state
+  const conversationList = loading ? [] : sortedConversations;
 
   return (
     <div className="flex flex-1 h-full overflow-y-scroll py-10 flex-col items-center p-2 sm:p-8 pb-10 sm:pb-36">
