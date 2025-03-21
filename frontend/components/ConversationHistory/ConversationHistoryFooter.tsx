@@ -3,12 +3,15 @@ import React from "react";
 const Pagination: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div>{children}</div>
 );
+
 const PaginationContent: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => <div className="flex justify-center space-x-1">{children}</div>;
+
 const PaginationItem: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => <div>{children}</div>;
+
 const PaginationLink: React.FC<{
   children: React.ReactNode;
   isActive: boolean;
@@ -16,8 +19,10 @@ const PaginationLink: React.FC<{
 }> = ({ children, isActive, onClick }) => (
   <button
     onClick={onClick}
-    className={`px-2 py-1 sm:px-4 sm:py-2 border rounded text-xs sm:text-base ${
-      isActive ? "bg-blue-500 text-white" : "bg-white text-black"
+    className={`px-2 py-1 sm:px-4 sm:py-2 border rounded text-xs sm:text-base shadow-sm transition-colors ${
+      isActive 
+        ? "bg-purple-chat text-white border-purple-chat/50 hover:bg-purple-chat/90" 
+        : "bg-white text-gray-700 border-gray-200 hover:bg-purple-chat/10"
     }`}
   >
     {children}
@@ -34,10 +39,10 @@ const PaginationPrevious = ({
   <button
     onClick={onClick}
     disabled={disabled}
-    className={`px-2 py-1 sm:px-4 sm:py-2 border rounded text-sm sm:text-base ${
+    className={`px-2 py-1 sm:px-4 sm:py-2 border rounded text-sm sm:text-base shadow-sm transition-colors ${
       disabled
-        ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-        : "bg-white text-black"
+        ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed"
+        : "bg-white text-gray-700 border-gray-200 hover:bg-purple-chat/10"
     }`}
   >
     Previous
@@ -54,10 +59,10 @@ const PaginationNext = ({
   <button
     onClick={onClick}
     disabled={disabled}
-    className={`px-2 py-1 sm:px-4 sm:py-2 border rounded text-sm sm:text-base ${
+    className={`px-2 py-1 sm:px-4 sm:py-2 border rounded text-sm sm:text-base shadow-sm transition-colors ${
       disabled
-        ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-        : "bg-white text-black"
+        ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed"
+        : "bg-white text-gray-700 border-gray-200 hover:bg-purple-chat/10"
     }`}
   >
     Next
@@ -65,7 +70,7 @@ const PaginationNext = ({
 );
 
 const PaginationEllipsis = () => (
-  <span className="px-2 py-1 sm:px-4 sm:py-2 ">...</span>
+  <span className="px-2 py-1 sm:px-4 sm:py-2 text-gray-500">...</span>
 );
 
 interface ConversationHistoryFooterProps {
@@ -98,7 +103,7 @@ const ConversationHistoryFooter: React.FC<ConversationHistoryFooterProps> = ({
   };
 
   return (
-    <div className="absolute bottom-0 left-0 py-6 px-8 bg-white w-full shadow-lg">
+    <div className="absolute bottom-0 left-0 py-6 px-8 bg-white w-full shadow-lg border-t border-purple-chat/10">
       <Pagination>
         <PaginationContent>
           <PaginationItem>

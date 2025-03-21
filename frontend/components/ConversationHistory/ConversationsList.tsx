@@ -21,7 +21,7 @@ const ConversationsList = ({
   sortType,
 }: ConversationsListProps) => {
   const handleConversationClick = (conversation: Conversation) => {
-    setSelectedConversation(conversation.threadId);
+    setSelectedConversation(conversation._id);
     setIsDrawerOpen(true);
   };
 

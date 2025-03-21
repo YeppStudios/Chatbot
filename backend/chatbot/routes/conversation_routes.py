@@ -39,14 +39,67 @@ async def get_user_conversations(userId: str = Query(..., description="The uniqu
         raise HTTPException(status_code=404, detail="User not found")
     return user.get("conversations", []) 
 
-@router.get("/conversation/{threadId}")
-async def get_conversation(threadId: str, messageLimit: int = Query(20, ge=1, le=100)):
+@router.get("/conversation/{conversation_id}")
+async def get_conversation(conversation_id: str, messageLimit: int = Query(20, ge=1, le=100)):
     try:
-        response = openai.beta.threads.messages.list(
-            thread_id=threadId,
-            limit=messageLimit
-        )
-        return response.data
+        # Find conversation by _id in our database
+        try:
+            conversation = await db['conversations'].find_one({"_id": ObjectId(conversation_id)})
+        except:
+            # Try finding by threadId as fallback for backward compatibility
+            conversation = await db['conversations'].find_one({"threadId": conversation_id})
+        
+        if not conversation:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        
+        # Convert ObjectId to string for serialization
+        conversation = serialize_doc(conversation)
+        
+        # Sort messages by timestamp if they exist
+        if 'messages' in conversation and conversation['messages']:
+            conversation['messages'].sort(key=lambda x: x.get('timestamp', ''))
+            
+            # Limit the number of messages if needed
+            if len(conversation['messages']) > messageLimit:
+                conversation['messages'] = conversation['messages'][-messageLimit:]
+        else:
+            # If no messages in our database but there's a threadId, 
+            # try to fetch from OpenAI as fallback (for older conversations)
+            if 'threadId' in conversation and conversation['threadId']:
+                try:
+                    response = openai.beta.threads.messages.list(
+                        thread_id=conversation['threadId'],
+                        limit=messageLimit
+                    )
+                    
+                    # Convert OpenAI messages to our format and add to conversation
+                    messages = []
+                    for msg in response.data:
+                        if hasattr(msg, 'content') and len(msg.content) > 0:
+                            content = msg.content[0].text.value
+                            # Clean citations if needed
+                            regex_pattern = r"【.*?】"
+                            cleaned_content = re.sub(regex_pattern, '', content)
+                            
+                            messages.append({
+                                'role': msg.role,
+                                'content': cleaned_content,
+                                'timestamp': msg.created_at
+                            })
+                    
+                    # Sort by timestamp
+                    messages.sort(key=lambda x: x.get('timestamp', 0))
+                    conversation['messages'] = messages
+                    
+                    # Update conversation in database with messages from OpenAI
+                    await db['conversations'].update_one(
+                        {"_id": ObjectId(conversation_id)},
+                        {"$set": {"messages": messages}}
+                    )
+                except Exception as e:
+                    print(f"Could not fetch messages from OpenAI: {str(e)}")
+        
+        return conversation
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -54,8 +107,14 @@ async def get_conversation(threadId: str, messageLimit: int = Query(20, ge=1, le
 
 def serialize_doc(doc):
     """Convert MongoDB document to dict with string IDs."""
-    if doc.get('_id') and isinstance(doc['_id'], ObjectId):
-        doc['_id'] = str(doc['_id'])
+    if isinstance(doc, dict):
+        return {k: serialize_doc(v) for k, v in doc.items()}
+    elif isinstance(doc, list):
+        return [serialize_doc(item) for item in doc]
+    elif isinstance(doc, ObjectId):
+        return str(doc)
+    elif isinstance(doc, datetime):
+        return doc.isoformat()
     return doc
 
 class ConversationResponse(BaseModel):

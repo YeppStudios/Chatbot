@@ -12,11 +12,93 @@ from dotenv import load_dotenv
 from chatbot.database.database import db
 from openai import OpenAI
 from chatbot.models.request.ai import AskAiRequest, CancelRun, ListRuns, SubmitToolResponse
+from chatbot.models.message import Message
+from bson import ObjectId
+import asyncio
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 load_dotenv()
 openai = OpenAI()
 router = APIRouter()
+
+
+async def save_assistant_message_to_db(thread_id, content):
+    """Save the assistant's message to the MongoDB conversation"""
+    conversation = await db['conversations'].find_one({"threadId": thread_id})
+    if conversation:
+        message = Message(
+            role="assistant",
+            content=content,
+            timestamp=datetime.utcnow()
+        )
+        
+        # Add the message to the conversation
+        await db['conversations'].update_one(
+            {"threadId": thread_id},
+            {
+                "$push": {"messages": message.dict(by_alias=True)},
+                "$set": {"lastUpdated": datetime.utcnow()}
+            }
+        )
+        return True
+    return False
+
+
+async def process_stream_for_db(thread_id, stream):
+    """Process the streaming response and save the complete message to MongoDB"""
+    full_content = ""
+    
+    async for chunk in stream:
+        if hasattr(chunk, 'data') and hasattr(chunk.data, 'content'):
+            if len(chunk.data.content) > 0:
+                content_chunk = chunk.data.content[0].text.value
+                full_content += content_chunk
+                
+        # Yield the chunk to continue streaming to the client
+        yield chunk
+    
+    # Once streaming is complete, save the full message to the database
+    regex_pattern = r"【.*?】"
+    cleaned_content = re.sub(regex_pattern, '', full_content)
+    await save_assistant_message_to_db(thread_id, cleaned_content)
+
+
+async def modified_event_stream(stream, thread_id):
+    """Modified event stream that aggregates the response for DB storage"""
+    full_content = ""
+    
+    # Create a wrapper to handle the stream and collect content
+    def stream_and_collect():
+        # Use a regular for loop since event_stream returns a regular generator
+        for chunk in event_stream(stream):
+            # For debugging
+            # print(f"Chunk: {chunk}")
+            yield chunk
+    
+    # Return the generator that will be used by StreamingResponse
+    generator = stream_and_collect()
+    
+    # We need to yield all chunks before saving to the database
+    # This generator will be consumed by StreamingResponse
+    for chunk in generator:
+        yield chunk
+    
+    # After streaming completes, get the full message from OpenAI
+    # We need to use asyncio.sleep to ensure the stream has completed
+    # before we try to get the message
+    await asyncio.sleep(1)  # Small delay to ensure stream completion
+    
+    messages = openai.beta.threads.messages.list(
+        thread_id=thread_id
+    )
+    
+    if messages.data:
+        regex_pattern = r"【.*?】"
+        response_text = messages.data[0].content[0].text.value
+        cleaned_string = re.sub(regex_pattern, '', response_text)
+        
+        # Save the complete message to the database
+        await save_assistant_message_to_db(thread_id, cleaned_string)
 
 
 @router.post("/ask-openai-assistant")
@@ -39,15 +121,27 @@ async def ask_ai(request: AskAiRequest):
                     run_id=request.runId,
                 )
 
+        # Create a new user message
+        user_message = Message(
+            role="user",
+            content=request.question,
+            timestamp=datetime.utcnow()
+        )
+        
+        # Add the user message to the conversation
+        await db['conversations'].update_one(
+            {"threadId": request.threadId},
+            {
+                "$push": {"messages": user_message.dict(by_alias=True)},
+                "$set": {"lastUpdated": datetime.utcnow()}
+            }
+        )
+
+        # Send message to OpenAI
         openai.beta.threads.messages.create(
             thread_id=request.threadId,
             role="user",
             content=request.question
-        )
-
-        await db['conversations'].update_one(
-            {"threadId": request.threadId},
-            {"$set": {"lastUpdated": datetime.utcnow()}}
         )
 
         instructions = assistant.get('preprompt', '')
@@ -62,7 +156,33 @@ async def ask_ai(request: AskAiRequest):
                 tools=assistant.get('tools', {}),
                 include=["step_details.tool_calls[*].file_search.results[*].content"]
             )
-            return StreamingResponse(event_stream(stream), media_type="text/event-stream")
+            
+            # Create a background task to save the message after streaming completes
+            async def save_message_after_streaming():
+                # Wait for streaming to complete (reasonable timeout)
+                await asyncio.sleep(10)  # Adjust timeout as needed
+                
+                # Get the complete message
+                messages = openai.beta.threads.messages.list(
+                    thread_id=request.threadId
+                )
+                
+                if messages.data:
+                    regex_pattern = r"【.*?】"
+                    response_text = messages.data[0].content[0].text.value
+                    cleaned_string = re.sub(regex_pattern, '', response_text)
+                    
+                    # Save the complete message to the database
+                    await save_assistant_message_to_db(request.threadId, cleaned_string)
+            
+            # Start the background task
+            asyncio.create_task(save_message_after_streaming())
+            
+            # Return the streaming response directly using the original event_stream
+            return StreamingResponse(
+                event_stream(stream), 
+                media_type="text/event-stream"
+            )
         
         else:
             run = openai.beta.threads.runs.create_and_poll(
@@ -80,6 +200,10 @@ async def ask_ai(request: AskAiRequest):
                 regex_pattern = r"【.*?】"
                 response_text = messages.data[0].content[0].text.value
                 cleaned_string = re.sub(regex_pattern, '', response_text)
+                
+                # Save the assistant's response to the database
+                await save_assistant_message_to_db(request.threadId, cleaned_string)
+                
                 return {"response": cleaned_string}
             else:
                 print(run.status)
@@ -91,4 +215,3 @@ async def ask_ai(request: AskAiRequest):
     except Exception as e:
         print(e)
         return JSONResponse(status_code=500, content={"detail": str(e)})
-

@@ -65,7 +65,7 @@ const ConversationHistory = () => {
       <ConversationDrawer
         isDrawerOpen={isDrawerOpen}
         handleDrawerClose={setIsDrawerOpen}
-        threadId={selectedConversation}
+        conversationId={selectedConversation}
       />
       <ConversationHistoryFooter
         currentPage={currentPage}
@@ -75,4 +75,5 @@ const ConversationHistory = () => {
     </div>
   );
 };
+
 export default ConversationHistory;
