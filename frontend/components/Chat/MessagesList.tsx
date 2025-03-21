@@ -275,7 +275,7 @@ const MessagesList: React.FC = () => {
         )}
       </div>
       
-      {showScrollIndicator && (
+      {/* {showScrollIndicator && (
         <div className="absolute bottom-4 left-0 right-0 flex justify-center">
           <motion.div 
             className="bg-purple-chat/80 text-white text-xs py-1.5 px-4 
@@ -301,7 +301,7 @@ const MessagesList: React.FC = () => {
             New messages ↓
           </motion.div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
