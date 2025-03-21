@@ -24,8 +24,6 @@ export const deleteConversation = async (
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-
-    console.log(`Successfully deleted conversation: ${conversationId}`);
     return true;
   } catch (err) {
     console.error(`Failed to delete conversation ${conversationId}:`, err);
