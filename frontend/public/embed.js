@@ -1,4 +1,9 @@
 (function () {
+    // Prevent recursive embedding on the chatbot's own domain
+    if (window.location.origin === "https://chatbot-yepp.vercel.app") {
+      return; // Exit if the script is running on the chatbot's own domain
+    }
+  
     // Create the container for the chatbot
     const container = document.createElement("div");
     container.style.position = "fixed";
@@ -13,13 +18,13 @@
     iframe.style.border = "none";
     iframe.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
     iframe.style.transition = "all 0.3s ease";
-    iframe.style.background = "transparent"; // Transparent background
-    iframe.allowTransparency = true; // Ensure transparency is allowed
+    iframe.style.background = "transparent";
+    iframe.allowTransparency = true;
   
     // Initial collapsed state
     iframe.style.width = "0px";
     iframe.style.height = "0px";
-    iframe.style.pointerEvents = "none"; // Allow clicks to pass through when collapsed
+    iframe.style.pointerEvents = "none";
     container.appendChild(iframe);
   
     // Create the toggle button (chat icon)
@@ -54,7 +59,7 @@
     closeButton.style.width = "25px";
     closeButton.style.height = "25px";
     closeButton.style.cursor = "pointer";
-    closeButton.style.display = "none"; // Hidden by default
+    closeButton.style.display = "none";
     container.appendChild(closeButton);
   
     // Toggle state
@@ -66,13 +71,13 @@
         // Collapse
         iframe.style.width = "0px";
         iframe.style.height = "0px";
-        iframe.style.pointerEvents = "none"; // Allow clicks to pass through
+        iframe.style.pointerEvents = "none";
         closeButton.style.display = "none";
       } else {
         // Expand
         iframe.style.width = "350px";
         iframe.style.height = "500px";
-        iframe.style.pointerEvents = "auto"; // Allow interaction with the iframe
+        iframe.style.pointerEvents = "auto";
         closeButton.style.display = "block";
       }
       isExpanded = !isExpanded;
