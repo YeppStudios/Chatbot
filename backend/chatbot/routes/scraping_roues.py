@@ -20,7 +20,6 @@ def scrape_bioxel():
     def scrape_generator():
         # This variable will accumulate all scraped topics.
         all_content = ""
-        print("Starting scraping...\n")
         yield "Starting scraping...\n"
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=False)  # headless=True for production
