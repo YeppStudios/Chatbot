@@ -1,7 +1,7 @@
 "use client";
+import ChatWindow from "@/components/Chat/ChatWindow";
+import OpenChatButton from "@/components/Chat/OpenChatButton";
 import { useState, useEffect } from "react";
-import OpenChatButton from "./OpenChatButton";
-import ChatWindow from "./ChatWindow";
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(false);
