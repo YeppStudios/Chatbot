@@ -3,7 +3,7 @@ import Chat from "@/components/Chat";
 
 export default function Home() {
   return (
-    <div className="h-[100vh]">
+    <div className="h-[100vh] bg-transparent pointer-events-none">
       <Chat />
     </div>
   );

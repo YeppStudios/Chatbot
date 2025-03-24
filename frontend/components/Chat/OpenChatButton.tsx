@@ -12,7 +12,7 @@ const OpenChatButton = ({
   return (
     <motion.div
       onClick={() => setIsOpen((prev) => !prev)}
-      className="fixed bottom-5 right-5 cursor-pointer"
+      className="fixed bottom-5 right-5 cursor-pointer pointer-events-auto"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}

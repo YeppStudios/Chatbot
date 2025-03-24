@@ -47,12 +47,13 @@ const ChatWindow = ({ isOpen }: { isOpen: boolean }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bottom-14 right-5 w-[450px] h-[550px] bg-white overflow-hidden border-2 border-gray-100 rounded-2xl shadow-lg flex flex-col"
+          className="fixed bottom-14 right-5 w-[450px] h-[550px] bg-white overflow-hidden border-2 border-gray-100 rounded-2xl shadow-lg flex flex-col pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0, transition: { stiffness: 300, damping: 25 } }}
           exit={{ opacity: 0, scale: 0.9, y: 20, transition: { duration: 0.2 } }}
           style={{ transformOrigin: "bottom right" }}
         >
+
           {/* Message list container with fixed height */}
           <div className="flex-1 relative overflow-hidden">
             <div className="absolute inset-0">
