@@ -1,5 +1,3 @@
-// components/OpenChatButton.tsx
-"use client";
 import { X } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,22 +9,10 @@ const OpenChatButton = ({
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
 }) => {
-  const enableIframeInteraction = () => {
-    console.log("Sending enableInteraction message");
-    window.parent.postMessage({ type: "enableInteraction" }, "*");
-  };
-
-  const disableIframeInteraction = () => {
-    console.log("Sending disableInteraction message");
-    window.parent.postMessage({ type: "disableInteraction" }, "*");
-  };
-
   return (
     <motion.div
       onClick={() => setIsOpen((prev) => !prev)}
-      onMouseEnter={enableIframeInteraction}
-      onMouseLeave={disableIframeInteraction}
-      className="fixed bottom-5 right-5 cursor-pointer pointer-events-auto"
+      className="absolute bottom-0 right-0 cursor-pointer"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
