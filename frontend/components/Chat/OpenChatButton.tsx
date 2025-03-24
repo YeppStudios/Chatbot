@@ -12,7 +12,7 @@ const OpenChatButton = ({
   return (
     <motion.div
       onClick={() => setIsOpen((prev) => !prev)}
-      className="fixed bottom-5 right-5 cursor-pointer pointer-events-auto"
+      className="absolute bottom-0 right-0 cursor-pointer pointer-events-auto"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -37,11 +37,7 @@ const OpenChatButton = ({
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 500,
-              damping: 30,
-            }}
+            transition={{ type: "spring", stiffness: 500, damping: 30 }}
           >
             <Image
               src="/chatIcon.webp"
