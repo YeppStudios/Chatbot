@@ -12,18 +12,20 @@ const OpenChatButton = ({
   isOpen: boolean;
 }) => {
   const enableIframeInteraction = () => {
+    console.log("Sending enableInteraction message");
     window.parent.postMessage({ type: "enableInteraction" }, "*");
   };
 
   const disableIframeInteraction = () => {
+    console.log("Sending disableInteraction message");
     window.parent.postMessage({ type: "disableInteraction" }, "*");
   };
 
   return (
     <motion.div
       onClick={() => setIsOpen((prev) => !prev)}
-      onMouseEnter={enableIframeInteraction} // Enable on hover
-      onMouseLeave={disableIframeInteraction} // Disable when leaving
+      onMouseEnter={enableIframeInteraction}
+      onMouseLeave={disableIframeInteraction}
       className="fixed bottom-5 right-5 cursor-pointer pointer-events-auto"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

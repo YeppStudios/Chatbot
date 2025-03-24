@@ -30,10 +30,10 @@ const ChatWindow = ({ isOpen }: { isOpen: boolean }) => {
       createNewConversation(isOpenAIRoute).catch((err) =>
         console.error("Failed to create conversation:", err)
       );
-      // Enable iframe interaction when chat opens
+      console.log("Sending enableInteraction message (chat opened)");
       window.parent.postMessage({ type: "enableInteraction" }, "*");
     } else {
-      // Disable when chat closes
+      console.log("Sending disableInteraction message (chat closed)");
       window.parent.postMessage({ type: "disableInteraction" }, "*");
     }
   }, [
@@ -53,8 +53,14 @@ const ChatWindow = ({ isOpen }: { isOpen: boolean }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          onMouseEnter={() => window.parent.postMessage({ type: "enableInteraction" }, "*")}
-          onMouseLeave={() => window.parent.postMessage({ type: "disableInteraction" }, "*")}
+          onMouseEnter={() => {
+            console.log("Mouse entered ChatWindow - enabling interaction");
+            window.parent.postMessage({ type: "enableInteraction" }, "*");
+          }}
+          onMouseLeave={() => {
+            console.log("Mouse left ChatWindow - disabling interaction");
+            window.parent.postMessage({ type: "disableInteraction" }, "*");
+          }}
           className="fixed bottom-14 right-5 w-[450px] h-[550px] bg-white overflow-hidden border-2 border-gray-100 rounded-2xl shadow-lg flex flex-col pointer-events-auto"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0, transition: { stiffness: 300, damping: 25 } }}
