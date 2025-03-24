@@ -4,12 +4,12 @@ import { Conversation } from "@/types";
 import { getAuthToken } from "@/utils/auth/getToken";
 import useConversationStore from "@/store/useConversationStore";
 
-interface props {
+interface Props {
   token: string;
   currentPage: number;
 }
 
-const useGetConversations = ({ token, currentPage = 1 }: props) => {
+const useGetConversations = ({ token, currentPage = 1 }: Props) => {
   const [conversationsList, setConversationsList] = useState<Conversation[]>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<unknown>(null);
@@ -25,7 +25,7 @@ const useGetConversations = ({ token, currentPage = 1 }: props) => {
 
   const fetchConversations = async () => {
     setLoading(true);
-    const authToken = getAuthToken();
+    const authToken = token || getAuthToken(); // Use prop token or fetch fresh
     if (!authToken) {
       console.log("No token available, skipping conversation fetch");
       setLoading(false);
@@ -51,7 +51,7 @@ const useGetConversations = ({ token, currentPage = 1 }: props) => {
 
   useEffect(() => {
     fetchConversations();
-  }, [currentPage, token]);
+  }, [currentPage, token]); // Refetch when token or page changes
 
   useEffect(() => {
     if (shouldRefetch) {

@@ -11,22 +11,30 @@ import useConversationStore from "@/store/useConversationStore";
 
 const ConversationHistory = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [selectedConversation, setSelectedConversation] = useState<
-    string | null
-  >(null);
-
+  const [selectedConversation, setSelectedConversation] = useState<string | null>(null);
   const [sortType, setSortType] = useState("latest");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [token, setToken] = useState<string>("");
 
-  const [token, setToken] = useState("");
-
+  // Continuously check for token updates
   useEffect(() => {
-    const authToken = getAuthToken();
-    if (authToken) {
-      setToken(authToken);
-    }
-  }, []);
+    const updateToken = () => {
+      const authToken = getAuthToken();
+      if (authToken && authToken !== token) {
+        setToken(authToken); // Update token if it changes
+      }
+    };
+
+    // Run once on mount
+    updateToken();
+
+    // Poll for token changes (e.g., every second) after redirect
+    const interval = setInterval(updateToken, 1000);
+
+    // Cleanup interval on unmount
+    return () => clearInterval(interval);
+  }, [token]); // Depend on token to avoid unnecessary re-renders
 
   const deletedConversationId = useConversationStore(
     (state) => state.deletedConversationId

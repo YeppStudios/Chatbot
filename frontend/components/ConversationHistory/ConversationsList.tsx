@@ -48,7 +48,7 @@ const ConversationsList = ({
       {/* Show empty state */}
       {!loading && (!conversationList || conversationList.length === 0) && (
         <div className="flex flex-col items-center justify-center h-full">
-          <MessageCircleReply className="w-10 h-10 mb-4 opacity-50" />
+          <MessageCircleReply className="w-10 h-10 mb-4 opacity-20" />
           <p className="text-gray-500 text-sm sm:text-base">No conversations</p>
         </div>
       )}
