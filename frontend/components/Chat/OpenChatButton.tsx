@@ -11,6 +11,7 @@ const OpenChatButton = ({
 }) => {
   return (
     <motion.div
+      id="open-button-chat"
       onClick={() => setIsOpen((prev) => !prev)}
       className="fixed bottom-5 right-5 cursor-pointer"
       initial={{ scale: 0.8, opacity: 0 }}
