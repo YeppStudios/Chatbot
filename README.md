@@ -101,9 +101,7 @@ Backend będzie dostępny pod adresem http://localhost:8000.
 
 4. Usługi zewnętrzne
 
-MongoDB: Uruchom lokalnie za pomocą Dockera:
-
-docker run -d -p 27017:27017 --name mongodb mongo:latest
+MongoDB: Należy się zalogować i wygenerować connection string
 
 Weaviate: Skonfiguruj lokalnie lub użyj chmurowej instancji (patrz dokumentacja Weaviate).
 
@@ -114,12 +112,4 @@ Pinecone: Utwórz indeks w Pinecone i skonfiguruj klucz API.
 Frontend: Deploy na Vercel poprzez integrację z GitHub. Ustaw zmienne środowiskowe w panelu Vercel.
 
 Backend: Deploy na DigitalOcean z użyciem GitHub Actions. Pliki konfiguracyjne CI/CD znajdują się w .github/workflows/.
-
-Dodatkowe uwagi
-
-Upewnij się, że wszystkie zmienne środowiskowe są poprawnie skonfigurowane, aby uniknąć błędów autoryzacji lub połączenia z usługami zewnętrznymi.
-
-W przypadku korzystania z OpenAI Assistants, skonfiguruj asystentów i vector stores za pomocą odpowiednich endpointów API (np. /assistant, /vector-store).
-
-Testowe trasy upsertowania (/pinecone-upsert, /weaviate-upsert) oraz scrapowania (/scrape-course-content) mogą być używane do ładowania danych do baz wektorowych.
 
