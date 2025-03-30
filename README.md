@@ -1,42 +1,47 @@
 Chatbot Project
+
 Opis projektu
+
 Ten projekt to zaawansowany chatbot oparty na nowoczesnym stosie technologicznym. Wykorzystuje hybrydowe wyszukiwanie Retrieval-Augmented Generation (RAG) z Weaviate i Pinecone, modele językowe Anthropic i OpenAI (w tym OpenAI Assistants), MongoDB do przechowywania konwersacji, Next.js jako framework frontendowy oraz FastAPI jako backend. Frontend jest hostowany na Vercel, a backend na DigitalOcean. Autoryzacja opiera się na JWT, a procesy CI/CD są zautomatyzowane za pomocą GitHub Actions.
+
 Wymagania wstępne
+
 Przed uruchomieniem projektu upewnij się, że masz zainstalowane następujące narzędzia:
-Node.js (v18 lub nowsza) - do uruchamiania frontendu (Next.js).
 
-npm - menedżer pakietów dla frontendu.
+Node.js (v18 lub nowsza) - do uruchamiania frontendu (Next.js)
 
-Python (v3.10 lub nowsza) - do uruchamiania backendu (FastAPI).
+npm - menedżer pakietów dla frontendu
 
-Poetry - menedżer pakietów dla backendu.
+Python (v3.10 lub nowsza) - do uruchamiania backendu (FastAPI)
 
-Docker (opcjonalnie) - do uruchamiania usług takich jak MongoDB, Weaviate lub Pinecone lokalnie.
+Poetry - menedżer pakietów dla backendu
 
-Git - do klonowania repozytorium.
+Docker (opcjonalnie) - do uruchamiania usług takich jak MongoDB, Weaviate lub Pinecone lokalnie
+
+Git - do klonowania repozytorium
 
 Struktura projektu
-frontend/: Kod Next.js dla interfejsu użytkownika.
 
-backend/: Kod FastAPI dla logiki serwera i integracji z LLM oraz bazami danych.
+frontend/: Kod Next.js dla interfejsu użytkownika
 
-.github/workflows/: Pliki konfiguracyjne CI/CD dla GitHub Actions.
+backend/: Kod FastAPI dla logiki serwera i integracji z LLM oraz bazami danych
+
+.github/workflows/: Pliki konfiguracyjne CI/CD dla GitHub Actions
 
 Jak uruchomić projekt
+
 1. Sklonuj repozytorium
-bash
 
 git clone https://github.com/your-username/chatbot-project.git
 cd chatbot-project
 
 2. Konfiguracja frontendu (Next.js)
+
 Przejdź do katalogu frontendu:
-bash
 
 cd frontend
 
 Zainstaluj zależności:
-bash
 
 npm install
 
@@ -48,34 +53,23 @@ NEXT_PUBLIC_BACKEND_API_SERVER_URL=https://your-backend-api-url
 NEXTAUTH_SECRET=your-nextauth-secret
 NEXTAUTH_URL=http://localhost:3000
 
-GOOGLE_CLIENT_ID i GOOGLE_CLIENT_SECRET: Klucze do autoryzacji Google OAuth.
-
-NEXT_PUBLIC_BACKEND_API_SERVER_URL: Adres URL Twojego backendu (np. http://localhost:8000 w środowisku lokalnym).
-
-NEXTAUTH_SECRET: Sekretny klucz do NextAuth (możesz wygenerować losowy ciąg znaków).
-
-NEXTAUTH_URL: Adres URL aplikacji frontendowej (domyślnie http://localhost:3000 w środowisku lokalnym).
-
 Uruchom frontend w trybie deweloperskim:
-bash
 
 npm run dev
 
 Frontend będzie dostępny pod adresem http://localhost:3000.
 
 3. Konfiguracja backendu (FastAPI)
+
 Przejdź do katalogu backendu:
-bash
 
 cd backend
 
 Zainstaluj Poetry (jeśli jeszcze nie jest zainstalowane):
-bash
 
 pip install poetry
 
 Zainstaluj zależności projektu:
-bash
 
 poetry install
 
@@ -95,39 +89,19 @@ SSH_KEY_PASSPHRASE=your-ssh-key-passphrase
 WEAVIATE_API_KEY=your-weaviate-api-key
 WEAVIATE_URL=your-weaviate-url
 
-ANTHROPIC_API_KEY: Klucz API do Anthropic LLM.
-
-DIGITALOCEAN_*: Dane dostępowe do DigitalOcean (używane w CI/CD lub lokalnym hostingu).
-
-JWT_SECRET_KEY: Sekretny klucz do generowania i weryfikacji JWT.
-
-MONGODB_URI: Adres URI do bazy MongoDB (np. lokalnej lub Atlas).
-
-OPENAI_API_KEY: Klucz API do OpenAI (w tym OpenAI Assistants).
-
-PINECONE_API_KEY: Klucz API do Pinecone.
-
-SSH_KEY_PASSPHRASE: Hasło do klucza SSH (jeśli dotyczy).
-
-WEAVIATE_API_KEY: Klucz API do Weaviate.
-
-WEAVIATE_URL: Adres URL instancji Weaviate.
-
 Aktywuj środowisko Poetry:
-bash
 
 poetry shell
 
 Uruchom backend:
-bash
 
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 Backend będzie dostępny pod adresem http://localhost:8000.
 
 4. Usługi zewnętrzne
+
 MongoDB: Uruchom lokalnie za pomocą Dockera:
-bash
 
 docker run -d -p 27017:27017 --name mongodb mongo:latest
 
@@ -136,20 +110,16 @@ Weaviate: Skonfiguruj lokalnie lub użyj chmurowej instancji (patrz dokumentacja
 Pinecone: Utwórz indeks w Pinecone i skonfiguruj klucz API.
 
 5. Deployment
+
 Frontend: Deploy na Vercel poprzez integrację z GitHub. Ustaw zmienne środowiskowe w panelu Vercel.
 
 Backend: Deploy na DigitalOcean z użyciem GitHub Actions. Pliki konfiguracyjne CI/CD znajdują się w .github/workflows/.
 
 Dodatkowe uwagi
+
 Upewnij się, że wszystkie zmienne środowiskowe są poprawnie skonfigurowane, aby uniknąć błędów autoryzacji lub połączenia z usługami zewnętrznymi.
 
 W przypadku korzystania z OpenAI Assistants, skonfiguruj asystentów i vector stores za pomocą odpowiednich endpointów API (np. /assistant, /vector-store).
 
 Testowe trasy upsertowania (/pinecone-upsert, /weaviate-upsert) oraz scrapowania (/scrape-course-content) mogą być używane do ładowania danych do baz wektorowych.
 
-Rozwiązywanie problemów
-Błąd połączenia z backendem: Sprawdź, czy NEXT_PUBLIC_BACKEND_API_SERVER_URL wskazuje na poprawny adres backendu.
-
-Błąd autoryzacji JWT: Upewnij się, że JWT_SECRET_KEY jest zgodny w backendzie i frontendzie.
-
-Błąd API LLM: Sprawdź poprawność kluczy API (ANTHROPIC_API_KEY, OPENAI_API_KEY).
