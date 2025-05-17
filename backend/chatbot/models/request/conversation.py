@@ -3,7 +3,6 @@ from typing import Optional
 
 class ConversationCreateRequest(BaseModel):
     userId: str
-    assistantId: str
+    assistantId: Optional[str] = None 
     title: str
     text: Optional[str] = None
-

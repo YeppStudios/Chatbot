@@ -14,15 +14,25 @@ export interface Codes {
   role: string;
 }
 
-type Message = {
-  messenger: "User" | "Avatar";
-  text: string;
-};
+export interface Citation {
+  citation: string;
+  file_reference: string;
+}
+
+export interface Message {
+  _id?: string;
+  role: string;
+  content: string;
+  citations?: Citation[];
+  timestamp: string;
+}
 
 export interface Conversation {
+  _id: string;
   threadId: string;
   user: string;
-  chatbot: string;
+  assistantId?: string;
+  messages: Message[];
   startTime: string;
   lastUpdated: string;
   title: string;

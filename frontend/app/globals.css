@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
- 
-}
-
-body {
-background-color: whitesmoke;
-}
-
-
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }

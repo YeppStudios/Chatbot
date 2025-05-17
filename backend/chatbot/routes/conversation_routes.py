@@ -1,6 +1,7 @@
 from datetime import datetime
+import traceback
 from typing import Any, Dict, List, Optional
-from chatbot.models.request.create_conversation import ConversationCreateRequest
+from chatbot.models.request.conversation import ConversationCreateRequest
 from chatbot.models.user import User
 from chatbot.models.assistant import Assistant
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -12,6 +13,7 @@ from dotenv import load_dotenv
 from bson import ObjectId
 from openai import OpenAI
 from pydantic import BaseModel
+from chatbot.models.message import Message
 
 load_dotenv()
 
@@ -37,14 +39,67 @@ async def get_user_conversations(userId: str = Query(..., description="The uniqu
         raise HTTPException(status_code=404, detail="User not found")
     return user.get("conversations", []) 
 
-@router.get("/conversation/{threadId}")
-async def get_conversation(threadId: str, messageLimit: int = Query(20, ge=1, le=100)):
+@router.get("/conversation/{conversation_id}")
+async def get_conversation(conversation_id: str, messageLimit: int = Query(20, ge=1, le=100)):
     try:
-        response = openai.beta.threads.messages.list(
-            thread_id=threadId,
-            limit=messageLimit
-        )
-        return response.data
+        # Find conversation by _id in our database
+        try:
+            conversation = await db['conversations'].find_one({"_id": ObjectId(conversation_id)})
+        except:
+            # Try finding by threadId as fallback for backward compatibility
+            conversation = await db['conversations'].find_one({"threadId": conversation_id})
+        
+        if not conversation:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        
+        # Convert ObjectId to string for serialization
+        conversation = serialize_doc(conversation)
+        
+        # Sort messages by timestamp if they exist
+        if 'messages' in conversation and conversation['messages']:
+            conversation['messages'].sort(key=lambda x: x.get('timestamp', ''))
+            
+            # Limit the number of messages if needed
+            if len(conversation['messages']) > messageLimit:
+                conversation['messages'] = conversation['messages'][-messageLimit:]
+        else:
+            # If no messages in our database but there's a threadId, 
+            # try to fetch from OpenAI as fallback (for older conversations)
+            if 'threadId' in conversation and conversation['threadId']:
+                try:
+                    response = openai.beta.threads.messages.list(
+                        thread_id=conversation['threadId'],
+                        limit=messageLimit
+                    )
+                    
+                    # Convert OpenAI messages to our format and add to conversation
+                    messages = []
+                    for msg in response.data:
+                        if hasattr(msg, 'content') and len(msg.content) > 0:
+                            content = msg.content[0].text.value
+                            # Clean citations if needed
+                            regex_pattern = r"【.*?】"
+                            cleaned_content = re.sub(regex_pattern, '', content)
+                            
+                            messages.append({
+                                'role': msg.role,
+                                'content': cleaned_content,
+                                'timestamp': msg.created_at
+                            })
+                    
+                    # Sort by timestamp
+                    messages.sort(key=lambda x: x.get('timestamp', 0))
+                    conversation['messages'] = messages
+                    
+                    # Update conversation in database with messages from OpenAI
+                    await db['conversations'].update_one(
+                        {"_id": ObjectId(conversation_id)},
+                        {"$set": {"messages": messages}}
+                    )
+                except Exception as e:
+                    print(f"Could not fetch messages from OpenAI: {str(e)}")
+        
+        return conversation
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -52,8 +107,14 @@ async def get_conversation(threadId: str, messageLimit: int = Query(20, ge=1, le
 
 def serialize_doc(doc):
     """Convert MongoDB document to dict with string IDs."""
-    if doc.get('_id') and isinstance(doc['_id'], ObjectId):
-        doc['_id'] = str(doc['_id'])
+    if isinstance(doc, dict):
+        return {k: serialize_doc(v) for k, v in doc.items()}
+    elif isinstance(doc, list):
+        return [serialize_doc(item) for item in doc]
+    elif isinstance(doc, ObjectId):
+        return str(doc)
+    elif isinstance(doc, datetime):
+        return doc.isoformat()
     return doc
 
 class ConversationResponse(BaseModel):
@@ -84,59 +145,71 @@ async def get_all_conversations(page: int = Query(1, description="Page number, s
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+
+
 @router.post("/conversation")
 async def create_conversation(request: ConversationCreateRequest):
     try:
-        # Create new thread
-        thread = openai.beta.threads.create()
-        
-        # Find user and verify existence
+        thread = None
+        if request.assistantId:
+            thread = openai.beta.threads.create()
+
         user = await db['users'].find_one({"_id": ObjectId(request.userId)})
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
-
-        # Convert to User model for type safety
         user_model = User(**user)
 
-        # Get the assistant
-        assistant = await db['assistants'].find_one({"openaiAssistantId": request.assistantId})
-        if not assistant:
-            raise HTTPException(status_code=404, detail="Assistant not found")
-        
-        assistant_model = Assistant(**assistant)
+        assistant_model = None
+        if request.assistantId:
+            print("Fetching assistant with openaiAssistantId:", request.assistantId)
+            assistant = await db['assistants'].find_one({"openaiAssistantId": request.assistantId})
+            if not assistant:
+                raise HTTPException(status_code=404, detail="Assistant not found")
+            assistant_model = Assistant(**assistant)
 
-        # (1) If there is a preprompt, add it
-        if assistant_model.preprompt:
+        if thread and assistant_model and assistant_model.preprompt:
             openai.beta.threads.messages.create(
                 thread.id,
                 role="assistant",
                 content=assistant_model.preprompt
             )
 
-        # (2) Always add your custom greeting as the next message
-        openai.beta.threads.messages.create(
-            thread.id,
-            role="assistant",
-            content=request.text
-        )
+        if thread and request.text:
+            openai.beta.threads.messages.create(
+                thread.id,
+                role="assistant",
+                content=request.text
+            )
 
-        # Create new conversation document
+        initial_messages = []
+        if not thread and request.text:
+            message = Message(
+                role="assistant",
+                content=request.text,
+                timestamp=datetime.utcnow()
+            )
+            initial_messages.append(message)
+
         new_conversation = Conversation(
-            threadId=thread.id,
-            user=str(ObjectId(request.userId)),
+            threadId=thread.id if thread else "",  # Use empty string instead of None
+            user=request.userId,
             startTime=datetime.utcnow(),
             lastUpdated=datetime.utcnow(),
-            assistantId=request.assistantId,
-            title=request.title
+            assistantId=request.assistantId if request.assistantId else "",  # Use empty string
+            title=request.title,
+            messages=initial_messages
         )
-        
-        result = await db['conversations'].insert_one(new_conversation.dict())
-        new_conversation_dict = new_conversation.dict()
+
+        result = await db['conversations'].insert_one(new_conversation.model_dump(exclude_none=True))
+        new_conversation_dict = new_conversation.model_dump(exclude_none=True)
         new_conversation_dict["_id"] = str(result.inserted_id)
 
-        # Add this conversation to the user's conversation list
-        user_conversations = user_model.conversations
-        user_conversations.append(thread.id)
+        user_conversations = user_model.conversations or []
+        if thread:
+            user_conversations.append(thread.id)
+
         await db['users'].update_one(
             {"_id": ObjectId(request.userId)},
             {"$set": {"conversations": user_conversations}}
@@ -146,8 +219,9 @@ async def create_conversation(request: ConversationCreateRequest):
             "thread": thread,
             "conversation": new_conversation_dict
         }
-
     except Exception as e:
+        print("Error in /conversation:", str(e))
+        print("Stack trace:", traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(e))
 
 class PaginationInfo(BaseModel):

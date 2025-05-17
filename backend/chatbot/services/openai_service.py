@@ -12,18 +12,6 @@ client = OpenAI()
 
 
 def get_embeddings(texts: List[str]) -> List[List[float]]:
-    """
-    Embed texts using OpenAI's embedding model.
-
-    Args:
-        texts: The list of texts to embed.
-
-    Returns:
-        A list of embeddings, each of which is a list of floats.
-
-    Raises:
-        Exception: If the OpenAI API call fails.
-    """
 
     response = client.embeddings.create(
         input=texts, model=EMBEDDING_MODEL, dimensions=EMBEDDING_DIMENSION

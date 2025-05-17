@@ -2,12 +2,10 @@
 import { useState, useEffect } from "react";
 import OpenChatButton from "./OpenChatButton";
 import ChatWindow from "./ChatWindow";
-import useConversation from "@/hooks/useConversation";
+import { cn } from "@/utils/cn";
 
-const Index = () => {
+const Chat = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  useConversation({ isOpen });
 
   useEffect(() => {
     const openButton = document.querySelector("#open-button-chat");
@@ -32,11 +30,16 @@ const Index = () => {
   });
 
   return (
-    <div>
+    <div
+      className={cn("fixed bottom-5 right-5", {
+        "w-[450px] h-[614px]": isOpen,
+        "w-[60px] h-[60px]": !isOpen,
+      })}
+    >
       <ChatWindow isOpen={isOpen} />
       <OpenChatButton setIsOpen={setIsOpen} isOpen={isOpen} />
     </div>
   );
 };
 
-export default Index;
+export default Chat;

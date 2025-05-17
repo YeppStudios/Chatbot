@@ -1,0 +1,536 @@
+query,openai-gpt-4o,openai-gpt-4-turbo,openai-gpt-4.5-preview,anthropic-claude-3-5-sonnet-20241022,anthropic-claude-3-7-sonnet-20250219
+Co to jest efekt Joulesa-Thomsona?,"Efekt Joulesa-Thomsona to zjawisko fizyczne polegające na nagłej zmianie temperatury gazu, gdy przechodzi on przez porowatą przegrodę z obszaru o wyższym ciśnieniu do obszaru o niższym ciśnieniu. W kontekście krioanalgezji, ten efekt jest wykorzystywany do schładzania końcówki sondy kriochirurgicznej do niskich temperatur, co umożliwia zamrażanie nerwów i blokowanie przewodnictwa nerwowego. Czy chcesz dowiedzieć się więcej o zastosowaniach tego efektu w medycynie?","Efekt Joulesa-Thomsona, który jest wykorzystywany w krioanalgezji, polega na nagłej zmianie temperatury gazu (podtlenku azotu N2O lub dwutlenku węgla CO2) podczas jego rozprężania, gdy przechodzi on przez porowatą przegrodę z miejsca o wyższym ciśnieniu do obszaru o niższym ciśnieniu. W wyniku tego zjawiska końcówka sondy używanej w krioanalgezji schładza się do bardzo niskich temperatur, dochodzących do -78°C dla CO2 i -89°C dla N2O, co umożliwia efektywne ""zamrażanie"" nerwów w celu blokady przewodnictwa nerwowego i tym samym zmniejszenia odczuwania bólu.","Efekt Joulesa-Thomsona to zjawisko fizyczne, które polega na nagłej zmianie temperatury gazu (np. podtlenku azotu N₂O lub dwutlenku węgla CO₂) podczas jego rozprężania. Następuje ono, gdy gaz przepływa przez porowatą przegrodę z obszaru o wyższym ciśnieniu do obszaru o niższym ciśnieniu. W wyniku tego efektu dochodzi do gwałtownego obniżenia temperatury gazu, co jest wykorzystywane w nowoczesnych urządzeniach do krioanalgezji.
+
+W praktyce medycznej, w urządzeniach Metrum Cryoflex, zastosowanie efektu Joulesa-Thomsona pozwala na uzyskanie bardzo niskich temperatur na końcówce roboczej sondy krioanalgetycznej – nawet do -78°C przy użyciu CO₂ lub do -89°C przy użyciu N₂O. Dzięki temu możliwe jest precyzyjne zamrażanie nerwów i długotrwała redukcja bólu poprzez tymczasową blokadę przewodnictwa nerwowego.","Na podstawie dostępnych materiałów, efekt Joulesa-Thomsona to zjawisko nagłej zmiany temperatury gazu (w tym przypadku podtlenku azotu N2O lub dwutlenku węgla CO2) podczas jego rozprężania, gdy przechodzi przez porowatą przegrodę z obszaru o wyższym ciśnieniu do obszaru o niższym ciśnieniu.
+
+W kontekście urządzeń Metrum Cryoflex proces ten wygląda następująco:
+1. Sprężony, ciekły gaz (N2O lub CO2) przemieszcza się wzdłuż dyszy rozprężnej
+2. Gaz jest uwalniany przez szczelinkę do komory rurki zewnętrznej, gdzie ciśnienie spada do 5-7 Bar
+3. W wyniku rozprężania i skroplenia gazu w końcówce kriosondy następuje natychmiastowe odbieranie ciepła
+4. Temperatura we wnętrzu końcówki obniża się do:
+   - -89°C w przypadku N2O
+   - -78°C w przypadku CO2
+
+Efekt ten powoduje utworzenie się ""kulki/strefy lodu"" w tkance podczas zabiegów krioanalgezji.
+
+Czy chciałbyś dowiedzieć się więcej szczegółów na temat wykorzystania tego efektu w urządzeniach kriogenicznych?","Efekt Joulesa-Thomsona (czasem nazywany też efektem Joule'a-Thompsona) to zjawisko fizyczne polegające na nagłej zmianie temperatury gazu podczas jego rozprężania, gdy przechodzi on przez porowatą przegrodę z miejsca o wyższym ciśnieniu do obszaru o niższym ciśnieniu.
+
+W kontekście krioanalgezji, efekt ten jest wykorzystywany w sondach kriogenicznych, gdzie:
+- Sprężony, ciekły gaz (podtlenek azotu N₂O lub dwutlenek węgla CO₂) przepływa przez dyszę rozprężną
+- Gaz jest uwalniany przez szczelinkę do komory o niższym ciśnieniu (5-7 Bar)
+- Rozprężanie i skraplanie gazu w końcówce sondy powoduje natychmiastowe odbieranie ciepła z końcówki roboczej
+- W wyniku tego procesu temperatura we wnętrzu końcówki sondy obniża się nawet do -89°C (dla N₂O) lub -78°C (dla CO₂)
+
+Ten efekt jest kluczowy dla tworzenia ""kulki lodowej"" w tkance podczas zabiegów krioanalgezji, umożliwiając tymczasowe blokowanie przewodnictwa nerwowego w celu leczenia bólu.
+
+Czy interesują Cię szczegóły dotyczące samego procesu krioanalgezji lub konkretnych urządzeń wykorzystujących ten efekt?"
+W jakiej temperaturze odbywa się krioanalgezja?,"Krioanalgezja odbywa się w temperaturze -50°C, co powoduje degenerację aksonów i tymczasowo blokuje przewodnictwo nerwowe oraz odczuwanie bólu. Czy chciałbyś dowiedzieć się więcej o procesie krioanalgezji?","Krioanalgezja odbywa się w temperaturze około -50°C, kiedy to nerwy są zamrażane na okres od 1 do 2 minut.","Krioanalgezja odbywa się przy temperaturze około -50°C przez czas od 1 do 2 minut. Taka temperatura powoduje degenerację aksonów (zwyrodnienie Wallera), tymczasowo blokując przewodnictwo nerwowe oraz odczuwanie bólu. Jednocześnie zachowane są struktury takie jak endoneurium, perineurium, epineurium oraz osłonka mielinowa, co umożliwia regenerację nerwu. Temperatura sondy może osiągać nawet -78°C przy użyciu CO₂ oraz -89°C przy użyciu N₂O, jednak sam proces zamrażania nerwów podczas zabiegu jest prowadzony w temperaturze około -50°C. 
+
+Czy chcesz dowiedzieć się więcej o mechanizmach działania krioanalgezji lub zastosowaniach klinicznych?","Na podstawie dostępnych materiałów, krioanalgezja odbywa się w następujących warunkach temperaturowych:
+
+1. Nerwy zamrażane są w temperaturze -50°C przez 1 do 2 minut
+
+2. Temperatura na końcówce sondy może osiągać:
+- do -78°C przy użyciu CO2
+- do -89°C przy użyciu N2O
+
+Warto zauważyć, że już w temperaturze -20°C przewodnictwo nerwowe ustaje całkowicie, jednak dla uzyskania efektu terapeutycznego (krioanalgezji) stosuje się niższe temperatury (-50°C) przez określony czas (1-2 minuty), co prowadzi do kontrolowanej degeneracji aksonu (zwyrodnienie Wallera).
+
+Czy chciałbyś dowiedzieć się więcej o fizjologicznych efektach działania niskiej temperatury na nerwy podczas krioanalgezji?","Krioanalgezja odbywa się w temperaturze około -50°C, przy czym nerwy są zamrażane przez 1 do 2 minut. Taka temperatura powoduje degenerację aksonów (zwyrodnienie Wallera), co tymczasowo blokuje przewodnictwo nerwowe i odczuwanie bólu.
+
+Warto zauważyć, że:
+- W temperaturze 10°C ustaje przewodzenie przez większe włókna mielinowe
+- Dopiero w temperaturze -20°C przewodnictwo nerwowe ustaje całkowicie
+- Końcówka sondy kriochirurgicznej może schładzać się do temperatury -78°C (przy użyciu CO2) lub -89°C (przy użyciu N2O)
+
+Skuteczność krioanalgezji zależy zarówno od osiągniętego poziomu zimna, jak i czasu ekspozycji na niską temperaturę. Czy interesują Cię szczegóły dotyczące mechanizmu działania krioanalgezji na poziomie fizjologicznym?"
+Ile zabiegów mogę przeprowadzić przy użyciu wielorazowej sondy 13/120/T/RF lub A13/120/R/RF?,"Nie mogę znaleźć konkretnej liczby zabiegów, które można przeprowadzić przy użyciu wielorazowej sondy 13/120/T/RF lub A13/120/R/RF. Sondy wielorazowe powinny być używane zgodnie z zaleceniami producenta, które mogą obejmować instrukcje dotyczące czyszczenia, sterylizacji i konserwacji, aby zapewnić ich długotrwałe i bezpieczne użytkowanie. Czy masz inne pytania dotyczące krioanalgezji lub sprzętu Metrum Cyroflex?","Czy chodzi o liczbę cykli zamrażania, które można przeprowadzić przy użyciu sondy wielorazowej 13/120/T/RF lub A13/120/R/RF, czy o ogólną żywotność sondy w kontekście wielokrotnego użycia?","W dostępnych materiałach nie ma informacji o dokładnej liczbie zabiegów możliwych do przeprowadzenia jedną sondą wielorazową typu A13/120/T/RF lub A13/120/R/RF. Czy chcesz, żebym wyszukał dodatkowych informacji na ten temat?","Let me search for specific information about the reusable probe usage limits.
+
+search_vector_store: How many treatments can be performed with reusable probe 13/120/T/RF or A13/120/R/RF?
+
+I apologize, but I cannot find specific information in the provided content about the exact number of treatments that can be performed with the reusable probes A13/120/T/RF or A13/120/R/RF. To get accurate information about the maximum number of treatments possible with these specific probes, I recommend:
+
+1. Consulting the device's user manual
+2. Contacting Metrum Cryoflex directly
+3. Checking the technical specifications provided with the probe
+
+This is important information that should come from official manufacturer sources to ensure proper and safe usage of the equipment.","Nie znalazłem w dostarczonych materiałach informacji o maksymalnej liczbie zabiegów, jakie można przeprowadzić przy użyciu wielorazowych sond 13/120/T/RF lub A13/120/R/RF. Materiały zawierają informacje o tych sondach w kontekście ich zastosowania w zabiegach krioanalgezji, ale nie określają ich żywotności czy maksymalnej liczby użyć.
+
+Czy chciałbyś uzyskać więcej informacji na temat samego sposobu użycia tych sond wielorazowych w zabiegach krioanalgezji? A może interesują Cię procedury czyszczenia i konserwacji tych sond?"
+Dla jakich produktów metrum jest producentem? Pokaż listę produktów.,"Metrum Cryoflex jest producentem sprzętu medycznego, w tym laserów i sond do krioanalgezji. Oto lista niektórych produktów:
+
+1. **Lasery diodowe** - SWING (1470 nm) i TWIST (1940 nm).
+2. **Laser CO2 BIOXEL** - charakteryzujący się szerokim wyborem głowic zabiegowych.
+3. **Sondy do krioanalgezji** - w tym sonda Pectus do krioanalgezji torakoskopowej.
+
+Czy chcesz dowiedzieć się więcej na temat konkretnego produktu?","Metrum Cryoflex jest producentem różnych urządzeń medycznych, w tym:
+
+1. Sondy do krioanalgezji torakoskopowej (sonda Pectus)
+2. Lasery diodowe SWING (1470 nm, 15W) i TWIST (1940 nm, 10W)
+3. Laser CO2 BIOXEL
+
+Czy mogę pomóc w czymś więcej?","Produkty, których producentem jest Metrum Cryoflex to między innymi:
+
+1. Lasery diodowe:
+   - SWING (1470 nm, 15W)
+   - TWIST (1940 nm, 10W)
+
+2. Sondy do krioanalgezji:
+   - Sonda Pectus do krioanalgezji torakoskopowej
+   - Sonda do przezskórnej krioanalgezji nerwów międzyżebrowych
+
+3. Lasery CO2:
+   - BIOXEL (laser CO2 o mocy 40W, z głowicami chirurgicznymi i frakcyjnymi oraz opcją rozbudowy o głowice do ginekologii, laryngologii, stomatologii)
+
+Jest to lista produktów, które bezpośrednio wynikają z udostępnionych materiałów edukacyjnych firmy Metrum Cryoflex. Jeśli potrzebujesz dodatkowych informacji, daj znać!","Na podstawie dostarczonych materiałów mogę zidentyfikować następujące produkty Metrum Cryoflex:
+
+1. Urządzenia do krioanalgezji:
+- Sonda do krioanalgezji torakoskopowej (sonda Pectus)
+- Sonda do krioanalgezji przezskórnej 
+
+2. Lasery:
+- SWING (laser diodowy 1470 nm, moc 15W)
+- TWIST (laser diodowy 1940 nm, moc 10W)
+
+Czy chciałbyś otrzymać więcej szczegółów na temat któregoś z tych produktów?
+
+Warto zaznaczyć, że może istnieć więcej produktów w portfolio firmy, ale mogę opierać się tylko na informacjach zawartych w dostarczonych materiałach.","Na podstawie dostępnych informacji, Metrum Cryoflex jest producentem następujących urządzeń medycznych:
+
+1. Urządzenia kriogeniczne:
+   - Sondy do krioanalgezji (w tym sonda Pectus do krioanalgezji torakoskopowej)
+   - Sondy do krioanalgezji przezskórnej (mniejszej średnicy, umożliwiające precyzyjne zabiegi)
+
+2. Lasery:
+   - SWING 1470 nm - laser diodowy o mocy 15W
+   - TWIST 1940 nm - laser diodowy o mocy 10W
+
+3. Inne urządzenia laserowe:
+   - Metrum jest wspomniane jako producent również innych urządzeń laserowych (choć nie są one szczegółowo wymienione)
+
+Firma dystrybuuje również laser BIOXEL CO2 (40W, produkcji koreańskiej), ale z kontekstu wynika, że Metrum Cryoflex nie jest jego producentem, a jedynie dystrybutorem.
+
+Czy chciałbyś uzyskać więcej szczegółów na temat któregoś z tych produktów?"
+Jaka jest przewaga krioanalgezji nad radiofrekwencją?,"Krioanalgezja ma kilka przewag nad radiofrekwencją (termolezją), szczególnie w kontekście leczenia bólu chronicznego:
+
+1. **Eliminacja bólu podczas zabiegu**: Krioanalgezja zapewnia pełne wyeliminowanie bólu w trakcie samego zabiegu, co daje pacjentowi i lekarzowi natychmiastową informację o skuteczności procedury. W przypadku radiofrekwencji efekt przeciwbólowy może być odczuwalny dopiero po kilku tygodniach.
+
+2. **Bezpieczeństwo dla otaczających tkanek**: Krioanalgezja nie niesie ryzyka koagulacji naczyń, ponieważ zewnętrzna strefa lodu izoluje inne tkanki, co pozwala na bezpieczne przeprowadzanie zabiegów w pobliżu dużych naczyń krwionośnych, implantów czy rozrusznika serca. 
+
+3. **Możliwość powtórzenia zabiegu**: Krioanalgezja może być powtarzana w tych samych miejscach, co nie jest zalecane w przypadku radiofrekwencji, jeśli pierwotny zabieg okazał się nieskuteczny.
+
+4. **Koszty i czas zabiegu**: Krioanalgezja może być tańsza i szybsza, szczególnie w niektórych zastosowaniach, jak np. denerwacja stawów krzyżowo-biodrowych, gdzie zastępuje potrzebę użycia wielu sond do termolezji.
+
+5. **Natychmiastowy efekt**: Podczas zabiegu krioanalgezji pacjent może odczuwać ucisk, co jest dobrym prognostykiem, ale ból ustępuje po około 30 sekundach, natomiast w radiofrekwencji zmiany w odczuwaniu bólu mogą nie być od razu zauważalne.
+
+Czy chciałbyś dowiedzieć się więcej o krioanalgezji lub jej zastosowaniach?","Krioanalgezja ma kilka przewag nad radiofrekwencją:
+
+1. **Bezpieczeństwo wobec struktur naczyniowych**: Krioanalgezja jest bezpieczniejsza w obszarach blisko dużych naczyń krwionośnych, ponieważ zewnętrzna strefa lodu działa jak izolator, zapobiegając ryzyku koagulacji naczyń. W przeciwieństwie do tego, termolezja monopolarne (radiofrekwencja) niesie ryzyko koagulacji oraz interferencji na implanty, takie jak rozruszniki serca.
+
+2. **Szybki efekt przeciwbólowy**: Krioanalgezja daje natychmiastowy efekt przeciwbólowy tuż po zastosowaniu, podczas gdy efekty termolezji mogą być odczuwalne dopiero po kilku tygodniach.
+
+3. **Zachowanie osłonek nerwowych**: Metoda ta uszkadza tylko aksony nerwów, zachowując ich osłonki, co jest korzystne dla regeneracji nerwu. W przypadku termolezji mogą wystąpić uszkodzenia osłonek, co może prowadzić do długotrwałych problemów, takich jak ból neuropatyczny czy nerwiak.
+
+4. **Możliwość powtarzania zabiegu**: Krioanalgezję można stosować wielokrotnie w tych samych miejscach, co jest niemożliwe w przypadku termolezji, która przy nieskuteczności zwykle nie jest powtarzana.
+
+5. **Mniejsze ryzyko pogorszenia stanu pacjenta**: W przypadku krioanalgezji rzadko obserwuje się nasilenie dolegliwości po zabiegu, co może być problemem przy termolezji.
+
+6. **Koszty i czas zabiegu**: Krioanalgezja jest generalnie tańsza i szybsza w porównaniu z termolezją, zwłaszcza przy zastosowaniu sondy krio SIJ, która zastępuje potrzebę wkłuwania wielu sond termolezji.
+
+Te cechy sprawiają, że krioanalgezja jest atrakcyjną alternatywą dla radiofrekwencji, zwłaszcza w przypadkach wymagających szybkiego działania i minimalizacji ryzyka dla pacjenta.","Przewaga krioanalgezji nad radiofrekwencją (termolezją) polega na kilku istotnych aspektach:
+
+1. Natychmiastowy efekt przeciwbólowy:  
+W przypadku krioanalgezji efekt przeciwbólowy występuje bezpośrednio podczas zabiegu, gdyż nerw jest natychmiast zamrażany. Przy radiofrekwencji natomiast, potwierdzenie skuteczności zabiegu może nastąpić dopiero po kilku tygodniach.
+
+2. Bezpieczeństwo sąsiadujących struktur:  
+Krioanalgezja jest bezpieczna do stosowania w pobliżu dużych naczyń krwionośnych, tętnic, żył, implantów czy rozruszników serca. Zewnętrzna strefa lodu działa jako izolator, dzięki czemu zamrażaniu ulega wyłącznie nerw, a pozostałe tkanki pozostają nienaruszone. W przypadku radiofrekwencji istnieje ryzyko koagulacji (uszkodzenia) naczyń krwionośnych oraz interferencji z implantami i rozrusznikami.
+
+3. Zachowanie struktur nerwu i brak ryzyka nerwiaka:  
+W krioanalgezji dochodzi wyłącznie do uszkodzenia aksonalnego nerwu, natomiast wszystkie osłonki nerwu pozostają zachowane, co zapewnia pełną regenerację nerwu po zabiegu. W termolezji dochodzi do uszkodzenia osłonek nerwu, w tym blaszki komórek Schwanna, co może prowadzić do powstania nerwiaka oraz bólu neuropatycznego.
+
+4. Możliwość wielokrotnego powtarzania zabiegu:  
+Krioanalgezję można bezpiecznie powtarzać lub wykonywać wielokrotnie w tych samych miejscach. Radiofrekwencji zazwyczaj nie powtarza się przy braku efektów terapeutycznych.
+
+5. Niższe koszty i krótszy czas proceduralny:  
+Krioanalgezja jest metodą tańszą, zarówno pod względem zakupu aparatury, jak i kosztów eksploatacyjnych (zużycie gazu, sterylizacja sond wielorazowych). Przykładem jest zastosowanie sondy krio SIJ, która skutecznie zastępuje konieczność stosowania wielu sond do termolezji, co sprawia, że cały zabieg jest krótszy i mniej kosztowny.
+
+6. Mniejsze ryzyko nieprzyjemnych odczuć po zabiegu:  
+Po krioanalgezji rzadziej obserwuje się nasilenie dolegliwości bólowych. Z kolei po radiofrekwencji, nawet perfekcyjnie wykonanej technicznie, mogą wystąpić nieprzyjemne odczucia takie jak parestezje.
+
+Podsumowując, głównymi przewagami krioanalgezji nad radiofrekwencją są natychmiastowy efekt przeciwbólowy, bezpieczeństwo dla sąsiadujących struktur, możliwość pełnej regeneracji nerwu oraz niższe koszty zabiegu.","Na podstawie dostępnych materiałów, główne przewagi krioanalgezji nad termolezją (radiofrekwencją) to:
+
+1. Skuteczność i natychmiastowy efekt:
+- Krioanalgezja daje natychmiastowy efekt przeciwbólowy podczas zabiegu
+- Przy termolezji na efekt trzeba czekać kilka tygodni
+
+2. Bezpieczeństwo:
+- Brak ryzyka koagulacji naczyń (strefa lodu działa jako izolator)
+- Można wykonywać w pobliżu dużych naczyń krwionośnych, implantów i rozruszników serca
+- Zachowane są wszystkie osłonki nerwu
+
+3. Możliwość powtarzania:
+- Krioanalgezję można powtarzać wielokrotnie w tych samych miejscach
+- Termolezji nie wykonuje się ponownie w przypadku braku efektów
+
+4. Mniejsze ryzyko powikłań:
+- Rzadko obserwuje się nasilenie dolegliwości po krioanalgezji
+- Przy termolezji mogą wystąpić zespoły bólowe i nieprzyjemne odczucia
+
+5. Aspekty ekonomiczne:
+- Niższe koszty zakupu aparatu (nawet dwukrotnie)
+- Niższe koszty eksploatacyjne (zużycie gazu, sterylizacja sond)
+
+6. Przewidywalność:
+- Nie wymaga dodatkowych regulacji parametrów podczas zabiegu
+- Nie wymaga dostosowywania do indywidualnej tolerancji bólu pacjenta
+
+Czy chciałbyś dowiedzieć się więcej o którymś z tych aspektów?","Na podstawie dostępnych informacji, przewaga krioanalgezji nad radiofrekwencją (termolezją) obejmuje kilka istotnych aspektów:
+
+1. **Natychmiastowy efekt przeciwbólowy** - w przypadku krioanalgezji efekt jest widoczny od razu podczas zabiegu, podczas gdy przy termolezji na efekty trzeba czekać nawet kilka tygodni.
+
+2. **Bezpieczeństwo przy implantach** - krioanalgezję można bezpiecznie wykonywać w pobliżu implantów, rozruszników serca i dużych naczyń krwionośnych, ponieważ zewnętrzna strefa lodu stanowi izolator. Przy termolezji monopolarnej istnieje ryzyko koagulacji oraz interferencji, podobne jak przy elektrochirurgii.
+
+3. **Zachowanie struktury nerwu** - krioanalgezja uszkadza tylko aksony, zachowując wszystkie osłonki nerwu, co umożliwia całkowitą regenerację nerwu. Przy termolezji może dochodzić do uszkodzenia osłonek, w tym blaszki komórek Schwana, co może prowadzić do powstania nerwiaka i bólu neuropatycznego.
+
+4. **Możliwość powtarzania zabiegu** - krioanalgezję można powtarzać wielokrotnie w tych samych miejscach, czego nie zaleca się przy termolezji.
+
+5. **Niższe koszty** - krioanalgezja charakteryzuje się niższymi kosztami zakupu aparatu (czasem dwukrotnie) oraz niższymi kosztami eksploatacyjnymi.
+
+6. **Mniejsze ryzyko powikłań** - po krioanalgezji rzadko obserwuje się nasilenie dolegliwości, nawet jeśli efekt terapeutyczny nie jest w pełni satysfakcjonujący.
+
+7. **Większa skuteczność** przy dokładnej lokalizacji gałązki bólowej, zwłaszcza przy zastosowaniu USG.
+
+8. **Efektywność przy denerwacji stawów krzyżowo-biodrowych** - zastosowanie sondy krio SIJ zastępuje konieczność wkucia 4-6 sond do termolezji, co czyni zabieg tańszym i dwukrotnie szybszym.
+
+Czy interesuje Cię jakiś konkretny aspekt przewagi krioanalgezji?"
+Jaka jest przewaga krioanalgezji nad leczeniem opioidami?,"Krioanalgezja ma kilka istotnych przewag nad leczeniem opioidami. Po pierwsze, krioanalgezja znacząco zmniejsza zapotrzebowanie na opioidy po operacjach, co jest szczególnie korzystne w kontekście kryzysu opioidowego. Badania wykazały, że pacjenci poddani krioanalgezji potrzebują mniej opioidów lub wcale ich nie potrzebują podczas hospitalizacji, co redukuje ryzyko uzależnienia. Krioanalgezja oferuje skuteczne działanie przeciwbólowe bez efektów ubocznych związanych z opioidami, takich jak depresja oddechowa, ryzyko uzależnienia czy konieczność dalszego monitorowania pacjentów. Czy interesują Cię konkretne badania dotyczące krioanalgezji?","Przewaga krioanalgezji nad leczeniem opioidami opiera się głównie na zmniejszeniu zapotrzebowania na opioidy oraz na ograniczeniu związanych z nimi negatywnych efektów ubocznych. Krioanalgezja, stosując zimno do zmniejszenia bólu poprzez uszkodzenie aksonalne nerwów, pozwala na natychmiastowe i skuteczne złagodzenie bólu, co jest szczególnie korzystne po operacjach. Ponadto, jak wynika z badań, krioanalgezja może znacząco zmniejszyć ilość przepisywanych opioidów na receptę po zabiegu, co przekłada się na mniejsze ryzyko uzależnienia od opioidów oraz mniejsze ryzyko wystąpienia negatywnych skutków ubocznych tych leków, takich jak depresja układu oddechowego czy zwiększone ryzyko powikłań pulmonologicznych. Ograniczenie stosowania opioidów jest szczególnie istotne w kontekście obecnego kryzysu opioidowego, gdzie istotne jest poszukiwanie skutecznych alternatywnych metod leczenia bólu.","Przewaga krioanalgezji nad leczeniem opioidami polega na znacznym ograniczeniu zapotrzebowania pacjentów na leki opioidowe, co przekłada się na zmniejszenie ryzyka uzależnienia i powikłań z tym związanych. Konkretne korzyści krioanalgezji wobec leczenia opioidowego to:
+
+1. Niższe zużycie opioidów – pacjenci po zabiegu krioanalgezji wykazują zdecydowanie mniejsze zapotrzebowanie na opioidy. W przeprowadzonych badaniach stwierdzono, że około jedna czwarta pacjentów nie wymagała żadnych opioidów podczas hospitalizacji.
+
+2. Mniejsze ryzyko uzależnienia – leczenie opioidami może prowadzić do uporczywego ich stosowania, zwiększając ryzyko rozwoju uzależnienia. Krioanalgezja zmniejsza to ryzyko, ponieważ ogranicza lub całkowicie eliminuje konieczność stosowania opioidów.
+
+3. Ograniczenie ilości opioidów przepisywanych po wypisie – pacjenci nieleczeni wcześniej opioidami, którzy przeszli krioanalgezję, wymagali mniejszych dawek opioidów na recepcie przy wypisie ze szpitala. W badaniu wskazano, że recepty na opioidy po krioanalgezji były średnio niższe o 88 mg OME.
+
+4. Skuteczność i natychmiastowy efekt – w przypadku krioanalgezji podczas zabiegu dochodzi do pełnego wyeliminowania bólu, dzięki czemu pacjent uzyskuje natychmiastową ulgę, podczas gdy opioidy jedynie maskują ból bez usunięcia jego źródła.
+
+5. Brak powikłań typowych dla leczenia opioidami – krioanalgezja nie jest związana z ryzykiem depresji oddechowej, która często występuje przy stosowaniu opioidów, zwłaszcza u pacjentów z ograniczonymi rezerwami płucnymi.
+
+6. Poprawa funkcji płuc po zabiegach torakochirurgicznych – krioanalgezja pozwala na wcześniejsze rozpoczęcie rehabilitacji oddechowej, minimalizując ryzyko powikłań płucnych związanych z depresyjnym działaniem opioidów.
+
+7. Bezpieczeństwo – krioanalgezja jest metodą bezpieczną, nie powoduje powikłań związanych z bólem neuropatycznym, nie wymaga ciągłego monitorowania i interwencji farmakologicznych, w przeciwieństwie do opioidów czy metod takich jak analgezja zewnątrzoponowa.
+
+Podsumowując, krioanalgezja jest skuteczną, bezpieczną i długotrwałą alternatywą dla leczenia opioidowego, ograniczającą ryzyko uzależnienia i powikłań zdrowotnych wynikających ze stosowania opioidów.","Na podstawie dostępnych materiałów, krioanalgezja ma następujące przewagi nad leczeniem opioidami:
+
+1. Znaczące zmniejszenie zapotrzebowania na opioidy:
+- Około 25% pacjentów nie wymaga żadnych opioidów podczas hospitalizacji
+- Redukcja dawki opioidów nawet 7-krotnie
+- U pacjentów po torakotomii zaobserwowano 4-krotne zmniejszenie zapotrzebowania na opioidy
+- 77% pacjentów nie wymaga dodatkowych recept na opioidy po wypisie ze szpitala
+
+2. Bezpieczeństwo i minimalizacja ryzyka:
+- Eliminuje ryzyko uzależnienia od opioidów
+- Zmniejsza ryzyko długotrwałego stosowania opioidów
+- Nie powoduje depresji układu oddechowego (w przeciwieństwie do opioidów)
+- Nie wymaga ciągłego monitorowania
+
+3. Skuteczność:
+- Zapewnia natychmiastowe działanie przeciwbólowe
+- Jest skuteczna przy dokładnej lokalizacji gałązki bólowej
+- Może być stosowana w pobliżu dużych naczyń krwionośnych, implantów i rozruszników serca
+- Pozwala na wczesną rehabilitację oddechową
+- Zmniejsza ból podczas ruchu pacjenta
+
+4. Długotrwałość działania:
+- Jest to jednorazowy zabieg o długotrwałym efekcie
+- Nie wymaga powtarzania procedury
+- Nie wymaga dalszego monitorowania w większości przypadków klinicznych
+
+Czy chciałbyś dowiedzieć się więcej o którymś z tych aspektów?","Na podstawie dostępnych informacji, krioanalgezja ma kilka istotnych przewag nad leczeniem opioidami:
+
+1. Zmniejszone zapotrzebowanie na opioidy:
+   - Około 25% pacjentów po krioanalgezji międzyżebrowej nie wymaga żadnych opioidów podczas hospitalizacji
+   - Pacjenci po krioanalgezji wymagają prawie siedmiokrotnie mniejszej dawki opioidów
+   - Po torakotomii obserwuje się czterokrotne zmniejszenie zapotrzebowania na opioidy (dziewięciokrotne u pacjentów nietolerujących opioidy)
+
+2. Mniejsze ryzyko uzależnienia:
+   - Krioanalgezja zmniejsza ryzyko uzależnienia od opioidów
+   - Badania pokazują, że 14% pacjentów nieleczonych opioidami po resekcji płuc stało się nowymi uporczywymi użytkownikami opioidów
+   - Pacjenci po krioanalgezji wymagali mniejszej ilości opioidów na receptę przy wypisie (średnio o 88 mg OME)
+   - 77% pacjentów po krioanalgezji nie wymagało dodatkowych recept na opioidy po wypisie ze szpitala
+
+3. Bezpieczeństwo i skuteczność:
+   - Krioanalgezja jest bezpieczna i ma podobną skuteczność przeciwbólową do znieczulenia zewnątrzoponowego
+   - W przeciwieństwie do TEA (znieczulenie zewnątrzoponowe klatki piersiowej), krioanalgezja nie wymaga ciągłego monitorowania
+   - Brak powikłań związanych z bólem neuropatycznym wymagającym interwencji farmakologicznej
+
+4. Korzyści kliniczne:
+   - Pozwala na wczesne przywrócenie funkcji płuc dzięki wdrożeniu rehabilitacji oddechowej
+   - Zmniejsza ból podczas ruchu pacjenta
+   - Pacjenci po krioanalgezji mają większą objętość początkową płuc
+   - Brak depresyjnego działania na układ oddechowy, które występuje przy opioidach
+
+Czy interesują Cię szczegóły dotyczące jakiegoś konkretnego aspektu przewagi krioanalgezji nad opioidami?"
+"Aparat Painless pokazuje komunikat o niedrożnej sondzie, co mam zrobić?","Aby rozwiązać problem niedrożnej sondy w aparacie Cryo-S Painless, upewnij się, że butla z gazem nie była przechowywana w zbyt niskiej temperaturze, poniżej 16°C, co może prowadzić do szybkiego spadku ciśnienia i niedrożności. Jeśli problem nadal występuje, rozważ podłączenie drugiej butli z wyższym ciśnieniem. Czy potrzebujesz więcej informacji na temat obsługi aparatu?","W przypadku komunikatu o niedrożnej sondzie w aparacie Cryo-S Painless, pierwszym krokiem jest sprawdzenie, czy sonda nie jest zablokowana przez skroplony gaz. Możliwe, że do sondy doszło do kondensacji na skutek różnicy temperatur. Aby rozwiązać ten problem:
+
+1. Wyłącz aparat i odczekaj kilkanaście minut, aby umożliwić gazowi powrót do stanu gazowego.
+2. Upewnij się, że temperatura w pomieszczeniu jest odpowiednia i że butla z gazem nie jest zbyt zimna w stosunku do temperatury otoczenia.
+3. Sprawdź, czy sonda nie jest mechanicznie uszkodzona lub zablokowana przez ciała obce.
+4. Ponownie podłącz sondę do aparatu i sprawdź, czy problem został rozwiązany.
+
+Jeśli problem nadal występuje, zaleca się kontakt z serwisem Metrum Cryoflex w celu dalszej diagnostyki lub wymiany sondy.","W przypadku komunikatu o niedrożnej sondzie w aparacie Cryo-S Painless zalecane jest sprawdzenie następujących elementów:
+
+1. Upewnij się, że temperatura butli z gazem nie jest radykalnie wyższa od temperatury pomieszczenia, w którym znajduje się aparat. Zbyt duża różnica temperatur może powodować skroplenie gazu i zablokowanie sondy.
+
+2. Sprawdź, czy ciśnienie w butli nie spadło do poziomu uniemożliwiającego prawidłowy przepływ gazu. W przypadku dużej liczby wykonanych mrożeń, ciśnienie może spaść. Rozwiązaniem jest wymiana butli na inną, o wyższym ciśnieniu lub zastosowanie dwóch butli połączonych szeregowo.
+
+3. Upewnij się, że butla z gazem była przechowywana w odpowiednich warunkach termicznych (nie poniżej 16°C). Niewłaściwa temperatura przechowywania może skutkować szybkim spadkiem ciśnienia i problemami z drożnością sondy.
+
+Jeżeli powyższe kroki nie rozwiążą problemu, należy skontaktować się bezpośrednio z autoryzowanym serwisem Metrum Cryoflex.","Przepraszam, ale w dostarczonych materiałach nie znajduję bezpośredniej informacji o komunikacie dotyczącym niedrożnej sondy w aparacie Cryo-S Painless. 
+
+Pozwól, że przeszukam dodatkowe materiały, aby udzielić precyzyjnej odpowiedzi.
+
+search_vector_store: komunikat niedrożna sonda painless","Komunikat o niedrożnej sondzie w aparacie Cryo-S Painless może oznaczać, że sonda została zablokowana. 
+
+Aby rozwiązać ten problem, zalecam następujące kroki:
+
+1. Sprawdź, czy sonda jest prawidłowo podłączona do aparatu - może być niedokręcona.
+
+2. Jeśli używasz sondy jednorazowej, upewnij się, że została prawidłowo zainstalowana zgodnie z instrukcją.
+
+3. Jeśli używasz sondy wielorazowej, może być konieczne jej oczyszczenie.
+
+4. Sprawdź ciśnienie w butli z gazem - jeśli jest zbyt niskie, może to powodować problemy z przepływem gazu przez sondę.
+
+5. Upewnij się, że temperatura butli z gazem jest odpowiednia (nie powinna być przechowywana w temperaturze poniżej 16°C).
+
+6. Jeśli butla była przechowywana w znacząco innej temperaturze niż pomieszczenie, gdzie znajduje się aparat, może dojść do skroplenia się gazu i zablokowania sondy.
+
+Jeśli żadne z powyższych rozwiązań nie pomaga, należy skontaktować się z serwisem METRUM CRYOFLEX.
+
+Czy mogę pomóc w jakiś konkretny sposób z tym problemem?"
+Chciałem zakupić aparat do krioanalgezji. Jakie aparaty do krioanalgezji są w ofercie metrum?,"Metrum Cryoflex oferuje kilka aparatów do krioanalgezji. Oto niektóre z nich:
+
+1. **Cryo-S Electric** - wprowadzony w 2010 roku, znany z zastosowań w okulistyce i ginekologii, został przystosowany do zabiegów krioanalgezji w neurochirurgii.
+
+2. **Cryo-S Electric II** - wprowadzony w 2012 roku, przeznaczony do zabiegów krioanalgezji na nerwach peryferyjnych.
+
+3. **Cryo-S Painless** - wprowadzony w 2015 roku, wyposażony w moduł neurostymulacji oraz dostępny z pierwszymi sondami jednorazowymi. Jest przeznaczony do miejscowego zamrażania nerwów obwodowych i oferuje szeroką gamę kriosond kontaktowych. 
+
+4. **Sonda SIJ** - wprowadzona w 2018 roku, przeznaczona do mrożenia stawów krzyżowo-biodrowych.
+
+5. **Sonda do torakoskopowej krioanalgezji** - wprowadzona w 2021 roku, przeznaczona do zastosowania w chirurgii dziecięcej.
+
+Czy interesuje Cię któryś z tych modeli bardziej szczegółowo?","W ofercie Metrum Cryoflex znajdują się następujące aparaty do krioanalgezji:
+
+1. **Cryo-S Electric** – znany z zastosowania w okulistyce i ginekologii, używany także w neurochirurgii. Wprowadzony na rynek w 2010 roku.
+2. **Cryo-S Electric II** – przeznaczony do zabiegów krioanalgezji na nerwach peryferyjnych, wprowadzony w 2012 roku.
+3. **Cryo-S Painless** – wyposażony w neurostymulację oraz pierwsze sondy jednorazowe, wprowadzony w 2015 roku.
+
+Każdy z tych aparatów jest przeznaczony do specyficznych zastosowań medycznych i posiada funkcje umożliwiające skuteczne i precyzyjne przeprowadzanie zabiegów krioanalgezji.","Metrum Cryoflex posiada w swojej ofercie następujące aparaty dedykowane do krioanalgezji:
+
+1. Cryo-S Electric (wprowadzony w 2010 roku, stosowany w neurochirurgii)
+2. Cryo-S Electric II (wprowadzony w 2012 roku, przeznaczony do zabiegów krioanalgezji na nerwach peryferyjnych)
+3. Cryo-S Painless (wprowadzony w 2015 roku, wyposażony w moduł neurostymulacji oraz pierwsze sondy jednorazowego użytku, przeznaczony wyłącznie do mrożenia nerwów obwodowych – krioanalgezja, kriolezja, krioneuroliza, krioablacja)
+
+Do aparatu Cryo-S Painless dostępny jest szeroki wybór dedykowanych kriosond kontaktowych, dostosowanych konstrukcyjnie do poszczególnych zastosowań medycznych, w tym również sondy specjalistyczne, takie jak:
+
+- Sonda SIJ (do mrożenia stawów krzyżowo-biodrowych)
+- Sonda do torakoskopowej krioanalgezji w chirurgii dziecięcej (wprowadzona w 2021 roku)
+- Sonda Pectus (dedykowana do krioanalgezji torakoskopowej)
+
+Aparaty wykorzystują gaz medyczny (dwutlenek węgla CO₂), powszechnie używany w laparoskopii.
+
+Czy potrzebujesz szczegółowych informacji na temat konkretnego aparatu lub konkretnego typu sondy?","Na podstawie dostępnych materiałów, Metrum Cryoflex oferuje następujące aparaty do krioanalgezji:
+
+1. Cryo-S Electric (wprowadzony w 2010) - pierwotnie znany z rynku okulistyki i ginekologii, zaadaptowany do zabiegów krioanalgezji w neurochirurgii
+
+2. Cryo-S Electric II (wprowadzony w 2012) - przeznaczony do zabiegów krioanalgezji na nerwach peryferyjnych
+
+3. Cryo-S Painless (wprowadzony w 2015) - najnowszy model wyposażony w:
+- moduł neurostymulacji
+- możliwość używania sond jednorazowych
+- wykorzystuje jako źródło niskiej temperatury dwutlenek węgla CO2 (gaz medyczny)
+- przeznaczony do mrożenia nerwów obwodowych (krioanalgezja, kriolezja, krioneuroliza, krioablacja)
+
+Czy chciałby Pan dowiedzieć się więcej szczegółów o którymś z tych modeli?","Na podstawie dostępnych informacji, Metrum Cryoflex oferuje następujące aparaty do krioanalgezji:
+
+1. Cryo-S Electric - wprowadzony w 2010 roku, początkowo stosowany z sondami wielorazowymi do zabiegów krioanalgezji w neurochirurgii.
+
+2. Cryo-S Electric II - wprowadzony w 2012 roku, przeznaczony do zabiegów krioanalgezji na nerwach peryferyjnych.
+
+3. Cryo-S Painless - wprowadzony w 2015 roku, jest to najnowszy model wyposażony w neurostymulację oraz możliwość stosowania sond jednorazowych. Jest to aparat przeznaczony specjalnie do mrożenia nerwów obwodowych (krioanalgezja, kriolezja, krioneuroliza, krioablacja).
+
+Cryo-S Painless wykorzystuje jako źródło niskiej temperatury dwutlenek węgla (CO₂) - gaz medyczny używany powszechnie do laparoskopii.
+
+Czy interesują Cię jakieś konkretne zastosowania krioanalgezji lub chciałbyś dowiedzieć się więcej o specyfikacji technicznej któregoś z tych aparatów?"
+"Szukam aparatu do masażu limfatycznego, czy mogę taki aparat kupić w Metrum?",Nie znalazłem informacji o aparacie do masażu limfatycznego w ofercie Metrum Cryoflex. Czy interesuje Cię inny rodzaj sprzętu medycznego lub estetycznego?,"Metrum Cryoflex specjalizuje się w produkcji urządzeń laserowych i krioterapeutycznych, nie ma w mojej wiedzy informacji o aparatach do masażu limfatycznego w ich ofercie. Czy mogę pomóc Ci w znalezieniu informacji o innym urządzeniu lub zabiegu oferowanym przez Metrum Cryoflex?","Na podstawie dostępnych informacji firma Metrum Cryoflex zajmuje się produkcją urządzeń laserowych oraz aparatury medycznej związanej z laseroterapią, radiofrekwencją mikroigłową czy chłodzeniem skóry (Cryo-T Cooler). W udostępnionych materiałach nie ma informacji wskazujących na to, że Metrum Cryoflex posiada w swojej ofercie aparaty do masażu limfatycznego.
+
+Czy jesteś zainteresowany bardziej szczegółowymi informacjami o dostępnych urządzeniach laserowych lub innych rozwiązaniach oferowanych przez Metrum Cryoflex?","Przepraszam, ale na podstawie dostępnych materiałów nie mogę potwierdzić, że Metrum Cryoflex oferuje aparaty do masażu limfatycznego. W przedstawionych materiałach znajdują się informacje głównie o laserach medycznych (jak SWING, TWIST, HESTIA), urządzeniu do radiofrekwencji mikroigłowej (ANTIGE), chłodziarce zabiegowej (Cryo-T Cooler) i ewakuatorze dymów zabiegowych.
+
+Czy interesują Cię może któreś z wymienionych urządzeń i ich zastosowania?
+
+Let me search for more information about Metrum Cryoflex's product range.
+
+/search_vector_store Do you have any information about lymphatic drainage devices or massage equipment in Metrum Cryoflex's offer?","Na podstawie dostępnych informacji nie mogę potwierdzić, czy Metrum Cryoflex oferuje aparaty do masażu limfatycznego. W udostępnionych materiałach nie znajduje się informacja o urządzeniach dedykowanych do drenażu limfatycznego czy masażu limfatycznego.
+
+Metrum Cryoflex specjalizuje się w produkcji i dystrybucji różnego rodzaju laserów medycznych i urządzeń do zabiegów estetycznych, takich jak:
+- Lasery diodowe SWING 1470 nm i TWIST 1940 nm
+- Chirurgiczny laser CO2 HESTIA
+- Laser Nd:YAG Q-Switch Q-MASTER PLUS
+- Urządzenie do radiofrekwencji mikroigłowej ANTIGE
+- Chłodziarka zabiegowa Cryo-T Cooler
+- Ewakuator dymów zabiegowych EV-1000
+
+Czy interesują Cię jakieś konkretne informacje na temat tych urządzeń? A może szukasz rozwiązania dla konkretnego problemu zdrowotnego lub estetycznego?"
+Czy metrum jest producentem lasera co2?,"Tak, Metrum Cryoflex jest producentem lasera CO2, takiego jak model BIOXEL o mocy 40 W. Czy chcesz dowiedzieć się więcej o jego zastosowaniach?","Tak, Metrum Cryoflex jest producentem lasera CO2. W ofercie firmy znajdują się lasery CO2 takie jak BIOXEL i HESTIA.","Metrum Cryoflex nie jest producentem lasera CO2. Laser CO2 oferowany przez Metrum Cryoflex (model BIOXEL) jest produkowany przez firmę AMI z Korei. Metrum Cryoflex zajmuje się dystrybucją tego urządzenia na rynku polskim, zapewniając pełny serwis gwarancyjny i pogwarancyjny, szkolenie z obsługi oraz wsparcie techniczne. 
+
+Czy potrzebujesz więcej informacji na temat lasera BIOXEL lub innych urządzeń oferowanych przez Metrum Cryoflex?","Na podstawie dostępnych materiałów, Metrum Cryoflex nie jest producentem lasera CO2 BIOXEL. Jest jego dystrybutorem w Polsce. 
+
+Z materiałów wynika, że:
+- BIOXEL jest produkowany przez firmę AMI z Korei
+- Metrum Cryoflex jest oficjalnym dystrybutorem tego urządzenia w Polsce
+- Cena BIOXEL od Metrum Cryoflex wynosi 85 000 zł (wersja bez ginekologii) lub 99 000 zł (wersja z ginekologią)
+
+Metrum Cryoflex jako dystrybutor zapewnia:
+- Pełny serwis gwarancyjny i pogwarancyjny
+- Dostawę do gabinetu
+- Prezentację u lekarza
+- Asystę przy pierwszych zabiegach
+- Szkolenie z obsługi
+- Urządzenia zastępcze w przypadku awarii
+- Kalibrację i pomiary przez wykwalifikowanych inżynierów
+
+Może chciałbyś dowiedzieć się więcej szczegółów na temat lasera BIOXEL lub wsparcia serwisowego Metrum Cryoflex?","Na podstawie dostarczonych informacji, Metrum Cryoflex nie jest bezpośrednim producentem laserów CO2, ale jest dystrybutorem tych urządzeń w Polsce.
+
+W szczególności, laser BIOXEL CO2 jest produkowany przez firmę AMI z Korei, a Metrum Cryoflex jest jego dystrybutorem w Polsce. W materiałach widać informację, że BIOXEL to ""laser CO2 10600nm 40W"" przeznaczony do chirurgii, dermatologii, medycyny estetycznej, ginekologii i laryngologii.
+
+Podobnie w przypadku lasera HESTIA CO2, który również jest dystrybuowany przez Metrum Cryoflex.
+
+Metrum Cryoflex produkuje natomiast inne urządzenia medyczne, takie jak Cryo-T Cooler (chłodziarka zabiegowa) i ewakuator dymów zabiegowych EV-1000, które uzupełniają ofertę laserową.
+
+Czy chciałbyś dowiedzieć się czegoś więcej na temat konkretnych laserów CO2 w ofercie Metrum Cryoflex?"
+A laser NdYAG produkuje metrum?,"Tak, Metrum Cryoflex produkuje laser Nd:YAG, znany jako Q-MASTER PLUS. Jest to wszechstronny laser opracowany dla profesjonalnych klinik medycyny estetycznej, który pracuje w trzech długościach impulsu: nanosekundy, mikrosekundy i milisekundy, co pozwala na różnorodne zabiegi takie jak redukcja tatuaży, przebarwień, zamykanie naczyń oraz depilację laserową. Czy interesuje Cię więcej informacji o jego zastosowaniach?","Tak, Metrum Cryoflex produkuje laser Nd:YAG o nazwie Q-MASTER PLUS. Jest to wszechstronny i uniwersalny laser opracowany dla profesjonalnych klinik medycyny estetycznej, który pracuje na długościach fali 1064 nm i 532 nm. Czy mogę pomóc w czymś jeszcze dotyczącym tego lasera lub innych urządzeń od Metrum Cryoflex?","Tak, Metrum Cryoflex oferuje laser Nd:YAG o nazwie Q-MASTER PLUS. Jest to wszechstronny, uniwersalny laser neodymowo-yagowy (Nd:YAG) przeznaczony do profesjonalnych klinik medycyny estetycznej. Laser ten pracuje na trzech długościach impulsu:
+
+- nanosekundy (ns) – redukcja tatuaży, przebarwień, makijażu permanentnego,
+- mikrosekundy (µs) – nieablacyjne zabiegi odmładzania skóry, leczenie grzybicy paznokci (tryb GENESIS),
+- milisekundy (ms) – przezskórne zamykanie naczyń, depilacja laserowa.
+
+Laser Q-MASTER PLUS oferowany przez Metrum Cryoflex wyposażony jest standardowo w dwie długości fali: 1064 nm oraz 532 nm, a dodatkowo istnieje opcja uzupełnienia o kolejne głowice barwnikowe (585 nm, 595 nm, 650 nm, 660 nm). Laser posiada intuicyjne polskie menu, 31 zdefiniowanych programów zabiegowych oraz identyfikowalne przez system laserowy głowice zabiegowe, co zwiększa komfort i bezpieczeństwo pracy.","Z dostępnych materiałów wynika, że Metrum Cryoflex nie produkuje laserów Nd:YAG, ale jest dystrybutorem lasera Q-MASTER PLUS, który jest laserem Nd:YAG wyprodukowanym w Korei.
+
+Metrum Cryoflex produkuje natomiast następujące lasery:
+- Laser Twist 1940nm, 10W
+- Laser Swing 1470nm, 15W  
+- Laser Salsa 940nm, 280W
+
+Czy chciałbyś dowiedzieć się więcej o którymś z tych laserów lub o laserze Q-MASTER PLUS, który jest dystrybuowany przez Metrum Cryoflex?","Tak, Metrum Cryoflex dystrybuuje laser Nd:YAG o nazwie Q-MASTER PLUS. Jest to wszechstronny i uniwersalny laser neodymowo-yagowy (Nd:YAG) opracowany dla profesjonalnych klinik medycyny estetycznej. 
+
+Główne cechy tego lasera to:
+- Praca w 3 różnych długościach impulsu: nanosekundy (ns), mikrosekundy (μs) i milisekundy (ms)
+- Generowanie promieniowania o długości fali 1064nm oraz 532nm
+- 31 zdefiniowanych programów zabiegowych
+- Menu w języku polskim
+- Głowice identyfikowane przez system lasera
+
+Laser ten ma szerokie zastosowanie, m.in. w:
+- Redukcji tatuaży, przebarwień i makijażu permanentnego (tryb nanosekund)
+- Nieablacyjnych zabiegach frakcyjnych i leczeniu grzybicy paznokci (tryb mikrosekund)
+- Przezskórnym zamykaniu naczyń i depilacji laserowej (tryb milisekund)
+
+Czy interesują Cię jakieś konkretne parametry lub zastosowania tego lasera?"
+Podaj aplikację sondy Pectus,"Sonda Pectus jest specjalnie ukształtowaną sondą dedykowaną do krioanalgezji śródoperacyjnej. Zostaje wprowadzona do jamy opłucnej w tej samej przestrzeni międzyżebrowej, co wcześniej wykonana torakotomia lub torakoskopia. Procedura krioanalgezji wykonywana jest na 5 poziomach (2 powyżej, 2 poniżej i na poziomie wprowadzenia płytki, zwykle Th3-Th8) po stronie torakotomii. Jeśli wykonywana jest torakoskopia typu „uni-portal”, to wykonuje się trzy mrożenia: nad linią cięcia, pod linią cięcia i w linii cięcia. Sonda jest odpowiednio zagięta, co pozwala na precyzyjne aplikowanie poniżej dolnej krawędzi żebra bocznie od wyrostków poprzecznych przed odejściem gałęzi łączących od nerwów międzyżebrowych. Czas pojedynczej aplikacji krioanalgezji wynosi każdorazowo dwie minuty na nerw międzyżebrowy.","Sonda Pectus, która jest specjalnie ukształtowana do krioanalgezji śródoperacyjnej, zostaje wprowadzona do jamy opłucnej w tej samej przestrzeni międzyżebrowej, co wcześniejsze nacięcie skóry lub miejsce na port kamery. Procedura ta jest wykonywana przy użyciu jednostronnej wentylacji, co zapewnia odpowiednie warunki wizualizacji. Krioanalgezja z użyciem sondy Pectus zwykle obejmuje 5 poziomów międzyżebrowych: 2 powyżej, 2 poniżej i na poziomie wprowadzenia płytki (zazwyczaj Th3-Th8). Czas aplikacji krioanalgezji na każdy nerw międzyżebrowy wynosi dwie minuty. Czy chcesz wiedzieć więcej o szczegółach procedury krioanalgezji lub o samej sondzie Pectus?","Aplikacja sondy Pectus polega na śródoperacyjnej krioanalgezji nerwów międzyżebrowych, najczęściej podczas operacji korekcji deformacji klatki piersiowej, takich jak zabieg metodą Nussa. Sondę Pectus wprowadza się do jamy opłucnej przez tę samą przestrzeń międzyżebrową, którą wcześniej wykorzystano do torakotomii lub torakoskopii. 
+
+Standardowo procedura obejmuje mrożenie na pięciu poziomach nerwów międzyżebrowych (dwa powyżej, dwa poniżej i na poziomie wprowadzenia płytki stabilizującej, zazwyczaj Th3-Th8). Sondę przykłada się poniżej dolnej krawędzi żebra, bocznie od wyrostków poprzecznych, przed odejściem gałęzi łączących nerwów międzyżebrowych. Czas pojedynczej aplikacji wynosi zazwyczaj dwie minuty na każdy nerw międzyżebrowy.
+
+W przypadku torakotomii bocznej cała procedura trwa około 12 minut, natomiast przy technice „uni-portal” około 8 minut. W sytuacjach bardziej rozległych deformacji liczba nerwów poddawanych mrożeniu może wzrosnąć (maksymalnie do siedmiu), a w przypadku bilateralnego zastosowania czas całkowity procedury wynosi około 25-30 minut.
+
+Zalecany jest standardowy protokół 2-minutowego mrożenia na nerw, choć wstępne badania sugerują, że skrócenie tego czasu do 1 minuty nie wpływa negatywnie na skuteczność zabiegu.
+
+Czy potrzebujesz dodatkowych informacji np. na temat powikłań czy techniki samego zabiegu?","Na podstawie dostępnych materiałów, procedura aplikacji sondy Pectus wygląda następująco:
+
+1. Wprowadzenie sondy:
+- Sonda wprowadzana jest do jamy opłucnej w tej samej przestrzeni międzyżebrowej co torakotomia/torakoskopia
+- W przypadku torakoskopii typu ""uni-portal"" wykorzystuje się miejsce nacięcia skóry lub port kamery
+
+2. Warunki wykonania:
+- Zapewnia się odpowiednią wizualizację poprzez wentylację jednego płuca po przeciwnej stronie
+
+3. Poziomy wykonania krioanalgezji:
+- Standardowo na 5 poziomach (2 powyżej, 2 poniżej i na poziomie wprowadzenia płytki, zwykle Th3-Th8)
+- W przypadku torakoskopii ""uni-portal"": 3 mrożenia (nad linią cięcia, pod linią cięcia i w linii cięcia)
+- Przy rozległych deformacjach liczba nerwów może być większa (max 7)
+
+4. Technika aplikacji:
+- Końcówkę sondy przykłada się poniżej dolnej krawędzi żebra
+- Pozycja: bocznie od wyrostków poprzecznych przed odejściem gałęzi łączących od nerwów międzyżebrowych
+- Czas pojedynczej aplikacji: 2 minuty na każdy nerw międzyżebrowy
+- Możliwa modyfikacja do 1 minuty, ale zaleca się protokół 2-minutowy
+
+5. Całkowity czas procedury:
+- Około 12 min w przypadku torakotomii
+- Około 8 min w przypadku ""uni-portal""
+- 25-30 min przy procedurze bilateralnej
+
+Czy chciałbyś uzyskać dodatkowe informacje na temat konkretnego aspektu procedury?","Na podstawie dostępnych informacji, sonda Pectus firmy Metrum Cryoflex jest stosowana w następujący sposób:
+
+### Aplikacja sondy Pectus podczas krioanalgezji śródoperacyjnej:
+
+1. **Wprowadzenie sondy**:
+   - Specjalnie ukształtowana sonda Pectus zostaje wprowadzona do jamy opłucnej w tej samej przestrzeni międzyżebrowej, co wcześniej wykonana torakotomia lub torakoskopia
+   - W przypadku zabiegu naprawy deformacji klatki piersiowej wprowadza się ją w tej samej przestrzeni międzyżebrowej co płytka, przy użyciu nacięcia skóry lub miejsca na port kamery
+
+2. **Wizualizacja**:
+   - Odpowiednie warunki wizualizacji zapewnia się poprzez wentylację jednego płuca po przeciwnej stronie
+
+3. **Umiejscowienie sondy**:
+   - Odpowiednio zagiętą końcówkę sondy przykłada się poniżej dolnej krawędzi żebra bocznie od wyrostków poprzecznych przed odejściem gałęzi łączących od nerwów międzyżebrowych
+   - Dzięki widocznej strefie mrożenia (złoto) chirurg może precyzyjnie zamrozić tylko nerw, bez narażania pozostałych tkanek
+
+4. **Protokół mrożenia**:
+   - Rutynowo krioanalgezję wykonuje się na 5 poziomach (2 powyżej, 2 poniżej i na poziomie wprowadzenia płytki, zwykle Th3-Th8)
+   - Czas pojedynczej aplikacji krioanalgezji wynosi standardowo 2 minuty na nerw międzyżebrowy (istnieje możliwość skrócenia do 1 minuty, ale zaleca się protokół 2-minutowy)
+   - Łączny czas procedury to około 12 min w przypadku torakotomii, 8 min w przypadku ""uni-portal"", lub 25-30 min przy zabiegach bilateralnych
+
+Sonda Pectus ma mniejszą średnicę niż konkurencyjne rozwiązania (np. sonda AtriCure), co umożliwia wykonanie zabiegu z większą precyzją i zmniejsza ryzyko powikłań związanych z uszkodzeniem okolicznych tkanek.
+
+Czy interesują Cię jakieś dodatkowe szczegóły dotyczące aplikacji sondy Pectus?"
+Czy są jakieś ograniczenia dotyczące regulacji w doniesieniu do MC?,"Regulacje dotyczące użytkowania aparatów Metrum Cryoflex, takich jak lasery diodowe SWING i TWIST, wymagają, aby były one obsługiwane wyłącznie przez przeszkolony personel. Użytkownik musi posiadać imienny certyfikat potwierdzający przeszkolenie przez Metrum Cryoflex. Osoby bez odpowiedniej wiedzy medycznej oraz bez takiego certyfikatu nie mogą korzystać z urządzeń. Firma nie ponosi odpowiedzialności za szkody wyrządzone przez osoby nieposiadające certyfikatu. Czy interesują Cię szczegóły dotyczące szkoleń lub certyfikacji?","Przepisy dotyczące regulacji urządzeń Metrum Cryoflex zależą od wielu czynników, w tym od kraju, w którym są one stosowane, a także od specyficznych wymogów dotyczących certyfikacji i szkolenia. Przykładowo, lasery diodowe takie jak SWING i TWIST mogą być używane wyłącznie przez osoby, które przeszły odpowiednie szkolenie i posiadają imienny certyfikat wydany przez Metrum Cryoflex. Czy masz na myśli jakieś konkretnie urządzenia lub rodzaje regulacji?","Tak, istnieją wyraźne wymagania dotyczące regulacji użytkowania sprzętu produkowanego przez Metrum Cryoflex (MC):
+
+1. Użytkowanie sprzętu jest możliwe wyłącznie przez personel odpowiednio przeszkolony przez Metrum Cryoflex.
+2. Każdy profesjonalny użytkownik musi przejść szkolenie prowadzone przez MC, potwierdzone imiennym certyfikatem.
+3. Osoby bez odpowiedniej wiedzy medycznej oraz bez imiennego certyfikatu MC nie mogą obsługiwać urządzeń.
+4. Firma Metrum Cryoflex nie ponosi odpowiedzialności za szkody wyrządzone przez osoby, które nie posiadają pisemnego, imiennego certyfikatu z obsługi urządzenia wystawionego przez tę firmę.
+
+Czy potrzebujesz dodatkowych informacji na ten temat?","Na podstawie dostępnych materiałów mogę wskazać kilka kluczowych ograniczeń regulacyjnych dotyczących urządzeń Metrum Cryoflex:
+
+1. Wymagania dotyczące operatorów:
+- Urządzenia mogą być obsługiwane wyłącznie przez przeszkolony personel
+- Wymagane jest posiadanie imiennego certyfikatu wydanego przez Metrum Cryoflex
+- Osoby bez odpowiedniej wiedzy medycznej i certyfikatu nie mogą używać urządzeń
+- Firma nie ponosi odpowiedzialności za szkody wyrządzone przez osoby bez certyfikatu
+
+2. Ograniczenia techniczne (na przykładzie laserów):
+- Określone parametry zasilania (110-230V, 50-60Hz)
+- Maksymalny pobór mocy 500 VA
+- Klasa bezpieczeństwa I
+- W przypadku laserów - ograniczenia związane z klasą lasera (klasa 4)
+
+3. Ograniczenia zabiegowe (na przykładzie krioanalgezji):
+- Nie wykonuje się zabiegów powyżej Th2
+- Nie wykonuje się zabiegów poniżej Th9 (ze względu na przeponę)
+
+Czy interesuje Cię któryś z tych aspektów szczególnie? Mogę rozwinąć wybrany temat.","W oparciu o dostarczone informacje, można wskazać kilka ograniczeń regulacyjnych dotyczących urządzeń Metrum Cryoflex:
+
+1. Kwalifikacje użytkowników:
+   - Aparaty mogą być użytkowane wyłącznie przez personel przeszkolony w ich obsłudze
+   - Przed rozpoczęciem pracy z urządzeniem profesjonalny użytkownik musi zostać przeszkolony przez MC
+   - Potwierdzeniem szkolenia jest imienny certyfikat
+   - Osoby bez odpowiedniej wiedzy medycznej oraz bez imiennego certyfikatu MC nie mogą używać urządzenia
+   - Metrum Cryoflex nie odpowiada za szkody wyrządzone przez osoby bez pisemnego imiennego certyfikatu
+
+2. Ograniczenia zabiegowe (dla krioanalgezji):
+   - Nie wykonuje się krioanalgezji w przestrzeniach powyżej Th2 (ten nerw międzyżebrowy unerwia dół pachowy oraz górną część ramienia)
+   - Nie wykonuje się krioanalgezji poniżej Th9, gdyż miejsce mrożenia jest zasłonięte przez przeponę
+
+3. Certyfikacja urządzeń:
+   - Urządzenia posiadają certyfikat medyczny CE, co oznacza konieczność spełnienia określonych wymogów bezpieczeństwa
+
+Czy interesują Cię szczegółowe informacje dotyczące któregoś z tych ograniczeń?"

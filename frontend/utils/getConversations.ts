@@ -27,7 +27,7 @@ export const getConversations = async (
 
     const data = await response.json();
     console.log("Fetched conversations:", data);
-    return data.conversations;
+    return data;
   } catch (err) {
     console.error("Failed to fetch the conversations:", err);
     return [];
