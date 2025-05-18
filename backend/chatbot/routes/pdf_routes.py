@@ -103,7 +103,7 @@ async def upload_pdf(
         # Upsert to Pinecone
         pinecone_upsert_chunks(
             chunks=chunk_tuples, 
-            index_name="courses",  # Use your existing index
+            index_name="pdf-vectors",  # Use your existing index
             namespace="pdf_files"  
         )
         
@@ -248,6 +248,10 @@ async def rename_pdf(
     
     return updated_pdf
 
+# Update in backend/chatbot/routes/pdf_routes.py
+
+# Update in backend/chatbot/routes/pdf_routes.py
+
 @router.delete("/pdf/{pdf_id}")
 async def delete_pdf(
     pdf_id: str,
@@ -265,10 +269,30 @@ async def delete_pdf(
     if not pdf_file:
         raise HTTPException(status_code=404, detail="PDF file not found")
     
+    filename = pdf_file["name"]
+    
+    # Delete vectors from Pinecone
+    try:
+        # Import the delete function
+        from chatbot.services.retrieval.vectorstores.pinecone.upsert import delete_vectors_by_filename
+        
+        # Call the delete function
+        response = delete_vectors_by_filename(
+            filename=filename,
+            index_name="pdf-vectors",  # Use your index name
+            namespace="pdf_files"
+        )
+        
+        print(f"Deleted vectors for file '{filename}' from Pinecone. Response: {response}")
+    except Exception as e:
+        print(f"Error deleting vectors from Pinecone: {str(e)}")
+        # We continue even if Pinecone deletion fails
+    
     # Delete file from storage
     if "path" in pdf_file and os.path.exists(pdf_file["path"]):
         try:
             os.remove(pdf_file["path"])
+            print(f"Deleted file from disk: {pdf_file['path']}")
         except Exception as e:
             print(f"Warning: Failed to delete file from disk: {str(e)}")
     
@@ -276,9 +300,9 @@ async def delete_pdf(
     result = await db['pdf_files'].delete_one({"_id": ObjectId(pdf_id)})
     
     if result.deleted_count == 0:
-        raise HTTPException(status_code=500, detail="Failed to delete PDF file")
+        raise HTTPException(status_code=500, detail="Failed to delete PDF file from database")
     
-    return {"message": "PDF file deleted successfully"}
+    return {"message": "PDF file and associated vectors deleted successfully"}
 
 @router.get("/pdf/{pdf_id}/download")
 async def download_pdf(
@@ -378,7 +402,7 @@ async def toggle_pdf_active(
             # Upsert to Pinecone
             pinecone_upsert_chunks(
                 chunks=chunk_tuples, 
-                index_name="courses",  # Use your existing index
+                index_name="pdf-vectors",  # Use your existing index
                 namespace="pdf_files"  
             )
             
@@ -413,7 +437,7 @@ async def test_pdf_vectors(
         
         # Define Pinecone query
         pinecone_query = PineconeQuery(
-            index_name="courses",  # Use your index name
+            index_name="pdf-vectors",  # Use your index name
             namespace="pdf_files"  # Specifically target the PDF namespace
         )
         
@@ -475,4 +499,106 @@ async def test_pdf_vectors(
         return {
             "error": str(e),
             "traceback": traceback.format_exc()
+        }
+    
+@router.get("/pinecone-indexes")
+async def list_pinecone_indexes(token: str = Depends(oauth2_scheme)):
+    """List available Pinecone indexes."""
+    verify_access_token(token)
+    
+    try:
+        from pinecone import Pinecone
+        import os
+        
+        pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+        indexes = pc.list_indexes()
+        
+        # Convert the indexes to a simple list or dictionary
+        # The exact structure depends on what pc.list_indexes() returns
+        serializable_indexes = [index.name for index in indexes] if hasattr(indexes, "__iter__") else str(indexes)
+        
+        # Also check what's in environment variables
+        env_index = os.getenv("PINECONE_INDEX", "Not set")
+        
+        return {
+            "available_indexes": serializable_indexes,
+            "env_index": env_index,
+            "hardcoded_index": "courses"
+        }
+    except Exception as e:
+        return {
+            "error": str(e)
+        }
+    
+@router.get("/pinecone-namespace-stats")
+async def pinecone_namespace_stats(token: str = Depends(oauth2_scheme)):
+    """Get detailed stats about namespaces within the Pinecone index."""
+    verify_access_token(token)
+    
+    try:
+        from pinecone import Pinecone
+        import os
+        
+        pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+        index = pc.Index("courses")
+        
+        # Get stats for the entire index
+        stats = index.describe_index_stats()
+        
+        # Create serializable versions of the data
+        total_vector_count = stats.get("total_vector_count", 0)
+        
+        # Create a serializable copy of the namespaces dictionary
+        namespaces_dict = {}
+        raw_namespaces = stats.get("namespaces", {})
+        
+        # Convert each namespace to a simple dict with primitive values
+        for ns_name, ns_data in raw_namespaces.items():
+            # Extract only the serializable data we need
+            ns_vector_count = ns_data.get("vector_count", 0) if isinstance(ns_data, dict) else 0
+            namespaces_dict[ns_name] = {"vector_count": ns_vector_count}
+        
+        # Check if pdf_files namespace exists and has vectors
+        pdf_namespace_exists = "pdf_files" in raw_namespaces
+        pdf_vector_count = 0
+        if pdf_namespace_exists:
+            pdf_ns = raw_namespaces.get("pdf_files", {})
+            pdf_vector_count = pdf_ns.get("vector_count", 0) if isinstance(pdf_ns, dict) else 0
+        
+        return {
+            "total_vectors": total_vector_count,
+            "namespaces": namespaces_dict,
+            "pdf_namespace_exists": pdf_namespace_exists, 
+            "pdf_vector_count": pdf_vector_count
+        }
+    except Exception as e:
+        return {
+            "error": str(e)
+        }
+    
+@router.get("/test-pdf-search")
+async def test_pdf_search(
+    query: str = Query(..., description="Search query to test"),
+    token: str = Depends(oauth2_scheme)
+):
+    """Test endpoint to search only PDF vectors."""
+    verify_access_token(token)
+    
+    try:
+        from chatbot.services.retrieval.vector_search import VectorSearchService
+        
+        # Create search service
+        search_service = VectorSearchService()
+        
+        # Test direct PDF search
+        results = search_service.test_pdf_search(query)
+        
+        return {
+            "query": query,
+            "result_count": len(results),
+            "results": results[:10]  # Return at most 10 results
+        }
+    except Exception as e:
+        return {
+            "error": str(e)
         }

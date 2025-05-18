@@ -10,7 +10,7 @@ from openai import OpenAI
 
 openai = OpenAI()
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-index = pc.Index("courses")
+index = pc.Index("pdf-vectors")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

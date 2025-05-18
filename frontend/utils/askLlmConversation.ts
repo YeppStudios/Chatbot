@@ -35,7 +35,7 @@ export const askLlmConversation = async (
     query,
     vector_store: {
       store_type: vectorStoreType, // Use store_type instead of provider
-      collection_name: "Courses", // Hardcoded for now; adjust as needed
+      collection_name: "pdf-vectors", // Hardcoded for now; adjust as needed
       top_k: 5, // Match backend default or adjust as needed
       hybrid: true
     } as VectorStoreConfig,

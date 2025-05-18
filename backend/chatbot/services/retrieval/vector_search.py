@@ -6,6 +6,9 @@ from fastapi import HTTPException
 from pydantic import BaseModel
 from typing import Literal, Optional
 from chatbot.database.database import db
+import logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 class VectorStoreConfig(BaseModel):
     store_type: Literal["pinecone", "weaviate"]
@@ -81,3 +84,35 @@ class VectorSearchService:
         for result in search_results:
             context_parts.append(f"[{result.get('filename', 'unknown')}]: {result['text']}\n")
         return "\n".join(context_parts)
+    
+    def test_pdf_search(self, query: str, index_name: str = "courses"):
+        """
+        Test function to directly search PDF vectors in Pinecone.
+        This bypasses all other logic to check if PDF search works.
+        """
+        try:
+            from chatbot.services.retrieval.vectorstores.pinecone.query import PineconeQuery
+            
+            # Create a dedicated query just for PDFs
+            pinecone_query = PineconeQuery(
+                index_name=index_name,
+                namespace="pdf_files"
+            )
+            
+            # Perform the query
+            logger.info(f"Test PDF search for query: {query}")
+            results = pinecone_query.query(
+                user_query=query,
+                top_k=10
+            )
+            
+            # Log results
+            logger.info(f"Test PDF search found {len(results)} results")
+            for i, result in enumerate(results[:3]):  # Log first 3
+                logger.info(f"Result {i+1}: score={result['score']}, file={result.get('filename', 'unknown')}")
+                logger.info(f"  Text: {result['text'][:100]}...")
+            
+            return results
+        except Exception as e:
+            logger.error(f"Error in test_pdf_search: {str(e)}")
+            return []

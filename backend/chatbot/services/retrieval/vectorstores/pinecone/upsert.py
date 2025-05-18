@@ -67,3 +67,39 @@ def upsert_chunks(chunks: List[Tuple[str, str]], index_name: str, namespace: str
         index.upsert(vectors=batch, namespace=namespace)
     
     print(f"Successfully upserted {len(chunks)} chunks to Pinecone (index={index_name}, namespace='{namespace}').")
+
+
+def delete_vectors_by_filename(filename: str, index_name: str, namespace: str = "pdf_files"):
+    """
+    Delete all vectors associated with a specific filename from Pinecone.
+    
+    Args:
+        filename (str): The filename to delete vectors for
+        index_name (str): Name of the Pinecone index
+        namespace (str): Pinecone namespace (default: "pdf_files")
+    
+    Returns:
+        dict: Delete operation response from Pinecone
+    """
+    try:
+        # Get Pinecone index
+        index = pinecone.Index(index_name)
+        
+        # Create a metadata filter for the filename
+        filter_dict = {"filename": {"$eq": filename}}
+        
+        # Log the delete operation
+        print(f"Deleting vectors with filename '{filename}' from index '{index_name}', namespace '{namespace}'")
+        print(f"Using filter: {filter_dict}")
+        
+        # Delete vectors matching the filter
+        response = index.delete(
+            namespace=namespace,
+            filter=filter_dict
+        )
+        
+        print(f"Pinecone delete response: {response}")
+        return response
+    except Exception as e:
+        print(f"Error deleting vectors for filename '{filename}': {str(e)}")
+        raise
