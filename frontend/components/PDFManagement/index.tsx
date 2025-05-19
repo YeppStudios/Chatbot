@@ -7,6 +7,7 @@ import PDFUploadModal from "./PDFUploadModal";
 import PDFList from "./PDFList";
 import PDFFilters from "./PDFFilters";
 import { getAuthToken } from "@/utils/auth/getToken";
+import { PlusCircle } from "lucide-react";
 
 const PDFManagement = () => {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
@@ -87,7 +88,7 @@ const PDFManagement = () => {
       const filterParams = getFilterParams();
       const url = `${backend.serverUrl}/pdfs?${filterParams}`;
       
-      console.log(`Fetching PDFs from: ${url}`);
+      console.log(`Pobieranie plików PDF z: ${url}`);
       
       const response = await fetch(url, {
         headers: {
@@ -98,23 +99,23 @@ const PDFManagement = () => {
       
       if (!response.ok) {
         const errorText = await response.text();
-        console.error(`Server responded with status ${response.status}:`, errorText);
+        console.error(`Serwer odpowiedział ze statusem ${response.status}:`, errorText);
         try {
           const errorData = JSON.parse(errorText);
-          setFetchError(errorData.detail || `Error fetching PDF files (${response.status})`);
+          setFetchError(errorData.detail || `Błąd podczas pobierania plików PDF (${response.status})`);
         } catch (e) {
-          setFetchError(`Error fetching PDF files (${response.status})`);
+          setFetchError(`Błąd podczas pobierania plików PDF (${response.status})`);
         }
         return;
       }
       
       const data = await response.json();
-      console.log("Successfully fetched PDF files:", data);
+      console.log("Pomyślnie pobrano pliki PDF:", data);
       setPDFFiles(data.pdf_files || []);
       setTotalPages(data.pages || 1);
     } catch (error) {
-      console.error("Failed to fetch PDF files:", error);
-      setFetchError("Failed to connect to the server. Please check your internet connection.");
+      console.error("Nie udało się pobrać plików PDF:", error);
+      setFetchError("Nie udało się połączyć z serwerem. Sprawdź swoje połączenie internetowe.");
     } finally {
       setLoading(false);
     }
@@ -135,15 +136,15 @@ const PDFManagement = () => {
   }, []);
   
   return (
-    <div className="bg-white min-h-screen">
-      <div className="bg-white p-5 text-center flex justify-between items-center shadow-lg">
-        <h1 className="text-xl font-medium">PDF File Management</h1>
+    <div className="bg-gray-50 min-h-screen">
+      <div className="bg-white p-5 md:px-6 md:py-5 flex justify-between items-center shadow-md border-b border-gray-200">
+        <h1 className="text-xl font-semibold text-gray-800">Zarządzanie plikami PDF</h1>
         <button
           onClick={() => setIsUploadModalOpen(true)}
-          className="bg-purple-chat hover:bg-purple-chat/90 text-white px-4 py-2 rounded-lg flex items-center"
+          className="bg-purple-chat hover:bg-purple-chat/90 text-white px-4 py-2 rounded-md flex items-center gap-2 font-medium transition-colors"
         >
-          <span className="mr-2">+</span>
-          Add PDF File
+          <PlusCircle size={18} />
+          Dodaj plik PDF
         </button>
       </div>
       
@@ -170,34 +171,34 @@ const PDFManagement = () => {
       />
       
       {/* Pagination */}
-      <div className="fixed bottom-0 left-0 right-0 py-6 px-8 bg-white w-full shadow-lg border-t border-purple-chat/10">
-        <div className="flex justify-center space-x-2">
+      <div className="fixed bottom-0 left-0 right-0 py-5 px-8 bg-white w-full shadow-lg border-t border-gray-200">
+        <div className="flex justify-center space-x-3">
           <button
             onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
             disabled={currentPage <= 1}
-            className={`px-4 py-2 border rounded ${
+            className={`px-4 py-2 border rounded-md flex items-center gap-1 transition-colors ${
               currentPage <= 1
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-white text-gray-700 hover:bg-purple-chat/10"
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
+                : "bg-white text-gray-700 hover:bg-indigo-50 border-indigo-200 hover:text-indigo-700"
             }`}
           >
-            Previous
+            Poprzednia
           </button>
           
-          <span className="px-4 py-2">
-            Page {currentPage} of {totalPages || 1}
+          <span className="px-4 py-2 bg-indigo-50 border border-indigo-100 rounded-md text-indigo-800 font-medium">
+            Strona {currentPage} z {totalPages || 1}
           </span>
           
           <button
             onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
             disabled={currentPage >= totalPages}
-            className={`px-4 py-2 border rounded ${
+            className={`px-4 py-2 border rounded-md flex items-center gap-1 transition-colors ${
               currentPage >= totalPages
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-white text-gray-700 hover:bg-purple-chat/10"
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
+                : "bg-white text-gray-700 hover:bg-indigo-50 border-indigo-200 hover:text-indigo-700"
             }`}
           >
-            Next
+            Następna
           </button>
         </div>
       </div>

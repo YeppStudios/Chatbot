@@ -1,7 +1,7 @@
 // components/PDFManagement/PDFUploadModal.tsx
 import { useState, useRef } from "react";
 import { backend } from "@/config/apiConfig";
-import { X } from "lucide-react";
+import { X, Upload, FileText, AlertCircle, Info, CheckCircle } from "lucide-react";
 
 interface PDFUploadModalProps {
   isOpen: boolean;
@@ -38,7 +38,7 @@ export default function PDFUploadModal({
     
     // Check file type
     if (selectedFile.type !== "application/pdf") {
-      setError("Only PDF files are allowed");
+      setError("Dozwolone są tylko pliki PDF");
       setErrorType("general");
       return;
     }
@@ -46,7 +46,7 @@ export default function PDFUploadModal({
     // Check file size (10MB limit)
     const MAX_SIZE = 10 * 1024 * 1024; // 10MB
     if (selectedFile.size > MAX_SIZE) {
-      setError(`File size exceeds 10MB limit (${(selectedFile.size / (1024 * 1024)).toFixed(2)}MB)`);
+      setError(`Rozmiar pliku przekracza limit 10MB (${(selectedFile.size / (1024 * 1024)).toFixed(2)}MB)`);
       setErrorType("size");
       return;
     }
@@ -89,7 +89,7 @@ export default function PDFUploadModal({
     formData.append("file", file);
     
     try {
-      console.log(`Uploading file to ${backend.serverUrl}/pdf`);
+      console.log(`Przesyłanie pliku do ${backend.serverUrl}/pdf`);
       
       const response = await fetch(`${backend.serverUrl}/pdf`, {
         method: "POST",
@@ -101,13 +101,13 @@ export default function PDFUploadModal({
       
       if (!response.ok) {
         const errorText = await response.text();
-        let errorMessage = "Upload failed";
+        let errorMessage = "Przesyłanie nie powiodło się";
         let errorTypeValue: "size" | "text" | "general" = "general";
         
         try {
           // Try to parse JSON error
           const errorData = JSON.parse(errorText);
-          errorMessage = errorData.detail || "Upload failed";
+          errorMessage = errorData.detail || "Przesyłanie nie powiodło się";
           
           // Determine error type
           if (response.status === 413 || errorMessage.includes("size exceeds")) {
@@ -119,10 +119,10 @@ export default function PDFUploadModal({
           // If not valid JSON, use status code to determine error type
           if (response.status === 413) {
             errorTypeValue = "size";
-            errorMessage = "File size exceeds the maximum limit of 10MB.";
+            errorMessage = "Rozmiar pliku przekracza maksymalny limit 10MB.";
           } else if (response.status === 422) {
             errorTypeValue = "text";
-            errorMessage = "File contains insufficient text for processing.";
+            errorMessage = "Plik zawiera niewystarczającą ilość tekstu do przetworzenia.";
           }
         }
         
@@ -132,11 +132,11 @@ export default function PDFUploadModal({
       }
       
       const data = await response.json();
-      console.log("Upload successful:", data);
+      console.log("Przesyłanie zakończone sukcesem:", data);
       onUploadSuccess();
     } catch (err) {
       if (!error) {
-        setError(err instanceof Error ? err.message : "Upload failed");
+        setError(err instanceof Error ? err.message : "Przesyłanie nie powiodło się");
         if (!errorType) setErrorType("general");
       }
     } finally {
@@ -148,35 +148,49 @@ export default function PDFUploadModal({
   const getErrorHelp = () => {
     switch (errorType) {
       case "size":
-        return "Try compressing your PDF or upload a smaller file. The maximum file size is 10MB.";
+        return "Spróbuj skompresować plik PDF lub prześlij mniejszy plik. Maksymalny rozmiar pliku to 10MB.";
       case "text":
-        return "The system could not extract sufficient text from this PDF. Make sure it's not image-only, password protected, or heavily scanned. OCR quality matters for scanned documents.";
+        return "System nie mógł wyodrębnić wystarczającej ilości tekstu z tego pliku PDF. Upewnij się, że nie zawiera tylko obrazów, nie jest chroniony hasłem ani mocno zeskanowany. Jakość OCR ma znaczenie w przypadku skanowanych dokumentów.";
       default:
         return null;
     }
   };
   
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-6 w-full max-w-md relative">
-        <button
-          onClick={onClose}
-          className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
-          aria-label="Close"
-        >
-          <X size={18} />
-        </button>
-        
-        <h2 className="text-xl font-bold mb-4">Upload PDF File</h2>
+    <div 
+      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 backdrop-blur-sm animate-fadeIn"
+      onClick={(e) => {
+        if (e.target === e.currentTarget && !isUploading) {
+          onClose();
+        }
+      }}
+    >
+      <div className="bg-white rounded-lg p-6 w-full max-w-md relative shadow-xl transform transition-all duration-300 ease-in-out animate-scaleIn" style={{ maxWidth: "95vw" }}>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-xl font-bold text-gray-800 flex items-center">
+            <Upload className="mr-2 text-purple-600" size={20} />
+            Prześlij plik PDF
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-gray-500 hover:text-gray-700 hover:bg-gray-100 p-1.5 rounded-full transition-colors"
+            aria-label="Zamknij"
+            disabled={isUploading}
+          >
+            <X size={20} />
+          </button>
+        </div>
         
         {/* Drag & drop area */}
         <div
-          className={`border-2 border-dashed rounded-lg p-8 text-center mb-4 ${
+          className={`border-2 border-dashed rounded-lg p-8 text-center mb-5 transition-all cursor-pointer ${
             isDragging
-              ? "border-purple-chat bg-purple-chat/5"
+              ? "border-purple-600 bg-purple-50"
               : error
               ? "border-red-400 bg-red-50"
-              : "border-gray-300 hover:border-purple-chat/50"
+              : file
+              ? "border-green-500 bg-green-50"
+              : "border-gray-300 hover:border-purple-500 hover:bg-purple-50/50"
           }`}
           onDragEnter={handleDragEnter}
           onDragLeave={handleDragLeave}
@@ -194,7 +208,10 @@ export default function PDFUploadModal({
           
           {file && !error ? (
             <div className="text-center">
-              <p className="font-medium">{file.name}</p>
+              <div className="w-16 h-16 mx-auto mb-3 bg-green-50 rounded-full flex items-center justify-center">
+                <FileText className="text-green-600" size={28} />
+              </div>
+              <p className="font-medium text-gray-800">{file.name}</p>
               <p className="text-sm text-gray-500 mt-1">
                 {(file.size / (1024 * 1024)).toFixed(2)} MB
               </p>
@@ -204,18 +221,26 @@ export default function PDFUploadModal({
                   e.stopPropagation();
                   setFile(null);
                 }}
-                className="text-red-600 text-sm mt-2 hover:underline"
+                className="text-red-600 text-sm mt-3 px-3 py-1 border border-red-200 rounded-full hover:bg-red-50 transition-colors"
               >
-                Remove
+                Usuń
               </button>
             </div>
           ) : (
             <div>
-              <p className="font-medium">
-                {error ? "Please try again" : "Drag & drop your PDF file here, or click to browse"}
+              <div className="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+                {error ? (
+                  <AlertCircle className="text-red-500" size={28} />
+                ) : (
+                  <Upload className="text-gray-500" size={28} />
+                )}
+              </div>
+              <p className="font-medium text-gray-800">
+                {error ? "Spróbuj ponownie" : "Przeciągnij i upuść plik PDF tutaj lub kliknij, aby przeglądać"}
               </p>
-              <p className="text-sm text-gray-500 mt-1">
-                Only PDF files up to 10MB are supported
+              <p className="text-sm text-gray-500 mt-2 flex items-center justify-center">
+                <Info size={14} className="mr-1" />
+                Obsługiwane są tylko pliki PDF do 10MB
               </p>
             </div>
           )}
@@ -223,40 +248,55 @@ export default function PDFUploadModal({
         
         {/* Error message */}
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-            <p className="font-medium">{error}</p>
-            {getErrorHelp() && (
-              <p className="text-sm mt-1">{getErrorHelp()}</p>
-            )}
+          <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 rounded mb-5 shadow-sm">
+            <div className="flex">
+              <AlertCircle className="flex-shrink-0 mr-2" size={18} />
+              <div>
+                <p className="font-medium">{error}</p>
+                {getErrorHelp() && (
+                  <p className="text-sm mt-1 text-red-600">{getErrorHelp()}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Progress indicator when uploading */}
+        {isUploading && (
+          <div className="mb-5">
+            <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-full bg-purple-600 rounded-full animate-pulse"></div>
+            </div>
+            <p className="text-sm text-center mt-2 text-gray-600">Przesyłanie pliku...</p>
           </div>
         )}
         
         {/* Buttons */}
-        <div className="flex justify-end gap-3">
+        <div className="flex justify-end gap-3 mt-6">
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+            className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
             disabled={isUploading}
           >
-            Cancel
+            Anuluj
           </button>
           <button
             type="button"
             onClick={handleUpload}
-            className="px-4 py-2 bg-purple-chat text-white rounded-md hover:bg-purple-chat/90 disabled:opacity-50"
+            className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors disabled:opacity-50 flex items-center shadow-sm"
             disabled={!file || isUploading || !!error}
           >
             {isUploading ? (
               <span className="flex items-center">
-                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Uploading...
+                <div className="w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                Przesyłanie...
               </span>
             ) : (
-              "Upload"
+              <>
+                <Upload size={16} className="mr-2" />
+                Prześlij
+              </>
             )}
           </button>
         </div>

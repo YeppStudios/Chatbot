@@ -4,7 +4,7 @@ import { backend } from "@/config/apiConfig";
 import { MultiLineSkeletonLoader } from "../Loaders";
 import PDFRenameModal from "./PDFRenameModal";
 import PDFDeleteModal from "./PDFDeleteModal";
-import { MessageCircleReply, Check } from "lucide-react";
+import { MessageCircleReply, Check, Edit, Trash2, Download, AlertCircle } from "lucide-react";
 
 interface PDFFile {
   _id: string;
@@ -50,13 +50,13 @@ export default function PDFList({
   const formatDate = (dateString: string): string => {
     try {
       const date = new Date(dateString);
-      return date.toLocaleDateString('en-GB', {
+      return date.toLocaleDateString('pl-PL', {
         day: '2-digit',
         month: '2-digit', 
         year: 'numeric'
       }).replace(/\//g, '-');
     } catch (e) {
-      return 'Invalid date';
+      return 'Nieprawidłowa data';
     }
   };
   
@@ -77,13 +77,13 @@ export default function PDFList({
       });
       
       if (!response.ok) {
-        throw new Error('Failed to update file status');
+        throw new Error('Nie udało się zaktualizować statusu pliku');
       }
       
       // Refresh file list
       onDeleteSuccess();
     } catch (error) {
-      console.error('Error toggling file active status:', error);
+      console.error('Błąd podczas przełączania statusu aktywności pliku:', error);
     } finally {
       setUpdatingActive(null);
     }
@@ -92,7 +92,7 @@ export default function PDFList({
   // Handle download - using the working implementation from the provided file
   const handleDownload = async (fileId: string, fileName: string) => {
     if (!token) {
-      setDownloadError("Authentication token is missing. Please try logging in again.");
+      setDownloadError("Brak tokenu uwierzytelniającego. Spróbuj zalogować się ponownie.");
       return;
     }
     
@@ -107,7 +107,7 @@ export default function PDFList({
       });
       
       if (!response.ok) {
-        let errorMessage = `Failed to download file (${response.status})`;
+        let errorMessage = `Nie udało się pobrać pliku (${response.status})`;
         try {
           const errorData = await response.json();
           errorMessage = errorData.detail || errorMessage;
@@ -117,7 +117,7 @@ export default function PDFList({
         }
         
         setDownloadError(errorMessage);
-        console.error("Download error:", errorMessage);
+        console.error("Błąd pobierania:", errorMessage);
         return;
       }
       
@@ -139,8 +139,8 @@ export default function PDFList({
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (error) {
-      console.error("Error downloading file:", error);
-      setDownloadError("Failed to download file. Network error or server unavailable.");
+      console.error("Błąd podczas pobierania pliku:", error);
+      setDownloadError("Nie udało się pobrać pliku. Błąd sieci lub serwer niedostępny.");
     } finally {
       setDownloadingFile(null);
     }
@@ -157,10 +157,13 @@ export default function PDFList({
   if (error) {
     return (
       <div className="p-8 text-center">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-6 inline-block">
-          <p className="text-red-600 font-medium">{error}</p>
-          <p className="text-gray-600 mt-2">
-            There was an error loading the PDF files. Please try again later or contact support.
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6 inline-block shadow-sm">
+          <div className="flex items-center justify-center mb-2">
+            <AlertCircle className="text-red-500 mr-2" size={20} />
+            <p className="text-red-600 font-medium">{error}</p>
+          </div>
+          <p className="text-gray-600">
+            Wystąpił błąd podczas ładowania plików PDF. Spróbuj ponownie później lub skontaktuj się z pomocą techniczną.
           </p>
         </div>
       </div>
@@ -171,9 +174,9 @@ export default function PDFList({
     return (
       <div className="p-12 text-center">
         <div className="text-gray-500">
-          <p className="text-lg mb-2">No PDF files match your search</p>
+          <p className="text-lg mb-2">Brak plików PDF pasujących do wyszukiwania</p>
           <p className="text-sm text-gray-400">
-            Try using different keywords or check your spelling
+            Spróbuj użyć innych słów kluczowych lub sprawdź pisownię
           </p>
         </div>
       </div>
@@ -183,11 +186,13 @@ export default function PDFList({
   if (!pdfFiles || pdfFiles.length === 0) {
     return (
       <div className="p-12 text-center">
-        <MessageCircleReply className="w-10 h-10 mb-4 opacity-20 mx-auto" />
-        <p className="text-gray-500 text-lg mb-2">No PDF files found</p>
-        <p className="text-gray-400 text-sm">
-          Upload your first PDF file using the "Add PDF File" button above
-        </p>
+        <div className="bg-gray-50 p-8 rounded-lg inline-block shadow-sm">
+          <MessageCircleReply className="w-12 h-12 mb-4 text-gray-300 mx-auto" />
+          <p className="text-gray-700 text-lg font-medium mb-2">Brak plików PDF</p>
+          <p className="text-gray-500">
+            Dodaj swój pierwszy plik PDF za pomocą przycisku "Dodaj plik PDF" powyżej
+          </p>
+        </div>
       </div>
     );
   }
@@ -195,82 +200,83 @@ export default function PDFList({
   return (
     <div className="p-4 overflow-x-auto">
       {downloadError && (
-        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md">
-          {downloadError}
+        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md border border-red-200 flex items-center">
+          <AlertCircle className="mr-2 flex-shrink-0" size={16} />
+          <span>{downloadError}</span>
         </div>
       )}
       
-      <table className="w-full border-collapse">
+      <table className="w-full border-collapse rounded-lg overflow-hidden shadow-sm">
         <thead>
           <tr className="bg-gray-100">
-            <th className="p-3 text-left border w-16">Active</th>
-            <th className="p-3 text-left border">Filename</th>
-            <th className="p-3 text-left border w-32">Date Added</th>
-            <th className="p-3 text-left border w-24">Size</th>
-            <th className="p-3 text-center border w-32">Actions</th>
+            <th className="p-3 text-left border-b border-r border-gray-200 w-16 font-medium text-gray-700">Aktywny</th>
+            <th className="p-3 text-left border-b border-r border-gray-200 font-medium text-gray-700">Nazwa pliku</th>
+            <th className="p-3 text-left border-b border-r border-gray-200 w-32 font-medium text-gray-700">Data dodania</th>
+            <th className="p-3 text-left border-b border-r border-gray-200 w-24 font-medium text-gray-700">Rozmiar</th>
+            <th className="p-3 text-center border-b border-gray-200 w-32 font-medium text-gray-700">Akcje</th>
           </tr>
         </thead>
         <tbody>
-          {pdfFiles.map((file) => (
-            <tr key={file._id} className="hover:bg-gray-50">
-              <td className="p-3 border text-center">
+          {pdfFiles.map((file, index) => (
+            <tr key={file._id} className={`hover:bg-gray-50 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+              <td className="p-3 border-b border-r border-gray-200 text-center">
                 <div className="flex justify-center">
                   <button
                     onClick={() => toggleActive(file._id, !!file.active)}
                     disabled={updatingActive === file._id}
-                    className={`w-5 h-5 rounded ${
-                      file.active ? 'bg-purple-chat text-white' : 'bg-gray-200'
-                    } flex items-center justify-center`}
-                    title={file.active ? "Active (click to disable)" : "Inactive (click to enable)"}
+                    className={`w-6 h-6 rounded-md ${
+                      file.active ? 'bg-purple-chat text-white hover:bg-purple-chat/90' : 'bg-gray-200 hover:bg-gray-300'
+                    } flex items-center justify-center transition-colors duration-200`}
+                    title={file.active ? "Aktywny (kliknij, aby wyłączyć)" : "Nieaktywny (kliknij, aby włączyć)"}
                   >
                     {updatingActive === file._id ? (
-                      <span className="animate-pulse">...</span>
+                      <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                     ) : file.active ? (
-                      <Check size={12} />
+                      <Check size={14} />
                     ) : null}
                   </button>
                 </div>
               </td>
-              <td className="p-3 border">{file.name}</td>
-              <td className="p-3 border">{formatDate(file.date_added)}</td>
-              <td className="p-3 border">{formatFileSize(file.size)}</td>
-              <td className="p-3 border text-center">
-                <div className="flex justify-center space-x-2">
-                  {/* Rename button - using text emoji */}
+              <td className="p-3 border-b border-r border-gray-200">{file.name}</td>
+              <td className="p-3 border-b border-r border-gray-200">{formatDate(file.date_added)}</td>
+              <td className="p-3 border-b border-r border-gray-200">{formatFileSize(file.size)}</td>
+              <td className="p-3 border-b border-gray-200 text-center">
+                <div className="flex justify-center space-x-3">
+                  {/* Rename button */}
                   <button
                     onClick={() => {
                       setSelectedFile(file);
                       setIsRenameModalOpen(true);
                     }}
-                    className="text-blue-600 hover:text-blue-800"
-                    title="Rename"
+                    className="text-blue-600 hover:text-blue-800 transition-colors p-1.5 rounded-full hover:bg-blue-100"
+                    title="Zmień nazwę"
                   >
-                    🖉
+                    <Edit size={16} />
                   </button>
                   
-                  {/* Delete button - using text emoji */}
+                  {/* Delete button */}
                   <button
                     onClick={() => {
                       setSelectedFile(file);
                       setIsDeleteModalOpen(true);
                     }}
-                    className="text-red-600 hover:text-red-800"
-                    title="Delete"
+                    className="text-red-600 hover:text-red-800 transition-colors p-1.5 rounded-full hover:bg-red-100"
+                    title="Usuń"
                   >
-                    ✖️
+                    <Trash2 size={16} />
                   </button>
                   
                   {/* Download button - using text emoji with spinner */}
                   <button
                     onClick={() => handleDownload(file._id, file.name)}
-                    className="text-gray-600 hover:text-gray-800"
-                    title="Download"
+                    className="text-gray-600 hover:text-gray-800 transition-colors p-1.5 rounded-full hover:bg-gray-100"
+                    title="Pobierz"
                     disabled={downloadingFile === file._id}
                   >
                     {downloadingFile === file._id ? (
                       <div className="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
                     ) : (
-                      "📥"
+                      <Download size={16} />
                     )}
                   </button>
                 </div>
