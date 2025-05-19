@@ -4,7 +4,14 @@ import { backend } from "@/config/apiConfig";
 import { MultiLineSkeletonLoader } from "../Loaders";
 import PDFRenameModal from "./PDFRenameModal";
 import PDFDeleteModal from "./PDFDeleteModal";
-import { MessageCircleReply, Check, Edit, Trash2, Download, AlertCircle } from "lucide-react";
+import { MessageCircleReply, Check, Edit, Trash2, Download, AlertCircle, MoreVertical } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator
+} from "@/components/ui/dropdown-menu"; // Adjust the import path as needed
 
 interface PDFFile {
   _id: string;
@@ -241,44 +248,59 @@ export default function PDFList({
               <td className="p-3 border-b border-r border-gray-200">{formatDate(file.date_added)}</td>
               <td className="p-3 border-b border-r border-gray-200">{formatFileSize(file.size)}</td>
               <td className="p-3 border-b border-gray-200 text-center">
-                <div className="flex justify-center space-x-3">
-                  {/* Rename button */}
-                  <button
-                    onClick={() => {
-                      setSelectedFile(file);
-                      setIsRenameModalOpen(true);
-                    }}
-                    className="text-blue-600 hover:text-blue-800 transition-colors p-1.5 rounded-full hover:bg-blue-100"
-                    title="Zmień nazwę"
-                  >
-                    <Edit size={16} />
-                  </button>
-                  
-                  {/* Delete button */}
-                  <button
-                    onClick={() => {
-                      setSelectedFile(file);
-                      setIsDeleteModalOpen(true);
-                    }}
-                    className="text-red-600 hover:text-red-800 transition-colors p-1.5 rounded-full hover:bg-red-100"
-                    title="Usuń"
-                  >
-                    <Trash2 size={16} />
-                  </button>
-                  
-                  {/* Download button - using text emoji with spinner */}
-                  <button
-                    onClick={() => handleDownload(file._id, file.name)}
-                    className="text-gray-600 hover:text-gray-800 transition-colors p-1.5 rounded-full hover:bg-gray-100"
-                    title="Pobierz"
-                    disabled={downloadingFile === file._id}
-                  >
-                    {downloadingFile === file._id ? (
-                      <div className="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
-                    ) : (
-                      <Download size={16} />
-                    )}
-                  </button>
+                <div className="flex justify-center">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button className="text-gray-600 hover:text-gray-800 transition-colors p-1.5 rounded-full hover:bg-gray-100 focus:outline-none">
+                        <MoreVertical size={16} />
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-48 bg-white border border-gray-200 shadow-lg">
+                      {/* Rename option */}
+                      <DropdownMenuItem
+                        onClick={() => {
+                          setSelectedFile(file);
+                          setIsRenameModalOpen(true);
+                        }}
+                        className="cursor-pointer py-2"
+                      >
+                        <Edit className="mr-2 h-4 w-4" />
+                        <span>Zmień nazwę</span>
+                      </DropdownMenuItem>
+                      
+                      {/* Download option */}
+                      <DropdownMenuItem
+                        onClick={() => handleDownload(file._id, file.name)}
+                        className="cursor-pointer py-2"
+                        disabled={downloadingFile === file._id}
+                      >
+                        {downloadingFile === file._id ? (
+                          <>
+                            <div className="mr-2 w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin" />
+                            <span>Pobieranie...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Download className="mr-2 h-4 w-4" />
+                            <span>Pobierz</span>
+                          </>
+                        )}
+                      </DropdownMenuItem>
+                      
+                      
+                      {/* Delete option */}
+                      <DropdownMenuItem
+                        onClick={() => {
+                          setSelectedFile(file);
+                          setIsDeleteModalOpen(true);
+                        }}
+                        className="cursor-pointer text-red-600 hover:text-red-700 focus:text-red-700 py-2"
+                      >
+                        <Trash2 className="mr-2 h-4 w-4" />
+                        <span>Usuń</span>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </td>
             </tr>
