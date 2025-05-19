@@ -33,7 +33,7 @@ async def upload_pdf(
     
     # Validate file format
     if file.content_type != "application/pdf":
-        raise HTTPException(status_code=400, detail="File must be PDF format")
+        raise HTTPException(status_code=400, detail="Plik musi być w formacie PDF")
     
     # Check file size before processing (10MB limit)
     MAX_SIZE = 10 * 1024 * 1024  # 10MB
@@ -47,12 +47,12 @@ async def upload_pdf(
         if file_size > MAX_SIZE:
             raise HTTPException(
                 status_code=413,  # Payload Too Large
-                detail=f"File size exceeds maximum limit of 10MB (uploaded: {file_size / (1024 * 1024):.2f}MB)"
+                detail=f"Rozmiar pliku przekracza maksymalny limit 10MB (przesłano: {file_size / (1024 * 1024):.2f}MB)"
             )
     except Exception as e:
         if isinstance(e, HTTPException):
             raise e
-        raise HTTPException(status_code=500, detail=f"Error checking file size: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Błąd podczas sprawdzania rozmiaru pliku: {str(e)}")
     
     # Save file to disk
     file_path = os.path.join(PDF_STORAGE_PATH, file.filename)
@@ -60,7 +60,7 @@ async def upload_pdf(
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Nie udało się zapisać pliku: {str(e)}")
     
     # Extract text from PDF
     try:
@@ -76,7 +76,7 @@ async def upload_pdf(
                 
             raise HTTPException(
                 status_code=422,  # Unprocessable Entity
-                detail="The PDF contains insufficient text for processing. The file may be image-only, scanned poorly, or encrypted."
+                detail="Plik PDF zawiera niewystarczającą ilość tekstu do przetworzenia. Plik może zawierać tylko obrazy, być słabo zeskanowany lub zaszyfrowany."
             )
         
         # Process for RAG (chunking and vectorization)
@@ -91,7 +91,7 @@ async def upload_pdf(
                 
             raise HTTPException(
                 status_code=422,
-                detail="Could not extract meaningful chunks from the document. The text might be too short or formatted unusually."
+                detail="Nie można wyodrębnić sensownych fragmentów z dokumentu. Tekst może być zbyt krótki lub sformatowany w nietypowy sposób."
             )
         
         # Prepare chunk tuples with filename
@@ -130,7 +130,7 @@ async def upload_pdf(
             
         if isinstance(e, HTTPException):
             raise e
-        raise HTTPException(status_code=500, detail=f"PDF processing failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Przetwarzanie PDF nie powiodło się: {str(e)}")
 
 @router.get("/pdfs")
 async def list_pdfs(
@@ -164,14 +164,14 @@ async def list_pdfs(
             start_date = datetime.fromisoformat(date_start)
             date_filter["$gte"] = start_date
         except ValueError:
-            raise HTTPException(status_code=400, detail=f"Invalid start date format: {date_start}")
+            raise HTTPException(status_code=400, detail=f"Nieprawidłowy format daty początkowej: {date_start}")
     
     if date_end:
         try:
             end_date = datetime.fromisoformat(date_end)
             date_filter["$lte"] = end_date
         except ValueError:
-            raise HTTPException(status_code=400, detail=f"Invalid end date format: {date_end}")
+            raise HTTPException(status_code=400, detail=f"Nieprawidłowy format daty końcowej: {date_end}")
     
     if date_filter:
         query["date_added"] = date_filter
@@ -226,12 +226,12 @@ async def rename_pdf(
     
     # Validate PDF ID
     if not ObjectId.is_valid(pdf_id):
-        raise HTTPException(status_code=400, detail="Invalid PDF ID")
+        raise HTTPException(status_code=400, detail="Nieprawidłowy identyfikator PDF")
     
     # Find the PDF file
     pdf_file = await db['pdf_files'].find_one({"_id": ObjectId(pdf_id)})
     if not pdf_file:
-        raise HTTPException(status_code=404, detail="PDF file not found")
+        raise HTTPException(status_code=404, detail="Nie znaleziono pliku PDF")
     
     # Update the name
     result = await db['pdf_files'].update_one(
@@ -240,7 +240,7 @@ async def rename_pdf(
     )
     
     if result.modified_count == 0:
-        raise HTTPException(status_code=500, detail="Failed to update PDF name")
+        raise HTTPException(status_code=500, detail="Nie udało się zaktualizować nazwy pliku PDF")
     
     # Return the updated PDF file
     updated_pdf = await db['pdf_files'].find_one({"_id": ObjectId(pdf_id)})
@@ -262,12 +262,12 @@ async def delete_pdf(
     
     # Validate PDF ID
     if not ObjectId.is_valid(pdf_id):
-        raise HTTPException(status_code=400, detail="Invalid PDF ID")
+        raise HTTPException(status_code=400, detail="Nieprawidłowy identyfikator PDF")
     
     # Find the PDF file
     pdf_file = await db['pdf_files'].find_one({"_id": ObjectId(pdf_id)})
     if not pdf_file:
-        raise HTTPException(status_code=404, detail="PDF file not found")
+        raise HTTPException(status_code=404, detail="Nie znaleziono pliku PDF")
     
     filename = pdf_file["name"]
     
@@ -302,7 +302,7 @@ async def delete_pdf(
     if result.deleted_count == 0:
         raise HTTPException(status_code=500, detail="Failed to delete PDF file from database")
     
-    return {"message": "PDF file and associated vectors deleted successfully"}
+    return {"message": "Plik PDF został pomyślnie usunięty"}
 
 @router.get("/pdf/{pdf_id}/download")
 async def download_pdf(
@@ -314,16 +314,16 @@ async def download_pdf(
     
     # Validate PDF ID
     if not ObjectId.is_valid(pdf_id):
-        raise HTTPException(status_code=400, detail="Invalid PDF ID")
+        raise HTTPException(status_code=400, detail="Nieprawidłowy identyfikator PDF")
     
     # Find the PDF file
     pdf_file = await db['pdf_files'].find_one({"_id": ObjectId(pdf_id)})
     if not pdf_file:
-        raise HTTPException(status_code=404, detail="PDF file not found")
+        raise HTTPException(status_code=404, detail="Nie znaleziono pliku PDF")
     
     # Check if file exists on disk
     if "path" not in pdf_file or not os.path.exists(pdf_file["path"]):
-        raise HTTPException(status_code=404, detail="PDF file not found on disk")
+        raise HTTPException(status_code=404, detail="Nie znaleziono pliku PDF na dysku")
     
     # Return the file with appropriate headers
     return FileResponse(
@@ -343,18 +343,18 @@ async def toggle_pdf_active(
     
     # Validate PDF ID
     if not ObjectId.is_valid(pdf_id):
-        raise HTTPException(status_code=400, detail="Invalid PDF ID")
+        raise HTTPException(status_code=400, detail="Nieprawidłowy identyfikator PDF")
     
     # Validate request
     if "active" not in request:
-        raise HTTPException(status_code=400, detail="'active' field is required")
+        raise HTTPException(status_code=400, detail="Pole 'active' jest wymagane")
     
     active_status = bool(request["active"])
     
     # Find the PDF file
     pdf_file = await db['pdf_files'].find_one({"_id": ObjectId(pdf_id)})
     if not pdf_file:
-        raise HTTPException(status_code=404, detail="PDF file not found")
+        raise HTTPException(status_code=404, detail="Nie znaleziono pliku PDF")
     
     # Update the active status in the database
     result = await db['pdf_files'].update_one(
@@ -363,7 +363,7 @@ async def toggle_pdf_active(
     )
     
     if result.modified_count == 0:
-        raise HTTPException(status_code=500, detail="Failed to update PDF active status")
+        raise HTTPException(status_code=500, detail="Nie udało się zaktualizować statusu aktywności pliku PDF")
     
     # If setting to inactive, remove vectors from Pinecone
     if not active_status:

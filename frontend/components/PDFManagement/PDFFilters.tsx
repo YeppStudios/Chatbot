@@ -1,7 +1,7 @@
 // components/PDFManagement/PDFFilters.tsx
 import { useState, useEffect } from "react";
 import useDebounce from "@/hooks/useDebounce";
-import { Search, Calendar, FileBadge, X } from "lucide-react";
+import { Search, Calendar, FileBadge, X, SlidersHorizontal } from "lucide-react";
 
 interface PDFFiltersProps {
   searchQuery: string;
@@ -67,52 +67,52 @@ export default function PDFFilters({
   );
   
   return (
-    <div className="p-4 border-b">
+    <div className="p-5 border-b bg-white shadow-sm">
       <div className="flex flex-col md:flex-row justify-between gap-4 mb-4">
         {/* Search field */}
         <form onSubmit={handleSearchSubmit} className="flex-1">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-4 w-4 text-gray-400" />
+              <Search className="h-4 w-4 text-indigo-500" />
             </div>
             <input
               type="text"
               value={localSearch}
               onChange={(e) => setLocalSearch(e.target.value)}
-              placeholder="Search by filename..."
-              className="w-full pl-10 pr-12 py-2 border rounded-lg"
+              placeholder="Szukaj według nazwy pliku..."
+              className="w-full pl-10 pr-24 py-2.5 border border-indigo-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"
             />
             <button
               type="submit"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-chat hover:bg-purple-chat/90 text-white p-1 rounded text-xs px-2"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-chat hover:bg-purple-chat/90 text-white py-1.5 px-4 rounded-md text-sm font-medium transition-colors"
             >
-              Search
+              Szukaj
             </button>
           </div>
         </form>
         
         {/* Filter toggle and sort controls */}
-        <div className="flex gap-2">
+        <div className="flex gap-3">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className={`px-3 py-2 rounded-lg border flex items-center gap-1 ${
+            className={`px-4 py-2.5 rounded-lg flex items-center gap-2 transition-all ${
               hasActiveFilters 
-                ? "border-purple-chat text-purple-chat bg-purple-chat/5"
-                : "border-gray-300 text-gray-700"
+                ? "bg-indigo-100 text-indigo-700 border border-indigo-200"
+                : "bg-gray-100 border border-gray-200 text-gray-700 hover:bg-gray-200"
             }`}
           >
-            <FileBadge size={16} />
-            <span className="text-sm">Filters</span>
+            <SlidersHorizontal size={16} />
+            <span className="text-sm font-medium">Filtry</span>
             {hasActiveFilters && (
-              <span className="inline-flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-purple-chat rounded-full">
+              <span className="inline-flex items-center justify-center w-5 h-5 text-xs font-semibold text-white bg-indigo-600 rounded-full">
                 {(dateRange.start ? 1 : 0) + (dateRange.end ? 1 : 0) + 
                  (sizeRange.min !== null ? 1 : 0) + (sizeRange.max !== null ? 1 : 0)}
               </span>
             )}
           </button>
           
-          <div className="flex items-center text-sm">
-            <span className="mr-2">Sort:</span>
+          <div className="flex items-center bg-gray-50 px-3 border border-gray-200 rounded-lg">
+            <span className="mr-2 text-sm font-medium text-gray-600">Sortuj:</span>
             <select
               value={`${sortBy}:${sortOrder}`}
               onChange={(e) => {
@@ -120,14 +120,14 @@ export default function PDFFilters({
                 setSortBy(field);
                 setSortOrder(parseInt(order));
               }}
-              className="border rounded-lg p-2"
+              className="bg-transparent py-2.5 pl-1 pr-8 text-sm focus:outline-none"
             >
-              <option value="date_added:-1">Newest first</option>
-              <option value="date_added:1">Oldest first</option>
-              <option value="name:1">Name (A-Z)</option>
-              <option value="name:-1">Name (Z-A)</option>
-              <option value="size:-1">Size (largest first)</option>
-              <option value="size:1">Size (smallest first)</option>
+              <option value="date_added:-1">Najnowsze najpierw</option>
+              <option value="date_added:1">Najstarsze najpierw</option>
+              <option value="name:1">Nazwa (A-Z)</option>
+              <option value="name:-1">Nazwa (Z-A)</option>
+              <option value="size:-1">Rozmiar (największe najpierw)</option>
+              <option value="size:1">Rozmiar (najmniejsze najpierw)</option>
             </select>
           </div>
         </div>
@@ -135,17 +135,17 @@ export default function PDFFilters({
       
       {/* Advanced filters panel */}
       {showFilters && (
-        <div className="mt-4 p-4 border rounded-lg bg-gray-50">
-          <div className="flex flex-col md:flex-row gap-6">
+        <div className="mt-4 p-5 border border-indigo-100 rounded-lg bg-indigo-50/50 shadow-sm">
+          <div className="flex flex-col md:flex-row gap-8">
             {/* Date range filter */}
             <div className="flex-1">
-              <h3 className="font-medium text-sm mb-2 flex items-center gap-1">
+              <h3 className="font-medium text-sm mb-3 flex items-center gap-2 text-indigo-700">
                 <Calendar size={16} />
-                Date Range
+                Zakres dat
               </h3>
-              <div className="flex flex-wrap gap-2">
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">From</label>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex-1">
+                  <label className="block text-xs text-gray-600 mb-1.5 font-medium">Od</label>
                   <input
                     type="date"
                     value={localDateRange.start || ""}
@@ -153,11 +153,11 @@ export default function PDFFilters({
                       ...localDateRange,
                       start: e.target.value || null
                     })}
-                    className="border rounded p-1.5 text-sm w-full"
+                    className="border border-gray-200 rounded-md p-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   />
                 </div>
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">To</label>
+                <div className="flex-1">
+                  <label className="block text-xs text-gray-600 mb-1.5 font-medium">Do</label>
                   <input
                     type="date"
                     value={localDateRange.end || ""}
@@ -165,7 +165,7 @@ export default function PDFFilters({
                       ...localDateRange,
                       end: e.target.value || null
                     })}
-                    className="border rounded p-1.5 text-sm w-full"
+                    className="border border-gray-200 rounded-md p-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   />
                 </div>
               </div>
@@ -173,13 +173,13 @@ export default function PDFFilters({
             
             {/* File size filter */}
             <div className="flex-1">
-              <h3 className="font-medium text-sm mb-2 flex items-center gap-1">
+              <h3 className="font-medium text-sm mb-3 flex items-center gap-2 text-indigo-700">
                 <FileBadge size={16} />
-                File Size (MB)
+                Rozmiar pliku (MB)
               </h3>
-              <div className="flex flex-wrap gap-2">
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">Min (MB)</label>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex-1">
+                  <label className="block text-xs text-gray-600 mb-1.5 font-medium">Min (MB)</label>
                   <input
                     type="number"
                     min="0"
@@ -190,11 +190,11 @@ export default function PDFFilters({
                       min: e.target.value ? parseFloat(e.target.value) : null
                     })}
                     placeholder="0"
-                    className="border rounded p-1.5 text-sm w-full"
+                    className="border border-gray-200 rounded-md p-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   />
                 </div>
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">Max (MB)</label>
+                <div className="flex-1">
+                  <label className="block text-xs text-gray-600 mb-1.5 font-medium">Maks (MB)</label>
                   <input
                     type="number"
                     min="0"
@@ -205,7 +205,7 @@ export default function PDFFilters({
                       max: e.target.value ? parseFloat(e.target.value) : null
                     })}
                     placeholder="∞"
-                    className="border rounded p-1.5 text-sm w-full"
+                    className="border border-gray-200 rounded-md p-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   />
                 </div>
               </div>
@@ -213,19 +213,19 @@ export default function PDFFilters({
           </div>
           
           {/* Filter action buttons */}
-          <div className="flex justify-end gap-2 mt-4">
+          <div className="flex justify-end gap-3 mt-5">
             <button
               onClick={handleResetFilters}
-              className="px-3 py-1.5 text-sm border border-gray-300 rounded flex items-center gap-1"
+              className="px-4 py-2 text-sm border border-gray-300 rounded-md flex items-center gap-2 text-gray-700 hover:bg-gray-100 transition-colors"
             >
               <X size={14} />
-              Clear All
+              Wyczyść wszystko
             </button>
             <button
               onClick={handleApplyFilters}
-              className="px-3 py-1.5 text-sm bg-purple-chat text-white rounded"
+              className="px-4 py-2 text-sm bg-indigo-600 hover:bg-indigo-700 text-white rounded-md font-medium transition-colors"
             >
-              Apply Filters
+              Zastosuj filtry
             </button>
           </div>
         </div>
@@ -235,11 +235,11 @@ export default function PDFFilters({
       {hasActiveFilters && (
         <div className="mt-4 flex flex-wrap gap-2">
           {dateRange.start && (
-            <div className="bg-purple-chat/10 text-purple-chat rounded-full px-3 py-1 text-xs flex items-center gap-1">
-              <span>From: {new Date(dateRange.start).toLocaleDateString()}</span>
+            <div className="bg-indigo-100 text-indigo-700 rounded-full px-3 py-1.5 text-xs flex items-center gap-1.5 border border-indigo-200">
+              <span className="font-medium">Od: {new Date(dateRange.start).toLocaleDateString()}</span>
               <button
                 onClick={() => setDateRange({ ...dateRange, start: null })}
-                className="text-purple-chat hover:text-purple-chat/80"
+                className="text-indigo-500 hover:text-indigo-700 bg-indigo-200 rounded-full p-0.5"
               >
                 <X size={12} />
               </button>
@@ -247,11 +247,11 @@ export default function PDFFilters({
           )}
           
           {dateRange.end && (
-            <div className="bg-purple-chat/10 text-purple-chat rounded-full px-3 py-1 text-xs flex items-center gap-1">
-              <span>To: {new Date(dateRange.end).toLocaleDateString()}</span>
+            <div className="bg-indigo-100 text-indigo-700 rounded-full px-3 py-1.5 text-xs flex items-center gap-1.5 border border-indigo-200">
+              <span className="font-medium">Do: {new Date(dateRange.end).toLocaleDateString()}</span>
               <button
                 onClick={() => setDateRange({ ...dateRange, end: null })}
-                className="text-purple-chat hover:text-purple-chat/80"
+                className="text-indigo-500 hover:text-indigo-700 bg-indigo-200 rounded-full p-0.5"
               >
                 <X size={12} />
               </button>
@@ -259,11 +259,11 @@ export default function PDFFilters({
           )}
           
           {sizeRange.min !== null && (
-            <div className="bg-purple-chat/10 text-purple-chat rounded-full px-3 py-1 text-xs flex items-center gap-1">
-              <span>Min size: {sizeRange.min} MB</span>
+            <div className="bg-indigo-100 text-indigo-700 rounded-full px-3 py-1.5 text-xs flex items-center gap-1.5 border border-indigo-200">
+              <span className="font-medium">Min. rozmiar: {sizeRange.min} MB</span>
               <button
                 onClick={() => setSizeRange({ ...sizeRange, min: null })}
-                className="text-purple-chat hover:text-purple-chat/80"
+                className="text-indigo-500 hover:text-indigo-700 bg-indigo-200 rounded-full p-0.5"
               >
                 <X size={12} />
               </button>
@@ -271,11 +271,11 @@ export default function PDFFilters({
           )}
           
           {sizeRange.max !== null && (
-            <div className="bg-purple-chat/10 text-purple-chat rounded-full px-3 py-1 text-xs flex items-center gap-1">
-              <span>Max size: {sizeRange.max} MB</span>
+            <div className="bg-indigo-100 text-indigo-700 rounded-full px-3 py-1.5 text-xs flex items-center gap-1.5 border border-indigo-200">
+              <span className="font-medium">Maks. rozmiar: {sizeRange.max} MB</span>
               <button
                 onClick={() => setSizeRange({ ...sizeRange, max: null })}
-                className="text-purple-chat hover:text-purple-chat/80"
+                className="text-indigo-500 hover:text-indigo-700 bg-indigo-200 rounded-full p-0.5"
               >
                 <X size={12} />
               </button>
@@ -285,9 +285,9 @@ export default function PDFFilters({
           {hasActiveFilters && (
             <button
               onClick={handleResetFilters}
-              className="bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-xs flex items-center gap-1"
+              className="bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full px-3 py-1.5 text-xs flex items-center gap-1.5 border border-gray-200 transition-colors"
             >
-              <span>Clear all</span>
+              <span className="font-medium">Wyczyść wszystko</span>
               <X size={12} />
             </button>
           )}
