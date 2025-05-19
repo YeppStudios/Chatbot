@@ -336,10 +336,9 @@ async def download_pdf(
 @router.put("/pdf/{pdf_id}/toggle-active")
 async def toggle_pdf_active(
     pdf_id: str,
-    request: dict,  # Will contain { "active": true/false }
+    request: dict,  # Contains { "active": true/false }
     token: str = Depends(oauth2_scheme)
 ):
-    """Toggle whether a PDF is active in conversations"""
     verify_access_token(token)
     
     # Validate PDF ID
@@ -357,7 +356,7 @@ async def toggle_pdf_active(
     if not pdf_file:
         raise HTTPException(status_code=404, detail="PDF file not found")
     
-    # Update the active status
+    # Update the active status in the database
     result = await db['pdf_files'].update_one(
         {"_id": ObjectId(pdf_id)},
         {"$set": {"active": active_status}}
@@ -369,26 +368,27 @@ async def toggle_pdf_active(
     # If setting to inactive, remove vectors from Pinecone
     if not active_status:
         try:
-            from chatbot.database.datastore.pinecone_datastore import PineconeDataStore
-            datastore = PineconeDataStore()
+            # Import the delete function
+            from chatbot.services.retrieval.vectorstores.pinecone.upsert import delete_vectors_by_filename
             
-            # Define filter to find vectors with this filename
-            file_filter = {"filename": pdf_file["name"]}
-            
-            # Delete vectors from the pdf_files namespace
-            await datastore.delete(filter=file_filter)
+            # Call the delete function - same as used in delete PDF
+            delete_vectors_by_filename(
+                filename=pdf_file["name"],
+                index_name="pdf-vectors",  # Use your index name
+                namespace="pdf_files"
+            )
             
             print(f"Removed vectors for inactive file: {pdf_file['name']}")
         except Exception as e:
             print(f"Warning: Failed to remove vectors for inactive file: {str(e)}")
     
-    # If setting to active, we'll need to re-vectorize the file
+    # If setting to active, re-vectorize the file
     if active_status and os.path.exists(pdf_file.get("path", "")):
         try:
             # Re-vectorize the file
             from chatbot.services.text_extract.pdf_extractor import PDFExtractor
             from chatbot.services.text_extract.text_splitter import text_splitter
-            from chatbot.services.retrieval.vectorstores.pinecone.upsert import upsert_chunks as pinecone_upsert_chunks
+            from chatbot.services.retrieval.vectorstores.pinecone.upsert import upsert_chunks
             
             extractor = PDFExtractor()
             with open(pdf_file["path"], "rb") as file:
@@ -400,7 +400,7 @@ async def toggle_pdf_active(
             chunk_tuples = [(chunk, pdf_file["name"]) for chunk in chunks]
             
             # Upsert to Pinecone
-            pinecone_upsert_chunks(
+            upsert_chunks(
                 chunks=chunk_tuples, 
                 index_name="pdf-vectors",  # Use your existing index
                 namespace="pdf_files"  
@@ -415,8 +415,6 @@ async def toggle_pdf_active(
     updated_pdf["_id"] = str(updated_pdf["_id"])
     
     return updated_pdf
-
-# In backend/chatbot/routes/pdf_routes.py
 
 @router.get("/pdf-vectors-test")
 async def test_pdf_vectors(
@@ -523,7 +521,7 @@ async def list_pinecone_indexes(token: str = Depends(oauth2_scheme)):
         return {
             "available_indexes": serializable_indexes,
             "env_index": env_index,
-            "hardcoded_index": "courses"
+            "hardcoded_index": "pdf-vectors"
         }
     except Exception as e:
         return {
@@ -540,7 +538,7 @@ async def pinecone_namespace_stats(token: str = Depends(oauth2_scheme)):
         import os
         
         pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-        index = pc.Index("courses")
+        index = pc.Index("pdf-vectors")
         
         # Get stats for the entire index
         stats = index.describe_index_stats()

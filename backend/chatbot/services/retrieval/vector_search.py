@@ -85,7 +85,7 @@ class VectorSearchService:
             context_parts.append(f"[{result.get('filename', 'unknown')}]: {result['text']}\n")
         return "\n".join(context_parts)
     
-    def test_pdf_search(self, query: str, index_name: str = "courses"):
+    def test_pdf_search(self, query: str, index_name: str = "pdf-vectors"):
         """
         Test function to directly search PDF vectors in Pinecone.
         This bypasses all other logic to check if PDF search works.

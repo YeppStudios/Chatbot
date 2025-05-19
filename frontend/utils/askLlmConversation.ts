@@ -26,17 +26,18 @@ export const askLlmConversation = async (
   conversationId: string,
   llmProvider: string,
   model: string,
-  vectorStoreType: string, // Renamed parameter to match backend
+  vectorStoreType: string,
   stream: boolean = false,
-  token?: string // Optional JWT token for authentication
+  token?: string
 ) => {
   const payload = {
     conversation_id: conversationId,
     query,
     vector_store: {
-      store_type: vectorStoreType, // Use store_type instead of provider
-      collection_name: "pdf-vectors", // Hardcoded for now; adjust as needed
-      top_k: 5, // Match backend default or adjust as needed
+      store_type: vectorStoreType,
+      index_name: "pdf-vectors", // Important: This is your Pinecone index name
+      namespace: "pdf_files", // Empty string triggers search in BOTH default and pdf_files namespaces
+      top_k: 5,
       hybrid: true
     } as VectorStoreConfig,
     llm: {
@@ -45,7 +46,7 @@ export const askLlmConversation = async (
       temperature: 0.25,
       max_tokens: 4096,
       system_message:
-        "You are a helpful AI assistant that specializes in educating users about the medical equipment produced by Metrum Cyroflex as well as related treatments and topics. You respond only based on the course and book content. By default you speak fluently in Polish, but when asked in different language you switch to user language. Sound natural and give direct answers.\n\n\nNever greet user. Rather ask followup question. \n\nYou respond only to questions related to Metrum Cyroflex, related treatments and topics.\n\nYou reply only based on the facts you can find in retrieved content and nothing else.\n\nDo not refer to uploaded files, rather treat it as your knowledgebase. \n If you feel like the question user has asked requires extra course or Metrum Cyroflex knowledge, ALWAYS call search_vector_store function.",
+        "You are a helpful AI assistant that specializes in answering questions based on the content available in the provided documents and PDFs. By default you speak fluently in Polish, but when asked in different language you switch to user language. Sound natural and give direct answers. Never greet user. Rather ask followup questions. You reply only based on the facts you can find in retrieved content and nothing else. If you don't find relevant information in the retrieved content, please say so honestly."
     } as LLMConfig,
     stream,
   };

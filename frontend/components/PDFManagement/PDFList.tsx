@@ -61,33 +61,33 @@ export default function PDFList({
   };
   
   // Toggle active status
-  const toggleActive = async (fileId: string, currentActive: boolean) => {
-    if (!token) return;
+const toggleActive = async (fileId: string, currentActive: boolean) => {
+  if (!token) return;
+  
+  setUpdatingActive(fileId);
+  
+  try {
+    const response = await fetch(`${backend.serverUrl}/pdf/${fileId}/toggle-active`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ active: !currentActive })
+    });
     
-    setUpdatingActive(fileId);
-    
-    try {
-      const response = await fetch(`${backend.serverUrl}/pdf/${fileId}/toggle-active`, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ active: !currentActive })
-      });
-      
-      if (!response.ok) {
-        throw new Error('Failed to update file status');
-      }
-      
-      // Refresh file list
-      onDeleteSuccess();
-    } catch (error) {
-      console.error('Error toggling file active status:', error);
-    } finally {
-      setUpdatingActive(null);
+    if (!response.ok) {
+      throw new Error('Failed to update file status');
     }
-  };
+    
+    // Refresh file list
+    onDeleteSuccess();
+  } catch (error) {
+    console.error('Error toggling file active status:', error);
+  } finally {
+    setUpdatingActive(null);
+  }
+};
   
   // Handle download - using the working implementation from the provided file
   const handleDownload = async (fileId: string, fileName: string) => {
