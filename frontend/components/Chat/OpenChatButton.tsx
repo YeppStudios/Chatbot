@@ -12,7 +12,7 @@ const OpenChatButton = ({
   return (
     <motion.div
       onClick={() => setIsOpen((prev) => !prev)}
-      className="absolute bottom-0 right-0 cursor-pointer"
+      className="absolute bottom-0 right-0 cursor-pointer z-[60]"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -23,11 +23,16 @@ const OpenChatButton = ({
         {isOpen ? (
           <motion.div
             key="close-button"
-            className="bg-purple-chat rounded-md p-[2px]"
+            className="bg-purple-chat rounded-full p-3 shadow-lg"
             initial={{ rotate: -90, opacity: 0 }}
             animate={{ rotate: 0, opacity: 1 }}
             exit={{ rotate: 90, opacity: 0 }}
             transition={{ duration: 0.2 }}
+            style={{
+              position: 'absolute',
+              bottom: '-10px',
+              right: '-10px',
+            }}
           >
             <X className="text-white w-5 h-5" />
           </motion.div>

@@ -105,7 +105,7 @@ const ChatForm = () => {
 
   return (
     <div className="border-t border-gray-100 bg-white">
-      <form onSubmit={handleSubmit} className="pt-2 px-3 pb-1">
+      <form onSubmit={handleSubmit} className="pt-2 px-1 sm:px-3 pb-1">
         <div className="flex items-center">
           <div className="relative w-full">
             <textarea
@@ -121,7 +121,7 @@ const ChatForm = () => {
           </div>
           <button
             type="submit"
-            className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 min-w-10 h-10 -mt-1.5 flex items-center justify-center"
+            className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 sm:ml-4 min-w-10 h-10 -mt-1.5 flex items-center justify-center"
             disabled={(isOpenAIRoute ? !threadId : !conversationId) || !inputValue.trim()}
           >
             <Image
