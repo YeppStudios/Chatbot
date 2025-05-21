@@ -38,7 +38,7 @@ class LLMConfig(BaseModel):
     temperature: float = 0.7
     max_tokens: int = 1000
     system_message: Optional[str] = (
-        "You are a helpful AI assistant that specializes in educating users about the medical equipment produced by Metrum Cyroflex as well as related treatments and topics. You respond only based on the course and book content. By default you speak fluently in Polish, but when asked in different language you switch to user language. Sound natural and give direct answers.\n\n\nNever greet user. Rather ask followup question. \n\nYou respond only to questions related to Metrum Cyroflex, related treatments and topics.\n\nYou reply only based on the facts you can find in retrieved content and nothing else.\n\nDo not refer to uploaded files, rather treat it as your knowledgebase. \n If you feel like the question user has asked requires extra course or Metrum Cyroflex knowledge, ALWAYS call search_vector_store function."
+        "You are a helpful AI assistant that can answer questions on any topic based on the content in your knowledge base and uploaded PDF documents. By default you speak fluently in Polish, but when asked in different language you switch to user language. Sound natural and give direct answers.\n\n\nNever greet user. Rather ask followup question. \n\nYou reply based on the facts you can find in retrieved content. Do not refer to uploaded files explicitly, just treat them as your knowledge source.\n\nALWAYS use the search_vector_store function to find relevant information for user questions. If no specific information is found, you can answer based on your general knowledge, but prioritize information from retrieved content.\n\nRemember you can discuss ANY topic the user asks about, not just medical equipment. The content in your vectors will determine what specific information you have available."
     )
 
 class LLMSearchRequest(BaseModel):
@@ -72,6 +72,7 @@ async def llm_search(request: LLMSearchRequest):
             query=request.query,
             vector_config=request.vector_store
         )
+        logger.info(f"Search results: {search_results}")
         context = vector_search_service.prepare_context(search_results)
         messages = [
             {"role": "system", "content": f"Context:\n{context}"},
@@ -157,16 +158,30 @@ async def llm_search_with_conversation(
         if isinstance(initial_response, dict) and initial_response.get("type") == "function_call" and initial_response["name"] == "search_vector_store":
             search_query = json.loads(initial_response["arguments"])["query"]
             logger.info(f"[{request_id}] Search tool called with query: {search_query}")
+            
+            # Explicitly log that we're searching both regular and PDF content
+            logger.info(f"[{request_id}] Searching both regular content and PDF files namespace")
+            
             search_results = await vector_search_service.perform_vector_search(
                 query=search_query,
                 vector_config=request.vector_store
             )
+            
+            # Log what we found
+            logger.info(f"[{request_id}] Found {len(search_results)} results")
+            for i, result in enumerate(search_results):
+                logger.info(f"[{request_id}] Result {i+1}: from {result.get('filename', 'unknown')} with score {result['score']}")
+            
             context = vector_search_service.prepare_context(search_results)
+            # Log the context that will be sent to the LLM
+            logger.info(f"[{request_id}] Context length: {len(context)} characters")
+            
+            # Modify how we provide context to make PDFs more prominent
             last_user_message = message_list[-1]
             if last_user_message["role"] == "user":
                 message_list[-1] = {
                     "role": "user",
-                    "content": f"Memory Recall:\n{context}\n\nUser query: \n{last_user_message['content']}"
+                    "content": f"The following information was retrieved from our knowledge base which includes course materials and uploaded PDF files:\n<KNOWLEDGE_BASE>\n{context}\n</KNOWLEDGE_BASE>\n\nBased on this information, please answer this question: \n<QUESTION>\n{last_user_message['content']}\n</QUESTION>"
                 }
         
         # Step 6: Final LLM call with system_message in instructions/system
@@ -175,7 +190,7 @@ async def llm_search_with_conversation(
             stream=request.stream,
             temperature=request.llm.temperature,
             max_tokens=request.llm.max_tokens,
-            instructions="You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. You are very helpful AI assistant. Treat memory recall as your memory based on trained courses and book meterials. Apply nice, clean and readable text formatting."
+            instructions="You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. You are very helpful AI assistant. Treat memory recall as your memory based on trained courses and uploaded case studies. Apply nice, clean and readable text formatting."
         )
         response = await llm.generate_response(message_list)
         

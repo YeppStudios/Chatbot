@@ -13,5 +13,5 @@ export default withAuth({
 });
 
 export const config = {
-  matcher: ["/conversations-history/:path*"],
+  matcher: ["/conversations-history/:path*", "/pdf-management/:path*"],
 };

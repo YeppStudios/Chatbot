@@ -1,38 +1,50 @@
-# pdf_extractor.py
+# Update in backend/chatbot/services/text_extract/pdf_extractor.py
+# Make sure the OCR logic is working well
 
-import base64
+import os
 import io
 import logging
-from pathlib import Path
-from typing import Optional
+from typing import Optional, BinaryIO, Union
 
 import pytesseract
 from pdf2image import convert_from_bytes
 from pypdf import PdfReader
 
-from .base import BaseExtractor  # or from .base import BaseFileExtractor; adapt to your naming
+from .base import BaseExtractor
 
 class PDFExtractor(BaseExtractor):
+    """Extract text from PDF files, with OCR capability for images/scanned documents."""
 
     def __init__(self, logger: Optional[logging.Logger] = None, text_threshold: int = 50):
         self.logger = logger or logging.getLogger(__name__)
-        self.text_threshold = text_threshold
+        self.text_threshold = text_threshold  # Minimum character count to consider embedded text sufficient
 
-    def extract_text(self, file: io.BytesIO) -> str:
-        pdf_bytes = file.read()
-        
-        # 1) Extract embedded text using pypdf
-        extracted_text = self._extract_embedded_text(pdf_bytes)
+    def extract_text(self, file: Union[BinaryIO, io.BytesIO]) -> str:
+        """Extract text from a PDF file, using OCR if necessary."""
+        pdf_bytes = file.read() if hasattr(file, 'read') else file
+        if isinstance(pdf_bytes, str):
+            # If it's a file path
+            with open(pdf_bytes, 'rb') as f:
+                pdf_bytes = f.read()
 
-        if len(extracted_text.strip()) > self.text_threshold:
-            # Sufficient embedded text found -> pass-through (base64-encoded raw PDF).
-            self.logger.info("Sufficient embedded text found; returning pass-through PDF data.")
-            b64_data = base64.b64encode(pdf_bytes).decode("utf-8")
-            return b64_data
+        # 1) Try extracting embedded text using pypdf
+        embedded_text = self._extract_embedded_text(pdf_bytes)
+
+        # Check if embedded text is sufficient (at least text_threshold characters)
+        if len(embedded_text.strip()) > self.text_threshold:
+            self.logger.info("Sufficient embedded text found; returning extracted text.")
+            return embedded_text
         else:
-            # 2) Otherwise, do OCR
+            # 2) If insufficient text found, run OCR
             self.logger.info("Minimal embedded text found; attempting OCR...")
             ocr_text = self._run_ocr(pdf_bytes)
+            
+            # If OCR also found very little text, try combining results
+            if len(ocr_text.strip()) < self.text_threshold:
+                combined_text = f"{embedded_text}\n\n{ocr_text}"
+                self.logger.info(f"Combined text length: {len(combined_text)}")
+                return combined_text.strip()
+                
             return ocr_text
 
     def _extract_embedded_text(self, pdf_bytes: bytes) -> str:
@@ -58,8 +70,9 @@ class PDFExtractor(BaseExtractor):
             self.logger.error(f"Error converting PDF to images for OCR: {str(e)}")
             return ""
 
-        for img in images:
+        for i, img in enumerate(images):
             try:
+                self.logger.info(f"Running OCR on page {i+1}")
                 text = pytesseract.image_to_string(img)
                 extracted.append(text)
             except Exception as e:
