@@ -110,7 +110,7 @@ const ChatForm = () => {
           <div className="relative w-full">
             <textarea
               ref={textareaRef}
-              placeholder="Zadaj pytanie..."
+              placeholder="Ask question..."
               className="w-full p-2 shadow-inner outline-none shadow-black/15 border border-black/5 bg-slate-50 rounded-lg resize-none min-h-10 overflow-y-auto"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
