@@ -144,7 +144,7 @@ const PDFManagement = () => {
           className="bg-purple-chat hover:bg-purple-chat/90 text-white px-4 py-2 rounded-md flex items-center gap-2 font-medium transition-colors"
         >
           <PlusCircle size={18} />
-          Dodaj plik PDF
+          Dodaj pliki PDF
         </button>
       </div>
       

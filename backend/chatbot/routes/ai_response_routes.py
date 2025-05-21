@@ -181,7 +181,7 @@ async def llm_search_with_conversation(
             if last_user_message["role"] == "user":
                 message_list[-1] = {
                     "role": "user",
-                    "content": f"The following information was retrieved from our knowledge base which includes course materials and uploaded PDF files:\n\n{context}\n\nBased on this information, please answer this question: {last_user_message['content']}"
+                    "content": f"The following information was retrieved from our knowledge base which includes course materials and uploaded PDF files:\n<KNOWLEDGE_BASE>\n{context}\n</KNOWLEDGE_BASE>\n\nBased on this information, please answer this question: \n<QUESTION>\n{last_user_message['content']}\n</QUESTION>"
                 }
         
         # Step 6: Final LLM call with system_message in instructions/system
@@ -190,7 +190,7 @@ async def llm_search_with_conversation(
             stream=request.stream,
             temperature=request.llm.temperature,
             max_tokens=request.llm.max_tokens,
-            instructions="You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. You are very helpful AI assistant. Treat memory recall as your memory based on trained courses and book meterials. Apply nice, clean and readable text formatting."
+            instructions="You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. You are very helpful AI assistant. Treat memory recall as your memory based on trained courses and uploaded case studies. Apply nice, clean and readable text formatting."
         )
         response = await llm.generate_response(message_list)
         

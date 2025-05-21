@@ -23,114 +23,105 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 # Ensure the PDF storage directory exists
 os.makedirs(PDF_STORAGE_PATH, exist_ok=True)
 
-@router.post("/pdf", response_model=PDFFile)
+@router.post("/pdf", response_model=List[PDFFile])
 async def upload_pdf(
-    file: UploadFile = File(...),
+    files: List[UploadFile] = File(...),
     token: str = Depends(oauth2_scheme)
 ):
-    """Upload a PDF file, process it for the RAG system, and store metadata."""
+    """Upload multiple PDF files, process them for the RAG system, and store metadata."""
     user_id = verify_access_token(token)
     
-    # Validate file format
-    if file.content_type != "application/pdf":
-        raise HTTPException(status_code=400, detail="Plik musi być w formacie PDF")
-    
-    # Check file size before processing (10MB limit)
     MAX_SIZE = 10 * 1024 * 1024  # 10MB
-    file_size = 0
-    try:
-        # Get file size by reading a small chunk first to get content-length
-        chunk = await file.read(1024)
-        file_size = file.size
-        await file.seek(0)  # Reset file position
-        
-        if file_size > MAX_SIZE:
-            raise HTTPException(
-                status_code=413,  # Payload Too Large
-                detail=f"Rozmiar pliku przekracza maksymalny limit 10MB (przesłano: {file_size / (1024 * 1024):.2f}MB)"
-            )
-    except Exception as e:
-        if isinstance(e, HTTPException):
-            raise e
-        raise HTTPException(status_code=500, detail=f"Błąd podczas sprawdzania rozmiaru pliku: {str(e)}")
+    processed_files = []
     
-    # Save file to disk
-    file_path = os.path.join(PDF_STORAGE_PATH, file.filename)
-    try:
-        with open(file_path, "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Nie udało się zapisać pliku: {str(e)}")
-    
-    # Extract text from PDF
-    try:
-        extractor = PDFExtractor()
-        with open(file_path, "rb") as pdf_file:
-            extracted_text = extractor.extract_text(pdf_file)
-        
-        # Check if text extraction was successful
-        if not extracted_text or len(extracted_text.strip()) < 50:  # Minimal text threshold
-            # Clean up the file as it's not usable
-            if os.path.exists(file_path):
-                os.remove(file_path)
-                
-            raise HTTPException(
-                status_code=422,  # Unprocessable Entity
-                detail="Plik PDF zawiera niewystarczającą ilość tekstu do przetworzenia. Plik może zawierać tylko obrazy, być słabo zeskanowany lub zaszyfrowany."
-            )
-        
-        # Process for RAG (chunking and vectorization)
-        chunks = text_splitter(extracted_text)
-
-        print(f"Created {len(chunks)} chunks from PDF '{file.filename}'")
-        
-        if not chunks or len(chunks) == 0:
-            # Clean up the file as it's not usable
-            if os.path.exists(file_path):
-                os.remove(file_path)
-                
-            raise HTTPException(
-                status_code=422,
-                detail="Nie można wyodrębnić sensownych fragmentów z dokumentu. Tekst może być zbyt krótki lub sformatowany w nietypowy sposób."
-            )
-        
-        # Prepare chunk tuples with filename
-        chunk_tuples = [(chunk, file.filename) for chunk in chunks]
-        
-        print(f"First chunk: {chunks[0][:100]}...")
-        print(f"Adding filename '{file.filename}' to each chunk's metadata")
-
-        # Upsert to Pinecone
-        pinecone_upsert_chunks(
-            chunks=chunk_tuples, 
-            index_name="pdf-vectors",  # Use your existing index
-            namespace="pdf_files"  
-        )
-        
-        # Save file metadata to MongoDB
-        pdf_file = PDFFile(
-            name=file.filename,
-            size=file_size,
-            date_added=datetime.utcnow(),
-            user_id=user_id,
-            vectorized=True,
-            path=file_path,
-            active=True 
-        )
-        
-        result = await db['pdf_files'].insert_one(pdf_file.dict(by_alias=True))
-        pdf_file.id = result.inserted_id
-        
-        return pdf_file
-    
-    except Exception as e:
-        # Clean up file if processing fails
-        if os.path.exists(file_path):
-            os.remove(file_path)
+    for file in files:
+        try:
+            # Validate file format
+            if file.content_type != "application/pdf":
+                continue  # Skip non-PDF files
             
-        if isinstance(e, HTTPException):
-            raise e
-        raise HTTPException(status_code=500, detail=f"Przetwarzanie PDF nie powiodło się: {str(e)}")
+            # Check file size before processing
+            file_size = 0
+            try:
+                # Get file size by reading a small chunk first to get content-length
+                chunk = await file.read(1024)
+                file_size = file.size
+                await file.seek(0)  # Reset file position
+                
+                if file_size > MAX_SIZE:
+                    continue  # Skip files exceeding size limit
+            except Exception as e:
+                continue  # Skip files with size checking errors
+            
+            # Save file to disk
+            file_path = os.path.join(PDF_STORAGE_PATH, file.filename)
+            try:
+                with open(file_path, "wb") as buffer:
+                    shutil.copyfileobj(file.file, buffer)
+            except Exception as e:
+                continue  # Skip files with saving errors
+            
+            # Extract text from PDF
+            try:
+                extractor = PDFExtractor()
+                with open(file_path, "rb") as pdf_file:
+                    extracted_text = extractor.extract_text(pdf_file)
+                
+                # Check if text extraction was successful
+                if not extracted_text or len(extracted_text.strip()) < 50:  # Minimal text threshold
+                    # Clean up the file as it's not usable
+                    if os.path.exists(file_path):
+                        os.remove(file_path)
+                    continue  # Skip files with insufficient text
+                
+                # Process for RAG (chunking and vectorization)
+                chunks = text_splitter(extracted_text)
+                
+                if not chunks or len(chunks) == 0:
+                    # Clean up the file as it's not usable
+                    if os.path.exists(file_path):
+                        os.remove(file_path)
+                    continue  # Skip files with no chunks
+                
+                # Prepare chunk tuples with filename
+                chunk_tuples = [(chunk, file.filename) for chunk in chunks]
+                
+                # Upsert to Pinecone
+                pinecone_upsert_chunks(
+                    chunks=chunk_tuples, 
+                    index_name="pdf-vectors",  # Use your existing index
+                    namespace="pdf_files"  
+                )
+                
+                # Save file metadata to MongoDB
+                pdf_file = PDFFile(
+                    name=file.filename,
+                    size=file_size,
+                    date_added=datetime.utcnow(),
+                    user_id=user_id,
+                    vectorized=True,
+                    path=file_path,
+                    active=True 
+                )
+                
+                result = await db['pdf_files'].insert_one(pdf_file.dict(by_alias=True))
+                pdf_file.id = result.inserted_id
+                processed_files.append(pdf_file)
+                
+            except Exception as e:
+                # Clean up file if processing fails
+                if os.path.exists(file_path):
+                    os.remove(file_path)
+                continue  # Skip files with processing errors
+                
+        except Exception as e:
+            # General error handling for this file
+            continue
+    
+    if not processed_files:
+        raise HTTPException(status_code=400, detail="Nie udało się przetworzyć żadnego z przesłanych plików PDF.")
+    
+    return processed_files
 
 @router.get("/pdfs")
 async def list_pdfs(

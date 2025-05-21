@@ -38,7 +38,7 @@ export const askLlmConversation = async (
       index_name: "pdf-vectors", // Important: This is your Pinecone index name
       namespace: "pdf_files", // Empty string triggers search in BOTH default and pdf_files namespaces
       top_k: 5,
-      hybrid: true
+      hybrid: false
     } as VectorStoreConfig,
     llm: {
       provider: llmProvider,
