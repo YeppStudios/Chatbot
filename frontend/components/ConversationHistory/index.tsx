@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import React, { useState, useEffect } from "react";
 import ConversationTitle from "./ConversationTitle";
 import ConversationsList from "./ConversationsList";
@@ -80,6 +81,9 @@ const ConversationHistory = () => {
         setCurrentPage={setCurrentPage}
         totalPages={totalPages}
       />
+      <Link href="/pdf-management" className="text-purple-chat hover:text-purple-chat/80 font-medium">
+        Manage PDF Files
+      </Link>
     </div>
   );
 };
