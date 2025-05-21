@@ -55,7 +55,7 @@ const ChatWindow = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="relative w-full sm:h-[85vh] h-[95vh] bg-white rounded-lg shadow-xl flex flex-col overflow-hidden"
+            className="relative w-full sm:h-[92vh] sm:-mt-[4vh] h-[95vh] bg-white rounded-xl shadow-xl flex flex-col overflow-hidden"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1, transition: { stiffness: 300, damping: 25 } }}
             exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
@@ -86,7 +86,7 @@ const ChatWindow = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
             {/* Message list container with scrollable area */}
             <div className="flex-1 relative overflow-hidden px-4 py-8">
-              <div className="absolute inset-0 px-4 py-8 max-w-4xl mx-auto">
+              <div className="absolute inset-0 px-4 py-0 max-w-5xl mx-auto">
                 <MessagesList />
               </div>
               <div className="pointer-events-none absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent z-10" />
@@ -94,8 +94,8 @@ const ChatWindow = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             </div>
             
             {/* Input container that can expand independently */}
-            <div className="z-20 border-t p-2 sm:p-2 sm:py-2">
-              <div className="max-w-4xl mx-auto">
+            <div className="z-20 border-t p-2 sm:p-2 sm:py-">
+              <div className="max-w-5xl mx-auto">
                 <ChatForm />
               </div>
             </div>
