@@ -13,6 +13,12 @@ export const getConversation = async (conversationId: string) => {
     );
 
     if (!conversationResponse.ok) {
+      // Handle specific error cases
+      if (conversationResponse.status === 404) {
+        console.warn("Conversation not found or has no messages");
+        return null;
+      }
+      
       throw new Error(`Failed to fetch conversation: ${conversationResponse.status}`);
     }
 

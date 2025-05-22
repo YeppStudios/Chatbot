@@ -1,6 +1,7 @@
 from datetime import datetime
 import traceback
 from typing import Any, Dict, List, Optional
+import re
 from chatbot.models.request.conversation import ConversationCreateRequest
 from chatbot.models.user import User
 from chatbot.models.assistant import Assistant
@@ -55,8 +56,11 @@ async def get_conversation(conversation_id: str, messageLimit: int = Query(20, g
         # Convert ObjectId to string for serialization
         conversation = serialize_doc(conversation)
         
+        # Check if the conversation has messages
+        has_messages = 'messages' in conversation and conversation['messages']
+        
         # Sort messages by timestamp if they exist
-        if 'messages' in conversation and conversation['messages']:
+        if has_messages:
             conversation['messages'].sort(key=lambda x: x.get('timestamp', ''))
             
             # Limit the number of messages if needed
@@ -96,8 +100,15 @@ async def get_conversation(conversation_id: str, messageLimit: int = Query(20, g
                         {"_id": ObjectId(conversation_id)},
                         {"$set": {"messages": messages}}
                     )
+                    
+                    # Check if we successfully fetched messages
+                    has_messages = len(messages) > 0
                 except Exception as e:
                     print(f"Could not fetch messages from OpenAI: {str(e)}")
+            
+            # If we still have no messages after trying OpenAI, return 404
+            if not has_messages:
+                raise HTTPException(status_code=404, detail="Conversation has no messages")
         
         return conversation
     except Exception as e:

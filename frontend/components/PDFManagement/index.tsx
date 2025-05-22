@@ -6,6 +6,7 @@ import { backend } from "@/config/apiConfig";
 import PDFUploadModal from "./PDFUploadModal";
 import PDFList from "./PDFList";
 import PDFFilters from "./PDFFilters";
+import Navigation from "@/components/ui/Navigation";
 import { getAuthToken } from "@/utils/auth/getToken";
 import { PlusCircle } from "lucide-react";
 
@@ -170,6 +171,8 @@ const PDFManagement = () => {
         searchQuery={searchQuery}
       />
       
+      <Navigation />
+      
       {/* Pagination */}
       <div className="fixed bottom-0 left-0 right-0 py-5 px-8 bg-white w-full shadow-lg border-t border-gray-200">
         <div className="flex justify-center space-x-3">
@@ -179,13 +182,13 @@ const PDFManagement = () => {
             className={`px-4 py-2 border rounded-md flex items-center gap-1 transition-colors ${
               currentPage <= 1
                 ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
-                : "bg-white text-gray-700 hover:bg-indigo-50 border-indigo-200 hover:text-indigo-700"
+                : "bg-white text-gray-700 hover:bg-purple-50 border-purple-200 hover:text-purple-700"
             }`}
           >
             Poprzednia
           </button>
           
-          <span className="px-4 py-2 bg-indigo-50 border border-indigo-100 rounded-md text-indigo-800 font-medium">
+          <span className="px-4 py-2 bg-purple-50 border border-purple-100 rounded-md text-purple-800 font-medium">
             Strona {currentPage} z {totalPages || 1}
           </span>
           
@@ -195,7 +198,7 @@ const PDFManagement = () => {
             className={`px-4 py-2 border rounded-md flex items-center gap-1 transition-colors ${
               currentPage >= totalPages
                 ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
-                : "bg-white text-gray-700 hover:bg-indigo-50 border-indigo-200 hover:text-indigo-700"
+                : "bg-white text-gray-700 hover:bg-purple-50 border-purple-200 hover:text-purple-700"
             }`}
           >
             Następna

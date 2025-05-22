@@ -1,11 +1,11 @@
 "use client";
 
-import Link from 'next/link';
 import React, { useState, useEffect } from "react";
 import ConversationTitle from "./ConversationTitle";
 import ConversationsList from "./ConversationsList";
 import ConversationDrawer from "./ConversationDrawer";
 import ConversationHistoryFooter from "./ConversationHistoryFooter";
+import Navigation from "@/components/ui/Navigation";
 import { getAuthToken } from "@/utils/auth/getToken";
 import useGetConversations from "@/hooks/useGetConverstaions";
 import useConversationStore from "@/store/useConversationStore";
@@ -76,14 +76,12 @@ const ConversationHistory = () => {
         handleDrawerClose={setIsDrawerOpen}
         conversationId={selectedConversation}
       />
+      <Navigation />
       <ConversationHistoryFooter
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         totalPages={totalPages}
       />
-      <Link href="/pdf-management" className="text-purple-chat hover:text-purple-chat/80 font-medium">
-        Manage PDF Files
-      </Link>
     </div>
   );
 };
