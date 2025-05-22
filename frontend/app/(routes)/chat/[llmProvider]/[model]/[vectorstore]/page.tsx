@@ -22,8 +22,8 @@ const Chat = () => {
 
   return (
     <div
-      className={`fixed bottom-0 right-0 ${
-        isOpen ? "w-auto h-auto" : "w-[60px] h-[60px]"
+      className={`fixed bottom-5 right-5 ${
+        isOpen ? "w-auto h-auto" : "w-[100px] h-[100px]"
       }`}
     >
       <ChatWindow isOpen={isOpen} onClose={handleClose} />
