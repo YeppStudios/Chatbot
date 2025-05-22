@@ -16,7 +16,7 @@ const OpenChatButton = ({
       onClick={() => setIsOpen((prev) => !prev)}
       className={cn(
         "absolute bottom-0 right-0 cursor-pointer z-[60]",
-        !isOpen && "-bottom-[30px] -right-[30px] md:bottom-0 md:right-0"
+        isOpen && "-bottom-[30px] -right-[30px] md:bottom-0 md:right-0"
       )}
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
