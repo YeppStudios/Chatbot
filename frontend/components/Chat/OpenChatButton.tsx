@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/utils/cn";
 
 const OpenChatButton = ({
   setIsOpen,
@@ -13,7 +14,10 @@ const OpenChatButton = ({
     <motion.div
       id="open-button-chat"
       onClick={() => setIsOpen((prev) => !prev)}
-      className="absolute bottom-0 right-0 cursor-pointer z-[60]"
+      className={cn(
+        "absolute bottom-0 right-0 cursor-pointer z-[60]",
+        !isOpen && "-bottom-[10px] -right-[10px]"
+      )}
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -30,9 +34,9 @@ const OpenChatButton = ({
             exit={{ rotate: 90, opacity: 0 }}
             transition={{ duration: 0.2 }}
             style={{
-              position: 'absolute',
-              bottom: '-10px',
-              right: '-10px',
+              position: "absolute",
+              bottom: "-10px",
+              right: "-10px",
             }}
           >
             <X className="text-white w-5 h-5" />
