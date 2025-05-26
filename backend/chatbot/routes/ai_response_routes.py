@@ -181,7 +181,7 @@ async def llm_search_with_conversation(
             if last_user_message["role"] == "user":
                 message_list[-1] = {
                     "role": "user",
-                    "content": f"The following information was retrieved from our knowledge base which includes course materials and uploaded PDF files:\n<KNOWLEDGE_BASE>\n{context}\n</KNOWLEDGE_BASE>\n\nBased on this information, please answer this question: \n<QUESTION>\n{last_user_message['content']}\n</QUESTION>"
+                    "content": f"The following information was retrieved from our knowledge base which includes course materials and uploaded PDF files:\n<KNOWLEDGE_BASE>\n{context}\n</KNOWLEDGE_BASE>\n\nBased on this information and your expertise knowledge, please answer user question: \n<QUESTION>\n{last_user_message['content']}\n</QUESTION>"
                 }
         
         # Step 6: Final LLM call with system_message in instructions/system
@@ -190,7 +190,14 @@ async def llm_search_with_conversation(
             stream=request.stream,
             temperature=request.llm.temperature,
             max_tokens=request.llm.max_tokens,
-            instructions="You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. You are a very helpful AI assistant for their medical equipment distributors. You do not advise them to visit doctor, rather just educate them as they need to know about the use cases and the equipment. You respond in language of user question. Treat memory recall as your memory based on trained courses and uploaded case studies. Apply nice, clean and readable text formatting."
+            instructions=f"""
+            You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. 
+            You are a very helpful AI assistant for their medical equipment distributors. 
+            You do not advise them to visit doctor, rather just educate them as they need to know about the use cases and the equipment. 
+            You respond in language of user question. Treat memory recall as your memory based on uploaded case studies. As an expert in the field, be sure to fact-check them before you respond so that all information provided is correct. 
+            Apply nice, clean and readable text formatting.
+            
+            """
         )
         response = await llm.generate_response(message_list)
         
