@@ -43,8 +43,8 @@ export default function PDFUploadModal({
         return false;
       }
       
-      // Check file size (10MB limit)
-      const MAX_SIZE = 10 * 1024 * 1024; // 10MB
+      // Check file size (25MB limit)
+      const MAX_SIZE = 25 * 1024 * 1024; // 25MB
       if (file.size > MAX_SIZE) {
         return false;
       }
@@ -53,7 +53,7 @@ export default function PDFUploadModal({
     });
     
     if (validFiles.length === 0 && selectedFiles.length > 0) {
-      setError("Wszystkie wybrane pliki są nieprawidłowe (tylko pliki PDF do 10MB są akceptowane)");
+      setError("Wszystkie wybrane pliki są nieprawidłowe (tylko pliki PDF do 25MB są akceptowane)");
       setErrorType("general");
       return;
     }
@@ -161,7 +161,7 @@ export default function PDFUploadModal({
   const getErrorHelp = () => {
     switch (errorType) {
       case "size":
-        return "Spróbuj skompresować pliki PDF lub prześlij mniejsze pliki. Maksymalny rozmiar pliku to 10MB.";
+        return "Spróbuj skompresować pliki PDF lub prześlij mniejsze pliki. Maksymalny rozmiar pliku to 25MB.";
       case "text":
         return "System nie mógł wyodrębnić wystarczającej ilości tekstu z przesłanych plików PDF. Upewnij się, że nie zawierają tylko obrazów, nie są chronione hasłem ani mocno zeskanowane. Jakość OCR ma znaczenie w przypadku skanowanych dokumentów.";
       default:
@@ -251,7 +251,7 @@ export default function PDFUploadModal({
               </p>
               <p className="text-sm text-gray-500 mt-2 flex items-center justify-center">
                 <Info size={14} className="mr-1" />
-                Obsługiwane są tylko pliki PDF do 10MB
+                Obsługiwane są tylko pliki PDF do 25MB
               </p>
             </div>
           )}

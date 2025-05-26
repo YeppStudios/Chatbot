@@ -31,7 +31,7 @@ async def upload_pdf(
     """Upload multiple PDF files, process them for the RAG system, and store metadata."""
     user_id = verify_access_token(token)
     
-    MAX_SIZE = 10 * 1024 * 1024  # 10MB
+    MAX_SIZE = 25 * 1024 * 1024  # 25MB
     processed_files = []
     
     for file in files:
