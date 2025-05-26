@@ -94,7 +94,7 @@ const ChatWindow = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             </div>
             
             {/* Input container that can expand independently */}
-            <div className="z-20 border-t p-2 sm:p-2 sm:py-">
+            <div className="z-20 p-2 sm:p-2 sm:py-">
               <div className="max-w-5xl mx-auto">
                 <ChatForm />
               </div>

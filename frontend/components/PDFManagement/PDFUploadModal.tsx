@@ -117,25 +117,28 @@ export default function PDFUploadModal({
         let errorMessage = "Przesyłanie nie powiodło się";
         let errorTypeValue: "size" | "text" | "general" = "general";
         
-        try {
-          // Try to parse JSON error
-          const errorData = JSON.parse(errorText);
-          errorMessage = errorData.detail || "Przesyłanie nie powiodło się";
-          
-          // Determine error type
-          if (response.status === 413 || errorMessage.includes("size exceeds")) {
-            errorTypeValue = "size";
-          } else if (response.status === 422 || errorMessage.includes("insufficient text") || errorMessage.includes("no extractable text")) {
-            errorTypeValue = "text";
-          }
-        } catch (e) {
-          // If not valid JSON, use status code to determine error type
-          if (response.status === 413) {
-            errorTypeValue = "size";
-            errorMessage = "Rozmiar plików przekracza maksymalny limit.";
-          } else if (response.status === 422) {
-            errorTypeValue = "text";
-            errorMessage = "Pliki zawierają niewystarczającą ilość tekstu do przetworzenia.";
+        // Handle nginx 413 error specifically
+        if (response.status === 413) {
+          errorTypeValue = "size";
+          errorMessage = "Rozmiar plików przekracza limit serwera. Skonfiguruj nginx aby obsługiwał większe pliki lub prześlij mniejsze pliki.";
+        } else {
+          try {
+            // Try to parse JSON error
+            const errorData = JSON.parse(errorText);
+            errorMessage = errorData.detail || "Przesyłanie nie powiodło się";
+            
+            // Determine error type
+            if (errorMessage.includes("size exceeds")) {
+              errorTypeValue = "size";
+            } else if (response.status === 422 || errorMessage.includes("insufficient text") || errorMessage.includes("no extractable text")) {
+              errorTypeValue = "text";
+            }
+          } catch (e) {
+            // If not valid JSON, use status code to determine error type
+            if (response.status === 422) {
+              errorTypeValue = "text";
+              errorMessage = "Pliki zawierają niewystarczającą ilość tekstu do przetworzenia.";
+            }
           }
         }
         
@@ -161,7 +164,7 @@ export default function PDFUploadModal({
   const getErrorHelp = () => {
     switch (errorType) {
       case "size":
-        return "Spróbuj skompresować pliki PDF lub prześlij mniejsze pliki. Maksymalny rozmiar pliku to 25MB.";
+        return "Spróbuj skompresować pliki PDF lub prześlij mniejsze pliki. Maksymalny rozmiar pliku to 25MB. Jeśli problem się powtarza, może być to ograniczenie serwera nginx - skontaktuj się z administratorem.";
       case "text":
         return "System nie mógł wyodrębnić wystarczającej ilości tekstu z przesłanych plików PDF. Upewnij się, że nie zawierają tylko obrazów, nie są chronione hasłem ani mocno zeskanowane. Jakość OCR ma znaczenie w przypadku skanowanych dokumentów.";
       default:

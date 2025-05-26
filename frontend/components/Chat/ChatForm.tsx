@@ -104,24 +104,27 @@ const ChatForm = () => {
   };
 
   return (
-    <div className="border-t border-gray-100 bg-white">
-      <form onSubmit={handleSubmit} className="pt-2 px-1 sm:px-3 pb-1">
-        <div className="flex items-center">
-          <div className="relative w-full">
-            <textarea
-              ref={textareaRef}
-              placeholder="Ask question..."
-              className="w-full p-2 shadow-inner outline-none shadow-black/15 border border-black/5 bg-slate-50 rounded-lg resize-none min-h-10 overflow-y-auto"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              onKeyDown={handleKeyDown}
-              rows={1}
-              style={{ height: '40px', lineHeight: '24px', paddingTop: '8px', paddingBottom: '8px' }}
-            />
-          </div>
+    <div className="bg-white">
+      <form onSubmit={handleSubmit} className="pt-2 px-1 sm:p-3 pb-1 bg-purple-50 rounded-lg">
+        <div className="relative w-full mb-1">
+          <textarea
+            ref={textareaRef}
+            placeholder="Ask question..."
+            className="w-full p-2 shadow-inner outline-none shadow-black/15 border border-black/5 bg-white-50 rounded-lg resize-none min-h-10 overflow-y-auto"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={handleKeyDown}
+            rows={1}
+            style={{ height: '40px', lineHeight: '24px', paddingTop: '8px', paddingBottom: '8px' }}
+          />
+        </div>
+        <div className="flex items-center justify-between">
+          <p className="text-xs text-gray-400 flex-1 p-1">
+            Please note that this is a test version of the chatbot. Not all responses may be fully accurate yet.<br /> If you notice any inconsistencies, please let us know to help improve this tool.
+          </p>
           <button
             type="submit"
-            className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 sm:ml-4 min-w-10 h-10 -mt-1.5 flex items-center justify-center"
+            className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 sm:ml-4 min-w-10 h-10 flex items-center justify-center"
             disabled={(isOpenAIRoute ? !threadId : !conversationId) || !inputValue.trim()}
           >
             <Image
