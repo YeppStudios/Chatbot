@@ -29,15 +29,36 @@ async def upload_pdf(
     token: str = Depends(oauth2_scheme)
 ):
     """Upload multiple PDF files, process them for the RAG system, and store metadata."""
-    user_id = verify_access_token(token)
+    try:
+        user_id = verify_access_token(token)
+    except Exception as e:
+        print(f"Token verification failed: {str(e)}")
+        raise HTTPException(status_code=401, detail="Invalid or expired token")
     
     MAX_SIZE = 25 * 1024 * 1024  # 25MB
     processed_files = []
+    errors = []  # Track individual file errors
     
-    for file in files:
+    print(f"PDF_STORAGE_PATH: {PDF_STORAGE_PATH}")
+    print(f"Received {len(files)} files for processing")
+    
+    # Ensure storage directory exists
+    try:
+        os.makedirs(PDF_STORAGE_PATH, exist_ok=True)
+        print(f"Storage directory ensured: {PDF_STORAGE_PATH}")
+    except Exception as e:
+        print(f"Failed to create storage directory: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Storage directory creation failed: {str(e)}")
+    
+    for i, file in enumerate(files):
         try:
+            print(f"Processing file {i+1}/{len(files)}: {file.filename}")
+            
             # Validate file format
             if file.content_type != "application/pdf":
+                error_msg = f"File {file.filename}: Invalid content type {file.content_type}"
+                print(error_msg)
+                errors.append(error_msg)
                 continue  # Skip non-PDF files
             
             # Check file size before processing
@@ -48,52 +69,80 @@ async def upload_pdf(
                 file_size = file.size
                 await file.seek(0)  # Reset file position
                 
+                print(f"File {file.filename} size: {file_size} bytes")
+                
                 if file_size > MAX_SIZE:
+                    error_msg = f"File {file.filename}: Size {file_size} exceeds limit {MAX_SIZE}"
+                    print(error_msg)
+                    errors.append(error_msg)
                     continue  # Skip files exceeding size limit
             except Exception as e:
+                error_msg = f"File {file.filename}: Size check failed - {str(e)}"
+                print(error_msg)
+                errors.append(error_msg)
                 continue  # Skip files with size checking errors
             
             # Save file to disk
             file_path = os.path.join(PDF_STORAGE_PATH, file.filename)
             try:
+                print(f"Saving file to: {file_path}")
                 with open(file_path, "wb") as buffer:
                     shutil.copyfileobj(file.file, buffer)
+                print(f"File saved successfully: {file_path}")
             except Exception as e:
+                error_msg = f"File {file.filename}: Save failed - {str(e)}"
+                print(error_msg)
+                errors.append(error_msg)
                 continue  # Skip files with saving errors
             
             # Extract text from PDF
             try:
+                print(f"Extracting text from: {file.filename}")
                 extractor = PDFExtractor()
                 with open(file_path, "rb") as pdf_file:
                     extracted_text = extractor.extract_text(pdf_file)
+                
+                print(f"Extracted text length: {len(extracted_text) if extracted_text else 0}")
                 
                 # Check if text extraction was successful
                 if not extracted_text or len(extracted_text.strip()) < 50:  # Minimal text threshold
                     # Clean up the file as it's not usable
                     if os.path.exists(file_path):
                         os.remove(file_path)
+                    error_msg = f"File {file.filename}: Insufficient text extracted ({len(extracted_text.strip()) if extracted_text else 0} chars)"
+                    print(error_msg)
+                    errors.append(error_msg)
                     continue  # Skip files with insufficient text
                 
                 # Process for RAG (chunking and vectorization)
+                print(f"Creating chunks for: {file.filename}")
                 chunks = text_splitter(extracted_text)
+                
+                print(f"Created {len(chunks) if chunks else 0} chunks")
                 
                 if not chunks or len(chunks) == 0:
                     # Clean up the file as it's not usable
                     if os.path.exists(file_path):
                         os.remove(file_path)
+                    error_msg = f"File {file.filename}: No chunks created"
+                    print(error_msg)
+                    errors.append(error_msg)
                     continue  # Skip files with no chunks
                 
                 # Prepare chunk tuples with filename
                 chunk_tuples = [(chunk, file.filename) for chunk in chunks]
                 
                 # Upsert to Pinecone
+                print(f"Upserting to Pinecone for: {file.filename}")
                 pinecone_upsert_chunks(
                     chunks=chunk_tuples, 
                     index_name="pdf-vectors",  # Use your existing index
                     namespace="pdf_files"  
                 )
+                print(f"Pinecone upsert completed for: {file.filename}")
                 
                 # Save file metadata to MongoDB
+                print(f"Saving metadata to MongoDB for: {file.filename}")
                 pdf_file = PDFFile(
                     name=file.filename,
                     size=file_size,
@@ -107,19 +156,35 @@ async def upload_pdf(
                 result = await db['pdf_files'].insert_one(pdf_file.dict(by_alias=True))
                 pdf_file.id = result.inserted_id
                 processed_files.append(pdf_file)
+                print(f"Successfully processed: {file.filename}")
                 
             except Exception as e:
                 # Clean up file if processing fails
                 if os.path.exists(file_path):
                     os.remove(file_path)
+                error_msg = f"File {file.filename}: Processing failed - {str(e)}"
+                print(error_msg)
+                errors.append(error_msg)
                 continue  # Skip files with processing errors
                 
         except Exception as e:
             # General error handling for this file
+            error_msg = f"File {file.filename if file else 'unknown'}: General error - {str(e)}"
+            print(error_msg)
+            errors.append(error_msg)
             continue
     
+    print(f"Processing complete. Successful: {len(processed_files)}, Errors: {len(errors)}")
+    if errors:
+        print("Errors encountered:")
+        for error in errors:
+            print(f"  - {error}")
+    
     if not processed_files:
-        raise HTTPException(status_code=400, detail="Nie udało się przetworzyć żadnego z przesłanych plików PDF.")
+        error_detail = "Nie udało się przetworzyć żadnego z przesłanych plików PDF."
+        if errors:
+            error_detail += f" Błędy: {'; '.join(errors[:3])}"  # Show first 3 errors
+        raise HTTPException(status_code=400, detail=error_detail)
     
     return processed_files
 

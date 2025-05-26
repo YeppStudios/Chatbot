@@ -87,12 +87,13 @@ jobs:
           WEAVIATE_API_KEY: ${{ secrets.WEAVIATE_API_KEY }}
           WEAVIATE_URL: ${{ secrets.WEAVIATE_URL }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PDF_STORAGE_PATH: ${{ secrets.PDF_STORAGE_PATH }}
         with:
           host: ${{ github.event.inputs.host || secrets.DIGITALOCEAN_SSH_HOST }}
           username: ${{ secrets.DIGITALOCEAN_SSH_USER }}
           key: ${{ secrets.DIGITALOCEAN_SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          envs: IMAGE_NAME,REGISTRY,DIGITALOCEAN_ACCESS_TOKEN,GITHUB_SHA,MONGODB_URI,OPENAI_API_KEY,JWT_SECRET_KEY,PINECONE_API_KEY,WEAVIATE_API_KEY,WEAVIATE_URL,ANTHROPIC_API_KEY
+          envs: IMAGE_NAME,REGISTRY,DIGITALOCEAN_ACCESS_TOKEN,GITHUB_SHA,MONGODB_URI,OPENAI_API_KEY,JWT_SECRET_KEY,PINECONE_API_KEY,WEAVIATE_API_KEY,WEAVIATE_URL,ANTHROPIC_API_KEY,PDF_STORAGE_PATH
           script: |
             set -e
             # Install Docker if not present
@@ -120,10 +121,16 @@ jobs:
             echo "Pulling new Docker image..."
             docker pull $REGISTRY/$IMAGE_NAME:${GITHUB_SHA}
             echo "Running new Docker container..."
+            
+            # Create host directory for PDF storage if it doesn't exist
+            sudo mkdir -p /opt/chatbot/uploaded_pdfs
+            sudo chmod 755 /opt/chatbot/uploaded_pdfs
+            
             docker run -d \
               -p 8000:8000 \
               --restart always \
               --name $IMAGE_NAME \
+              -v /opt/chatbot/uploaded_pdfs:/code/uploaded_pdfs \
               -e MONGODB_URI="$MONGODB_URI" \
               -e OPENAI_API_KEY="$OPENAI_API_KEY" \
               -e PINECONE_API_KEY="$PINECONE_API_KEY" \
@@ -131,6 +138,7 @@ jobs:
               -e WEAVIATE_API_KEY="$WEAVIATE_API_KEY" \
               -e WEAVIATE_URL="$WEAVIATE_URL" \
               -e ANTHROPIC_API_KEY="$ANTHROPIC_API_KEY" \
+              -e PDF_STORAGE_PATH="./uploaded_pdfs" \
               $REGISTRY/$IMAGE_NAME:${GITHUB_SHA}
             # Verify if container is running
             if ! docker ps | grep $IMAGE_NAME; then
