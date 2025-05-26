@@ -4,11 +4,13 @@ import { withAuth } from "next-auth/middleware";
 export default withAuth({
   callbacks: {
     authorized({ req, token }) {
+      // If there's a token, the user has been authenticated and passed the email allowlist
       return !!token;
     },
   },
   pages: {
-    signIn: "sign-in/",
+    signIn: "/sign-in",
+    error: "/auth/error",
   },
 });
 
