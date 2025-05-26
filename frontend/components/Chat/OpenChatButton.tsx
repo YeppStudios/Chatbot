@@ -28,7 +28,7 @@ const OpenChatButton = ({
         {isOpen ? (
           <motion.div
             key="close-button"
-            className="bg-purple-chat rounded-full p-3 shadow-lg"
+            className="hidden md:block bg-purple-chat rounded-full p-3 shadow-lg"
             initial={{ rotate: -90, opacity: 0 }}
             animate={{ rotate: 0, opacity: 1 }}
             exit={{ rotate: 90, opacity: 0 }}

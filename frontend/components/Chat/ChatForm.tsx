@@ -13,6 +13,7 @@ const ChatForm = () => {
   const isOpenAIRoute = pathname === "/";
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [textareaHeight, setTextareaHeight] = useState(40);
+  const [isInfoExpanded, setIsInfoExpanded] = useState(false);
 
   const {
     messages,
@@ -118,24 +119,71 @@ const ChatForm = () => {
             style={{ height: '40px', lineHeight: '24px', paddingTop: '8px', paddingBottom: '8px' }}
           />
         </div>
-        <div className="flex items-center justify-between">
-          <p className="text-xs text-gray-400 flex-1 p-1">
-            Please note that this is a test version of the chatbot. Not all responses may be fully accurate yet.<br /> If you notice any inconsistencies, please let us know to help improve this tool.
-          </p>
-          <button
-            type="submit"
-            className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 sm:ml-4 min-w-10 h-10 flex items-center justify-center"
-            disabled={(isOpenAIRoute ? !threadId : !conversationId) || !inputValue.trim()}
-          >
-            <Image
-              src="/send_white.png"
-              alt="icon"
-              width={50}
-              height={50}
-              className="w-5 h-5 object-contain"
-            />
-          </button>
-        </div>
+                <div className="flex items-center justify-between">
+           {/* Info icon and text */}
+           <div className="flex items-center gap-1 flex-1 relative sm:px-2 -mt-1">
+             {/* Mobile: Info icon */}
+             <button
+               type="button"
+               onClick={() => setIsInfoExpanded(!isInfoExpanded)}
+               className="sm:hidden p-1 text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
+               aria-label="Show full info"
+             >
+               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+               </svg>
+             </button>
+             
+             {/* Desktop: Static text */}
+             <span className="hidden sm:inline text-xs text-gray-400">
+               Please note that this is a test version of the chatbot. Not all responses may be fully accurate yet.<br />If you notice any inconsistencies, please let us know to help improve this tool.
+             </span>
+             
+             {/* Mobile: Clickable truncated text */}
+             <button
+               type="button"
+               onClick={() => setIsInfoExpanded(!isInfoExpanded)}
+               className="sm:hidden text-xs text-gray-400 hover:text-gray-600 transition-colors text-left truncate"
+             >
+               Please note that this is a test version...
+             </button>
+             
+             {/* Mobile: Popup */}
+             {isInfoExpanded && (
+               <>
+                 {/* Backdrop */}
+                 <div 
+                   className="fixed inset-0 z-40 sm:hidden"
+                   onClick={() => setIsInfoExpanded(false)}
+                 />
+                 {/* Popup badge */}
+                 <div className="absolute bottom-full left-0 mb-2 z-50 sm:hidden">
+                   <div className="inline-flex items-center rounded-md border border-gray-200 bg-white px-2.5 py-2 text-xs font-medium text-gray-700 shadow-sm">
+                     <div className="max-w-xs text-left leading-relaxed">
+                       Please note that this is a test version of the chatbot. Not all responses may be fully accurate yet. If you notice any inconsistencies, please let us know to help improve this tool.
+                     </div>
+                   </div>
+                   {/* Arrow */}
+                   <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-200"></div>
+                 </div>
+               </>
+             )}
+           </div>
+           
+           <button
+             type="submit"
+             className="bg-purple-chat hover:bg-purple-chat/90 transition-all duration-200 rounded-lg p-2 ml-3 min-w-10 h-10 flex items-center justify-center"
+             disabled={(isOpenAIRoute ? !threadId : !conversationId) || !inputValue.trim()}
+           >
+             <Image
+               src="/send_white.png"
+               alt="icon"
+               width={50}
+               height={50}
+               className="w-5 h-5 object-contain"
+             />
+           </button>
+         </div>
       </form>
     </div>
   );
