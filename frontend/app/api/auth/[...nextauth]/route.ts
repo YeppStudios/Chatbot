@@ -8,6 +8,7 @@ const ALLOWED_EMAILS = process.env.ALLOWED_EMAILS
   : [
       "peter@yepp.ai",
       "metrum.cryoflex@gmail.com",
+      "metrum.cyroflex@gmail.com"
     ];
 
 const handler = NextAuth({
