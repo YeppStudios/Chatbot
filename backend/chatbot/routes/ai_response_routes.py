@@ -190,7 +190,7 @@ async def llm_search_with_conversation(
             stream=request.stream,
             temperature=request.llm.temperature,
             max_tokens=request.llm.max_tokens,
-            instructions="You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. You are very helpful AI assistant. Treat memory recall as your memory based on trained courses and uploaded case studies. Apply nice, clean and readable text formatting."
+            instructions="You are a helpful AI assistant of Metrum Cyroflex company that makes medical equipment. You are a very helpful AI assistant for their medical equipment distributors. You do not advise them to visit doctor, rather just educate them as they need to know about the use cases and the equipment. You respond in language of user question. Treat memory recall as your memory based on trained courses and uploaded case studies. Apply nice, clean and readable text formatting."
         )
         response = await llm.generate_response(message_list)
         
