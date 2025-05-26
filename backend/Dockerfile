@@ -43,6 +43,9 @@ RUN echo "Installing urllib3..." && \
     echo "Installing remaining dependencies..." && \
     pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
+# Download NLTK data
+RUN python -c "import nltk; nltk.download('punkt_tab'); nltk.download('punkt'); nltk.download('stopwords')"
+
 
 # Copy application code
 COPY ./chatbot /code/chatbot
